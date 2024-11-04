@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://b22yg8qvukk2b"]
+
+[ext_resource type="PackedScene" uid="uid://d0tr0k7nrnn66" path="res://assets/meshes/roads/road_straight.glb" id="1_e6ncq"]
+[ext_resource type="PackedScene" uid="uid://fi7nvlv0bs0p" path="res://assets/meshes/roads/road_bend.glb" id="2_dnycr"]
+[ext_resource type="Script" path="res://scenes/character_body_3d.gd" id="3_iputa"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_slcvf"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_hcpea"]
+sky_material = SubResource("ProceduralSkyMaterial_slcvf")
+
+[sub_resource type="Environment" id="Environment_eulnq"]
+background_mode = 2
+sky = SubResource("Sky_hcpea")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0k8x4"]
+radius = 0.097804
+height = 0.306713
+
+[node name="Main" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_eulnq")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.965926, 0, -0.258819, 0.258819, -4.37114e-08, 0.965926, -1.13133e-08, -1, -4.2222e-08, 0, 8.64267, 0)
+
+[node name="road_straight2" parent="." instance=ExtResource("1_e6ncq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.513866, -0.0129991, -0.242547)
+
+[node name="road_straight3" parent="." instance=ExtResource("1_e6ncq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.51387, -0.0129991, -0.242547)
+
+[node name="road_straight4" parent="." instance=ExtResource("1_e6ncq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.51387, -0.0129991, -0.242547)
+
+[node name="road_bend2" parent="." instance=ExtResource("2_dnycr")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.73272, -0.00613451, 0.524387)
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.323063, 0.232122, 0.21588)
+script = ExtResource("3_iputa")
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+shape = SubResource("CapsuleShape3D_0k8x4")
