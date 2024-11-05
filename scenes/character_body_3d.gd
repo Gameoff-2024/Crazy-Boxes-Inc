@@ -1,8 +1,11 @@
 extends CharacterBody3D
 
 
-const SPEED = 1.0
+const SPEED = 5.5
 const JUMP_VELOCITY = 1.5
+
+var mouse_sens = 1000
+var camera_anglev=0
 
 
 func _physics_process(delta: float) -> void:
@@ -24,5 +27,12 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
+	
 
 	move_and_slide()
+	
+func _input(event):
+	if event is InputEventMouseMotion:
+		$CameraPivot.rotation.y -= event.relative.x / mouse_sens
+		$CameraPivot.rotation.x -= event.relative.y / mouse_sens
+		$CameraPivot.rotation.x = clamp($CameraPivot.rotation.x, deg_to_rad(-45), deg_to_rad(90))
