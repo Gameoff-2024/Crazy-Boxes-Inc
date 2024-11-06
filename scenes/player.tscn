@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=4 uid="uid://dy6gruj4b2t1q"]
 
-[ext_resource type="PackedScene" uid="uid://bdw8t8io46qe3" path="res://assets/models/vehicles/van.glb" id="1_u7d7w"]
+[ext_resource type="Script" path="res://scripts/player_camera.gd" id="2_fvrfc"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="2_np1tf"]
 [ext_resource type="PackedScene" uid="uid://nbru01g4kpwf" path="res://assets/models/vehicles/wheel-default.glb" id="3_fj3q0"]
 [ext_resource type="Texture2D" uid="uid://ck3ad1a77x17e" path="res://assets/models/vehicles/Textures/colormap.png" id="3_kgi4v"]
@@ -48,57 +48,49 @@ shadow_mesh = SubResource("ArrayMesh_n4b68")
 [sub_resource type="BoxShape3D" id="BoxShape3D_6lefp"]
 size = Vector3(1.2984, 0.835632, 2.60126)
 
-[node name="Player" instance=ExtResource("1_u7d7w")]
+[node name="Player" type="Node3D" node_paths=PackedStringArray("camera_pivot")]
+script = ExtResource("2_fvrfc")
+camera_pivot = NodePath("VehicleBody3D/CameraPivot")
 
-[node name="VehicleBody3D" type="VehicleBody3D" parent="." index="0"]
+[node name="VehicleBody3D" type="VehicleBody3D" parent="."]
 script = ExtResource("2_np1tf")
 
-[node name="body" type="MeshInstance3D" parent="VehicleBody3D" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0.1)
+[node name="body" type="MeshInstance3D" parent="VehicleBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.310155, 0.1)
 mesh = SubResource("ArrayMesh_qfdcc")
 skeleton = NodePath("")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VehicleBody3D" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="VehicleBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00424194, 0.417958, -0.0514221)
 shape = SubResource("BoxShape3D_6lefp")
 
-[node name="wheel-back-left" type="VehicleWheel3D" parent="VehicleBody3D" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0.308292, -0.75)
+[node name="wheel-back-left" type="VehicleWheel3D" parent="VehicleBody3D"]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.6, 0.308292, -0.75)
 use_as_traction = true
 
-[node name="wheel-default2" parent="VehicleBody3D/wheel-back-left" index="0" instance=ExtResource("3_fj3q0")]
+[node name="wheel-default2" parent="VehicleBody3D/wheel-back-left" instance=ExtResource("3_fj3q0")]
 
-[node name="wheel-back-right" type="VehicleWheel3D" parent="VehicleBody3D" index="3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0.308292, -0.75)
+[node name="wheel-back-right" type="VehicleWheel3D" parent="VehicleBody3D"]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -0.6, 0.308292, -0.75)
 use_as_traction = true
 
-[node name="wheel-default2" parent="VehicleBody3D/wheel-back-right" index="0" instance=ExtResource("3_fj3q0")]
+[node name="wheel-default2" parent="VehicleBody3D/wheel-back-right" instance=ExtResource("3_fj3q0")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
-[node name="wheel-front-right" type="VehicleWheel3D" parent="VehicleBody3D" index="4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0.308292, 0.75)
+[node name="wheel-front-right" type="VehicleWheel3D" parent="VehicleBody3D"]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -0.6, 0.308292, 0.75)
 use_as_steering = true
 
-[node name="wheel-default2" parent="VehicleBody3D/wheel-front-right" index="0" instance=ExtResource("3_fj3q0")]
+[node name="wheel-default2" parent="VehicleBody3D/wheel-front-right" instance=ExtResource("3_fj3q0")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
 
-[node name="wheel-front-left" type="VehicleWheel3D" parent="VehicleBody3D" index="5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0.308292, 0.75)
+[node name="wheel-front-left" type="VehicleWheel3D" parent="VehicleBody3D"]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.6, 0.308292, 0.75)
 use_as_steering = true
 
-[node name="wheel-default2" parent="VehicleBody3D/wheel-front-left" index="0" instance=ExtResource("3_fj3q0")]
+[node name="wheel-default2" parent="VehicleBody3D/wheel-front-left" instance=ExtResource("3_fj3q0")]
 
-[node name="body" parent="." index="1"]
-visible = false
+[node name="CameraPivot" type="Node3D" parent="VehicleBody3D"]
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 5.96046e-07, 1.66623, -3.08795)
 
-[node name="wheel-back-left" parent="." index="2"]
-visible = false
-
-[node name="wheel-back-right" parent="." index="3"]
-visible = false
-
-[node name="wheel-front-left" parent="." index="4"]
-visible = false
-
-[node name="wheel-front-right" parent="." index="5"]
-visible = false
+[node name="Camera3D" type="Camera3D" parent="VehicleBody3D/CameraPivot"]

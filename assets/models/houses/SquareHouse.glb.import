@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dkmv1bsbm5ppl"
-path="res://.godot/imported/house_type19.glb-e7404d630976b5b937b3e03d5f1a15f0.scn"
+path="res://.godot/imported/SquareHouse.glb-5cc5d06ce2ab43515885db0a6da240b1.scn"
 
 [deps]
 
-source_file="res://assets/models/houses/house_type19.glb"
-dest_files=["res://.godot/imported/house_type19.glb-e7404d630976b5b937b3e03d5f1a15f0.scn"]
+source_file="res://assets/models/houses/SquareHouse.glb"
+dest_files=["res://.godot/imported/SquareHouse.glb-5cc5d06ce2ab43515885db0a6da240b1.scn"]
 
 [params]
 
