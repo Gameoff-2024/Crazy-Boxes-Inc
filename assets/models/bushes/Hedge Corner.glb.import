@@ -3,18 +3,18 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cb0pbk7giwkj"
-path="res://.godot/imported/road_end.glb-dd32e2de3c912a0353f5026aad185673.scn"
+uid="uid://chccgdvko8wg4"
+path="res://.godot/imported/Hedge Corner.glb-6069b0192d8852922c6a78a33ddc8048.scn"
 
 [deps]
 
-source_file="res://assets/models/roads/road_end.glb"
-dest_files=["res://.godot/imported/road_end.glb-dd32e2de3c912a0353f5026aad185673.scn"]
+source_file="res://assets/models/bushes/Hedge Corner.glb"
+dest_files=["res://.godot/imported/Hedge Corner.glb-6069b0192d8852922c6a78a33ddc8048.scn"]
 
 [params]
 
 nodes/root_type=""
-nodes/root_name=""
+nodes/root_name="HedgeCorner"
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false
@@ -25,17 +25,16 @@ meshes/light_baking=1
 meshes/lightmap_texel_size=0.2
 meshes/force_disable_compression=false
 skins/use_named_skins=true
-animation/import=true
+animation/import=false
 animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path="res://scripts/import_asset.gd"
+import_script/path=""
 _subresources={
 "nodes": {
-"PATH:tmpParent/road_end": {
-"generate/physics": true,
-"physics/physics_material_override": Resource("res://resources/materials/physics_material.tres")
+"PATH:RootNode/hedge_corner": {
+"generate/physics": true
 }
 }
 }

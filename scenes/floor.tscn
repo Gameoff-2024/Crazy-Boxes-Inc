@@ -1,9 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://bksnos26h6fga"]
+[gd_scene load_steps=5 format=3 uid="uid://bksnos26h6fga"]
+
+[ext_resource type="Texture2D" uid="uid://bqmnhassuv6pn" path="res://resources/Material.002_diffuse.png" id="1_so3j8"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_qgril"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4mh66"]
-albedo_color = Color(0.466667, 0.666667, 0.631373, 1)
+albedo_texture = ExtResource("1_so3j8")
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_axog3"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)

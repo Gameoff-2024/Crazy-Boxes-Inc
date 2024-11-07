@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cb0pbk7giwkj"
-path="res://.godot/imported/road_end.glb-dd32e2de3c912a0353f5026aad185673.scn"
+uid="uid://2ubwlg5g07qb"
+path="res://.godot/imported/small_buildingC.glb-0834dd7f0a05508bb6c572cda957f99c.scn"
 
 [deps]
 
-source_file="res://assets/models/roads/road_end.glb"
-dest_files=["res://.godot/imported/road_end.glb-dd32e2de3c912a0353f5026aad185673.scn"]
+source_file="res://assets/models/commercials/small_buildingC.glb"
+dest_files=["res://.godot/imported/small_buildingC.glb-0834dd7f0a05508bb6c572cda957f99c.scn"]
 
 [params]
 
@@ -25,19 +25,12 @@ meshes/light_baking=1
 meshes/lightmap_texel_size=0.2
 meshes/force_disable_compression=false
 skins/use_named_skins=true
-animation/import=true
+animation/import=false
 animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path="res://scripts/import_asset.gd"
-_subresources={
-"nodes": {
-"PATH:tmpParent/road_end": {
-"generate/physics": true,
-"physics/physics_material_override": Resource("res://resources/materials/physics_material.tres")
-}
-}
-}
+_subresources={}
 gltf/naming_version=1
 gltf/embedded_image_handling=1
