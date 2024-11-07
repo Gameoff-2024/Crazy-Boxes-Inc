@@ -34,7 +34,8 @@ import_script/path="res://scripts/import_asset.gd"
 _subresources={
 "nodes": {
 "PATH:tmpParent/road_straight": {
-"generate/physics": true
+"generate/physics": true,
+"physics/physics_material_override": Resource("res://resources/materials/physics_material.tres")
 }
 }
 }
