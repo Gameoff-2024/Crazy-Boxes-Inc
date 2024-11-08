@@ -53,7 +53,7 @@ glow_enabled = true
 environment = SubResource("Environment_eulnq")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-3.09086e-08, 0.707107, -0.707107, 3.09086e-08, 0.707107, 0.707107, 1, 0, -4.37114e-08, -11, 22, 0)
+transform = Transform3D(-1.13133e-08, 0.965926, -0.258819, 4.22219e-08, 0.258819, 0.965926, 1, 0, -4.37114e-08, -11, 22, 0)
 light_color = Color(1, 1, 0.741176, 1)
 directional_shadow_mode = 1
 sky_mode = 1
@@ -670,6 +670,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99.0009, 0.0355873, -16.5359)
 [node name="house_type165" parent="WorldMap/Roads" instance=ExtResource("13_q4xp0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99.0009, 0.0355873, -16.5359)
 
+[node name="road_curve2" parent="WorldMap/Roads" instance=ExtResource("4_rqnau")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 74.2456, 0.0355873, -30.2518)
+
+[node name="road_bendSquare2" parent="WorldMap/Roads" instance=ExtResource("7_6pivt")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 110.001, 0.0355873, -22.0359)
+
 [node name="Houses" type="Node3D" parent="WorldMap"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000892639, -0.0355873, 0.0359325)
 top_level = true
@@ -865,9 +871,3 @@ transform = Transform3D(0.999985, 0, -0.00556757, 0, 1, 0, 0.00556757, 0, 0.9999
 
 [node name="HedgeStraight2" parent="WorldMap/Decorations" instance=ExtResource("25_bjvj2")]
 transform = Transform3D(0.999985, 0, -0.00556757, 0, 1, 0, 0.00556757, 0, 0.999985, 3.64232, 0.0355873, -4.03593)
-
-[node name="road_curve2" parent="." instance=ExtResource("4_rqnau")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 74.2447, 0, -30.2159)
-
-[node name="road_bendSquare2" parent="." instance=ExtResource("7_6pivt")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 110, 0, -22)
