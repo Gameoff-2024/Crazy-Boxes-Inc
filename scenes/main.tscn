@@ -592,89 +592,53 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.5, 0.001, 22)
 [node name="tile_low3" parent="WorldMap/Roads" instance=ExtResource("8_ewcxm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0.001, 22)
 
-[node name="SmallHouse" parent="WorldMap/Roads" instance=ExtResource("9_bm55p")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 51, 0, 8)
-
-[node name="path_long2" parent="WorldMap/Roads/SmallHouse" instance=ExtResource("4_12121")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13241, 0, 3.19484)
-
-[node name="SmallHouse2" parent="WorldMap/Roads" instance=ExtResource("9_bm55p")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 51, 0, 16)
-
-[node name="path_long2" parent="WorldMap/Roads/SmallHouse2" instance=ExtResource("4_12121")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13241, 0, 3.19484)
-
-[node name="SmallHouse3" parent="WorldMap/Roads" instance=ExtResource("9_bm55p")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 51, 0, 24)
-
-[node name="path_long2" parent="WorldMap/Roads/SmallHouse3" instance=ExtResource("4_12121")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13241, 0, 3.19484)
-
-[node name="SmallHouse4" parent="WorldMap/Roads" instance=ExtResource("9_bm55p")]
-transform = Transform3D(0.000384041, 0, 1, 0, 1, 0, -1, 0, 0.000384041, 70, 0, 24)
-
-[node name="path_long2" parent="WorldMap/Roads/SmallHouse4" instance=ExtResource("4_12121")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13241, 0, 3.19484)
-
-[node name="SmallHouse5" parent="WorldMap/Roads" instance=ExtResource("9_bm55p")]
-transform = Transform3D(0.000384041, 0, 1, 0, 1, 0, -1, 0, 0.000384041, 70, 0, 16)
-
-[node name="path_long2" parent="WorldMap/Roads/SmallHouse5" instance=ExtResource("4_12121")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13241, 0, 3.19484)
-
-[node name="SmallHouse6" parent="WorldMap/Roads" instance=ExtResource("9_bm55p")]
-transform = Transform3D(0.000384041, 0, 1, 0, 1, 0, -1, 0, 0.000384041, 70, 0, 8)
-
-[node name="path_long2" parent="WorldMap/Roads/SmallHouse6" instance=ExtResource("4_12121")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13241, 0, 3.19484)
-
 [node name="road_end2" parent="WorldMap/Roads" instance=ExtResource("26_n4dsu")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="house_type212" parent="WorldMap/Roads" instance=ExtResource("12_hg4jl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 82.5009, 0.0355873, -16.5359)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 82.501, 0, -16.536)
 
 [node name="house_type214" parent="WorldMap/Roads" instance=ExtResource("12_hg4jl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.5009, 0.0355873, -16.5359)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.501, 0, -16.536)
 
 [node name="house_type215" parent="WorldMap/Roads" instance=ExtResource("12_hg4jl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 88.0009, 0.0355873, -5.53593)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 88.001, 0, -5.536)
 
 [node name="house_type219" parent="WorldMap/Roads" instance=ExtResource("12_hg4jl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99.0009, 0.0355873, -5.53593)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99.001, 0, -5.536)
 
 [node name="house_type216" parent="WorldMap/Roads" instance=ExtResource("12_hg4jl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.501, 0.0355873, -16.5359)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.501, 0, -16.536)
 
 [node name="house_type217" parent="WorldMap/Roads" instance=ExtResource("12_hg4jl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.501, 0.0355873, -16.5359)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.501, 0, -16.536)
 
 [node name="house_type218" parent="WorldMap/Roads" instance=ExtResource("12_hg4jl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.501, 0.0355873, -16.5359)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.501, 0, -16.536)
 
 [node name="house_type162" parent="WorldMap/Roads" instance=ExtResource("13_q4xp0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 82.5009, 0.0355873, -5.53593)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 82.501, 0, -5.536)
 
 [node name="house_type166" parent="WorldMap/Roads" instance=ExtResource("13_q4xp0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.5009, 0.0355873, -5.53593)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.5009, 0, -5.53593)
 
 [node name="house_type167" parent="WorldMap/Roads" instance=ExtResource("13_q4xp0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.501, 0.0355873, -5.53593)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.501, 0, -5.53593)
 
 [node name="house_type163" parent="WorldMap/Roads" instance=ExtResource("13_q4xp0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 88.0009, 0.0355873, -16.5359)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 88.0009, 0, -16.5359)
 
 [node name="house_type164" parent="WorldMap/Roads" instance=ExtResource("13_q4xp0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99.0009, 0.0355873, -16.5359)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99.0009, 0, -16.5359)
 
 [node name="house_type165" parent="WorldMap/Roads" instance=ExtResource("13_q4xp0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99.0009, 0.0355873, -16.5359)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99.0009, 0, -16.5359)
 
 [node name="road_curve2" parent="WorldMap/Roads" instance=ExtResource("4_rqnau")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 74.2456, 0.0355873, -30.2518)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 74.246, 0, -30.252)
 
 [node name="road_bendSquare2" parent="WorldMap/Roads" instance=ExtResource("7_6pivt")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 110.001, 0.0355873, -22.0359)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 110.001, 0, -22.036)
 
 [node name="Houses" type="Node3D" parent="WorldMap"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000892639, -0.0355873, 0.0359325)
@@ -842,6 +806,78 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 102.58
 
 [node name="skyscraperB2" parent="WorldMap/Houses" instance=ExtResource("27_f6ymq")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 94, 0, 16)
+
+[node name="SmallHouse" parent="WorldMap/Houses" instance=ExtResource("9_bm55p")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 51, 0, 8)
+
+[node name="path_long2" parent="WorldMap/Houses/SmallHouse" instance=ExtResource("4_12121")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13241, 0, 3.19484)
+
+[node name="SmallHouse2" parent="WorldMap/Houses" instance=ExtResource("9_bm55p")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 51, 0, 16)
+
+[node name="path_long2" parent="WorldMap/Houses/SmallHouse2" instance=ExtResource("4_12121")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13241, 0, 3.19484)
+
+[node name="SmallHouse3" parent="WorldMap/Houses" instance=ExtResource("9_bm55p")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 51, 0, 24)
+
+[node name="path_long2" parent="WorldMap/Houses/SmallHouse3" instance=ExtResource("4_12121")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13241, 0, 3.19484)
+
+[node name="SmallHouse4" parent="WorldMap/Houses" instance=ExtResource("9_bm55p")]
+transform = Transform3D(0.000384041, 0, 1, 0, 1, 0, -1, 0, 0.000384041, 70, 0, 24)
+
+[node name="path_long2" parent="WorldMap/Houses/SmallHouse4" instance=ExtResource("4_12121")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13241, 0, 3.19484)
+
+[node name="SmallHouse5" parent="WorldMap/Houses" instance=ExtResource("9_bm55p")]
+transform = Transform3D(0.000384041, 0, 1, 0, 1, 0, -1, 0, 0.000384041, 70, 0, 16)
+
+[node name="path_long2" parent="WorldMap/Houses/SmallHouse5" instance=ExtResource("4_12121")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13241, 0, 3.19484)
+
+[node name="SmallHouse6" parent="WorldMap/Houses" instance=ExtResource("9_bm55p")]
+transform = Transform3D(0.000384041, 0, 1, 0, 1, 0, -1, 0, 0.000384041, 70, 0, 8)
+
+[node name="path_long2" parent="WorldMap/Houses/SmallHouse6" instance=ExtResource("4_12121")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13241, 0, 3.19484)
+
+[node name="SmallHouse7" parent="WorldMap/Houses" instance=ExtResource("9_bm55p")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 51, 0, 8)
+
+[node name="path_long2" parent="WorldMap/Houses/SmallHouse7" instance=ExtResource("4_12121")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13241, 0, 3.19484)
+
+[node name="SmallHouse8" parent="WorldMap/Houses" instance=ExtResource("9_bm55p")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 51, 0, 16)
+
+[node name="path_long2" parent="WorldMap/Houses/SmallHouse8" instance=ExtResource("4_12121")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13241, 0, 3.19484)
+
+[node name="SmallHouse9" parent="WorldMap/Houses" instance=ExtResource("9_bm55p")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 51, 0, 24)
+
+[node name="path_long2" parent="WorldMap/Houses/SmallHouse9" instance=ExtResource("4_12121")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13241, 0, 3.19484)
+
+[node name="SmallHouse10" parent="WorldMap/Houses" instance=ExtResource("9_bm55p")]
+transform = Transform3D(0.000384041, 0, 1, 0, 1, 0, -1, 0, 0.000384041, 70, 0, 24)
+
+[node name="path_long2" parent="WorldMap/Houses/SmallHouse10" instance=ExtResource("4_12121")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13241, 0, 3.19484)
+
+[node name="SmallHouse11" parent="WorldMap/Houses" instance=ExtResource("9_bm55p")]
+transform = Transform3D(0.000384041, 0, 1, 0, 1, 0, -1, 0, 0.000384041, 70, 0, 16)
+
+[node name="path_long2" parent="WorldMap/Houses/SmallHouse11" instance=ExtResource("4_12121")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13241, 0, 3.19484)
+
+[node name="SmallHouse12" parent="WorldMap/Houses" instance=ExtResource("9_bm55p")]
+transform = Transform3D(0.000384041, 0, 1, 0, 1, 0, -1, 0, 0.000384041, 70, 0, 8)
+
+[node name="path_long2" parent="WorldMap/Houses/SmallHouse12" instance=ExtResource("4_12121")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13241, 0, 3.19484)
 
 [node name="Decorations" type="Node3D" parent="WorldMap"]
 

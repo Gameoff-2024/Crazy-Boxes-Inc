@@ -49,7 +49,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_n4b68")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6lefp"]
-size = Vector3(1.36746, 1.49411, 2.60126)
+size = Vector3(1.26686, 1.49411, 2.60126)
 
 [node name="Player" type="Node3D" node_paths=PackedStringArray("camera_pivot")]
 script = ExtResource("2_fvrfc")
@@ -67,7 +67,7 @@ mesh = SubResource("ArrayMesh_qfdcc")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="VehicleBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0738235, 0.747197, -0.0514221)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0277833, 0.750324, -0.0266287)
 shape = SubResource("BoxShape3D_6lefp")
 
 [node name="wheel-front-left" type="VehicleWheel3D" parent="VehicleBody3D"]
@@ -75,7 +75,7 @@ transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.6, 0.308292, 0.75)
 use_as_traction = true
 use_as_steering = true
 wheel_roll_influence = 0.4
-wheel_radius = 0.3
+wheel_radius = 0.31
 wheel_friction_slip = 1.0
 suspension_travel = 2.0
 suspension_stiffness = 40.0
@@ -88,7 +88,7 @@ transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -0.6, 0.308292, 0.75)
 use_as_traction = true
 use_as_steering = true
 wheel_roll_influence = 0.4
-wheel_radius = 0.3
+wheel_radius = 0.31
 wheel_friction_slip = 1.0
 suspension_travel = 2.0
 suspension_stiffness = 40.0
@@ -101,7 +101,7 @@ transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 
 transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.6, 0.308292, -0.75)
 use_as_traction = true
 wheel_roll_influence = 0.4
-wheel_radius = 0.3
+wheel_radius = 0.31
 wheel_friction_slip = 1.0
 suspension_travel = 2.0
 suspension_stiffness = 40.0
@@ -113,7 +113,7 @@ damping_compression = 0.88
 transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -0.6, 0.308292, -0.75)
 use_as_traction = true
 wheel_roll_influence = 0.4
-wheel_radius = 0.3
+wheel_radius = 0.31
 wheel_friction_slip = 1.0
 suspension_travel = 2.0
 suspension_stiffness = 40.0
