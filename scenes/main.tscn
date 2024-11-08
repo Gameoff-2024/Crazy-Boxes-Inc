@@ -629,7 +629,7 @@ transform = Transform3D(0.000384041, 0, 1, 0, 1, 0, -1, 0, 0.000384041, 70, 0, 8
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13241, 0, 3.19484)
 
 [node name="road_end2" parent="WorldMap/Roads" instance=ExtResource("26_n4dsu")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.000892639, 0.0355873, 0.00198035)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="house_type212" parent="WorldMap/Roads" instance=ExtResource("12_hg4jl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 82.5009, 0.0355873, -16.5359)

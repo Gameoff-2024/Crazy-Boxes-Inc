@@ -40,7 +40,6 @@ func _physics_process(delta: float):
 			engine_force = engine_force_value
 
 		if not DisplayServer.is_touchscreen_available():
-			print("ooh")
 			# Apply analog throttle factor for more subtle acceleration if not fully holding down the trigger.
 			engine_force *= Input.get_action_strength(&"up")
 	else:
