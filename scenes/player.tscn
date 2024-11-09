@@ -1,9 +1,13 @@
-[gd_scene load_steps=9 format=4 uid="uid://dy6gruj4b2t1q"]
+[gd_scene load_steps=11 format=4 uid="uid://dy6gruj4b2t1q"]
 
-[ext_resource type="Script" path="res://scripts/player_camera.gd" id="2_fvrfc"]
+[ext_resource type="Script" path="res://scripts/player_camera_pivot.gd" id="2_fvrfc"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="2_np1tf"]
 [ext_resource type="PackedScene" uid="uid://nbru01g4kpwf" path="res://assets/models/vehicles/wheel-default.glb" id="3_fj3q0"]
 [ext_resource type="Texture2D" uid="uid://ck3ad1a77x17e" path="res://assets/models/vehicles/Textures/colormap.png" id="3_kgi4v"]
+[ext_resource type="Script" path="res://scripts/player_camera.gd" id="5_dbhll"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kjse8"]
+friction = 0.5
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6puvk"]
 resource_name = "colormap"
@@ -46,57 +50,87 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_n4b68")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6lefp"]
-size = Vector3(1.2984, 0.835632, 2.60126)
+size = Vector3(1.26686, 1.49411, 2.60126)
 
-[node name="Player" type="Node3D" node_paths=PackedStringArray("camera_pivot")]
-script = ExtResource("2_fvrfc")
-camera_pivot = NodePath("VehicleBody3D/CameraPivot")
+[node name="Player" type="Node3D"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 
 [node name="VehicleBody3D" type="VehicleBody3D" parent="."]
 axis_lock_angular_x = true
 axis_lock_angular_z = true
+physics_material_override = SubResource("PhysicsMaterial_kjse8")
 script = ExtResource("2_np1tf")
 
 [node name="body" type="MeshInstance3D" parent="VehicleBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.310155, 0.1)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.310155, 0.1)
 mesh = SubResource("ArrayMesh_qfdcc")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="VehicleBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00424194, 0.417958, -0.0514221)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.0277833, 0.750324, -0.0266287)
 shape = SubResource("BoxShape3D_6lefp")
 
-[node name="wheel-back-left" type="VehicleWheel3D" parent="VehicleBody3D"]
-transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.6, 0.308292, -0.75)
-wheel_radius = 0.3
-
-[node name="wheel-default2" parent="VehicleBody3D/wheel-back-left" instance=ExtResource("3_fj3q0")]
-
-[node name="wheel-back-right" type="VehicleWheel3D" parent="VehicleBody3D"]
-transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -0.6, 0.308292, -0.75)
-wheel_radius = 0.3
-
-[node name="wheel-default2" parent="VehicleBody3D/wheel-back-right" instance=ExtResource("3_fj3q0")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
-
-[node name="wheel-front-right" type="VehicleWheel3D" parent="VehicleBody3D"]
-transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -0.6, 0.308292, 0.75)
-use_as_traction = true
-use_as_steering = true
-wheel_radius = 0.3
-
-[node name="wheel-default2" parent="VehicleBody3D/wheel-front-right" instance=ExtResource("3_fj3q0")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
-
 [node name="wheel-front-left" type="VehicleWheel3D" parent="VehicleBody3D"]
-transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.6, 0.308292, 0.75)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.308, 0.434559)
 use_as_traction = true
 use_as_steering = true
-wheel_radius = 0.3
+wheel_roll_influence = 0.4
+wheel_radius = 0.16
+wheel_friction_slip = 1.0
+suspension_travel = 2.0
+suspension_stiffness = 40.0
+damping_compression = 0.88
 
 [node name="wheel-default2" parent="VehicleBody3D/wheel-front-left" instance=ExtResource("3_fj3q0")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="wheel-front-right" type="VehicleWheel3D" parent="VehicleBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.308, 0.435)
+use_as_traction = true
+use_as_steering = true
+wheel_roll_influence = 0.4
+wheel_radius = 0.16
+wheel_friction_slip = 1.0
+suspension_travel = 2.0
+suspension_stiffness = 40.0
+damping_compression = 0.88
+
+[node name="wheel-default2" parent="VehicleBody3D/wheel-front-right" instance=ExtResource("3_fj3q0")]
+transform = Transform3D(-0.5, 0, 7.54979e-08, 0, 0.5, 0, -7.54979e-08, 0, -0.5, 0, 0, 0)
+
+[node name="wheel-back-left" type="VehicleWheel3D" parent="VehicleBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.308, -0.325034)
+use_as_traction = true
+wheel_roll_influence = 0.4
+wheel_radius = 0.16
+wheel_friction_slip = 1.0
+suspension_travel = 2.0
+suspension_stiffness = 40.0
+damping_compression = 0.88
+
+[node name="wheel-default2" parent="VehicleBody3D/wheel-back-left" instance=ExtResource("3_fj3q0")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="wheel-back-right" type="VehicleWheel3D" parent="VehicleBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.308, -0.325)
+use_as_traction = true
+wheel_roll_influence = 0.4
+wheel_radius = 0.16
+wheel_friction_slip = 1.0
+suspension_travel = 2.0
+suspension_stiffness = 40.0
+damping_compression = 0.88
+
+[node name="wheel-default2" parent="VehicleBody3D/wheel-back-right" instance=ExtResource("3_fj3q0")]
+transform = Transform3D(-0.5, 0, -7.54979e-08, 0, 0.5, 0, 7.54979e-08, 0, -0.5, 0, 0, 0)
 
 [node name="CameraPivot" type="Node3D" parent="VehicleBody3D"]
-transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 5.96046e-07, 1.66623, -3.08795)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.583746, 0)
+script = ExtResource("2_fvrfc")
 
 [node name="Camera3D" type="Camera3D" parent="VehicleBody3D/CameraPivot"]
+transform = Transform3D(-2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, 0, 0.556031, -1.4932)
+script = ExtResource("5_dbhll")
+
+[node name="Shooter" type="Node3D" parent="VehicleBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.651478, -0.164607)
