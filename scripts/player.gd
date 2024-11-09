@@ -1,15 +1,23 @@
 extends VehicleBody3D
 
+const BOX = preload("res://scenes/box.tscn")
+
 const STEER_SPEED = 1.5
 const STEER_LIMIT = 0.4
 const BRAKE_STRENGTH = 2.0
 
 @export var engine_force_value := 40.0
 
+@onready var shooter: Node3D = $Shooter
+
 var previous_speed := linear_velocity.length()
 var _steer_target := 0.0
 
 #@onready var desired_engine_pitch: float = $EngineSound.pitch_scale
+
+func _process(delta: float):
+	if Input.is_action_just_pressed("shot"):
+		shoot_box()
 
 func _physics_process(delta: float):
 	var fwd_mps := (linear_velocity * transform.basis).x
@@ -59,3 +67,10 @@ func _physics_process(delta: float):
 	steering = move_toward(steering, _steer_target, STEER_SPEED * delta)
 
 	previous_speed = linear_velocity.length()
+
+func shoot_box():
+	var box = BOX.instantiate()
+	box.global_position = shooter.global_position
+	box.apply_central_impulse(Vector3.UP * 5)
+	box.apply_torque(Vector3(randf_range(0, 10), randf_range(0, 10), randf_range(0, 10)))
+	get_tree().root.add_child(box)

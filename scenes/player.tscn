@@ -133,4 +133,4 @@ transform = Transform3D(-2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, 0, 0.5
 script = ExtResource("5_dbhll")
 
 [node name="Shooter" type="Node3D" parent="VehicleBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.651478, -0.164607)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.911914, -0.0659413)
