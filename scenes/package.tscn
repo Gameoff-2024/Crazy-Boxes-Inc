@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=4 uid="uid://23qnd3dgka3j"]
+[gd_scene load_steps=10 format=4 uid="uid://23qnd3dgka3j"]
 
 [ext_resource type="Texture2D" uid="uid://bbpi23bgbmxav" path="res://assets/models/boxes/Textures/colormap.png" id="1_6h251"]
-[ext_resource type="Texture2D" uid="uid://dstm71fwxpd0b" path="res://assets/popi.png" id="2_qtgj2"]
+[ext_resource type="Script" path="res://scripts/quest_package.gd" id="1_frb41"]
+[ext_resource type="Texture2D" uid="uid://d1t16b635kflg" path="res://icon.svg" id="2_o26q1"]
 [ext_resource type="FontFile" uid="uid://cm77ftmps3og0" path="res://resources/fonts/Bettermilk.otf" id="3_stgpe"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ck4su"]
@@ -42,25 +43,27 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_20asl")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_12j36"]
-albedo_texture = ExtResource("2_qtgj2")
-
 [sub_resource type="QuadMesh" id="QuadMesh_ylp1p"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_28oew"]
+
 [node name="Package" type="Node3D"]
+script = ExtResource("1_frb41")
+label = "GNO"
+texture = ExtResource("2_o26q1")
 
 [node name="Mesh" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_b4kib")
 skeleton = NodePath("")
 
-[node name="Label3D" type="Label3D" parent="."]
+[node name="Label" type="Label3D" parent="."]
 transform = Transform3D(-4.37114e-09, -0.1, -4.37114e-09, 0, -4.37114e-09, 0.1, -0.1, 4.37114e-09, 1.91069e-16, 0, 0.51, 0)
 text = "provoa"
 font = ExtResource("3_stgpe")
 font_size = 500
 outline_size = 127
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="Picture" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.143484, 0.166848, 3.60461e-08, 8.50763e-16, -8.84404e-09, 1, 0.209176, -0.114449, -2.47257e-08, -0.145331, 0.51, 0.358349)
-material_override = SubResource("StandardMaterial3D_12j36")
 mesh = SubResource("QuadMesh_ylp1p")
+surface_material_override/0 = SubResource("StandardMaterial3D_28oew")

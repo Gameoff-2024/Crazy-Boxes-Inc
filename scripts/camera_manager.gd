@@ -16,8 +16,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("switch"):
 		if (player_camera.current):
-			%QuestDisplayer.show()
+			%QuestDisplayer.active()
 			package_camera.make_current()
 		else:
 			player_camera.make_current()
-			%QuestDisplayer.hide()
+			%QuestDisplayer.inactive()
+			

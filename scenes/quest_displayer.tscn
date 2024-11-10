@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/quest_displayer.gd" id="1_rwak3"]
 [ext_resource type="PackedScene" uid="uid://23qnd3dgka3j" path="res://scenes/package.tscn" id="2_xvum5"]
 
-[sub_resource type="QuadMesh" id="QuadMesh_3ujdm"]
+[sub_resource type="QuadMesh" id="QuadMesh_fuf16"]
 
 [node name="QuestDisplayer" type="Node3D"]
 script = ExtResource("1_rwak3")
@@ -21,6 +21,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0)
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 5, 0)
 
-[node name="Background" type="MeshInstance3D" parent="."]
-transform = Transform3D(10, 0, 0, 0, -4.37114e-07, 10, 0, -10, -4.37114e-07, 0, -2, 0)
-mesh = SubResource("QuadMesh_3ujdm")
+[node name="Enclosure" type="MeshInstance3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, -4.37114e-07, 10, 0, -10, -4.37114e-07, 0, -1.6896, 7.38548e-08)
+mesh = SubResource("QuadMesh_fuf16")
