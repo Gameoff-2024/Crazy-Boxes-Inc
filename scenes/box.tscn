@@ -1,65 +1,51 @@
-[gd_scene load_steps=7 format=4 uid="uid://23qnd3dgka3j"]
+[gd_scene load_steps=5 format=4 uid="uid://23qnd3dgka3j"]
 
-[ext_resource type="Script" path="res://scripts/box.gd" id="1_12j8u"]
 [ext_resource type="Texture2D" uid="uid://bbpi23bgbmxav" path="res://assets/models/boxes/Textures/colormap.png" id="2_3bilj"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_71iji"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ck4su"]
 resource_name = "colormap"
 cull_mode = 2
 albedo_texture = ExtResource("2_3bilj")
 texture_filter = 2
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_ut1w7"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_20asl"]
 _surfaces = [{
-"aabb": AABB(-0.25, 0, -0.25, 0.5, 0.5, 0.5),
+"aabb": AABB(-0.25, 0, -0.5, 0.5, 0.5, 1),
 "format": 34896613377,
 "index_count": 84,
-"index_data": PackedByteArray("AgAAAAEAAQADAAIAAgADAAQABAAFAAIACAAGAAcACQAIAAcACQAHAAoAAQAJAAoAAQAKAAQABAADAAEACwAJAAEAAQAAAAsADAAGAAgACAANAAwADAANAAsADgAMAAsADwAOAAsADwALAAAAAAACAA8ABQAPAAIACAAJAAsACwANAAgADgAPAAUABQAMAA4ABQAEAAYABgAMAAUABgAEAAoACgAHAAYA"),
+"index_data": PackedByteArray("AgAAAAEAAQADAAIABgAEAAUABQAHAAYACQAIAAIAAgADAAkABgAKAAsACwAEAAYAAgAIAAwAAAACAAwAAAAMAA0ACwAAAA0ACwANAAUABQAEAAsAAQAAAAsACwAKAAEACQADAAEADgAJAAEADwAOAAEADwABAAoACgAGAA8ABwAPAAYADgAPAAcABwAJAA4ACAAFAA0ADQAMAAgABwAFAAgACAAJAAcA"),
 "name": "colormap",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 16,
-"vertex_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAAAA//8AAAAA/////wAAAAD//////18AAAAA////XwAA//////+fAAD///9//58AAP///////wAA//8AAP//AAD///9//18AAAAAAAD//wAAAAD///+fAAAAAP////8AAAAA/3//nwAAAAD/f/9fAAA=")
+"vertex_data": PackedByteArray("//8AAP//AAAAAAAA//8AAP///////wAAAAD/////AAD/////AAAAAP//////bwAAAAD//wAAAAAAAP///28AAP//////jwAAAAD///+PAAAAAAAAAAAAAP//AAAAAAAA////f/+PAAD///9//28AAAAA/3//jwAAAAD/f/9vAAA=")
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_f24ie"]
-resource_name = "box-small_box-small"
+[sub_resource type="ArrayMesh" id="ArrayMesh_b4kib"]
+resource_name = "box-wide_box-wide"
 _surfaces = [{
-"aabb": AABB(-0.25, 0, -0.25, 0.5, 0.5, 0.5),
-"attribute_data": PackedByteArray("/5eY+f+XmPn/l2XG/5dlxv+XZcb/l2XG/5dlxv+XZcb/l2XG/5f/3/+XZcb/l5j5/5f/3/+XmPn/l2XG/5dlxv+XmPn/l5j5/5eY+f+XmPn/l2XG/5dlxv+XZcb/l2XG/5dlxv+XmPn/l2XG/5f/3/+X/9//l5j5/5dlxv+XZcb/l5j5/5eY+f+XZcb/l2XG/9eY+f/XZcb/15j5/9dlxv/XZcb/12XG/9dlxv/XZcb/12XG/9eY+f/XZcb/15j5"),
+"aabb": AABB(-0.25, 0, -0.5, 0.5, 0.5, 1),
+"attribute_data": PackedByteArray("/5eY+f+XmPn/l2XG/5dlxv+XZcb/l2XG/5dlxv+XZcb/l2XG/5dlxv+XZcb/l2XG/5eY+f+XmPn/l2XG/5dlxv+XZcb/l//f/5dlxv+XmPn/l//f/5eY+f+XZcb/l2XG/5eY+f+XmPn/l5j5/5eY+f+XZcb/l5j5/5dlxv+X/9//l//f/5eY+f+XZcb/l2XG/9eY+f/XZcb/15j5/9dlxv/XZcb/15j5/9dlxv/XmPn/12XG/9dlxv/XZcb/12XG"),
 "format": 34896613399,
 "index_count": 84,
-"index_data": PackedByteArray("AgAAAAEAAQADAAIABgAEAAUABQAHAAYACgAIAAkACwAKAAkACwAJAAwADQALAAwADQAMAA4ADgAPAA0AEgAQABEAEQATABIAFgAUABUAFQAXABYAGgAYABkAGwAaABkAHAAbABkAHAAZAB0AHQAeABwAHwAcAB4AIgAgACEAIQAjACIAJgAkACUAJQAnACYAKgAoACkAKQArACoALgAsAC0ALQAvAC4A"),
-"material": SubResource("StandardMaterial3D_71iji"),
+"index_data": PackedByteArray("AgAAAAEAAQADAAIABgAEAAUABQAHAAYACgAIAAkACQALAAoADgAMAA0ADQAPAA4AEgAQABEAEwASABEAEwARABQAFQATABQAFQAUABYAFgAXABUAGgAYABkAGQAbABoAHgAcAB0AHwAeAB0AIAAfAB0AIAAdACEAIQAiACAAIwAgACIAJgAkACUAJQAnACYAKgAoACkAKQArACoALgAsAC0ALQAvAC4A"),
+"material": SubResource("StandardMaterial3D_ck4su"),
 "name": "colormap",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 48,
-"vertex_data": PackedByteArray("AAAAAAAA/////wAAAAD//wAA//8AAP///////wAA////////AAD/////////X///AAD//wAA//8AAP///1//////////n/+/////f/+f/7//////////v///AAD///+/////f/9f/7///wAAAAD/v///////X/+//////wAA/7///wAA////v///AAAAAP+/AAAAAP///78AAAAAAAD/v///////n/////////////8AAP///5///wAA////////AAD//////78AAAAA////vwAA////n/+/AAD/f/+f/78AAP9//1//vwAAAAAAAP+/AAD//wAA/78AAP///1//v///AAD//wCAAAAAAP//AID///////8AgAAA/////wCAAAD/f/9f/78AAP///1//vwAA/3//n/+/AAD///+f/7///////1//////////n///AAD///9f//8AAP///5//////////X/+/////f/9f/7///////5//v////3//n/+//3////9/////f////3////9//7//f/+//3//v/9//7//fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAAAA/38AAP9/AAD/fwAA/3//f/+//3//v/9//7//f/+//3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9//7//f/+//3//v/9//7//fwAA/38AAP9/AAD/fwAA")
+"vertex_data": PackedByteArray("//8AAP//AIAAAAAA//8AgP///////wCAAAD/////AID/////AAD/////////b///AAD//wAA//8AAP///2//////////j/////////////8AAP///4///wAA////////AAAAAAAA/////wAAAAD//wAA//8AAP///////wAA/////////4//v////3//j/+//////////7///wAA////v////3//b/+///8AAAAA/7///////2//v/////8AAP+///8AAP///7///wAAAAD/vwAAAAD///+/AAAAAAAA/78AAP//////vwAAAAD///+/AAD///+P/78AAP9//4//vwAA/3//b/+/AAAAAAAA/78AAP//AAD/vwAA////b/+/AAD/f/9v/78AAP///2//vwAA/3//j/+/AAD///+P/7///////2//v////3//b/+///////+P/7////9//4//v///////b/////////+P//8AAP///2///wAA////j////3////9/////f////3////9//7//f/+//3//v/9//7//f/+//3//v/9//7//f/+//3////9/////f////3////9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAAAAD/fwAA/38AAP9/AAD/f/9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/AAD/fwAA/38AAP9/AAD/f/+//3//v/9//7//f/+/")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_ut1w7")
+shadow_mesh = SubResource("ArrayMesh_20asl")
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_wsx4r"]
-points = PackedVector3Array(0.25, 0.499902, 0.25, -0.25, 9.78964e-05, -0.25, -0.25, 9.78964e-05, 0.25, -0.25, 0.499902, -0.25, 0.25, 9.78964e-05, -0.25, -0.25, 0.499902, 0.25, 0.25, 9.78964e-05, 0.25, 0.25, 0.499902, -0.25)
+[node name="Box" type="Node3D"]
 
-[node name="Box" type="RigidBody3D"]
-collision_layer = 2
-script = ExtResource("1_12j8u")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.35, 0, 0, 0, 0.35, 0, 0, 0, 0.35, 0, 0, 0)
-mesh = SubResource("ArrayMesh_f24ie")
+[node name="Mesh" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_b4kib")
 skeleton = NodePath("")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.35, 0, 0, 0, 0.35, 0, 0, 0, 0.35, 0, 0, 0)
-shape = SubResource("ConvexPolygonShape3D_wsx4r")
-
-[node name="LifetimeTimer" type="Timer" parent="."]
-wait_time = 30.0
-one_shot = true
-autostart = true
-
-[connection signal="timeout" from="LifetimeTimer" to="." method="_on_lifetime_timer_timeout"]
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 0, 0.51, 0)
+text = "provoa"

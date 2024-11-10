@@ -18,6 +18,9 @@ var _steer_target := 0.0
 func _process(delta: float):
 	if Input.is_action_just_pressed("shot"):
 		shoot_box()
+		var img = get_viewport().get_texture().get_data()
+		img.flip_y()
+		img.save_png('user://image.png')
 
 func _physics_process(delta: float):
 	var fwd_mps := (linear_velocity * transform.basis).x
