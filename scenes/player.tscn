@@ -1,10 +1,12 @@
-[gd_scene load_steps=11 format=4 uid="uid://dy6gruj4b2t1q"]
+[gd_scene load_steps=13 format=4 uid="uid://dy6gruj4b2t1q"]
 
 [ext_resource type="Script" path="res://scripts/player_camera_pivot.gd" id="2_fvrfc"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="2_np1tf"]
 [ext_resource type="PackedScene" uid="uid://nbru01g4kpwf" path="res://assets/models/vehicles/wheel-default.glb" id="3_fj3q0"]
 [ext_resource type="Texture2D" uid="uid://ck3ad1a77x17e" path="res://assets/models/vehicles/Textures/colormap.png" id="3_kgi4v"]
 [ext_resource type="Script" path="res://scripts/player_camera.gd" id="5_dbhll"]
+[ext_resource type="PackedScene" uid="uid://cpo47gat2iyue" path="res://assets/models/container/skip.glb" id="6_yt7w7"]
+[ext_resource type="PackedScene" uid="uid://dj4q00iannf87" path="res://assets/models/boxes/box-long.glb" id="7_sqtkt"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kjse8"]
 friction = 0.5
@@ -56,6 +58,7 @@ size = Vector3(1.26686, 1.49411, 2.60126)
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 
 [node name="VehicleBody3D" type="VehicleBody3D" parent="."]
+collision_layer = 2
 axis_lock_angular_x = true
 axis_lock_angular_z = true
 physics_material_override = SubResource("PhysicsMaterial_kjse8")
@@ -128,10 +131,21 @@ transform = Transform3D(-0.5, 0, -7.54979e-08, 0, 0.5, 0, 7.54979e-08, 0, -0.5, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.583746, 0)
 script = ExtResource("2_fvrfc")
 
-[node name="PlayerCamera" type="Camera3D" parent="VehicleBody3D/CameraPivot" groups=["camera"]]
-unique_name_in_owner = true
+[node name="Camera3D" type="Camera3D" parent="VehicleBody3D/CameraPivot"]
 transform = Transform3D(-2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, 0, 0.556031, -1.4932)
 script = ExtResource("5_dbhll")
 
 [node name="Shooter" type="Node3D" parent="VehicleBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.01686, -0.0659413)
+
+[node name="Skip" parent="VehicleBody3D" instance=ExtResource("6_yt7w7")]
+transform = Transform3D(0.375855, 0, 0, 0, 0.375855, 0, 0, 0, 0.375855, 0, 0.88727, -0.0639817)
+
+[node name="box-long2" parent="VehicleBody3D/Skip" instance=ExtResource("7_sqtkt")]
+transform = Transform3D(-3.54573e-08, 1.29596e-22, -0.961988, 0.700309, 0.232155, -3.6303e-08, 0.409342, -0.397174, -2.12197e-08, 0.00139935, 0.40842, 0.427914)
+
+[node name="box-long3" parent="VehicleBody3D/Skip" instance=ExtResource("7_sqtkt")]
+transform = Transform3D(-3.54573e-08, 0, 0.961988, 0, 0.460047, 0, -0.811168, 0, -4.20498e-08, 0.00139935, 0.0361853, -0.0961103)
+
+[node name="box-long4" parent="VehicleBody3D/Skip" instance=ExtResource("7_sqtkt")]
+transform = Transform3D(-0.452434, 0, -8.40997e-08, 0, 0.460047, 0, 3.95531e-08, 0, -0.961988, 0.00139935, 0.29284, -0.240961)
