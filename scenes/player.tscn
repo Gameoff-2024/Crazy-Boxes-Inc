@@ -78,7 +78,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.308, 0.434559)
 use_as_traction = true
 use_as_steering = true
 wheel_roll_influence = 0.4
-wheel_radius = 0.16
+wheel_radius = 0.15
 wheel_friction_slip = 1.0
 suspension_travel = 2.0
 suspension_stiffness = 40.0
@@ -92,7 +92,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.308, 0.435)
 use_as_traction = true
 use_as_steering = true
 wheel_roll_influence = 0.4
-wheel_radius = 0.16
+wheel_radius = 0.15
 wheel_friction_slip = 1.0
 suspension_travel = 2.0
 suspension_stiffness = 40.0
@@ -105,7 +105,7 @@ transform = Transform3D(-0.5, 0, 7.54979e-08, 0, 0.5, 0, -7.54979e-08, 0, -0.5, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.308, -0.325034)
 use_as_traction = true
 wheel_roll_influence = 0.4
-wheel_radius = 0.16
+wheel_radius = 0.15
 wheel_friction_slip = 1.0
 suspension_travel = 2.0
 suspension_stiffness = 40.0
@@ -118,7 +118,7 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.308, -0.325)
 use_as_traction = true
 wheel_roll_influence = 0.4
-wheel_radius = 0.16
+wheel_radius = 0.15
 wheel_friction_slip = 1.0
 suspension_travel = 2.0
 suspension_stiffness = 40.0
@@ -149,3 +149,22 @@ transform = Transform3D(-3.54573e-08, 0, 0.961988, 0, 0.460047, 0, -0.811168, 0,
 
 [node name="box-long4" parent="VehicleBody3D/Skip" instance=ExtResource("7_sqtkt")]
 transform = Transform3D(-0.452434, 0, -8.40997e-08, 0, 0.460047, 0, 3.95531e-08, 0, -0.961988, 0.00139935, 0.29284, -0.240961)
+
+[node name="FrontLightRight" type="SpotLight3D" parent="VehicleBody3D"]
+transform = Transform3D(-0.996195, 0, 0.0871556, 0, 1, 0, -0.0871556, 0, -0.996195, -0.224332, 0.536974, 0.658259)
+light_energy = 20.0
+spot_range = 17.702
+spot_attenuation = 2.0
+spot_angle = 18.23
+spot_angle_attenuation = 1.93187
+
+[node name="FrontLightLeft" type="SpotLight3D" parent="VehicleBody3D"]
+transform = Transform3D(-0.996195, 0, -0.0871556, 0, 1, 0, 0.0871556, 0, -0.996195, 0.224427, 0.536974, 0.658259)
+light_energy = 20.0
+spot_range = 17.702
+spot_attenuation = 2.0
+spot_angle = 18.2332
+spot_angle_attenuation = 1.93187
+
+[connection signal="rotation_start" from="VehicleBody3D/CameraPivot" to="VehicleBody3D" method="_on_camera_pivot_rotation_start"]
+[connection signal="rotation_stop" from="VehicleBody3D/CameraPivot" to="VehicleBody3D" method="_on_camera_pivot_rotation_stop"]
