@@ -2,6 +2,11 @@ extends VehicleBody3D
 
 const BOX = preload("res://scenes/box.tscn")
 
+const MOUSE_RAY_CAST_SIZE = 10
+const BOX_SHOOT_FORCE_MULTIPLIER = 3.4
+const BOX_MIN_TORQUE = 0
+const BOX_MAX_TORQUE = 10
+
 const STEER_SPEED = 1.5
 const STEER_LIMIT = 0.4
 const BRAKE_STRENGTH = 2.0
@@ -9,14 +14,16 @@ const BRAKE_STRENGTH = 2.0
 @export var engine_force_value := 40.0
 
 @onready var shooter: Node3D = $Shooter
+@onready var camera: Camera3D = $CameraPivot/Camera3D
 
 var previous_speed := linear_velocity.length()
 var _steer_target := 0.0
+var _can_shoot := true
 
 #@onready var desired_engine_pitch: float = $EngineSound.pitch_scale
 
 func _process(delta: float):
-	if Input.is_action_just_pressed("shot"):
+	if Input.is_action_just_pressed("shot") and _can_shoot:
 		shoot_box()
 
 func _physics_process(delta: float):
@@ -71,6 +78,42 @@ func _physics_process(delta: float):
 func shoot_box():
 	var box = BOX.instantiate()
 	box.global_position = shooter.global_position
-	box.apply_central_impulse(Vector3.UP * 5)
-	box.apply_torque(Vector3(randf_range(0, 10), randf_range(0, 10), randf_range(0, 10)))
+	box.apply_central_impulse(calc_box_shot_force())
+	box.apply_torque(get_rand_torque())
 	get_tree().root.add_child(box)
+	
+func get_rand_torque() -> Vector3:
+	return Vector3(
+		randf_range(BOX_MIN_TORQUE, BOX_MAX_TORQUE),
+		randf_range(BOX_MIN_TORQUE, BOX_MAX_TORQUE),
+		randf_range(BOX_MIN_TORQUE, BOX_MAX_TORQUE),
+	)
+	
+func calc_box_shot_force() -> Vector3:
+	var segment_start = shooter.global_position
+	var segment_end = calc_segment_end(segment_start)
+	var plane_normal = MathUtils.calc_plane_normal(segment_start, segment_end, Vector3.DOWN)
+	var shot_direction = MathUtils.calc_tangent_vector(segment_start, segment_end, plane_normal)
+	var distance = (segment_end - segment_start).length()
+	
+	return shot_direction * (distance * BOX_SHOOT_FORCE_MULTIPLIER)
+	
+func calc_segment_end(real_start: Vector3) -> Vector3:
+	var space_state = get_world_3d().direct_space_state
+	var mousepos = get_viewport().get_mouse_position()
+
+	var origin = camera.project_ray_origin(mousepos)
+	var end = origin + camera.project_ray_normal(mousepos) * MOUSE_RAY_CAST_SIZE
+	var query = PhysicsRayQueryParameters3D.create(origin, end)
+	var result = space_state.intersect_ray(query)
+	
+	if result.is_empty():
+		return end
+		
+	return result.position
+	
+func _on_camera_pivot_rotation_start() -> void:
+	_can_shoot = false
+
+func _on_camera_pivot_rotation_stop() -> void:
+	_can_shoot = true
