@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://b22yg8qvukk2b"]
+[gd_scene load_steps=40 format=3 uid="uid://b22yg8qvukk2b"]
 
 [ext_resource type="PackedScene" uid="uid://bksnos26h6fga" path="res://scenes/floor.tscn" id="1_ryhdv"]
 [ext_resource type="PackedScene" uid="uid://cr14adlejjbft" path="res://assets/models/roads/road_straight.glb" id="2_bpay6"]
@@ -33,6 +33,9 @@
 [ext_resource type="PackedScene" uid="uid://2ubwlg5g07qb" path="res://assets/models/commercials/small_buildingC.glb" id="26_c8iad"]
 [ext_resource type="PackedScene" uid="uid://cb0pbk7giwkj" path="res://assets/models/roads/road_end.glb" id="26_n4dsu"]
 [ext_resource type="PackedScene" uid="uid://c04t03a6ykrqm" path="res://assets/models/commercials/skyscraperB.glb" id="27_f6ymq"]
+[ext_resource type="PackedScene" uid="uid://8h8fiibks635" path="res://assets/models/boxes/box-wide.glb" id="34_otmhy"]
+[ext_resource type="Script" path="res://scripts/autoload/camera_manager.gd" id="35_cwjvg"]
+[ext_resource type="Script" path="res://scripts/box_wide.gd" id="36_xbodd"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_slcvf"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -48,6 +51,9 @@ tonemap_mode = 2
 glow_enabled = true
 
 [node name="Main" type="Node3D"]
+
+[node name="CameraManagement" type="Node3D" parent="."]
+script = ExtResource("35_cwjvg")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_eulnq")
@@ -907,3 +913,18 @@ transform = Transform3D(0.999985, 0, -0.00556757, 0, 1, 0, 0.00556757, 0, 0.9999
 
 [node name="HedgeStraight2" parent="WorldMap/Decorations" instance=ExtResource("25_bjvj2")]
 transform = Transform3D(0.999985, 0, -0.00556757, 0, 1, 0, 0.00556757, 0, 0.999985, 3.64232, 0.0355873, -4.03593)
+
+[node name="Package" type="Node3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.67373, 97.7574)
+
+[node name="PackageCamera" type="Camera3D" parent="Package" groups=["camera"]]
+unique_name_in_owner = true
+transform = Transform3D(1.91069e-15, -1, -4.37114e-08, -4.37114e-08, -4.37114e-08, 1, -1, 0, -4.37114e-08, 0.00281572, 0.860336, -3.76065e-08)
+current = true
+
+[node name="PackagePivot" type="Node3D" parent="Package"]
+script = ExtResource("36_xbodd")
+
+[node name="box-wide2" parent="Package/PackagePivot" instance=ExtResource("34_otmhy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.217984, 0)
