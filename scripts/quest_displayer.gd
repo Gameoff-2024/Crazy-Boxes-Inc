@@ -28,7 +28,7 @@ func _process(delta: float):
 			global_rotation = current_lock_rotation
 			
 	if panning:
-		package_pivot.position.y = clamp(package_pivot.position.y + current_mouse_relative.y, -1, 0)
+		package_pivot.position.y = clamp(package_pivot.position.y + current_mouse_relative.y, -1, .3)
 	
 			
 	if current_mouse_relative:

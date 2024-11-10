@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dalnm8eb8osgr"]
 
 [ext_resource type="Script" path="res://scripts/quest_displayer.gd" id="1_rwak3"]
-[ext_resource type="PackedScene" uid="uid://23qnd3dgka3j" path="res://scenes/box.tscn" id="2_xvum5"]
+[ext_resource type="PackedScene" uid="uid://23qnd3dgka3j" path="res://scenes/package.tscn" id="2_xvum5"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_3ujdm"]
 
@@ -15,7 +15,7 @@ current = true
 
 [node name="PackagePivot" type="Node3D" parent="."]
 
-[node name="Box" parent="PackagePivot" instance=ExtResource("2_xvum5")]
+[node name="Package" parent="PackagePivot" instance=ExtResource("2_xvum5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
