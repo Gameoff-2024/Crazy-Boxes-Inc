@@ -1,7 +1,7 @@
 extends Node3D
 
-signal on_rotating_start
-signal on_rotating_stop
+signal rotation_start
+signal rotation_stop
 
 @export var rotation_sens := 0.5
 
@@ -31,11 +31,11 @@ func _input(event: InputEvent):
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 			rotating = true
 			current_lock_rotation = global_rotation
-			on_rotating_start.emit()
+			rotation_start.emit()
 		else:
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 			rotating = false
-			on_rotating_stop.emit()
+			rotation_stop.emit()
 			
 	if event is InputEventMouseMotion:
 		current_mouse_relative = event.relative

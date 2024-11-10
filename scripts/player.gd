@@ -112,8 +112,8 @@ func calc_segment_end(real_start: Vector3) -> Vector3:
 		
 	return result.position
 	
-func _on_camera_pivot_on_rotating_start() -> void:
+func _on_camera_pivot_rotation_start() -> void:
 	_can_shoot = false
 
-func _on_camera_pivot_on_rotating_stop() -> void:
+func _on_camera_pivot_rotation_stop() -> void:
 	_can_shoot = true
