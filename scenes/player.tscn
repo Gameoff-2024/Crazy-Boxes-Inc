@@ -165,3 +165,6 @@ spot_range = 17.702
 spot_attenuation = 2.0
 spot_angle = 18.2332
 spot_angle_attenuation = 1.93187
+
+[connection signal="on_rotating_start" from="VehicleBody3D/CameraPivot" to="VehicleBody3D" method="_on_camera_pivot_on_rotating_start"]
+[connection signal="on_rotating_stop" from="VehicleBody3D/CameraPivot" to="VehicleBody3D" method="_on_camera_pivot_on_rotating_stop"]
