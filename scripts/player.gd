@@ -76,10 +76,10 @@ func _physics_process(delta: float):
 
 func shoot_box():
 	var box = BOX.instantiate()
+	get_tree().root.add_child(box)
 	box.global_position = shooter.global_position
 	box.apply_central_impulse(calc_box_shot_force())
 	box.apply_torque(get_rand_torque())
-	get_tree().root.add_child(box)
 	
 func get_rand_torque() -> Vector3:
 	return Vector3(

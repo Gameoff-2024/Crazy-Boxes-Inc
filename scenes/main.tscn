@@ -165,7 +165,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.5, 0, -16.5)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55, 0, -16.5)
 
 [node name="road_straight42" parent="WorldMap/Roads" instance=ExtResource("2_bpay6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.5, 0, -16.5458)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.5, 0, -16.5)
 
 [node name="road_straight102" parent="WorldMap/Roads" instance=ExtResource("2_bpay6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66, 0, -16.5)
@@ -463,131 +463,81 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0.001, 33)
 
 [node name="commercial_tile9" parent="WorldMap/Roads" instance=ExtResource("8_ewcxm")]
 transform = Transform3D(0.999992, 0, -0.00399679, 0, 1, 0, 0.00399679, 0, 0.999992, 82.5099, 0.000999998, 5.45605)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="commercial_tile10" parent="WorldMap/Roads" instance=ExtResource("8_ewcxm")]
 transform = Transform3D(0.999992, 0, -0.00399679, 0, 1, 0, 0.00399679, 0, 0.999992, 88.0098, 0.000999998, 5.47803)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="commercial_tile11" parent="WorldMap/Roads" instance=ExtResource("8_ewcxm")]
 transform = Transform3D(0.999992, 0, -0.00399679, 0, 1, 0, 0.00399679, 0, 0.999992, 93.5098, 0.000999998, 5.50002)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="commercial_tile12" parent="WorldMap/Roads" instance=ExtResource("8_ewcxm")]
 transform = Transform3D(0.999992, 0, -0.00399679, 0, 1, 0, 0.00399679, 0, 0.999992, 99.0097, 0.000999998, 5.522)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="commercial_tile13" parent="WorldMap/Roads" instance=ExtResource("8_ewcxm")]
 transform = Transform3D(0.999992, 0, -0.00399679, 0, 1, 0, 0.00399679, 0, 0.999992, 104.51, 0.000999998, 5.54398)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="tile_low14" parent="WorldMap/Roads" instance=ExtResource("8_ewcxm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.5, 0.000999998, 5.5)
 
 [node name="commercial_tile15" parent="WorldMap/Roads" instance=ExtResource("8_ewcxm")]
 transform = Transform3D(0.999992, 0, -0.00399679, 0, 1, 0, 0.00399679, 0, 0.999992, 82.4879, 0.000999998, 10.956)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="commercial_tile16" parent="WorldMap/Roads" instance=ExtResource("8_ewcxm")]
 transform = Transform3D(0.999992, 0, -0.00399679, 0, 1, 0, 0.00399679, 0, 0.999992, 87.9878, 0.000999998, 10.978)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="commercial_tile17" parent="WorldMap/Roads" instance=ExtResource("8_ewcxm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.5, 0.000999998, 11)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="commercial_tile18" parent="WorldMap/Roads" instance=ExtResource("8_ewcxm")]
 transform = Transform3D(0.999992, 0, -0.00399679, 0, 1, 0, 0.00399679, 0, 0.999992, 98.9877, 0.000999998, 11.022)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="commercial_tile19" parent="WorldMap/Roads" instance=ExtResource("8_ewcxm")]
 transform = Transform3D(0.999992, 0, -0.00399679, 0, 1, 0, 0.00399679, 0, 0.999992, 104.488, 0.000999998, 11.0439)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="commercial_tile20" parent="WorldMap/Roads" instance=ExtResource("8_ewcxm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 82.5, 0.000999998, 16.5)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="commercial_tile21" parent="WorldMap/Roads" instance=ExtResource("8_ewcxm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 88, 0.000999998, 16.5)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="commercial_tile22" parent="WorldMap/Roads" instance=ExtResource("8_ewcxm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.5, 0.000999998, 16.5)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="commercial_tile23" parent="WorldMap/Roads" instance=ExtResource("8_ewcxm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99, 0.000999998, 16.5)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="commercial_tile24" parent="WorldMap/Roads" instance=ExtResource("8_ewcxm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.5, 0.000999998, 16.5)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="commercial_tile25" parent="WorldMap/Roads" instance=ExtResource("8_ewcxm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 82.5, 0.000999998, 22)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="commercial_tile26" parent="WorldMap/Roads" instance=ExtResource("8_ewcxm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 88, 0.000999998, 22)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="commercial_tile27" parent="WorldMap/Roads" instance=ExtResource("8_ewcxm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.5, 0.000999998, 22)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="commercial_tile28" parent="WorldMap/Roads" instance=ExtResource("8_ewcxm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99, 0.000999998, 22)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="commercial_tile29" parent="WorldMap/Roads" instance=ExtResource("8_ewcxm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.5, 0.000999998, 22)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="commercial_tile34" parent="WorldMap/Roads" instance=ExtResource("8_ewcxm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.5, 0.000999998, 27.5)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="commercial_tile30" parent="WorldMap/Roads" instance=ExtResource("8_ewcxm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 82.5, 0.000999998, 27.5)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="commercial_tile31" parent="WorldMap/Roads" instance=ExtResource("8_ewcxm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 88, 0.000999998, 27.5)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="commercial_tile32" parent="WorldMap/Roads" instance=ExtResource("8_ewcxm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.5, 0.000999998, 27.5)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="commercial_tile33" parent="WorldMap/Roads" instance=ExtResource("8_ewcxm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99, 0.000999998, 27.5)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="tile_low8" parent="WorldMap/Roads" instance=ExtResource("8_ewcxm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.0009, 0.000587311, 32.9641)

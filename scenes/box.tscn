@@ -46,6 +46,7 @@ points = PackedVector3Array(0.25, 0.499902, 0.25, -0.25, 9.78964e-05, -0.25, -0.
 
 [node name="Box" type="RigidBody3D"]
 collision_layer = 4
+continuous_cd = true
 contact_monitor = true
 max_contacts_reported = 10
 script = ExtResource("1_12j8u")
