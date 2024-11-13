@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="Quest" load_steps=9 format=3 uid="uid://csf1olgomr4wh"]
+
+[ext_resource type="Script" path="res://scripts/resources/element.gd" id="1_kmpsk"]
+[ext_resource type="Texture2D" uid="uid://d1t16b635kflg" path="res://icon.svg" id="2_otwyv"]
+[ext_resource type="Texture2D" uid="uid://dstm71fwxpd0b" path="res://assets/img/example.png" id="3_0f4r7"]
+[ext_resource type="Script" path="res://scripts/resources/quest.gd" id="4_nq58f"]
+
+[sub_resource type="Resource" id="Resource_f1fth"]
+script = ExtResource("1_kmpsk")
+textLabel = "Top"
+picture = ExtResource("3_0f4r7")
+decal1 = ExtResource("2_otwyv")
+decal2 = ExtResource("2_otwyv")
+side = 0
+
+[sub_resource type="Resource" id="Resource_wxbk3"]
+script = ExtResource("1_kmpsk")
+textLabel = "Bottom"
+picture = ExtResource("3_0f4r7")
+decal1 = ExtResource("2_otwyv")
+decal2 = ExtResource("2_otwyv")
+side = 1
+
+[sub_resource type="Resource" id="Resource_g6rxw"]
+script = ExtResource("1_kmpsk")
+textLabel = "Front"
+picture = ExtResource("3_0f4r7")
+decal1 = ExtResource("2_otwyv")
+decal2 = ExtResource("2_otwyv")
+side = 2
+
+[sub_resource type="Resource" id="Resource_xgqp5"]
+script = ExtResource("1_kmpsk")
+textLabel = "Back"
+picture = ExtResource("3_0f4r7")
+decal1 = ExtResource("2_otwyv")
+decal2 = ExtResource("2_otwyv")
+side = 3
+
+[resource]
+script = ExtResource("4_nq58f")
+id = 0
+color = Color(0, 0, 0, 1)
+elements = Array[ExtResource("1_kmpsk")]([SubResource("Resource_f1fth"), SubResource("Resource_wxbk3"), SubResource("Resource_g6rxw"), SubResource("Resource_xgqp5")])

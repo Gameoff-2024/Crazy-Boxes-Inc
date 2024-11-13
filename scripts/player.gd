@@ -25,7 +25,6 @@ var _can_shoot := true
 func _process(delta: float):
 	if Input.is_action_just_pressed("shot") and _can_shoot:
 		shoot_box()
-
 func _physics_process(delta: float):
 	var fwd_mps := (linear_velocity * transform.basis).x
 

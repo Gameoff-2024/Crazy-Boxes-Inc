@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bksnos26h6fga"]
 
-[ext_resource type="Texture2D" uid="uid://bqmnhassuv6pn" path="res://resources/Material.002_diffuse.png" id="1_so3j8"]
+[ext_resource type="Texture2D" uid="uid://bqmnhassuv6pn" path="res://assets/textures/Material.002_diffuse.png" id="1_so3j8"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_qgril"]
 

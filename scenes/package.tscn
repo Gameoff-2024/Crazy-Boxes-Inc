@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=4 uid="uid://23qnd3dgka3j"]
+
+[ext_resource type="Texture2D" uid="uid://bbpi23bgbmxav" path="res://assets/models/boxes/Textures/colormap.png" id="1_6h251"]
+[ext_resource type="Script" path="res://scripts/quest_displayer.gd" id="1_frb41"]
+[ext_resource type="FontFile" uid="uid://cm77ftmps3og0" path="res://resources/fonts/Bettermilk.otf" id="3_stgpe"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ck4su"]
+resource_name = "colormap"
+cull_mode = 2
+albedo_texture = ExtResource("1_6h251")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_20asl"]
+_surfaces = [{
+"aabb": AABB(-0.25, 0, -0.5, 0.5, 0.5, 1),
+"format": 34896613377,
+"index_count": 84,
+"index_data": PackedByteArray("AgAAAAEAAQADAAIABgAEAAUABQAHAAYACQAIAAIAAgADAAkABgAKAAsACwAEAAYAAgAIAAwAAAACAAwAAAAMAA0ACwAAAA0ACwANAAUABQAEAAsAAQAAAAsACwAKAAEACQADAAEADgAJAAEADwAOAAEADwABAAoACgAGAA8ABwAPAAYADgAPAAcABwAJAA4ACAAFAA0ADQAMAAgABwAFAAgACAAJAAcA"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("//8AAP//AAAAAAAA//8AAP///////wAAAAD/////AAD/////AAAAAP//////bwAAAAD//wAAAAAAAP///28AAP//////jwAAAAD///+PAAAAAAAAAAAAAP//AAAAAAAA////f/+PAAD///9//28AAAAA/3//jwAAAAD/f/9vAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_b4kib"]
+resource_name = "box-wide_box-wide"
+_surfaces = [{
+"aabb": AABB(-0.25, 0, -0.5, 0.5, 0.5, 1),
+"attribute_data": PackedByteArray("/5eY+f+XmPn/l2XG/5dlxv+XZcb/l2XG/5dlxv+XZcb/l2XG/5dlxv+XZcb/l2XG/5eY+f+XmPn/l2XG/5dlxv+XZcb/l//f/5dlxv+XmPn/l//f/5eY+f+XZcb/l2XG/5eY+f+XmPn/l5j5/5eY+f+XZcb/l5j5/5dlxv+X/9//l//f/5eY+f+XZcb/l2XG/9eY+f/XZcb/15j5/9dlxv/XZcb/15j5/9dlxv/XmPn/12XG/9dlxv/XZcb/12XG"),
+"format": 34896613399,
+"index_count": 84,
+"index_data": PackedByteArray("AgAAAAEAAQADAAIABgAEAAUABQAHAAYACgAIAAkACQALAAoADgAMAA0ADQAPAA4AEgAQABEAEwASABEAEwARABQAFQATABQAFQAUABYAFgAXABUAGgAYABkAGQAbABoAHgAcAB0AHwAeAB0AIAAfAB0AIAAdACEAIQAiACAAIwAgACIAJgAkACUAJQAnACYAKgAoACkAKQArACoALgAsAC0ALQAvAC4A"),
+"material": SubResource("StandardMaterial3D_ck4su"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 48,
+"vertex_data": PackedByteArray("//8AAP//AIAAAAAA//8AgP///////wCAAAD/////AID/////AAD/////////b///AAD//wAA//8AAP///2//////////j/////////////8AAP///4///wAA////////AAAAAAAA/////wAAAAD//wAA//8AAP///////wAA/////////4//v////3//j/+//////////7///wAA////v////3//b/+///8AAAAA/7///////2//v/////8AAP+///8AAP///7///wAAAAD/vwAAAAD///+/AAAAAAAA/78AAP//////vwAAAAD///+/AAD///+P/78AAP9//4//vwAA/3//b/+/AAAAAAAA/78AAP//AAD/vwAA////b/+/AAD/f/9v/78AAP///2//vwAA/3//j/+/AAD///+P/7///////2//v////3//b/+///////+P/7////9//4//v///////b/////////+P//8AAP///2///wAA////j////3////9/////f////3////9//7//f/+//3//v/9//7//f/+//3//v/9//7//f/+//3////9/////f////3////9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAAAAD/fwAA/38AAP9/AAD/f/9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/AAD/fwAA/38AAP9/AAD/f/+//3//v/9//7//f/+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_20asl")
+
+[sub_resource type="QuadMesh" id="QuadMesh_ylp1p"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_28oew"]
+
+[node name="Quest" type="Node3D"]
+script = ExtResource("1_frb41")
+
+[node name="PackageMesh" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_b4kib")
+skeleton = NodePath("")
+
+[node name="TextLabel" type="Label3D" parent="."]
+transform = Transform3D(-4.37114e-09, -0.1, -4.37114e-09, 0, -4.37114e-09, 0.1, -0.1, 4.37114e-09, 1.91069e-16, 0, 0.51, 0)
+text = "provoa"
+font = ExtResource("3_stgpe")
+font_size = 500
+outline_size = 127
+
+[node name="Picture" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.143484, 0.166848, 3.60461e-08, 8.50763e-16, -8.84404e-09, 1, 0.209176, -0.114449, -2.47257e-08, -0.145331, 0.51, 0.358349)
+mesh = SubResource("QuadMesh_ylp1p")
+surface_material_override/0 = SubResource("StandardMaterial3D_28oew")

@@ -1,0 +1,230 @@
+[gd_scene load_steps=11 format=4 uid="uid://d1hgfad0lpcql"]
+
+[ext_resource type="Script" path="res://scripts/quest_manager.gd" id="1_rwak3"]
+[ext_resource type="Script" path="res://scripts/quest_displayer.gd" id="2_6fpso"]
+[ext_resource type="Texture2D" uid="uid://bbpi23bgbmxav" path="res://assets/models/boxes/Textures/colormap.png" id="3_ia8dh"]
+[ext_resource type="FontFile" uid="uid://cm77ftmps3og0" path="res://resources/fonts/Bettermilk.otf" id="4_806bw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ck4su"]
+resource_name = "colormap"
+cull_mode = 2
+albedo_texture = ExtResource("3_ia8dh")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_20asl"]
+_surfaces = [{
+"aabb": AABB(-0.25, 0, -0.5, 0.5, 0.5, 1),
+"format": 34896613377,
+"index_count": 84,
+"index_data": PackedByteArray("AgAAAAEAAQADAAIABgAEAAUABQAHAAYACQAIAAIAAgADAAkABgAKAAsACwAEAAYAAgAIAAwAAAACAAwAAAAMAA0ACwAAAA0ACwANAAUABQAEAAsAAQAAAAsACwAKAAEACQADAAEADgAJAAEADwAOAAEADwABAAoACgAGAA8ABwAPAAYADgAPAAcABwAJAA4ACAAFAA0ADQAMAAgABwAFAAgACAAJAAcA"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("//8AAP//AAAAAAAA//8AAP///////wAAAAD/////AAD/////AAAAAP//////bwAAAAD//wAAAAAAAP///28AAP//////jwAAAAD///+PAAAAAAAAAAAAAP//AAAAAAAA////f/+PAAD///9//28AAAAA/3//jwAAAAD/f/9vAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_b4kib"]
+resource_name = "box-wide_box-wide"
+_surfaces = [{
+"aabb": AABB(-0.25, 0, -0.5, 0.5, 0.5, 1),
+"attribute_data": PackedByteArray("/5eY+f+XmPn/l2XG/5dlxv+XZcb/l2XG/5dlxv+XZcb/l2XG/5dlxv+XZcb/l2XG/5eY+f+XmPn/l2XG/5dlxv+XZcb/l//f/5dlxv+XmPn/l//f/5eY+f+XZcb/l2XG/5eY+f+XmPn/l5j5/5eY+f+XZcb/l5j5/5dlxv+X/9//l//f/5eY+f+XZcb/l2XG/9eY+f/XZcb/15j5/9dlxv/XZcb/15j5/9dlxv/XmPn/12XG/9dlxv/XZcb/12XG"),
+"format": 34896613399,
+"index_count": 84,
+"index_data": PackedByteArray("AgAAAAEAAQADAAIABgAEAAUABQAHAAYACgAIAAkACQALAAoADgAMAA0ADQAPAA4AEgAQABEAEwASABEAEwARABQAFQATABQAFQAUABYAFgAXABUAGgAYABkAGQAbABoAHgAcAB0AHwAeAB0AIAAfAB0AIAAdACEAIQAiACAAIwAgACIAJgAkACUAJQAnACYAKgAoACkAKQArACoALgAsAC0ALQAvAC4A"),
+"material": SubResource("StandardMaterial3D_ck4su"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 48,
+"vertex_data": PackedByteArray("//8AAP//AIAAAAAA//8AgP///////wCAAAD/////AID/////AAD/////////b///AAD//wAA//8AAP///2//////////j/////////////8AAP///4///wAA////////AAAAAAAA/////wAAAAD//wAA//8AAP///////wAA/////////4//v////3//j/+//////////7///wAA////v////3//b/+///8AAAAA/7///////2//v/////8AAP+///8AAP///7///wAAAAD/vwAAAAD///+/AAAAAAAA/78AAP//////vwAAAAD///+/AAD///+P/78AAP9//4//vwAA/3//b/+/AAAAAAAA/78AAP//AAD/vwAA////b/+/AAD/f/9v/78AAP///2//vwAA/3//j/+/AAD///+P/7///////2//v////3//b/+///////+P/7////9//4//v///////b/////////+P//8AAP///2///wAA////j////3////9/////f////3////9//7//f/+//3//v/9//7//f/+//3//v/9//7//f/+//3////9/////f////3////9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAAAAD/fwAA/38AAP9/AAD/f/9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/AAD/fwAA/38AAP9/AAD/f/+//3//v/9//7//f/+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_20asl")
+
+[sub_resource type="QuadMesh" id="QuadMesh_ylp1p"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_28oew"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_fuf16"]
+
+[node name="QuestManager" type="Node3D"]
+script = ExtResource("1_rwak3")
+
+[node name="QuestCamera" type="Camera3D" parent="." groups=["camera"]]
+unique_name_in_owner = true
+transform = Transform3D(1.91069e-15, -1, -4.37114e-08, -4.37114e-08, -4.37114e-08, 1, -1, -3.59989e-21, -4.37114e-08, 0.00281572, 0.860336, 0)
+
+[node name="QuestDisplayer" type="Node3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1.91069e-15, -1, -4.37114e-08, -4.37114e-08, -4.37114e-08, 1, -1, -3.59989e-21, -4.37114e-08, 0.00281572, 0.860336, 0)
+visible = false
+script = ExtResource("2_6fpso")
+
+[node name="PackagePivot" type="Node3D" parent="QuestDisplayer"]
+transform = Transform3D(1.91069e-15, -4.37114e-08, -1, -1, -4.37114e-08, -3.59989e-21, -4.37114e-08, 1, -4.37114e-08, 3.76065e-08, 0.00281576, -0.860336)
+
+[node name="Package" type="Node3D" parent="QuestDisplayer/PackagePivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0)
+
+[node name="PackageMesh" type="MeshInstance3D" parent="QuestDisplayer/PackagePivot/Package"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.49012e-08, 0)
+mesh = SubResource("ArrayMesh_b4kib")
+skeleton = NodePath("")
+
+[node name="Top" type="Node3D" parent="QuestDisplayer/PackagePivot/Package"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.0208272)
+
+[node name="Picture" type="MeshInstance3D" parent="QuestDisplayer/PackagePivot/Package/Top"]
+transform = Transform3D(-0.17293, -0.148022, -3.19788e-08, -2.20648e-16, -8.84407e-09, 1, -0.185573, 0.137936, 2.98e-08, -0.152068, 0.00564522, 0.430644)
+visible = false
+mesh = SubResource("QuadMesh_ylp1p")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_28oew")
+
+[node name="TextLabel" type="Label3D" parent="QuestDisplayer/PackagePivot/Package/Top"]
+transform = Transform3D(0.00777704, -0.0934463, 2.54641e-06, -2.14051e-05, 7.73593e-07, 0.0937694, -0.0934463, -0.00777704, -2.12672e-05, -0.208921, 0.0022338, -0.108141)
+visible = false
+double_sided = false
+text = "Lorem ipsum
+sdasda
+dasd sssssssss"
+font = ExtResource("4_806bw")
+font_size = 300
+outline_size = 100
+vertical_alignment = 0
+line_spacing = -100.0
+
+[node name="Decal1" type="Decal" parent="QuestDisplayer/PackagePivot/Package/Top"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.113084, 0.037678, 0.388241)
+visible = false
+size = Vector3(0.25, 0.1, 0.25)
+upper_fade = 0.0
+lower_fade = 0.0
+
+[node name="Decal2" type="Decal" parent="QuestDisplayer/PackagePivot/Package/Top"]
+transform = Transform3D(-0.0293871, 0, 0.999568, 0, 1, 0, -0.999568, 0, -0.0293871, -0.087889, 0.037678, -0.317492)
+visible = false
+size = Vector3(0.25, 0.1, 0.25)
+upper_fade = 0.0
+lower_fade = 0.0
+
+[node name="Front" type="Node3D" parent="QuestDisplayer/PackagePivot/Package"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0.251648, 0.243811, -0.021)
+
+[node name="Picture" type="MeshInstance3D" parent="QuestDisplayer/PackagePivot/Package/Front"]
+transform = Transform3D(-0.17674, -0.14513, -3.13541e-08, 0, -8.84407e-09, 1, -0.181948, 0.140976, 3.04566e-08, -0.152068, 0.00930154, 0.432044)
+visible = false
+mesh = SubResource("QuadMesh_ylp1p")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_28oew")
+
+[node name="TextLabel" type="Label3D" parent="QuestDisplayer/PackagePivot/Package/Front"]
+transform = Transform3D(0.00777704, -0.0934463, 2.54641e-06, -2.14051e-05, 7.73593e-07, 0.0937694, -0.0934463, -0.00777704, -2.12672e-05, -0.208921, 0.000705957, -0.108141)
+visible = false
+double_sided = false
+text = "Lorem ipsum
+sdasda
+dasd sssssssss"
+font = ExtResource("4_806bw")
+font_size = 300
+outline_size = 100
+vertical_alignment = 0
+line_spacing = -100.0
+
+[node name="Decal1" type="Decal" parent="QuestDisplayer/PackagePivot/Package/Front"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.113084, 0.0281981, 0.367414)
+visible = false
+size = Vector3(0.25, 0.1, 0.25)
+upper_fade = 0.0
+lower_fade = 0.0
+
+[node name="Decal2" type="Decal" parent="QuestDisplayer/PackagePivot/Package/Front"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.127776, 0.0281981, -0.351192)
+visible = false
+size = Vector3(0.25, 0.1, 0.25)
+upper_fade = 0.0
+lower_fade = 0.0
+
+[node name="Back" type="Node3D" parent="QuestDisplayer/PackagePivot/Package"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -0.251002, 0.255887, -0.0178839)
+
+[node name="Picture" type="MeshInstance3D" parent="QuestDisplayer/PackagePivot/Package/Back"]
+transform = Transform3D(-0.195622, -0.1288, 1.33886e-07, 2.20467e-09, 4.0423e-08, 1, -0.161476, 0.156037, -1.48581e-07, -0.152068, 0.00930154, 0.432044)
+visible = false
+mesh = SubResource("QuadMesh_ylp1p")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_28oew")
+
+[node name="TextLabel" type="Label3D" parent="QuestDisplayer/PackagePivot/Package/Back"]
+transform = Transform3D(0.00777704, -0.0934463, 2.54641e-06, -2.14051e-05, 7.73593e-07, 0.0937694, -0.0934463, -0.00777704, -2.12672e-05, -0.208921, 0.000705957, -0.108141)
+visible = false
+double_sided = false
+text = "Lorem ipsum
+sdasda
+dasd sssssssss"
+font = ExtResource("4_806bw")
+font_size = 300
+outline_size = 100
+vertical_alignment = 0
+line_spacing = -100.0
+
+[node name="Decal1" type="Decal" parent="QuestDisplayer/PackagePivot/Package/Back"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.113084, 0.0281981, 0.388241)
+visible = false
+size = Vector3(0.25, 0.1, 0.25)
+upper_fade = 0.0
+lower_fade = 0.0
+
+[node name="Decal2" type="Decal" parent="QuestDisplayer/PackagePivot/Package/Back"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.127776, 0.0281981, -0.351192)
+visible = false
+size = Vector3(0.25, 0.1, 0.25)
+upper_fade = 0.0
+lower_fade = 0.0
+
+[node name="Bottom" type="Node3D" parent="QuestDisplayer/PackagePivot/Package"]
+transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 0.00145055, 0)
+
+[node name="Picture" type="MeshInstance3D" parent="QuestDisplayer/PackagePivot/Package/Bottom"]
+transform = Transform3D(-0.18962, -0.134389, 1.53426e-07, 6.38159e-08, -1.05534e-08, 1, -0.168482, 0.15125, 2.0606e-07, -0.144192, 0.00916934, 0.359749)
+visible = false
+mesh = SubResource("QuadMesh_ylp1p")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_28oew")
+
+[node name="TextLabel" type="Label3D" parent="QuestDisplayer/PackagePivot/Package/Bottom"]
+transform = Transform3D(0.00777704, -0.0934463, 2.54641e-06, -2.14051e-05, 7.73593e-07, 0.0937694, -0.0934463, -0.00777704, -2.12672e-05, -0.177941, 0.00592665, -0.135918)
+visible = false
+double_sided = false
+text = "Lorem ipsum
+sdasda
+dasd sssssssss"
+font = ExtResource("4_806bw")
+font_size = 300
+outline_size = 100
+vertical_alignment = 0
+line_spacing = -100.0
+
+[node name="Decal1" type="Decal" parent="QuestDisplayer/PackagePivot/Package/Bottom"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.120782, 0.0281981, 0.369614)
+visible = false
+size = Vector3(0.25, 0.1, 0.25)
+upper_fade = 0.0
+lower_fade = 0.0
+
+[node name="Decal2" type="Decal" parent="QuestDisplayer/PackagePivot/Package/Bottom"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.114824, 0.028198, -0.36454)
+visible = false
+size = Vector3(0.25, 0.1, 0.25)
+upper_fade = 0.0
+lower_fade = 0.0
+
+[node name="Light" type="SpotLight3D" parent="QuestDisplayer"]
+transform = Transform3D(1.91069e-15, 1, 0, -1, 1.91069e-15, -4.37114e-08, -4.37114e-08, 0, 1, -1.80951e-07, 0.00281554, 4.13966)
+
+[node name="Enclosure" type="MeshInstance3D" parent="QuestDisplayer"]
+transform = Transform3D(1.91069e-14, 10, 2.84217e-14, -10, 1.91069e-14, -4.37114e-07, -4.37114e-07, -2.84217e-14, 10, 3.76065e-08, 0.00281583, -2.54994)
+mesh = SubResource("QuadMesh_fuf16")
+skeleton = NodePath("../..")

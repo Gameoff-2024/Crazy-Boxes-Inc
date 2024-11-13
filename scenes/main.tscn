@@ -1,8 +1,10 @@
-[gd_scene load_steps=37 format=3 uid="uid://b22yg8qvukk2b"]
+[gd_scene load_steps=40 format=3 uid="uid://b22yg8qvukk2b"]
 
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_rlfhc"]
 [ext_resource type="PackedScene" uid="uid://bksnos26h6fga" path="res://scenes/floor.tscn" id="1_ryhdv"]
 [ext_resource type="PackedScene" uid="uid://cr14adlejjbft" path="res://assets/models/roads/road_straight.glb" id="2_bpay6"]
 [ext_resource type="PackedScene" uid="uid://npy26s8n58ex" path="res://assets/models/roads/road_crossroad.glb" id="2_i5ta1"]
+[ext_resource type="PackedScene" uid="uid://d1hgfad0lpcql" path="res://scenes/quest_manager.tscn" id="2_rsn4w"]
 [ext_resource type="PackedScene" uid="uid://cs57fiofj1q4g" path="res://assets/models/houses/HouseWideWithSolarPanels.glb" id="3_qbl4g"]
 [ext_resource type="PackedScene" uid="uid://cp1euoxaxrdpj" path="res://assets/models/houses/path_long.glb" id="4_12121"]
 [ext_resource type="PackedScene" uid="uid://dy6gruj4b2t1q" path="res://scenes/player.tscn" id="4_mkejn"]
@@ -33,6 +35,7 @@
 [ext_resource type="PackedScene" uid="uid://2ubwlg5g07qb" path="res://assets/models/commercials/small_buildingC.glb" id="26_c8iad"]
 [ext_resource type="PackedScene" uid="uid://cb0pbk7giwkj" path="res://assets/models/roads/road_end.glb" id="26_n4dsu"]
 [ext_resource type="PackedScene" uid="uid://c04t03a6ykrqm" path="res://assets/models/commercials/skyscraperB.glb" id="27_f6ymq"]
+[ext_resource type="Script" path="res://scripts/autoload/camera_manager.gd" id="35_cwjvg"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_slcvf"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -48,17 +51,26 @@ tonemap_mode = 2
 glow_enabled = true
 
 [node name="Main" type="Node3D"]
+script = ExtResource("1_rlfhc")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_eulnq")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-1.13133e-08, 0.965926, -0.258819, 4.22219e-08, 0.258819, 0.965926, 1, 0, -4.37114e-08, -11, 22, 0)
+transform = Transform3D(-1.13133e-08, 0.965926, -0.258819, 4.22219e-08, 0.258819, 0.965926, 1, -2.04281e-14, -4.37113e-08, -11, 22, 0)
 light_color = Color(1, 1, 0.741176, 1)
 directional_shadow_mode = 1
 sky_mode = 1
 
-[node name="Player" parent="." instance=ExtResource("4_mkejn")]
+[node name="CameraManager" type="Node3D" parent="."]
+script = ExtResource("35_cwjvg")
+
+[node name="QuestManager" parent="." instance=ExtResource("2_rsn4w")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.5, 16.5, 0)
+
+[node name="Player" parent="." groups=["player"] instance=ExtResource("4_mkejn")]
+unique_name_in_owner = true
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.29612, 0, 1.00245)
 
 [node name="WorldMap" type="Node3D" parent="."]
@@ -907,3 +919,5 @@ transform = Transform3D(0.999985, 0, -0.00556757, 0, 1, 0, 0.00556757, 0, 0.9999
 
 [node name="HedgeStraight2" parent="WorldMap/Decorations" instance=ExtResource("25_bjvj2")]
 transform = Transform3D(0.999985, 0, -0.00556757, 0, 1, 0, 0.00556757, 0, 0.999985, 3.64232, 0.0355873, -4.03593)
+
+[connection signal="new_quest" from="." to="QuestManager" method="_on_main_new_quest"]
