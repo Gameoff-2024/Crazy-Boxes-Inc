@@ -132,11 +132,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.583746, 0)
 script = ExtResource("2_fvrfc")
 
 [node name="Camera3D" type="Camera3D" parent="VehicleBody3D/CameraPivot" groups=["camera"]]
-transform = Transform3D(-2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, 0, 0.556031, -1.4932)
+transform = Transform3D(-2, 0, -1.74846e-07, -3.53579e-08, 1.95868, 0.404447, 1.71234e-07, 0.404447, -1.95868, 0, 1.24562, -3.03982)
 script = ExtResource("5_dbhll")
 
 [node name="Shooter" type="Node3D" parent="VehicleBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.01686, -0.0659413)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.981174, -0.0659413)
 
 [node name="Skip" parent="VehicleBody3D" instance=ExtResource("6_yt7w7")]
 transform = Transform3D(0.375855, 0, 0, 0, 0.375855, 0, 0, 0, 0.375855, 0, 0.88727, -0.0639817)
