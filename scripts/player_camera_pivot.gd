@@ -1,5 +1,7 @@
 extends Node3D
 
+class_name PlayerCamera
+
 signal rotation_start
 signal rotation_stop
 
@@ -9,7 +11,11 @@ var rotating := false
 var current_lock_rotation := Vector3.ZERO
 var current_mouse_relative:= Vector2.ZERO
 
+var active := true
+
 func _process(delta: float):
+	if not active:
+		return
 	# Handle rotation state
 	if rotating:
 		# Mouse movement

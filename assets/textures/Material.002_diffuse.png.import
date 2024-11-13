@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dstm71fwxpd0b"
-path.s3tc="res://.godot/imported/popi.png-e4d4509ca2b0c2ea8c0c53729280e02d.s3tc.ctex"
+uid="uid://bqmnhassuv6pn"
+path.s3tc="res://.godot/imported/Material.002_diffuse.png-0c3c1edfa8137807ef702d8f8c50eb00.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/popi.png"
-dest_files=["res://.godot/imported/popi.png-e4d4509ca2b0c2ea8c0c53729280e02d.s3tc.ctex"]
+source_file="res://assets/textures/Material.002_diffuse.png"
+dest_files=["res://.godot/imported/Material.002_diffuse.png-0c3c1edfa8137807ef702d8f8c50eb00.s3tc.ctex"]
 
 [params]
 
