@@ -16,11 +16,16 @@ const BRAKE_STRENGTH = 2.0
 @onready var shooter: Node3D = $Shooter
 @onready var camera: Camera3D = $CameraPivot/Camera3D
 
+var _quest_manager: QuestManager
+
 var previous_speed := linear_velocity.length()
 var _steer_target := 0.0
 var _can_shoot := true
 
 #@onready var desired_engine_pitch: float = $EngineSound.pitch_scale
+
+func _ready():
+	_quest_manager = get_tree().get_first_node_in_group("quest_manager")
 
 func _process(delta: float):
 	if Input.is_action_just_pressed("shot") and _can_shoot:
@@ -76,10 +81,13 @@ func _physics_process(delta: float):
 
 func shoot_box():
 	var box = BOX.instantiate()
+	get_tree().root.add_child(box)
 	box.global_position = shooter.global_position
 	box.apply_central_impulse(calc_box_shot_force())
 	box.apply_torque(get_rand_torque())
-	get_tree().root.add_child(box)
+	
+	# Register the box in the quest manager so it's able to listen for events
+	_quest_manager.register_in_game_box(box)
 	
 func get_rand_torque() -> Vector3:
 	return Vector3(
