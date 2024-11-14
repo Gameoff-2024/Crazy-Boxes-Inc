@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Quest" load_steps=9 format=3 uid="uid://csf1olgomr4wh"]
+
+[ext_resource type="Script" path="res://scripts/resources/element.gd" id="1_yew26"]
+[ext_resource type="Texture2D" uid="uid://bbkvjscrapdhk" path="res://assets/img/flower1.png" id="2_gnx41"]
+[ext_resource type="Texture2D" uid="uid://cw8cw2q7s1uhw" path="res://assets/img/flower2.png" id="3_hx7gr"]
+[ext_resource type="Script" path="res://scripts/resources/quest.gd" id="4_6ytqs"]
+
+[sub_resource type="Resource" id="Resource_f1fth"]
+script = ExtResource("1_yew26")
+textLabel = "I Love Flowers!"
+decal1 = ExtResource("2_gnx41")
+decal2 = ExtResource("3_hx7gr")
+side = 0
+
+[sub_resource type="Resource" id="Resource_wxbk3"]
+script = ExtResource("1_yew26")
+textLabel = ""
+decal1 = ExtResource("3_hx7gr")
+decal2 = ExtResource("2_gnx41")
+side = 1
+
+[sub_resource type="Resource" id="Resource_g6rxw"]
+script = ExtResource("1_yew26")
+textLabel = ""
+decal2 = ExtResource("2_gnx41")
+side = 2
+
+[sub_resource type="Resource" id="Resource_xgqp5"]
+script = ExtResource("1_yew26")
+textLabel = ""
+decal1 = ExtResource("2_gnx41")
+side = 3
+
+[resource]
+script = ExtResource("4_6ytqs")
+id = 1
+color = Color(1, 1, 1, 0)
+elements = Array[ExtResource("1_yew26")]([SubResource("Resource_f1fth"), SubResource("Resource_wxbk3"), SubResource("Resource_g6rxw"), SubResource("Resource_xgqp5")])

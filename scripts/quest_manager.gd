@@ -107,8 +107,8 @@ func set_quest(quest: Quest):
 
 func _on_main_new_quest() -> void:
 	active_quest = quest_loader.choose_random_quest()
-	
-	set_quest(active_quest)
+	if active_quest:
+		set_quest(active_quest)
 	
 	
 func register_in_game_box(box: Box):
@@ -117,5 +117,7 @@ func register_in_game_box(box: Box):
 
 func _on_box_quest_object_touched(box: Box, quest_id: int):
 	if quest_id == active_quest.id:
-		print("quest completa")
 		box.queue_free()
+		active_quest = quest_loader.choose_random_quest()
+		if active_quest:
+			set_quest(active_quest)

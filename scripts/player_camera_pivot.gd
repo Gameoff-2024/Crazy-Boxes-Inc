@@ -23,7 +23,6 @@ func _process(delta: float):
 			rotate(Vector3.RIGHT, deg_to_rad(current_mouse_relative.y * rotation_sens))
 			rotation_degrees.x = clamp(rotation_degrees.x, -25, +25)
 			rotation_degrees.z = clamp(rotation_degrees.z, -25, +25)
-			print(rotation_degrees)
 			current_lock_rotation = global_rotation
 		else:
 			global_rotation = current_lock_rotation

@@ -2,9 +2,17 @@ class_name QuestLoader
 
 @export var quest_path = "res://scripts/resources/quests/"
 
-func choose_random_quest() -> Quest:
-	var quests_list = DirAccess.get_files_at(quest_path)
-	
-	var quest_index = RandomUtil.get_random_number(quests_list.size())
+var quests_list: Array
 
-	return load(quest_path + quests_list[quest_index])
+func _init():
+	quests_list = Array(DirAccess.get_files_at(quest_path))
+	quests_list.shuffle()
+	
+
+func choose_random_quest() -> Quest:
+	if quests_list.is_empty():
+		print("WIN")
+		return null
+		
+	return load(quest_path + quests_list.pop_back())
+	

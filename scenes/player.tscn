@@ -75,11 +75,10 @@ shape = SubResource("BoxShape3D_6lefp")
 
 [node name="wheel-front-left" type="VehicleWheel3D" parent="VehicleBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.308, 0.434559)
-use_as_traction = true
 use_as_steering = true
 wheel_roll_influence = 0.4
 wheel_radius = 0.15
-wheel_friction_slip = 1.0
+wheel_friction_slip = 2.0
 suspension_travel = 2.0
 suspension_stiffness = 40.0
 damping_compression = 0.88
@@ -89,11 +88,10 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 
 [node name="wheel-front-right" type="VehicleWheel3D" parent="VehicleBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.308, 0.435)
-use_as_traction = true
 use_as_steering = true
 wheel_roll_influence = 0.4
 wheel_radius = 0.15
-wheel_friction_slip = 1.0
+wheel_friction_slip = 2.0
 suspension_travel = 2.0
 suspension_stiffness = 40.0
 damping_compression = 0.88
@@ -106,7 +104,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.308, -0.325034)
 use_as_traction = true
 wheel_roll_influence = 0.4
 wheel_radius = 0.15
-wheel_friction_slip = 1.0
+wheel_friction_slip = 2.0
 suspension_travel = 2.0
 suspension_stiffness = 40.0
 damping_compression = 0.88
@@ -119,7 +117,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.308, -0.325)
 use_as_traction = true
 wheel_roll_influence = 0.4
 wheel_radius = 0.15
-wheel_friction_slip = 1.0
+wheel_friction_slip = 2.0
 suspension_travel = 2.0
 suspension_stiffness = 40.0
 damping_compression = 0.88
