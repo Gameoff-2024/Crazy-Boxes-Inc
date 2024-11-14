@@ -61,7 +61,7 @@ transform = Transform3D(0.35, 0, 0, 0, 0.35, 0, 0, 0, 0.35, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_wsx4r")
 
 [node name="LifetimeTimer" type="Timer" parent="."]
-wait_time = 30.0
+wait_time = 8.0
 one_shot = true
 autostart = true
 

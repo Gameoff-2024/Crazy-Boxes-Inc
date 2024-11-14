@@ -1,5 +1,7 @@
 extends Node3D
 
+class_name QuestManager
+
 @export var rotation_sensibility := 1
 @export var panning_sensibility := .1
 @export var zoom_sensibility := .1
@@ -106,3 +108,8 @@ func _on_main_new_quest() -> void:
 	
 	set_quest(quest)
 	
+func register_in_game_box(box: Box):
+	box.box_quest_object_touched.connect(_on_box_quest_object_touched)
+
+func _on_box_quest_object_touched(box: Box, quest_id: int):
+	print("Quest ID " + str(quest_id))

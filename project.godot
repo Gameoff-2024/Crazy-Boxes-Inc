@@ -27,6 +27,7 @@ Random="*res://scripts/utils/random.gd"
 
 camera=""
 player=""
+quest_manager=""
 
 [input]
 

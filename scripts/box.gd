@@ -2,7 +2,7 @@ extends RigidBody3D
 
 class_name Box
 
-signal box_quest_object_collided(box: Box)
+signal box_quest_object_touched(box: Box, quest_id: int)
 
 func _ready():
 	contact_monitor = true
@@ -17,5 +17,8 @@ func _on_lifetime_timer_timeout():
 	queue_free()
 
 func _on_body_entered(body: Node) -> void:
-	box_quest_object_collided.emit(self)
+	var quest_id = body.owner.get_meta("quest_id", -1)
+	
+	if quest_id >= 0:
+		box_quest_object_touched.emit(self, quest_id)
  
