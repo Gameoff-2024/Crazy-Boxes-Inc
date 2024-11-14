@@ -20,7 +20,7 @@ var starting_rotation := Vector3.ZERO
 var starting_position := Vector3.ZERO
 
 var min_zoom = -1
-var max_zoom = .3
+var max_zoom = 0
 
 var quest_loader = QuestLoader.new()
 
@@ -37,17 +37,17 @@ func _process(delta: float):
 		
 	if rotating:
 		if current_mouse_relative:
-			package_pivot.rotate(Vector3.FORWARD, deg_to_rad(current_mouse_relative.normalized().y * rotation_sensibility))
-			package_pivot.rotate(Vector3.RIGHT, deg_to_rad(current_mouse_relative.normalized().x * rotation_sensibility))
+			package_pivot.rotate(Vector3.FORWARD, deg_to_rad(current_mouse_relative.normalized().x * rotation_sensibility))
+			package_pivot.rotate(Vector3.RIGHT, deg_to_rad(current_mouse_relative.normalized().y * rotation_sensibility))
 
 	if zooming:
 		if current_mouse_relative:
-			package_pivot.position.y = clamp(package_pivot.position.y + current_mouse_zoom_relative.y, min_zoom, max_zoom)
+			package_pivot.position.z = clamp(package_pivot.position.z + current_mouse_zoom_relative.y, min_zoom, max_zoom)
 		
 	if panning:
 		if current_mouse_relative:
-			package_pivot.position.z = package_pivot.position.z - (current_mouse_relative.normalized().x * panning_sensibility)
-			package_pivot.position.x = package_pivot.position.x + (current_mouse_relative.normalized().y * panning_sensibility)
+			package_pivot.position.y = package_pivot.position.y - (current_mouse_relative.normalized().y * panning_sensibility)
+			package_pivot.position.x = package_pivot.position.x + (current_mouse_relative.normalized().x * panning_sensibility)
 		
 	if current_mouse_relative:
 		current_mouse_relative = Vector2.ZERO
@@ -74,9 +74,9 @@ func _input(event: InputEvent):
 				panning = false
 				
 		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
-			package_pivot.position.y = clamp(package_pivot.position.y + zoom_sensibility, min_zoom, max_zoom)
+			package_pivot.position.z = clamp(package_pivot.position.z + zoom_sensibility, min_zoom, max_zoom)
 		if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
-			package_pivot.position.y = clamp(package_pivot.position.y - zoom_sensibility, min_zoom, max_zoom)
+			package_pivot.position.z = clamp(package_pivot.position.z - zoom_sensibility, min_zoom, max_zoom)
 			
 	if event is InputEventMouseMotion:
 		current_mouse_relative = event.relative

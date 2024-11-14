@@ -1,10 +1,17 @@
-[gd_resource type="Resource" script_class="Quest" load_steps=3 format=3 uid="uid://b5hlbkhpjomau"]
+[gd_resource type="Resource" script_class="Quest" load_steps=5 format=3 uid="uid://b5hlbkhpjomau"]
 
 [ext_resource type="Script" path="res://scripts/resources/element.gd" id="1_r1i77"]
+[ext_resource type="Texture2D" uid="uid://dstm71fwxpd0b" path="res://assets/img/example.png" id="2_ch6wc"]
 [ext_resource type="Script" path="res://scripts/resources/quest.gd" id="4_xgm4s"]
+
+[sub_resource type="Resource" id="Resource_x8ifo"]
+script = ExtResource("1_r1i77")
+textLabel = ""
+picture = ExtResource("2_ch6wc")
+side = 0
 
 [resource]
 script = ExtResource("4_xgm4s")
 id = 2
 color = Color(0, 0, 0, 1)
-elements = Array[ExtResource("1_r1i77")]([])
+elements = Array[ExtResource("1_r1i77")]([SubResource("Resource_x8ifo")])

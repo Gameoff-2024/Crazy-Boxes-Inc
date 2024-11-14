@@ -20,7 +20,7 @@ func set_quest(quest: Quest) -> void:
 			pic.show()
 			var material = pic.get_surface_override_material(0)
 			if material is StandardMaterial3D:
-				material.albedo_texture = null
+				material.albedo_texture = element.picture
 		else:
 			pic.hide()
 			var material = pic.get_surface_override_material(0)
