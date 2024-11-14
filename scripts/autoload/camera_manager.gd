@@ -18,6 +18,8 @@ func _process(delta: float) -> void:
 		if (player_camera.current):
 			%QuestManager.active()
 			quest_camera.make_current()
+			player_camera.get_parent().active = false
 		else:
 			player_camera.make_current()
+			player_camera.get_parent().active = true
 			%QuestManager.inactive()

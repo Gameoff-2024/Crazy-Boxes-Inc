@@ -16,14 +16,15 @@ var active := true
 func _process(delta: float):
 	if not active:
 		return
-	# Handle rotation state
+
 	if rotating:
-		# Mouse movement
 		if current_mouse_relative:
 			rotate(Vector3.DOWN, deg_to_rad(current_mouse_relative.x * rotation_sens))
 			rotate(Vector3.RIGHT, deg_to_rad(current_mouse_relative.y * rotation_sens))
+			rotation_degrees.x = clamp(rotation_degrees.x, -25, +25)
+			rotation_degrees.z = clamp(rotation_degrees.z, -25, +25)
+			print(rotation_degrees)
 			current_lock_rotation = global_rotation
-		# Frozen camera position
 		else:
 			global_rotation = current_lock_rotation
 			

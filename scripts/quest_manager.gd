@@ -24,6 +24,8 @@ var max_zoom = .3
 
 var quest_loader = QuestLoader.new()
 
+var active_quest: Quest
+
 func _ready() -> void:
 	starting_rotation = package_pivot.rotation
 	starting_position = package_pivot.position
@@ -104,12 +106,16 @@ func set_quest(quest: Quest):
 
 
 func _on_main_new_quest() -> void:
-	var quest: Quest = quest_loader.choose_random_quest()
+	active_quest = quest_loader.choose_random_quest()
 	
-	set_quest(quest)
+	set_quest(active_quest)
+	
 	
 func register_in_game_box(box: Box):
 	box.box_quest_object_touched.connect(_on_box_quest_object_touched)
 
+
 func _on_box_quest_object_touched(box: Box, quest_id: int):
-	print("Quest ID " + str(quest_id))
+	if quest_id == active_quest.id:
+		print("quest completa")
+		box.queue_free()

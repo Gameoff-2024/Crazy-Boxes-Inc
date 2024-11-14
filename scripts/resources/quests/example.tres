@@ -39,6 +39,6 @@ side = 3
 
 [resource]
 script = ExtResource("4_nq58f")
-id = 0
+id = 1
 color = Color(0, 0, 0, 1)
 elements = Array[ExtResource("1_kmpsk")]([SubResource("Resource_f1fth"), SubResource("Resource_wxbk3"), SubResource("Resource_g6rxw"), SubResource("Resource_xgqp5")])
