@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://cc0mnuut83j1b"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h1xhx"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_vufxf"]
+material = SubResource("StandardMaterial3D_h1xhx")
+
+[node name="PedestrianCrossings" type="Node3D"]
+
+[node name="Cross1" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.193, 0, 0, 0, 1, 0, 0, 0, 1.12618, 0.0637655, 0, 0.0606489)
+mesh = SubResource("PlaneMesh_vufxf")
+skeleton = NodePath("../..")
+
+[node name="Cross2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.193, 0, 0, 0, 1, 0, 0, 0, 1.12618, -0.577306, 0, 0.0606489)
+mesh = SubResource("PlaneMesh_vufxf")
+skeleton = NodePath("../..")
+
+[node name="Cross3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.193, 0, 0, 0, 1, 0, 0, 0, 1.12618, -1.2061, 0, 0.0606489)
+mesh = SubResource("PlaneMesh_vufxf")
+skeleton = NodePath("../..")
+
+[node name="Cross4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.193, 0, 0, 0, 1, 0, 0, 0, 1.12618, -1.87188, 0, 0.0606489)
+mesh = SubResource("PlaneMesh_vufxf")
+skeleton = NodePath("../..")
+
+[node name="Cross5" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.193, 0, 0, 0, 1, 0, 0, 0, 1.12618, -2.53525, 0, 0.0606489)
+mesh = SubResource("PlaneMesh_vufxf")
+skeleton = NodePath("../..")
+
+[node name="Cross6" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.193, 0, 0, 0, 1, 0, 0, 0, 1.12618, -3.14193, 0, 0.0606489)
+mesh = SubResource("PlaneMesh_vufxf")
+skeleton = NodePath("../..")
+
+[node name="Cross7" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.193, 0, 0, 0, 1, 0, 0, 0, 1.12618, -3.7637, 0, 0.0606489)
+mesh = SubResource("PlaneMesh_vufxf")
+skeleton = NodePath("../..")

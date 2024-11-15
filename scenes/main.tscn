@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=4 uid="uid://b22yg8qvukk2b"]
+[gd_scene load_steps=73 format=4 uid="uid://b22yg8qvukk2b"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_rlfhc"]
 [ext_resource type="PackedScene" uid="uid://bksnos26h6fga" path="res://scenes/floor.tscn" id="1_ryhdv"]
@@ -47,6 +47,7 @@
 [ext_resource type="PackedScene" uid="uid://c04t03a6ykrqm" path="res://assets/models/commercials/skyscraperB.glb" id="27_f6ymq"]
 [ext_resource type="Script" path="res://scripts/autoload/camera_manager.gd" id="35_cwjvg"]
 [ext_resource type="PackedScene" uid="uid://ctdxyrsdbpayx" path="res://scenes/ui/ui.tscn" id="47_fpkxg"]
+[ext_resource type="PackedScene" uid="uid://cc0mnuut83j1b" path="res://scenes/pedestrian_crossings.tscn" id="48_lpu7p"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_slcvf"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -1424,6 +1425,27 @@ transform = Transform3D(0.999985, 0, -0.00556757, 0, 1, 0, 0.00556757, 0, 0.9999
 
 [node name="HedgeStraight2" parent="WorldMap/Decorations" instance=ExtResource("25_bjvj2")]
 transform = Transform3D(0.999985, 0, -0.00556757, 0, 1, 0, 0.00556757, 0, 0.999985, 3.64232, 0.0355873, -4.03593)
+
+[node name="PedestrianCrossings" parent="WorldMap/Decorations" instance=ExtResource("48_lpu7p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8452, 0.0555873, -8.0875)
+
+[node name="PedestrianCrossings2" parent="WorldMap/Decorations" instance=ExtResource("48_lpu7p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8452, 0.0555873, 6.72374)
+
+[node name="PedestrianCrossings3" parent="WorldMap/Decorations" instance=ExtResource("48_lpu7p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.7693, 0.0555873, -25.1882)
+
+[node name="PedestrianCrossings4" parent="WorldMap/Decorations" instance=ExtResource("48_lpu7p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.7693, 0.0555873, 11.0125)
+
+[node name="PedestrianCrossings5" parent="WorldMap/Decorations" instance=ExtResource("48_lpu7p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78.9068, 0.0555873, -5.64451)
+
+[node name="PedestrianCrossings6" parent="WorldMap/Decorations" instance=ExtResource("48_lpu7p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78.9068, 0.0555873, 16.0754)
+
+[node name="PedestrianCrossings7" parent="WorldMap/Decorations" instance=ExtResource("48_lpu7p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111.914, 0.0555873, 16.0754)
 
 [node name="UI" parent="." instance=ExtResource("47_fpkxg")]
 
