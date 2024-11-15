@@ -60,14 +60,14 @@ func _input(event: InputEvent):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_RIGHT:
 			if !rotating and event.pressed:
-				Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+				Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 				rotating = true
 			else:
 				Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 				rotating = false
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			if !panning and event.pressed:
-				Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+				Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 				panning = true
 			else:
 				Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
