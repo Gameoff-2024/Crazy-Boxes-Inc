@@ -131,6 +131,7 @@ script = ExtResource("2_fvrfc")
 
 [node name="Camera3D" type="Camera3D" parent="VehicleBody3D/CameraPivot" groups=["camera"]]
 transform = Transform3D(-2, 0, -1.74846e-07, -3.53579e-08, 1.95868, 0.404447, 1.71234e-07, 0.404447, -1.95868, 0, 1.24562, -3.03982)
+cull_mask = 1047553
 script = ExtResource("5_dbhll")
 
 [node name="Shooter" type="Node3D" parent="VehicleBody3D"]

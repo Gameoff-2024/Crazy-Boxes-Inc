@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=4 uid="uid://b22yg8qvukk2b"]
+[gd_scene load_steps=72 format=4 uid="uid://b22yg8qvukk2b"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_rlfhc"]
 [ext_resource type="PackedScene" uid="uid://bksnos26h6fga" path="res://scenes/floor.tscn" id="1_ryhdv"]
@@ -46,6 +46,7 @@
 [ext_resource type="PackedScene" uid="uid://cb0pbk7giwkj" path="res://assets/models/roads/road_end.glb" id="26_n4dsu"]
 [ext_resource type="PackedScene" uid="uid://c04t03a6ykrqm" path="res://assets/models/commercials/skyscraperB.glb" id="27_f6ymq"]
 [ext_resource type="Script" path="res://scripts/autoload/camera_manager.gd" id="35_cwjvg"]
+[ext_resource type="PackedScene" uid="uid://ctdxyrsdbpayx" path="res://scenes/ui/ui.tscn" id="47_fpkxg"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_slcvf"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -210,7 +211,6 @@ data = PackedVector3Array(-0.476, 0.67, 0.38, -0.716, 0.67, 0.38, -0.716, 0.67, 
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tu26k"]
 resource_name = "tiny_treats_1"
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("24_i3b4j")
 metallic = 0.4
 
@@ -1424,5 +1424,7 @@ transform = Transform3D(0.999985, 0, -0.00556757, 0, 1, 0, 0.00556757, 0, 0.9999
 
 [node name="HedgeStraight2" parent="WorldMap/Decorations" instance=ExtResource("25_bjvj2")]
 transform = Transform3D(0.999985, 0, -0.00556757, 0, 1, 0, 0.00556757, 0, 0.999985, 3.64232, 0.0355873, -4.03593)
+
+[node name="UI" parent="." instance=ExtResource("47_fpkxg")]
 
 [connection signal="new_quest" from="." to="QuestManager" method="_on_main_new_quest"]
