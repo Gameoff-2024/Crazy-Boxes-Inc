@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://gm1lay4g8w6j"
-path="res://.godot/imported/flower_yellowA.glb-f8ab450924a3cd5648e8fd4cee729585.scn"
+uid="uid://cd403cy6g4r6y"
+path="res://.godot/imported/flower_yellowB.glb-935450d9ab50f6177772b769ef8a4bf4.scn"
 
 [deps]
 
-source_file="res://assets/models/flowers/flower_yellowA.glb"
-dest_files=["res://.godot/imported/flower_yellowA.glb-f8ab450924a3cd5648e8fd4cee729585.scn"]
+source_file="res://assets/models/props/flower_yellowB.glb"
+dest_files=["res://.godot/imported/flower_yellowB.glb-935450d9ab50f6177772b769ef8a4bf4.scn"]
 
 [params]
 
