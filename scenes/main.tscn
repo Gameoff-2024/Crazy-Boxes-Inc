@@ -44,6 +44,7 @@
 [ext_resource type="PackedScene" uid="uid://cxgvrtmyrm5la" path="res://assets/models/commercials/small_buildingD.glb" id="25_n1mv8"]
 [ext_resource type="PackedScene" uid="uid://2ubwlg5g07qb" path="res://assets/models/commercials/small_buildingC.glb" id="26_c8iad"]
 [ext_resource type="Texture2D" uid="uid://dwimo3cch5lyd" path="res://assets/models/props/Basket ball and hoop_untitled.png" id="26_dsnm8"]
+[ext_resource type="PackedScene" uid="uid://ce3hr3feokjlu" path="res://scenes/christmas_house_3.tscn" id="26_dm7vx"]
 [ext_resource type="PackedScene" uid="uid://cb0pbk7giwkj" path="res://assets/models/roads/road_end.glb" id="26_n4dsu"]
 [ext_resource type="PackedScene" uid="uid://c04t03a6ykrqm" path="res://assets/models/commercials/skyscraperB.glb" id="27_f6ymq"]
 [ext_resource type="PackedScene" uid="uid://xwc33yjftiwa" path="res://assets/models/skate/bowl-corner-inner.glb" id="30_yxrji"]
@@ -4271,6 +4272,9 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 8.0026
 [node name="half-pipe11" parent="WorldMap/Houses/SkateHouseId6/Skate" instance=ExtResource("34_jpw5j")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 8.00267, -0.0144127, -9.51293)
 
+[node name="ChristmasHouse3" parent="WorldMap/Houses" instance=ExtResource("26_dm7vx")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 60.1165, -1.90735e-06, -26.2059)
+
 [node name="House1" type="Node3D" parent="WorldMap/Houses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
 
@@ -4392,10 +4396,6 @@ transform = Transform3D(0.999919, 0, 0.0127406, 0, 1, 0, -0.0127406, 0, 0.999919
 
 [node name="path_long2" parent="WorldMap/Houses/LongSquareHouse3" instance=ExtResource("4_12121")]
 transform = Transform3D(0.99992, 0, 0.0127406, 0, 1, 0, -0.0127406, 0, 0.99992, -2.192, 0, 3.117)
-
-[node name="HouseWithFireplace" parent="WorldMap/Houses" instance=ExtResource("20_liun1")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 60, 0, -26.1)
-metadata/quest_id = 0
 
 [node name="small_buildingE2" parent="WorldMap/Houses" instance=ExtResource("23_sc8vv")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 91.1726, 0, 7.39643)
