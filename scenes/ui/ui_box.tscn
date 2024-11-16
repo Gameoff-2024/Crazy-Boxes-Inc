@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=4 uid="uid://bml4xghk1tgxm"]
+
+[ext_resource type="Texture2D" uid="uid://bbpi23bgbmxav" path="res://assets/models/boxes/Textures/colormap.png" id="1_115pq"]
+[ext_resource type="Script" path="res://scripts/ui_box.gd" id="1_pcw6j"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yc873"]
+resource_name = "colormap"
+cull_mode = 2
+albedo_texture = ExtResource("1_115pq")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_jfohu"]
+_surfaces = [{
+"aabb": AABB(-0.25, 0, -0.25, 0.5, 0.5, 0.5),
+"format": 34896613377,
+"index_count": 84,
+"index_data": PackedByteArray("AgAAAAEAAQADAAIAAgADAAQABAAFAAIACAAGAAcACQAIAAcACQAHAAoAAQAJAAoAAQAKAAQABAADAAEACwAJAAEAAQAAAAsADAAGAAgACAANAAwADAANAAsADgAMAAsADwAOAAsADwALAAAAAAACAA8ABQAPAAIACAAJAAsACwANAAgADgAPAAUABQAMAA4ABQAEAAYABgAMAAUABgAEAAoACgAHAAYA"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAAAA//8AAAAA/////wAAAAD//////18AAAAA////XwAA//////+fAAD///9//58AAP///////wAA//8AAP//AAD///9//18AAAAAAAD//wAAAAD///+fAAAAAP////8AAAAA/3//nwAAAAD/f/9fAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ro7ti"]
+resource_name = "box-small_box-small"
+_surfaces = [{
+"aabb": AABB(-0.25, 0, -0.25, 0.5, 0.5, 0.5),
+"attribute_data": PackedByteArray("/5eY+f+XmPn/l2XG/5dlxv+XZcb/l2XG/5dlxv+XZcb/l2XG/5f/3/+XZcb/l5j5/5f/3/+XmPn/l2XG/5dlxv+XmPn/l5j5/5eY+f+XmPn/l2XG/5dlxv+XZcb/l2XG/5dlxv+XmPn/l2XG/5f/3/+X/9//l5j5/5dlxv+XZcb/l5j5/5eY+f+XZcb/l2XG/9eY+f/XZcb/15j5/9dlxv/XZcb/12XG/9dlxv/XZcb/12XG/9eY+f/XZcb/15j5"),
+"format": 34896613399,
+"index_count": 84,
+"index_data": PackedByteArray("AgAAAAEAAQADAAIABgAEAAUABQAHAAYACgAIAAkACwAKAAkACwAJAAwADQALAAwADQAMAA4ADgAPAA0AEgAQABEAEQATABIAFgAUABUAFQAXABYAGgAYABkAGwAaABkAHAAbABkAHAAZAB0AHQAeABwAHwAcAB4AIgAgACEAIQAjACIAJgAkACUAJQAnACYAKgAoACkAKQArACoALgAsAC0ALQAvAC4A"),
+"material": SubResource("StandardMaterial3D_yc873"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 48,
+"vertex_data": PackedByteArray("AAAAAAAA/////wAAAAD//wAA//8AAP///////wAA////////AAD/////////X///AAD//wAA//8AAP///1//////////n/+/////f/+f/7//////////v///AAD///+/////f/9f/7///wAAAAD/v///////X/+//////wAA/7///wAA////v///AAAAAP+/AAAAAP///78AAAAAAAD/v///////n/////////////8AAP///5///wAA////////AAD//////78AAAAA////vwAA////n/+/AAD/f/+f/78AAP9//1//vwAAAAAAAP+/AAD//wAA/78AAP///1//v///AAD//wCAAAAAAP//AID///////8AgAAA/////wCAAAD/f/9f/78AAP///1//vwAA/3//n/+/AAD///+f/7///////1//////////n///AAD///9f//8AAP///5//////////X/+/////f/9f/7///////5//v////3//n/+//3////9/////f////3////9//7//f/+//3//v/9//7//fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAAAA/38AAP9/AAD/fwAA/3//f/+//3//v/9//7//f/+//3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9//7//f/+//3//v/9//7//fwAA/38AAP9/AAD/fwAA")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_jfohu")
+
+[sub_resource type="Environment" id="Environment_kucqk"]
+background_color = Color(0, 0, 0, 0)
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+
+[node name="UIBox" type="Node3D"]
+script = ExtResource("1_pcw6j")
+
+[node name="box-small" type="MeshInstance3D" parent="."]
+layers = 2
+mesh = SubResource("ArrayMesh_ro7ti")
+skeleton = NodePath("")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.707107, -0.5, 0.5, 0, 0.707107, 0.707107, -0.707107, -0.5, 0.5, 0.450002, 0.857383, 0.384612)
+cull_mask = 1047554
+environment = SubResource("Environment_kucqk")

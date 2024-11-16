@@ -117,6 +117,7 @@ func register_in_game_box(box: Box):
 
 func _on_box_quest_object_touched(box: Box, quest_id: int):
 	if quest_id == active_quest.id:
+		GameState.score_add_one()
 		box.queue_free()
 		active_quest = quest_loader.choose_random_quest()
 		if active_quest:
