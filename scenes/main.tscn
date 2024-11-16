@@ -29,7 +29,6 @@
 [ext_resource type="PackedScene" uid="uid://2xa4exvcfgq8" path="res://assets/models/flowers/flower_purpleC.glb" id="18_wkxue"]
 [ext_resource type="PackedScene" uid="uid://c21d4jbrhynpd" path="res://assets/models/flowers/flower_redC.glb" id="19_4o5bj"]
 [ext_resource type="PackedScene" uid="uid://cs366k3u70bsv" path="res://assets/models/houses/LongSquareHouse.glb" id="19_ny0qy"]
-[ext_resource type="PackedScene" uid="uid://vtl7gnbgeuqj" path="res://assets/models/houses/HouseWithFireplace.glb" id="20_liun1"]
 [ext_resource type="PackedScene" uid="uid://gm1lay4g8w6j" path="res://assets/models/flowers/flower_yellowA.glb" id="20_ncx6u"]
 [ext_resource type="PackedScene" uid="uid://cd403cy6g4r6y" path="res://assets/models/flowers/flower_yellowB.glb" id="21_w5nc3"]
 [ext_resource type="PackedScene" uid="uid://c11pjeitwxoxn" path="res://assets/models/flowers/flower_redB.glb" id="22_kqfk0"]
@@ -43,6 +42,7 @@
 [ext_resource type="PackedScene" uid="uid://dukqrxipgd82j" path="res://assets/models/bushes/Hedge Straight.glb" id="25_bjvj2"]
 [ext_resource type="PackedScene" uid="uid://cxgvrtmyrm5la" path="res://assets/models/commercials/small_buildingD.glb" id="25_n1mv8"]
 [ext_resource type="PackedScene" uid="uid://2ubwlg5g07qb" path="res://assets/models/commercials/small_buildingC.glb" id="26_c8iad"]
+[ext_resource type="PackedScene" uid="uid://ce3hr3feokjlu" path="res://scenes/christmas_house_3.tscn" id="26_dm7vx"]
 [ext_resource type="PackedScene" uid="uid://cb0pbk7giwkj" path="res://assets/models/roads/road_end.glb" id="26_n4dsu"]
 [ext_resource type="PackedScene" uid="uid://c04t03a6ykrqm" path="res://assets/models/commercials/skyscraperB.glb" id="27_f6ymq"]
 [ext_resource type="Script" path="res://scripts/autoload/camera_manager.gd" id="35_cwjvg"]
@@ -1101,6 +1101,9 @@ metadata/quest_id = 2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="WorldMap/Houses/BlackHouseId2/house_type213/tmpParent/house_type21/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_ggqvw")
 
+[node name="ChristmasHouse3" parent="WorldMap/Houses" instance=ExtResource("26_dm7vx")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 60.1165, -1.90735e-06, -26.2059)
+
 [node name="House1" type="Node3D" parent="WorldMap/Houses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
 
@@ -1241,10 +1244,6 @@ transform = Transform3D(0.999919, 0, 0.0127406, 0, 1, 0, -0.0127406, 0, 0.999919
 
 [node name="path_long2" parent="WorldMap/Houses/LongSquareHouse3" instance=ExtResource("4_12121")]
 transform = Transform3D(0.99992, 0, 0.0127406, 0, 1, 0, -0.0127406, 0, 0.99992, -2.192, 0, 3.117)
-
-[node name="HouseWithFireplace" parent="WorldMap/Houses" instance=ExtResource("20_liun1")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 60, 0, -26.1)
-metadata/quest_id = 0
 
 [node name="small_buildingE2" parent="WorldMap/Houses" instance=ExtResource("23_sc8vv")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 91.1726, 0, 7.39643)
