@@ -16,3 +16,8 @@ func choose_random_quest() -> Quest:
 		
 	return load(quest_path + quests_list.pop_back())
 	
+	
+func choose_quest(index: int) -> Quest:
+	quests_list = Array(DirAccess.get_files_at(quest_path))
+	return load(quest_path + quests_list[index])
+	

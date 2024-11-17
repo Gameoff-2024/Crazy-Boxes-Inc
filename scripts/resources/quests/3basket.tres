@@ -1,13 +1,14 @@
 [gd_resource type="Resource" script_class="Quest" load_steps=5 format=3 uid="uid://b3fqv6ou6rtlh"]
 
 [ext_resource type="Script" path="res://scripts/resources/element.gd" id="1_f7u88"]
-[ext_resource type="Texture2D" uid="uid://dstm71fwxpd0b" path="res://assets/img/example.png" id="2_u2c11"]
+[ext_resource type="Texture2D" uid="uid://dotw24rjywxfr" path="res://assets/img/basket.jpg" id="2_nqp2e"]
 [ext_resource type="Script" path="res://scripts/resources/quest.gd" id="3_10xf7"]
 
 [sub_resource type="Resource" id="Resource_x8ifo"]
 script = ExtResource("1_f7u88")
-textLabel = ""
-picture = ExtResource("2_u2c11")
+textLabel = "To my greatest 
+fan!"
+picture = ExtResource("2_nqp2e")
 side = 0
 
 [resource]

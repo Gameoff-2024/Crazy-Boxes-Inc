@@ -51,6 +51,7 @@ shadow_mesh = SubResource("ArrayMesh_20asl")
 
 [node name="QuestManager" type="Node3D"]
 script = ExtResource("1_rwak3")
+active_quest_id = 2
 
 [node name="QuestCamera" type="Camera3D" parent="." groups=["camera"]]
 unique_name_in_owner = true
@@ -76,15 +77,13 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.0208272)
 
 [node name="Picture" type="MeshInstance3D" parent="QuestDisplayer/PackagePivot/Package/Top"]
-transform = Transform3D(-0.17293, -0.148022, -3.19788e-08, -2.20648e-16, -8.84407e-09, 1, -0.185573, 0.137936, 2.98e-08, -0.152068, 0.00564522, 0.430644)
-visible = false
+transform = Transform3D(-0.158052, -0.158252, -3.19788e-08, 8.5797e-10, -8.81755e-09, 1, -0.198398, 0.126068, 2.98e-08, -0.214206, 0.00564522, 0.486042)
 mesh = SubResource("QuadMesh_ylp1p")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_28oew")
 
 [node name="TextLabel" type="Label3D" parent="QuestDisplayer/PackagePivot/Package/Top"]
 transform = Transform3D(0.00777704, -0.0934463, 2.54641e-06, -2.14051e-05, 7.73593e-07, 0.0937694, -0.0934463, -0.00777704, -2.12672e-05, 0.0133832, 0.0022338, 0.00987531)
-visible = false
 double_sided = false
 text = "Lorem ipsum
 sdasda
