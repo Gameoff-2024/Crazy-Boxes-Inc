@@ -183,15 +183,13 @@ lower_fade = 0.0
 transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 0.00145055, 0)
 
 [node name="Picture" type="MeshInstance3D" parent="QuestDisplayer/PackagePivot/Package/Bottom"]
-transform = Transform3D(-0.18962, -0.134389, 1.53426e-07, 6.38159e-08, -1.05534e-08, 1, -0.168482, 0.15125, 2.0606e-07, -0.144192, 0.00916934, 0.359749)
-visible = false
+transform = Transform3D(-0.18962, -0.134389, 1.53426e-07, 6.38159e-08, -1.05534e-08, 1, -0.168482, 0.15125, 2.0606e-07, -0.178267, 0.00916934, 0.398099)
 mesh = SubResource("QuadMesh_ylp1p")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_28oew")
 
 [node name="TextLabel" type="Label3D" parent="QuestDisplayer/PackagePivot/Package/Bottom"]
-transform = Transform3D(0.00777704, -0.0934463, 2.54641e-06, -2.14051e-05, 7.73593e-07, 0.0937694, -0.0934463, -0.00777704, -2.12672e-05, 0.0259509, 0.00592664, -0.100742)
-visible = false
+transform = Transform3D(0.00777704, -0.0934463, 2.54641e-06, -2.14051e-05, 7.73593e-07, 0.0937694, -0.0934463, -0.00777704, -2.12672e-05, 0.0108736, 0.00592664, -0.0468947)
 double_sided = false
 text = "Lorem ipsum
 sdasda
@@ -202,14 +200,14 @@ outline_size = 100
 line_spacing = -100.0
 
 [node name="Decal1" type="Decal" parent="QuestDisplayer/PackagePivot/Package/Bottom"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.120782, 0.0281981, 0.369614)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.129398, 0.0281981, 0.380383)
 visible = false
 size = Vector3(0.25, 0.1, 0.25)
 upper_fade = 0.0
 lower_fade = 0.0
 
 [node name="Decal2" type="Decal" parent="QuestDisplayer/PackagePivot/Package/Bottom"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.114824, 0.028198, -0.36454)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.119132, 0.028198, -0.372079)
 visible = false
 size = Vector3(0.25, 0.1, 0.25)
 upper_fade = 0.0
