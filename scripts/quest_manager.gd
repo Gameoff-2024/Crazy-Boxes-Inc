@@ -26,10 +26,19 @@ var quest_loader = QuestLoader.new()
 
 var active_quest: Quest
 
+@export var active_quest_id : int = -1
+
 func _ready() -> void:
 	starting_rotation = package_pivot.rotation
 	starting_position = package_pivot.position
 	inactive()
+	
+	# To debug a specific quest. Works only in debug builds or when run in the editor!
+	if OS.is_debug_build() and active_quest_id >= 0:
+		var quest: Quest = quest_loader.choose_quest(active_quest_id)
+		set_quest(quest)
+		active()
+		
 
 func _process(delta: float):
 	if !quest_displayer.visible:
