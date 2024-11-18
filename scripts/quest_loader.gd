@@ -1,6 +1,6 @@
 class_name QuestLoader
 
-@export var quest_path = "res://scripts/resources/quests/"
+@export var quest_path = "res://resources/quests/"
 
 var quests_list: Array
 
