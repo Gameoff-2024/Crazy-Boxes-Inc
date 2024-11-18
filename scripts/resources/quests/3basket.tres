@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Quest" load_steps=5 format=3 uid="uid://b3fqv6ou6rtlh"]
+
+[ext_resource type="Script" path="res://scripts/resources/element.gd" id="1_f7u88"]
+[ext_resource type="Texture2D" uid="uid://dotw24rjywxfr" path="res://assets/img/basket.jpg" id="2_nqp2e"]
+[ext_resource type="Script" path="res://scripts/resources/quest.gd" id="3_10xf7"]
+
+[sub_resource type="Resource" id="Resource_x8ifo"]
+script = ExtResource("1_f7u88")
+textLabel = "To my greatest 
+fan!"
+picture = ExtResource("2_nqp2e")
+side = 0
+
+[resource]
+script = ExtResource("3_10xf7")
+id = 3
+color = Color(1, 1, 1, 0)
+elements = Array[ExtResource("1_f7u88")]([SubResource("Resource_x8ifo")])

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c11pjeitwxoxn"
-path="res://.godot/imported/flower_redB.glb-c3d6575c28eb2a380f398581aa6a584b.scn"
+uid="uid://bsrxq10rkxkye"
+path="res://.godot/imported/structure-platform.glb-994ef00be2e5025c860cd99d322d7199.scn"
 
 [deps]
 
-source_file="res://assets/models/flowers/flower_redB.glb"
-dest_files=["res://.godot/imported/flower_redB.glb-c3d6575c28eb2a380f398581aa6a584b.scn"]
+source_file="res://assets/models/skate/structure-platform.glb"
+dest_files=["res://.godot/imported/structure-platform.glb-994ef00be2e5025c860cd99d322d7199.scn"]
 
 [params]
 
@@ -30,7 +30,13 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
-_subresources={}
+import_script/path="res://scripts/import_asset.gd"
+_subresources={
+"nodes": {
+"PATH:structure-platform": {
+"generate/physics": true
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

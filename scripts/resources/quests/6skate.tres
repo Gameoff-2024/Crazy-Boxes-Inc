@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Quest" load_steps=7 format=3 uid="uid://cj6j2cdge8yg7"]
+
+[ext_resource type="Script" path="res://scripts/resources/element.gd" id="1_scq5g"]
+[ext_resource type="Texture2D" uid="uid://dhf5xkg40r2vs" path="res://assets/img/skate2.png" id="2_47mn5"]
+[ext_resource type="Texture2D" uid="uid://bjpd5kj65i20i" path="res://assets/img/skate1.png" id="2_cg1jp"]
+[ext_resource type="Script" path="res://scripts/resources/quest.gd" id="3_usgi7"]
+
+[sub_resource type="Resource" id="Resource_7pyo8"]
+script = ExtResource("1_scq5g")
+textLabel = ""
+decal1 = ExtResource("2_47mn5")
+side = 0
+
+[sub_resource type="Resource" id="Resource_x8ifo"]
+script = ExtResource("1_scq5g")
+textLabel = "Keep shredding!"
+decal1 = ExtResource("2_cg1jp")
+decal2 = ExtResource("2_cg1jp")
+side = 1
+
+[resource]
+script = ExtResource("3_usgi7")
+id = 6
+color = Color(1, 1, 1, 0)
+elements = Array[ExtResource("1_scq5g")]([SubResource("Resource_7pyo8"), SubResource("Resource_x8ifo")])

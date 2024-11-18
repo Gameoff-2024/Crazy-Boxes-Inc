@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://gm1lay4g8w6j"
-path="res://.godot/imported/flower_yellowA.glb-f8ab450924a3cd5648e8fd4cee729585.scn"
+uid="uid://xwc33yjftiwa"
+path="res://.godot/imported/bowl-corner-inner.glb-6782085a1d3dccd847e372d2cc80acb2.scn"
 
 [deps]
 
-source_file="res://assets/models/flowers/flower_yellowA.glb"
-dest_files=["res://.godot/imported/flower_yellowA.glb-f8ab450924a3cd5648e8fd4cee729585.scn"]
+source_file="res://assets/models/skate/bowl-corner-inner.glb"
+dest_files=["res://.godot/imported/bowl-corner-inner.glb-6782085a1d3dccd847e372d2cc80acb2.scn"]
 
 [params]
 
@@ -30,7 +30,13 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
-_subresources={}
+import_script/path="res://scripts/import_asset.gd"
+_subresources={
+"nodes": {
+"PATH:bowl-corner-inner": {
+"generate/physics": true
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1
