@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="Quest" load_steps=4 format=3 uid="uid://cinsbmddy4oqx"]
+[gd_resource type="Resource" script_class="Quest" load_steps=6 format=3 uid="uid://cinsbmddy4oqx"]
 
 [ext_resource type="Script" path="res://scripts/resources/element.gd" id="1_4u80v"]
+[ext_resource type="Texture2D" uid="uid://bjhdp3hjnqihq" path="res://assets/img/hide-&-seek.png" id="2_rbaf8"]
 [ext_resource type="Script" path="res://scripts/resources/quest.gd" id="4_pg4l7"]
 
 [sub_resource type="Resource" id="Resource_7pyo8"]
@@ -8,8 +9,14 @@ script = ExtResource("1_4u80v")
 textLabel = "Hide & Seek"
 side = 1
 
+[sub_resource type="Resource" id="Resource_kpiou"]
+script = ExtResource("1_4u80v")
+textLabel = ""
+picture = ExtResource("2_rbaf8")
+side = 0
+
 [resource]
 script = ExtResource("4_pg4l7")
 id = 7
 color = Color(1, 1, 1, 0)
-elements = Array[ExtResource("1_4u80v")]([SubResource("Resource_7pyo8")])
+elements = Array[ExtResource("1_4u80v")]([SubResource("Resource_7pyo8"), SubResource("Resource_kpiou")])
