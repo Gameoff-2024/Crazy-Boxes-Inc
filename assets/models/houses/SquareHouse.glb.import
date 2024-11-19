@@ -32,6 +32,12 @@ animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path="res://scripts/import_asset.gd"
 _subresources={
+"materials": {
+"border": {
+"use_external/enabled": true,
+"use_external/path": "res://resources/materials/border.tres"
+}
+},
 "nodes": {
 "PATH:tmpParent/house_type19": {
 "generate/physics": true

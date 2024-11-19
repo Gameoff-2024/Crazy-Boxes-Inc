@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwimo3cch5lyd"
-path.s3tc="res://.godot/imported/Basket ball and hoop_untitled.png-8408e70c097bf780b2b53382629e2797.s3tc.ctex"
+uid="uid://cmfrmqww2w01v"
+path.s3tc="res://.godot/imported/texture_house.png-2efb93bbf3aff430c7fd1dc4360646cb.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "d3ac26d73deffa882de06a04c8f383c8"
-}
 
 [deps]
 
-source_file="res://assets/models/props/Basket ball and hoop_untitled.png"
-dest_files=["res://.godot/imported/Basket ball and hoop_untitled.png-8408e70c097bf780b2b53382629e2797.s3tc.ctex"]
+source_file="res://assets/img/texture_house.png"
+dest_files=["res://.godot/imported/texture_house.png-2efb93bbf3aff430c7fd1dc4360646cb.s3tc.ctex"]
 
 [params]
 

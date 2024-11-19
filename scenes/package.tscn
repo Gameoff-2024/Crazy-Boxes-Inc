@@ -1,14 +1,8 @@
-[gd_scene load_steps=9 format=4 uid="uid://23qnd3dgka3j"]
+[gd_scene load_steps=8 format=4 uid="uid://23qnd3dgka3j"]
 
-[ext_resource type="Texture2D" uid="uid://bbpi23bgbmxav" path="res://assets/models/boxes/Textures/colormap.png" id="1_6h251"]
 [ext_resource type="Script" path="res://scripts/quest_displayer.gd" id="1_frb41"]
+[ext_resource type="Material" uid="uid://ik1uikxx2b5" path="res://resources/materials/package.tres" id="2_5wmdk"]
 [ext_resource type="FontFile" uid="uid://cm77ftmps3og0" path="res://resources/fonts/Bettermilk.otf" id="3_stgpe"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ck4su"]
-resource_name = "colormap"
-cull_mode = 2
-albedo_texture = ExtResource("1_6h251")
-texture_filter = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_20asl"]
 _surfaces = [{
@@ -32,7 +26,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 84,
 "index_data": PackedByteArray("AgAAAAEAAQADAAIABgAEAAUABQAHAAYACgAIAAkACQALAAoADgAMAA0ADQAPAA4AEgAQABEAEwASABEAEwARABQAFQATABQAFQAUABYAFgAXABUAGgAYABkAGQAbABoAHgAcAB0AHwAeAB0AIAAfAB0AIAAdACEAIQAiACAAIwAgACIAJgAkACUAJQAnACYAKgAoACkAKQArACoALgAsAC0ALQAvAC4A"),
-"material": SubResource("StandardMaterial3D_ck4su"),
+"material": ExtResource("2_5wmdk"),
 "name": "colormap",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
