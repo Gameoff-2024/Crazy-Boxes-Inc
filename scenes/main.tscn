@@ -41,7 +41,7 @@ script = ExtResource("35_cwjvg")
 [node name="QuestManager" parent="." groups=["quest_manager"] instance=ExtResource("2_rsn4w")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.5, 16.5, 0)
-active_quest_id = 5
+active_quest_id = -1
 
 [node name="Player" parent="." instance=ExtResource("4_mkejn")]
 unique_name_in_owner = true
