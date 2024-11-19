@@ -224,11 +224,9 @@ metadata/quest_id = 6
 shape = SubResource("ConcavePolygonShape3D_24hey")
 
 [node name="Shadow" type="Decal" parent="Node/House"]
-transform = Transform3D(-0.0191684, -2.75818e-09, -0.999816, -2.55645e-09, 1, -2.70968e-09, 0.999816, 2.50404e-09, -0.0191684, 2.59145e-08, -6.70637, 6.20625e-15)
-size = Vector3(5, 10, 5)
+transform = Transform3D(-0.0191684, -2.75818e-09, -0.999816, -2.55645e-09, 1, -2.70968e-09, 0.999816, 2.50404e-09, -0.0191684, 2.59145e-08, -12.9968, 6.20625e-15)
+size = Vector3(5, 15, 5)
 texture_albedo = ExtResource("2_owtpd")
-upper_fade = 2.0
-lower_fade = 1.0
 cull_mask = 1048573
 
 [node name="Props" type="Node3D" parent="Node"]
