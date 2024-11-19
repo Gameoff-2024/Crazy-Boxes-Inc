@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Quest" load_steps=8 format=3 uid="uid://rvwal78sj6ir"]
+
+[ext_resource type="Script" path="res://scripts/resources/element.gd" id="1_uwgee"]
+[ext_resource type="Texture2D" uid="uid://drokdsg65udif" path="res://assets/img/arrow.png" id="2_xmtlw"]
+[ext_resource type="Script" path="res://scripts/resources/quest.gd" id="4_foj3g"]
+
+[sub_resource type="Resource" id="Resource_cu7np"]
+script = ExtResource("1_uwgee")
+textLabel = "Just look up!"
+decal1 = ExtResource("2_xmtlw")
+decal2 = ExtResource("2_xmtlw")
+side = 1
+
+[sub_resource type="Resource" id="Resource_seywp"]
+script = ExtResource("1_uwgee")
+textLabel = ""
+decal1 = ExtResource("2_xmtlw")
+decal2 = ExtResource("2_xmtlw")
+side = 0
+
+[sub_resource type="Resource" id="Resource_ccxbo"]
+script = ExtResource("1_uwgee")
+textLabel = ""
+decal1 = ExtResource("2_xmtlw")
+decal2 = ExtResource("2_xmtlw")
+side = 2
+
+[sub_resource type="Resource" id="Resource_vgrim"]
+script = ExtResource("1_uwgee")
+textLabel = ""
+decal1 = ExtResource("2_xmtlw")
+decal2 = ExtResource("2_xmtlw")
+side = 3
+
+[resource]
+script = ExtResource("4_foj3g")
+id = 6
+color = Color(1, 1, 1, 0)
+elements = Array[ExtResource("1_uwgee")]([SubResource("Resource_cu7np"), SubResource("Resource_seywp"), SubResource("Resource_ccxbo"), SubResource("Resource_vgrim")])

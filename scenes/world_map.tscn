@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://c4acnkarrlclk"]
+[gd_scene load_steps=39 format=3 uid="uid://c4acnkarrlclk"]
 
 [ext_resource type="PackedScene" uid="uid://bksnos26h6fga" path="res://scenes/floor.tscn" id="1_qlq8n"]
 [ext_resource type="PackedScene" uid="uid://npy26s8n58ex" path="res://assets/models/roads/road_crossroad.glb" id="2_wb3ai"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://1r3iot4c0wx1" path="res://scenes/quests/basket_house_id_4.tscn" id="13_i2xag"]
 [ext_resource type="PackedScene" uid="uid://bu3ysabbk6buc" path="res://scenes/quests/skate_house_id_5.tscn" id="14_qyndc"]
 [ext_resource type="PackedScene" uid="uid://cs57fiofj1q4g" path="res://assets/models/houses/HouseWideWithSolarPanels.glb" id="15_xju2p"]
+[ext_resource type="PackedScene" uid="uid://xjknberblov6" path="res://scenes/quests/up_house_id_6.tscn" id="15_y7rns"]
 [ext_resource type="PackedScene" uid="uid://cp1euoxaxrdpj" path="res://assets/models/houses/path_long.glb" id="16_xi21n"]
 [ext_resource type="PackedScene" uid="uid://cgmaeqe6jqycr" path="res://assets/models/houses/tree_large.glb" id="17_0sdic"]
 [ext_resource type="PackedScene" uid="uid://b3623jufft4yg" path="res://assets/models/houses/fence_large.glb" id="18_qf07b"]
@@ -39,7 +40,7 @@
 [ext_resource type="PackedScene" uid="uid://cc0mnuut83j1b" path="res://scenes/pedestrian_crossings.tscn" id="37_23qqp"]
 
 [node name="WorldMap" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000892639, -0.0355873, 0.0359325)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.036, 0)
 
 [node name="Floor" parent="." instance=ExtResource("1_qlq8n")]
 transform = Transform3D(500, 0, 0, 0, 0.5, 0, 0, 0, 500, 0, -0.2, 0)
@@ -77,7 +78,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0, 38.5)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.5, 0, 38.5)
 
 [node name="road_straight60" parent="Roads" instance=ExtResource("3_yqw14")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0, 16.5)
+transform = Transform3D(0.999997, -1.13673e-10, -0.00260054, 1.13673e-10, 1, -1.48508e-13, 0.00260054, -1.48508e-13, 0.999997, 33, 0, 16.5)
 
 [node name="road_straight61" parent="Roads" instance=ExtResource("3_yqw14")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.5, 0, 16.5)
@@ -520,6 +521,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.5, 0.001, 22)
 [node name="tile_low3" parent="Roads" instance=ExtResource("7_wa21w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0.001, 22)
 
+[node name="tile_low9" parent="Roads" instance=ExtResource("7_wa21w")]
+transform = Transform3D(0.898593, 0, 0, 0, 0.898593, 0, 0, 0, 0.898593, 50.9564, 0.0199685, 24.0404)
+
 [node name="road_end2" parent="Roads" instance=ExtResource("8_xpacf")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
@@ -532,7 +536,6 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 110.00
 [node name="Houses" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000892639, -0.0355873, 0.0359325)
 top_level = true
-metadata/_edit_lock_ = true
 
 [node name="FlowerHouseId1" parent="Houses" instance=ExtResource("10_vnrew")]
 
@@ -544,6 +547,9 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 60.116
 [node name="BasketHouseId4" parent="Houses" instance=ExtResource("13_i2xag")]
 
 [node name="SkateHouseId5" parent="Houses" instance=ExtResource("14_qyndc")]
+
+[node name="UpHouseId6" parent="Houses" instance=ExtResource("15_y7rns")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 51, 15, 24)
 
 [node name="House1" type="Node3D" parent="Houses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
@@ -708,12 +714,6 @@ metadata/quest_id = 0
 [node name="path_long2" parent="Houses/SmallHouse2" instance=ExtResource("16_xi21n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13241, 0, 3.19484)
 
-[node name="SmallHouse3" parent="Houses" instance=ExtResource("31_hn8jv")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 51, 0, 24)
-
-[node name="path_long2" parent="Houses/SmallHouse3" instance=ExtResource("16_xi21n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13241, 0, 3.19484)
-
 [node name="SmallHouse4" parent="Houses" instance=ExtResource("31_hn8jv")]
 transform = Transform3D(0.000384041, 0, 1, 0, 1, 0, -1, 0, 0.000384041, 70, 0, 24)
 
@@ -746,12 +746,8 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 51, 0,
 [node name="path_long2" parent="Houses/SmallHouse8" instance=ExtResource("16_xi21n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13241, 0, 3.19484)
 
-[node name="SmallHouse9" parent="Houses" instance=ExtResource("31_hn8jv")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 51, 0, 24)
-metadata/quest_id = 0
-
-[node name="path_long2" parent="Houses/SmallHouse9" instance=ExtResource("16_xi21n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13241, 0, 3.19484)
+[node name="path_long2" parent="Houses" instance=ExtResource("16_xi21n")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 47.8052, 0, 25.1324)
 
 [node name="SmallHouse10" parent="Houses" instance=ExtResource("31_hn8jv")]
 transform = Transform3D(0.000384041, 0, 1, 0, 1, 0, -1, 0, 0.000384041, 70, 0, 24)

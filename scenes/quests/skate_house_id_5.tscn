@@ -2632,7 +2632,7 @@ mesh = SubResource("ArrayMesh_euq8y")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="HouseTall2Stories/tmpParent/house_type02"]
-metadata/quest_id = 6
+metadata/quest_id = 5
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="HouseTall2Stories/tmpParent/house_type02/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_wrxye")
