@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://c4acnkarrlclk"]
+[gd_scene load_steps=41 format=3 uid="uid://c4acnkarrlclk"]
 
 [ext_resource type="PackedScene" uid="uid://bksnos26h6fga" path="res://scenes/floor.tscn" id="1_qlq8n"]
 [ext_resource type="PackedScene" uid="uid://npy26s8n58ex" path="res://assets/models/roads/road_crossroad.glb" id="2_wb3ai"]
