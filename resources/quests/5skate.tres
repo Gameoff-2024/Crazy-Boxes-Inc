@@ -20,6 +20,6 @@ side = 1
 
 [resource]
 script = ExtResource("3_usgi7")
-id = 6
+id = 5
 color = Color(1, 1, 1, 0)
 elements = Array[ExtResource("1_scq5g")]([SubResource("Resource_7pyo8"), SubResource("Resource_x8ifo")])
