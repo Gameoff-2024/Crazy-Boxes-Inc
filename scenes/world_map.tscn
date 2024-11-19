@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://c4acnkarrlclk"]
+[gd_scene load_steps=40 format=3 uid="uid://c4acnkarrlclk"]
 
 [ext_resource type="PackedScene" uid="uid://bksnos26h6fga" path="res://scenes/floor.tscn" id="1_qlq8n"]
 [ext_resource type="PackedScene" uid="uid://npy26s8n58ex" path="res://assets/models/roads/road_crossroad.glb" id="2_wb3ai"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://bu3ysabbk6buc" path="res://scenes/quests/skate_house_id_5.tscn" id="14_qyndc"]
 [ext_resource type="PackedScene" uid="uid://cs57fiofj1q4g" path="res://assets/models/houses/HouseWideWithSolarPanels.glb" id="15_xju2p"]
 [ext_resource type="PackedScene" uid="uid://xjknberblov6" path="res://scenes/quests/up_house_id_6.tscn" id="15_y7rns"]
+[ext_resource type="PackedScene" uid="uid://cwi3d5r2pmh7g" path="res://scenes/quests/glitch_house_id_8.tscn" id="16_jb157"]
 [ext_resource type="PackedScene" uid="uid://cp1euoxaxrdpj" path="res://assets/models/houses/path_long.glb" id="16_xi21n"]
 [ext_resource type="PackedScene" uid="uid://cgmaeqe6jqycr" path="res://assets/models/houses/tree_large.glb" id="17_0sdic"]
 [ext_resource type="PackedScene" uid="uid://b3623jufft4yg" path="res://assets/models/houses/fence_large.glb" id="18_qf07b"]
@@ -551,6 +552,9 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 60.116
 [node name="UpHouseId6" parent="Houses" instance=ExtResource("15_y7rns")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 51, 15, 24)
 
+[node name="GlitchHouseId8" parent="Houses" instance=ExtResource("16_jb157")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 18, 0, 29.5)
+
 [node name="House1" type="Node3D" parent="Houses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
 
@@ -620,23 +624,14 @@ transform = Transform3D(-1, 0, 1.19209e-07, 0, 1, 0, -1.19209e-07, 0, -1, -1.1, 
 
 [node name="SquareHouse" parent="Houses" instance=ExtResource("22_hcsdk")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 18, 0, 16.5)
-metadata/quest_id = 0
 
 [node name="path_tilesLong2" parent="Houses/SquareHouse" instance=ExtResource("23_2oe38")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00284386, -4.76837e-07, 3.15662)
 
 [node name="SquareHouse2" parent="Houses" instance=ExtResource("22_hcsdk")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 18, 0, 23)
-metadata/quest_id = 0
 
 [node name="path_tilesLong2" parent="Houses/SquareHouse2" instance=ExtResource("23_2oe38")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00284386, -4.76837e-07, 3.15662)
-
-[node name="SquareHouse3" parent="Houses" instance=ExtResource("22_hcsdk")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 18, 0, 29.5)
-metadata/quest_id = 0
-
-[node name="path_tilesLong2" parent="Houses/SquareHouse3" instance=ExtResource("23_2oe38")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00284386, -4.76837e-07, 3.15662)
 
 [node name="HugeHouse" parent="Houses" instance=ExtResource("24_g8o1b")]
@@ -675,31 +670,24 @@ transform = Transform3D(0.99992, 0, 0.0127406, 0, 1, 0, -0.0127406, 0, 0.99992, 
 
 [node name="small_buildingE2" parent="Houses" instance=ExtResource("26_i4kee")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 91.1726, 0, 7.39643)
-metadata/quest_id = 0
 
 [node name="large_buildingA2" parent="Houses" instance=ExtResource("27_8sttd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 88, 0, 25.5)
-metadata/quest_id = 0
 
 [node name="large_buildingA3" parent="Houses" instance=ExtResource("27_8sttd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99, 0, 25.5)
-metadata/quest_id = 0
 
 [node name="small_buildingD2" parent="Houses" instance=ExtResource("28_v7mia")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 97.9633, 0, 7.411)
-metadata/quest_id = 0
 
 [node name="small_buildingC2" parent="Houses" instance=ExtResource("29_6alsn")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 84.4633, 0, 7.421)
-metadata/quest_id = 0
 
 [node name="small_buildingC3" parent="Houses" instance=ExtResource("29_6alsn")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 102.584, 0, 7.41102)
-metadata/quest_id = 0
 
 [node name="skyscraperB2" parent="Houses" instance=ExtResource("30_burnf")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 94, 0, 16)
-metadata/quest_id = 0
 
 [node name="SmallHouse" parent="Houses" instance=ExtResource("31_hn8jv")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 51, 0, 8)
