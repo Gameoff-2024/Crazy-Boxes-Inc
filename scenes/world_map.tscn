@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://c4acnkarrlclk"]
+[gd_scene load_steps=41 format=3 uid="uid://c4acnkarrlclk"]
 
 [ext_resource type="PackedScene" uid="uid://bksnos26h6fga" path="res://scenes/floor.tscn" id="1_qlq8n"]
 [ext_resource type="PackedScene" uid="uid://npy26s8n58ex" path="res://assets/models/roads/road_crossroad.glb" id="2_wb3ai"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://ce3hr3feokjlu" path="res://scenes/quests/christmas_house_3.tscn" id="12_xrali"]
 [ext_resource type="PackedScene" uid="uid://1r3iot4c0wx1" path="res://scenes/quests/basket_house_id_4.tscn" id="13_i2xag"]
 [ext_resource type="PackedScene" uid="uid://bu3ysabbk6buc" path="res://scenes/quests/skate_house_id_5.tscn" id="14_qyndc"]
+[ext_resource type="PackedScene" uid="uid://cl12jqxd8m2f" path="res://scenes/HideAndSeekHouseId7.tscn" id="15_swcgx"]
 [ext_resource type="PackedScene" uid="uid://cs57fiofj1q4g" path="res://assets/models/houses/HouseWideWithSolarPanels.glb" id="15_xju2p"]
 [ext_resource type="PackedScene" uid="uid://xjknberblov6" path="res://scenes/quests/up_house_id_6.tscn" id="15_y7rns"]
 [ext_resource type="PackedScene" uid="uid://cwi3d5r2pmh7g" path="res://scenes/quests/glitch_house_id_8.tscn" id="16_jb157"]
@@ -555,6 +556,9 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 51, 15
 [node name="GlitchHouseId8" parent="Houses" instance=ExtResource("16_jb157")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 18, 0, 29.5)
 
+[node name="HideAndSeekHouseId7" parent="Houses" instance=ExtResource("15_swcgx")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 104.57, -9.53674e-07, -5.44043)
+
 [node name="House1" type="Node3D" parent="Houses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
 
@@ -778,10 +782,6 @@ metadata/quest_id = 0
 
 [node name="house_type166" parent="Houses" instance=ExtResource("33_d1dqs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.5009, 0, -5.53593)
-metadata/quest_id = 0
-
-[node name="house_type167" parent="Houses" instance=ExtResource("33_d1dqs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.501, 0, -5.53593)
 metadata/quest_id = 0
 
 [node name="house_type163" parent="Houses" instance=ExtResource("33_d1dqs")]
