@@ -31,7 +31,6 @@ var min_zoom = -1
 var max_zoom = -0.7
 
 var quest_loader = QuestLoader.new()
-
 var active_quest: Quest
 
 
@@ -122,6 +121,8 @@ func set_quest(quest: Quest):
 
 func _on_main_new_quest() -> void:
 	choose_new_quest()
+	$QuestDisplayer.active()
+	no_quest_displayer.hide()
 	
 	
 func register_in_game_box(box: Box):
@@ -144,6 +145,8 @@ func choose_new_quest():
 	if active_quest:
 		set_quest(active_quest)
 		emit_signal("enable_box_shooting")
+	else:
+		get_tree().change_scene_to_file("res://scenes/win_screen.tscn")
 	
 
 func _on_quest_indicator_indicator_triggered() -> void:
