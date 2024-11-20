@@ -124,3 +124,13 @@ func _on_camera_pivot_rotation_start() -> void:
 
 func _on_camera_pivot_rotation_stop() -> void:
 	_can_shoot = true
+
+
+func _on_quest_manager_disable_box_shooting() -> void:
+	_can_shoot = false
+	%Skip.hide_boxes()
+
+
+func _on_quest_manager_enable_box_shooting() -> void:
+	_can_shoot = true
+	%Skip.show_boxes()

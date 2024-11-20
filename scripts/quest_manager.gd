@@ -2,10 +2,18 @@ extends Node3D
 
 class_name QuestManager
 
+signal show_quest_indicator
+signal disable_box_shooting
+signal enable_box_shooting
+
 @export var rotation_sensibility := 1
 @export var panning_sensibility := .1
 @export var zoom_sensibility := .1
+@export var active_quest_id : int = -1
+@export var quest_indicator: Node3D
+
 @onready var quest_displayer = $QuestDisplayer
+@onready var no_quest_displayer = %NoQuestDisplayer
 @onready var package_pivot = $QuestDisplayer/PackagePivot
 
 var rotating := false
@@ -26,7 +34,6 @@ var quest_loader = QuestLoader.new()
 
 var active_quest: Quest
 
-@export var active_quest_id : int = -1
 
 func _ready() -> void:
 	starting_rotation = package_pivot.rotation
@@ -35,8 +42,8 @@ func _ready() -> void:
 	
 	# To debug a specific quest. Works only in debug builds or when run in the editor!
 	if OS.is_debug_build() and active_quest_id >= 0:
-		var quest: Quest = quest_loader.choose_quest(active_quest_id)
-		set_quest(quest)
+		active_quest = quest_loader.choose_quest(active_quest_id)
+		set_quest(active_quest)
 		active()
 		
 
@@ -115,9 +122,7 @@ func set_quest(quest: Quest):
 
 
 func _on_main_new_quest() -> void:
-	active_quest = quest_loader.choose_random_quest()
-	if active_quest:
-		set_quest(active_quest)
+	choose_new_quest()
 	
 	
 func register_in_game_box(box: Box):
@@ -125,9 +130,24 @@ func register_in_game_box(box: Box):
 
 
 func _on_box_quest_object_touched(box: Box, quest_id: int):
-	if quest_id == active_quest.id:
+	if active_quest and quest_id == active_quest.id:
+		active_quest = null
 		GameState.score_add_one()
 		box.queue_free()
-		active_quest = quest_loader.choose_random_quest()
-		if active_quest:
-			set_quest(active_quest)
+		emit_signal("show_quest_indicator")
+		emit_signal("disable_box_shooting")
+		$QuestDisplayer.inactive()
+		no_quest_displayer.show()
+
+
+func choose_new_quest():
+	active_quest = quest_loader.choose_random_quest()
+	if active_quest:
+		set_quest(active_quest)
+		emit_signal("enable_box_shooting")
+	
+
+func _on_quest_indicator_indicator_triggered() -> void:
+	choose_new_quest()
+	$QuestDisplayer.active()
+	no_quest_displayer.hide()
