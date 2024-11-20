@@ -1,5 +1,6 @@
-[gd_scene load_steps=49 format=4 uid="uid://c2dalslc3003k"]
+[gd_scene load_steps=50 format=4 uid="uid://c2dalslc3003k"]
 
+[ext_resource type="Script" path="res://scripts/build_house_10.gd" id="1_31bb4"]
 [ext_resource type="PackedScene" uid="uid://bwu5c10kdbdgn" path="res://assets/models/roads/tile_low.glb" id="1_mluji"]
 [ext_resource type="PackedScene" uid="uid://bf37b8jn3j2q" path="res://assets/models/prototype-kit/indicator-special-area.glb" id="3_2ypg6"]
 [ext_resource type="PackedScene" uid="uid://drlxcox5qu6s" path="res://assets/models/prototype-kit/shape-cylinder.glb" id="4_g3ibc"]
@@ -2717,51 +2718,53 @@ _data = {
 "wheelchair-sit": SubResource("Animation_nqitj")
 }
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wiinw"]
-radius = 0.329922
-height = 1.19866
+[sub_resource type="BoxShape3D" id="BoxShape3D_r2cjd"]
+size = Vector3(3.40332, 2.28931, 3.43555)
 
 [node name="BuildHouse10" type="Node3D"]
+script = ExtResource("1_31bb4")
 
-[node name="tile_low10" parent="." instance=ExtResource("1_mluji")]
+[node name="Elements" type="Node3D" parent="."]
 
-[node name="indicator-special-area2" parent="." instance=ExtResource("3_2ypg6")]
+[node name="tile_low10" parent="Elements" instance=ExtResource("1_mluji")]
+
+[node name="indicator-special-area2" parent="Elements" instance=ExtResource("3_2ypg6")]
 transform = Transform3D(3.01447, 0, 0, 0, 3.01447, 0, 0, 0, 3.01447, 0, 0.116249, 0)
 
-[node name="shape-cylinder2" parent="." instance=ExtResource("4_g3ibc")]
+[node name="shape-cylinder2" parent="Elements" instance=ExtResource("4_g3ibc")]
 transform = Transform3D(0.2, 0, 0, 0, 6, 0, 0, 0, 0.2, -1.8, 0.115, 1.8)
 
-[node name="shape-cylinder3" parent="." instance=ExtResource("4_g3ibc")]
+[node name="shape-cylinder3" parent="Elements" instance=ExtResource("4_g3ibc")]
 transform = Transform3D(0.2, 0, 0, 0, 6, 0, 0, 0, 0.2, -1.8, 0.115, -1.8)
 
-[node name="shape-cylinder4" parent="." instance=ExtResource("4_g3ibc")]
+[node name="shape-cylinder4" parent="Elements" instance=ExtResource("4_g3ibc")]
 transform = Transform3D(0.2, 0, 0, 0, 6, 0, 0, 0, 0.2, 1.8, 0.115, 1.8)
 
-[node name="shape-cylinder5" parent="." instance=ExtResource("4_g3ibc")]
+[node name="shape-cylinder5" parent="Elements" instance=ExtResource("4_g3ibc")]
 transform = Transform3D(0.2, 0, 0, 0, 6, 0, 0, 0, 0.2, 1.8, 0.115, -1.8)
 
-[node name="floor-thick2" parent="." instance=ExtResource("4_ptuxo")]
+[node name="floor-thick2" parent="Elements" instance=ExtResource("4_ptuxo")]
 transform = Transform3D(3.6, 0, 0, 0, 1, 0, 0, 0, 3.6, 0, 2.5, 0)
 
-[node name="floor-thick3" parent="." instance=ExtResource("4_ptuxo")]
+[node name="floor-thick3" parent="Elements" instance=ExtResource("4_ptuxo")]
 transform = Transform3D(3.6, 0, 0, 0, 1, 0, 0, 0, 3.6, 0, 5, 0)
 
-[node name="cone2" parent="." instance=ExtResource("5_8hty4")]
+[node name="cone2" parent="Elements" instance=ExtResource("5_8hty4")]
 transform = Transform3D(-0.289082, -0.957304, 0, 0.957304, -0.289082, 0, 0, 0, 1, 0.484639, 0.335995, 1.83482)
 
-[node name="cone3" parent="." instance=ExtResource("5_8hty4")]
+[node name="cone3" parent="Elements" instance=ExtResource("5_8hty4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
 
-[node name="cone4" parent="." instance=ExtResource("5_8hty4")]
+[node name="cone4" parent="Elements" instance=ExtResource("5_8hty4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
 
-[node name="cone5" parent="." instance=ExtResource("5_8hty4")]
+[node name="cone5" parent="Elements" instance=ExtResource("5_8hty4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
 
-[node name="truck" parent="." instance=ExtResource("6_p30jv")]
+[node name="truck" parent="Elements" instance=ExtResource("6_p30jv")]
 transform = Transform3D(0.664592, 0, 0.747207, 0, 1, 0, -0.747207, 0, 0.664592, 0.162128, 0.11, 0.197304)
 
-[node name="box2" parent="." instance=ExtResource("7_tcywk")]
+[node name="box2" parent="Elements" instance=ExtResource("7_tcywk")]
 transform = Transform3D(0.650787, 0, 0.75926, 0, 1, 0, -0.75926, 0, 0.650787, -0.40162, 0.734256, -0.390691)
 
 [node name="Path3D" type="Path3D" parent="."]
@@ -2782,7 +2785,7 @@ bones/0/name = "root"
 bones/0/parent = -1
 bones/0/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 bones/0/enabled = true
-bones/0/position = Vector3(0, 0.0406745, 0)
+bones/0/position = Vector3(0, 0, 0)
 bones/0/rotation = Quaternion(0, 0, 0, 1)
 bones/0/scale = Vector3(1, 1, 1)
 bones/1/name = "leg-left"
@@ -2790,42 +2793,42 @@ bones/1/parent = 0
 bones/1/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.083571, 0.17625, -0.02875)
 bones/1/enabled = true
 bones/1/position = Vector3(0.083571, 0.17625, -0.02875)
-bones/1/rotation = Quaternion(-0.476245, 0, 0, 0.879313)
+bones/1/rotation = Quaternion(0, 0, 0, 1)
 bones/1/scale = Vector3(1, 1, 1)
 bones/2/name = "leg-right"
 bones/2/parent = 0
 bones/2/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.083571, 0.17625, -0.02875)
 bones/2/enabled = true
 bones/2/position = Vector3(-0.083571, 0.17625, -0.02875)
-bones/2/rotation = Quaternion(0.476245, 0, 0, 0.879313)
+bones/2/rotation = Quaternion(0, 0, 0, 1)
 bones/2/scale = Vector3(1, 1, 1)
 bones/3/name = "torso"
 bones/3/parent = 0
 bones/3/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.44382e-15, 0.17625, -0.02875)
 bones/3/enabled = true
 bones/3/position = Vector3(-1.44382e-15, 0.17625, -0.02875)
-bones/3/rotation = Quaternion(0, -0.106285, 0, 0.994336)
+bones/3/rotation = Quaternion(0, 0, 0, 1)
 bones/3/scale = Vector3(1, 1, 1)
 bones/4/name = "arm-left"
 bones/4/parent = 3
 bones/4/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0998968, 0.1115, 0.0115)
 bones/4/enabled = true
 bones/4/position = Vector3(0.0998968, 0.1115, 0.0115)
-bones/4/rotation = Quaternion(-0.0548246, 0.309241, -0.170137, 0.934033)
+bones/4/rotation = Quaternion(0, 0, 0, 1)
 bones/4/scale = Vector3(1, 1, 1)
 bones/5/name = "arm-right"
 bones/5/parent = 3
 bones/5/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0998968, 0.1115, 0.0115)
 bones/5/enabled = true
 bones/5/position = Vector3(-0.0998968, 0.1115, 0.0115)
-bones/5/rotation = Quaternion(0.0548246, 0.309241, 0.170137, 0.934033)
+bones/5/rotation = Quaternion(0, 0, 0, 1)
 bones/5/scale = Vector3(1, 1, 1)
 bones/6/name = "head"
 bones/6/parent = 3
 bones/6/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.81969e-09, 0.167, 0.0263888)
 bones/6/enabled = true
 bones/6/position = Vector3(1.81969e-09, 0.167, 0.0263888)
-bones/6/rotation = Quaternion(0, 0.0709308, 0, 0.997481)
+bones/6/rotation = Quaternion(0, 0, 0, 1)
 bones/6/scale = Vector3(1, 1, 1)
 
 [node name="body-mesh" type="MeshInstance3D" parent="Path3D/PathFollow3D/ConstructionCharacter/character-male-e/Skeleton3D"]
@@ -2843,10 +2846,11 @@ libraries = {
 autoplay = "walk"
 speed_scale = 0.5
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Path3D/PathFollow3D/ConstructionCharacter"]
-transform = Transform3D(0.579202, 0, -0.00740064, 0, 0.579249, 0, 0.00740064, 0, 0.579202, 0.00403714, 0.627471, -0.00883412)
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.85004, 0)
+collision_mask = 4
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Path3D/PathFollow3D/ConstructionCharacter/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.452608, 0)
-shape = SubResource("CapsuleShape3D_wiinw")
-metadata/quest_id = 10
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_r2cjd")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
