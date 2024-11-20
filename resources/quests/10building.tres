@@ -1,12 +1,16 @@
-[gd_resource type="Resource" script_class="Quest" load_steps=4 format=3 uid="uid://dp53340nsltfl"]
+[gd_resource type="Resource" script_class="Quest" load_steps=6 format=3 uid="uid://dp53340nsltfl"]
 
 [ext_resource type="Script" path="res://scripts/resources/element.gd" id="1_j8b73"]
+[ext_resource type="Texture2D" uid="uid://dasreihdgbbct" path="res://assets/img/helmet_128x91.png" id="2_fxgfi"]
 [ext_resource type="Script" path="res://scripts/resources/quest.gd" id="3_1dh8t"]
+[ext_resource type="Texture2D" uid="uid://bwvqyypp0vka8" path="res://assets/img/caterpillar_128x115.png" id="3_d7fro"]
 
 [sub_resource type="Resource" id="Resource_ykg3b"]
 script = ExtResource("1_j8b73")
-textLabel = "Building"
-side = 2
+textLabel = "The first floor!"
+decal1 = ExtResource("2_fxgfi")
+decal2 = ExtResource("3_d7fro")
+side = 0
 
 [resource]
 script = ExtResource("3_1dh8t")

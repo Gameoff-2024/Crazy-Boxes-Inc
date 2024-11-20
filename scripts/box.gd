@@ -15,7 +15,10 @@ func _ready():
 
 func _on_lifetime_timer_timeout():
 	queue_free()
-
+	
+func quest_trigger(quest_id: int):
+	box_quest_object_touched.emit(self, quest_id)
+	
 func _on_body_entered(body: Node) -> void:
 
 	var quest_id = body.get_meta("quest_id", -1)
