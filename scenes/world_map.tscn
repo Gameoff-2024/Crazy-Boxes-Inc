@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://c4acnkarrlclk"]
+[gd_scene load_steps=45 format=3 uid="uid://c4acnkarrlclk"]
 
 [ext_resource type="PackedScene" uid="uid://bksnos26h6fga" path="res://scenes/floor.tscn" id="1_qlq8n"]
 [ext_resource type="PackedScene" uid="uid://npy26s8n58ex" path="res://assets/models/roads/road_crossroad.glb" id="2_wb3ai"]
@@ -40,6 +40,10 @@
 [ext_resource type="PackedScene" uid="uid://chccgdvko8wg4" path="res://assets/models/bushes/Hedge Corner.glb" id="35_ht2gr"]
 [ext_resource type="PackedScene" uid="uid://dukqrxipgd82j" path="res://assets/models/bushes/Hedge Straight.glb" id="36_sdpit"]
 [ext_resource type="PackedScene" uid="uid://cc0mnuut83j1b" path="res://scenes/pedestrian_crossings.tscn" id="37_23qqp"]
+[ext_resource type="PackedScene" uid="uid://ce2gjh2lmwch3" path="res://assets/models/boxes/box-large.glb" id="41_vckon"]
+[ext_resource type="PackedScene" uid="uid://dj4q00iannf87" path="res://assets/models/boxes/box-long.glb" id="42_qwu7v"]
+[ext_resource type="PackedScene" uid="uid://kdqc76lxud3g" path="res://assets/models/boxes/box-small.glb" id="43_1ydwr"]
+[ext_resource type="PackedScene" uid="uid://8h8fiibks635" path="res://assets/models/boxes/box-wide.glb" id="44_wfnav"]
 
 [node name="WorldMap" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.036, 0)
@@ -844,3 +848,29 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78.9068, 0.0555873, 16.0754)
 
 [node name="PedestrianCrossings7" parent="Decorations" instance=ExtResource("37_23qqp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111.914, 0.0555873, 16.0754)
+
+[node name="Boxes" type="Node3D" parent="Decorations"]
+
+[node name="box-large2" parent="Decorations/Boxes" instance=ExtResource("41_vckon")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.66948, 0.0554126, -1.38608)
+
+[node name="box-long2" parent="Decorations/Boxes" instance=ExtResource("42_qwu7v")]
+transform = Transform3D(-4.37114e-08, 1.29179e-15, -1, -0.482503, 0.875894, 2.10909e-08, 0.875894, 0.482503, -3.82866e-08, -1.7474, 0.354908, -0.50673)
+
+[node name="box-small2" parent="Decorations/Boxes" instance=ExtResource("43_1ydwr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.68563, 0.562219, -1.38603)
+
+[node name="box-long3" parent="Decorations/Boxes" instance=ExtResource("42_qwu7v")]
+transform = Transform3D(0.816027, 0, -0.578014, 0, 1, 0, 0.578014, 0, 0.816027, -1.65133, 0.0554126, 1.60157)
+
+[node name="box-wide2" parent="Decorations/Boxes" instance=ExtResource("44_wfnav")]
+transform = Transform3D(0.957062, 0, 0.289884, 0, 1, 0, -0.289884, 0, 0.957062, -1.3144, 0.0554124, 0.743734)
+
+[node name="box-long4" parent="Decorations/Boxes" instance=ExtResource("42_qwu7v")]
+transform = Transform3D(-0.0263688, 0, 0.999652, 0, 1, 0, -0.999652, 0, -0.0263688, -1.57754, 0.561319, 1.13709)
+
+[node name="box-small3" parent="Decorations/Boxes" instance=ExtResource("43_1ydwr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.769359, 0.0554126, -1.83003)
+
+[node name="box-small4" parent="Decorations/Boxes" instance=ExtResource("43_1ydwr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.05675, 0.555315, -1.67572)

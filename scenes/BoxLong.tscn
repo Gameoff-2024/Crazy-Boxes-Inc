@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=4 uid="uid://cks8v06vh0bfn"]
+
+[ext_resource type="Texture2D" uid="uid://bbpi23bgbmxav" path="res://assets/models/boxes/Textures/colormap.png" id="1_w5m8q"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v2adx"]
+resource_name = "colormap"
+cull_mode = 2
+albedo_texture = ExtResource("1_w5m8q")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_28djh"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.25, 1, 0.5, 0.5),
+"format": 34896613377,
+"index_count": 84,
+"index_data": PackedByteArray("AgAAAAEAAQADAAIABgAEAAUABQAHAAYACgAIAAkACQALAAoACgAHAAUABQAIAAoAAQAEAAYABgADAAEAAgADAAYADAACAAYADQAMAAYADQAGAAcABwAKAA0ACwANAAoAAQAAAA4ABAABAA4ABAAOAA8ABQAEAA8ABQAPAAkACQAIAAUACwAJAAAAAAACAAsADAANAAsACwACAAwAAAAJAA8ADwAOAAAA"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("//////+fAAD///////8AAAAA////nwAAAAD/////AAD//wAA//8AAP//AAAAAAAAAAAAAP//AAAAAAAAAAAAAP////8AAAAA//////9fAAAAAP//AAAAAAAA////XwAAAAD/f/+fAAAAAP9//18AAP///3//nwAA////f/9fAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_nmqr8"]
+resource_name = "box-long_box-long"
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.25, 1, 0.5, 0.5),
+"attribute_data": PackedByteArray("/5dlxv+XZcb/l2XG/5dlxv+XmPn/l5j5/5eY+f+XmPn/l2XG/5dlxv+XZcb/l2XG/5eY+f+XmPn/l2XG/5dlxv+XmPn/l5j5/5dlxv+XZcb/l2XG/5eY+f+XZcb/l//f/5f/3/+XmPn/l2XG/5dlxv+XZcb/l//f/5dlxv+XmPn/l//f/5eY+f+XZcb/l2XG/9dlxv/XZcb/12XG/9dlxv/XmPn/12XG/9eY+f/XZcb/12XG/9eY+f/XZcb/15j5"),
+"format": 34896613399,
+"index_count": 84,
+"index_data": PackedByteArray("AgAAAAEAAQADAAIABgAEAAUABQAHAAYACgAIAAkACQALAAoADgAMAA0ADQAPAA4AEgAQABEAEQATABIAFgAUABUAFwAWABUAGAAXABUAGAAVABkAGQAaABgAGwAYABoAHgAcAB0AHwAeAB0AHwAdACAAIQAfACAAIQAgACIAIgAjACEAJgAkACUAJQAnACYAKgAoACkAKQArACoALgAsAC0ALQAvAC4A"),
+"material": SubResource("StandardMaterial3D_v2adx"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 48,
+"vertex_data": PackedByteArray("//////+f/////////////wAA////n///AAD//////////wAA////v///AAAAAP+/AAAAAP///78AAAAAAAD/v/////8AAP////////9f//8AAP//AAD//wAA////X///AAAAAAAA/////wAAAAD//wAA//8AAP///////wAA/////wAA//8AgAAAAAD//wCA////////AIAAAP////8AgAAA//////+/AAAAAP///78AAP///5//vwAA/3//n/+/AAD/f/9f/78AAAAAAAD/vwAA//8AAP+/AAD///9f/7///////5//v////3//n/+//////////7///wAA////v////3//X/+///8AAAAA/7///////1//v/////8AAP+///////9f/////////5///wAA////X///AAD///+f//8AAP9//1//vwAA////X/+/AAD/f/+f/78AAP///5//v///////X/+/////f/9f/7///////5//v////3//n/+//3//v/9//7//f/+//3//vwAA/38AAP9/AAD/fwAA/3//f/+//3//v/9//7//f/+//3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/3//v/9//7//f/+//3//v/9/////f////3////9/////fwAA/38AAP9/AAD/fwAA")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_28djh")
+
+[node name="box-long2" type="Node3D"]
+
+[node name="box-long" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_nmqr8")
+skeleton = NodePath("")

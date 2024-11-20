@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://8h8fiibks635"
-path="res://.godot/imported/box-wide.glb-a1b0111aa52914c53c3c7c6d99f1eff9.scn"
+uid="uid://ky4yo0mut7j3"
+path="res://.godot/imported/indicator-round-d.glb-2b7a57f8dd632747e4f62ae76b5f00fe.scn"
 
 [deps]
 
-source_file="res://assets/models/boxes/box-wide.glb"
-dest_files=["res://.godot/imported/box-wide.glb-a1b0111aa52914c53c3c7c6d99f1eff9.scn"]
+source_file="res://assets/models/props/indicator-round-d.glb"
+dest_files=["res://.godot/imported/indicator-round-d.glb-2b7a57f8dd632747e4f62ae76b5f00fe.scn"]
 
 [params]
 
@@ -31,12 +31,6 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={
-"nodes": {
-"PATH:box-wide": {
-"generate/physics": true
-}
-}
-}
+_subresources={}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

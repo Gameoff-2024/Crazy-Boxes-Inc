@@ -1,0 +1,89 @@
+[gd_scene load_steps=8 format=4 uid="uid://bf4mujj3qlo4c"]
+
+[ext_resource type="Script" path="res://scripts/quest_indicator.gd" id="1_6ubbp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i0kn0"]
+resource_name = "colormap"
+transparency = 1
+cull_mode = 2
+albedo_color = Color(1, 1, 0, 1)
+metallic = 0.5
+metallic_specular = 0.95
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_wxahk"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 1e-05, 1),
+"format": 34896613377,
+"index_count": 72,
+"index_data": PackedByteArray("AgAAAAEAAQADAAIAAwAEAAIABQADAAEABAAGAAIAAQAHAAUABAAIAAYABwAJAAUACAAKAAYACAALAAoABwAMAAkADAANAAkADAAOAA0ADAAPAA4ADwAQAA4ACwARAAoACwASABEAEgATABEADwAUABAAEwAVABEAFAAWABAAEwAWABUAFAAVABYAFAAXABUA"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("//8AAP9/AADY7gAA/78AANjuAAD/PwAAfuUAAP9/AADl1wAAQE0AAOXXAAC+sgAA/78AACYRAAD/vwAA2O4AAL6yAAAZKAAAvrIAAOXXAAD/fwAAAAAAAP9/AACAGgAA/38AAP//AAD/fwAAfuUAAEBNAADl1wAA/z8AANjuAAAZKAAAvrIAAP8/AAAmEQAAQE0AABkoAAAZKAAAQE0AACYRAAD/vwAAJhEAAP8/AACAGgAA/38AAAAAAAD/fwAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_l265b"]
+resource_name = "indicator-round-b_rotate-y"
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 1e-05, 1),
+"attribute_data": PackedByteArray("/0f/n/9H/5//R/+f/0f/n/9H/5//R/+f/0f/n/9H/5//R/+f/0f/n/9H/5//R/+f/0f/n/9H/5//R/+f/0f/n/9H/5//R/+f/0f/n/9H/5//R/+f/0f/n/9H/5//R/+f"),
+"format": 34896613399,
+"index_count": 72,
+"index_data": PackedByteArray("AgAAAAEAAQADAAIAAwAEAAIABQADAAEABAAGAAIAAQAHAAUABAAIAAYABwAJAAUACAAKAAYACAALAAoABwAMAAkADAANAAkADAAOAA0ADAAPAA4ADwAQAA4ACwARAAoACwASABEAEgATABEADwAUABAAEwAVABEAFAAWABAAEwAWABUAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_i0kn0"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("//8AAP9////Y7gAA/7///9juAAD/P///fuUAAP9////l1wAAQE3//+XXAAC+sv///78AACYR////vwAA2O7//76yAAAZKP//vrIAAOXX////fwAAAAD///9/AACAGv///38AAP//////fwAAfuX//0BNAADl1////z8AANju//8ZKAAAvrL///8/AAAmEf//QE0AABko//8ZKAAAQE3//yYRAAD/v///JhEAAP8///+AGgAA/3///wAAAAD/f////3//v/9//7//f/+//3//v/9//7//f/+//3//v/9//7//f/+//3//v/9//7//f/+//3//v/9//7//f/+//3//v/9//7//f/+//3//v/9//7//f/+//3//v/9//7//f/+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_wxahk")
+
+[sub_resource type="Animation" id="Animation_c4whk"]
+resource_name = "animation"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("indicator-round-b/rotate-y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.0333333, 1, 0, 0.0229054, 0, -0.999738, 0.0666667, 1, 0, 0.0784591, 0, -0.996917, 0.1, 1, 0, 0.14673, 0, -0.989177, 0.133333, 1, 0, 0.207912, 0, -0.978148, 1.13333, 1, 0, 0.978148, 0, 0.207912, 1.86667, 1, 0, 0.207912, 0, 0.978148, 1.9, 1, 0, 0.146731, 0, 0.989177, 1.93333, 1, 0, 0.0784593, 0, 0.996917, 1.96667, 1, 0, 0.0392597, 0, 0.999229, 2, 1, 0, -8.74228e-08, 0, 1)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y8qfv"]
+_data = {
+"animation": SubResource("Animation_c4whk")
+}
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_goiwe"]
+
+[node name="QuestIndicator" type="Node3D"]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0)
+script = ExtResource("1_6ubbp")
+
+[node name="indicator-round-b" type="Node3D" parent="."]
+
+[node name="rotate-y" type="MeshInstance3D" parent="indicator-round-b"]
+mesh = SubResource("ArrayMesh_l265b")
+skeleton = NodePath("")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_y8qfv")
+}
+autoplay = "animation"
+
+[node name="Area3D" type="Area3D" parent="."]
+unique_name_in_owner = true
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.875224, 0)
+shape = SubResource("CylinderShape3D_goiwe")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

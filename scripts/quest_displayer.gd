@@ -1,6 +1,7 @@
 extends Node3D
 
 @onready var packageMesh: MeshInstance3D = $PackagePivot/Package/PackageMesh
+@onready var packagePivot: Node3D = $PackagePivot
 @onready var basePath: String = "PackagePivot/Package"
 
 func set_quest(quest: Quest) -> void:
@@ -73,4 +74,12 @@ func reset_quest():
 			
 		decal2.hide()
 		decal2.texture_albedo = null
+		
+
+func active():
+	packagePivot.show()
+	
+	
+func inactive():
+	packagePivot.hide()
 			

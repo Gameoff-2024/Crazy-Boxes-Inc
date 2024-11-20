@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://b22yg8qvukk2b"]
+[gd_scene load_steps=11 format=3 uid="uid://b22yg8qvukk2b"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_rlfhc"]
 [ext_resource type="PackedScene" uid="uid://bppvsr4na3ydl" path="res://scenes/quest_manager.tscn" id="2_rsn4w"]
 [ext_resource type="PackedScene" uid="uid://dy6gruj4b2t1q" path="res://scenes/player.tscn" id="4_mkejn"]
 [ext_resource type="PackedScene" uid="uid://c4acnkarrlclk" path="res://scenes/world_map.tscn" id="6_vts3g"]
+[ext_resource type="PackedScene" uid="uid://bf4mujj3qlo4c" path="res://scenes/quest_indicator.tscn" id="7_d4bhd"]
 [ext_resource type="Script" path="res://scripts/autoload/camera_manager.gd" id="35_cwjvg"]
 [ext_resource type="PackedScene" uid="uid://ctdxyrsdbpayx" path="res://scenes/ui/ui.tscn" id="47_fpkxg"]
 
@@ -38,10 +39,11 @@ sky_mode = 1
 [node name="CameraManager" type="Node3D" parent="."]
 script = ExtResource("35_cwjvg")
 
-[node name="QuestManager" parent="." groups=["quest_manager"] instance=ExtResource("2_rsn4w")]
+[node name="QuestManager" parent="." node_paths=PackedStringArray("quest_indicator") groups=["quest_manager"] instance=ExtResource("2_rsn4w")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.5, 16.5, 0)
 active_quest_id = 5
+quest_indicator = NodePath("../QuestIndicator")
 
 [node name="Player" parent="." instance=ExtResource("4_mkejn")]
 unique_name_in_owner = true
@@ -49,4 +51,12 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.2961
 
 [node name="WorldMap" parent="." instance=ExtResource("6_vts3g")]
 
+[node name="QuestIndicator" parent="." instance=ExtResource("7_d4bhd")]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 0.39784, 0.03479, 0)
+visible = false
+
 [connection signal="new_quest" from="." to="QuestManager" method="_on_main_new_quest"]
+[connection signal="disable_box_shooting" from="QuestManager" to="Player" method="_on_quest_manager_disable_box_shooting"]
+[connection signal="enable_box_shooting" from="QuestManager" to="Player" method="_on_quest_manager_enable_box_shooting"]
+[connection signal="show_quest_indicator" from="QuestManager" to="QuestIndicator" method="_on_quest_manager_show_quest_indicator"]
+[connection signal="indicator_triggered" from="QuestIndicator" to="QuestManager" method="_on_quest_indicator_indicator_triggered"]
