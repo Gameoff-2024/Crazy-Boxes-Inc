@@ -8,3 +8,7 @@ func _ready():
 	
 func _on_score_updated(old_score: int, new_score: int):
 	score_label.text = str(new_score)
+
+
+func _on_quest_indicator_indicator_triggered() -> void:
+	pass # Replace with function body.

@@ -30,6 +30,10 @@ func _ready():
 func _process(delta: float):
 	if Input.is_action_just_pressed("shot") and _can_shoot:
 		shoot_box()
+		%ShootTimer.start()
+		_can_shoot = false
+		
+		
 func _physics_process(delta: float):
 	var fwd_mps := (linear_velocity * transform.basis).x
 
@@ -105,6 +109,7 @@ func calc_box_shot_force() -> Vector3:
 	
 	return shot_direction * (distance * BOX_SHOOT_FORCE_MULTIPLIER)
 	
+	
 func calc_segment_end(real_start: Vector3) -> Vector3:
 	var space_state = get_world_3d().direct_space_state
 	var mousepos = get_viewport().get_mouse_position()
@@ -119,8 +124,10 @@ func calc_segment_end(real_start: Vector3) -> Vector3:
 		
 	return result.position
 	
+	
 func _on_camera_pivot_rotation_start() -> void:
 	_can_shoot = false
+
 
 func _on_camera_pivot_rotation_stop() -> void:
 	_can_shoot = true
@@ -134,3 +141,7 @@ func _on_quest_manager_disable_box_shooting() -> void:
 func _on_quest_manager_enable_box_shooting() -> void:
 	_can_shoot = true
 	%Skip.show_boxes()
+
+
+func _on_shoot_timer_timeout() -> void:
+	_can_shoot = true

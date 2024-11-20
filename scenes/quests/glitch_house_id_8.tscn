@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/glitch_house_id_8.gd" id="1_dx6n4"]
 [ext_resource type="Shader" path="res://resources/shaders/glitch.gdshader" id="1_nprkx"]
 [ext_resource type="Material" uid="uid://cqmvt84td32uk" path="res://resources/materials/glitch_material.tres" id="2_5vqax"]
-[ext_resource type="Texture2D" uid="uid://bhqbhu1akndkp" path="res://assets/img/texture_house.png" id="3_n8c2g"]
+[ext_resource type="Texture2D" uid="uid://cmfrmqww2w01v" path="res://assets/img/texture_house.png" id="3_n8c2g"]
 [ext_resource type="Texture2D" uid="uid://b0im7gx66j5p" path="res://assets/img/texture_border.png" id="3_pqnr7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o570x"]

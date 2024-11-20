@@ -210,5 +210,10 @@ spot_attenuation = 2.0
 spot_angle = 18.2332
 spot_angle_attenuation = 1.93187
 
+[node name="ShootTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.5
+
 [connection signal="rotation_start" from="CameraPivot" to="." method="_on_camera_pivot_rotation_start"]
 [connection signal="rotation_stop" from="CameraPivot" to="." method="_on_camera_pivot_rotation_stop"]
+[connection signal="timeout" from="ShootTimer" to="." method="_on_shoot_timer_timeout"]

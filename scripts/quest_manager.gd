@@ -6,9 +6,9 @@ signal show_quest_indicator
 signal disable_box_shooting
 signal enable_box_shooting
 
-@export var rotation_sensibility := 1
-@export var panning_sensibility := .1
-@export var zoom_sensibility := .1
+@export var rotation_sensibility := 05
+@export var panning_sensibility := .05
+@export var zoom_sensibility := .05
 @export var active_quest_id : int = -1
 @export var quest_indicator: Node3D
 
@@ -28,7 +28,7 @@ var starting_rotation := Vector3.ZERO
 var starting_position := Vector3.ZERO
 
 var min_zoom = -1
-var max_zoom = 0
+var max_zoom = -0.7
 
 var quest_loader = QuestLoader.new()
 
@@ -56,14 +56,13 @@ func _process(delta: float):
 			package_pivot.rotate(Vector3.FORWARD, deg_to_rad(current_mouse_relative.normalized().x * rotation_sensibility))
 			package_pivot.rotate(Vector3.RIGHT, deg_to_rad(current_mouse_relative.normalized().y * rotation_sensibility))
 
-	if zooming:
+	elif zooming:
 		if current_mouse_relative:
 			package_pivot.position.z = clamp(package_pivot.position.z + current_mouse_zoom_relative.y, min_zoom, max_zoom)
-		
-	if panning:
+	elif panning:
 		if current_mouse_relative:
-			package_pivot.position.y = package_pivot.position.y - (current_mouse_relative.normalized().y * panning_sensibility)
-			package_pivot.position.x = package_pivot.position.x + (current_mouse_relative.normalized().x * panning_sensibility)
+			package_pivot.position.y = clamp(package_pivot.position.y - (current_mouse_relative.normalized().y * panning_sensibility), -0.5, .5)
+			package_pivot.position.x = clamp(package_pivot.position.x + (current_mouse_relative.normalized().x * panning_sensibility), -1, 1)
 		
 	if current_mouse_relative:
 		current_mouse_relative = Vector2.ZERO
@@ -74,14 +73,14 @@ func _input(event: InputEvent):
 		return
 		
 	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_RIGHT:
+		if event.button_index == MOUSE_BUTTON_LEFT:
 			if !rotating and event.pressed:
 				Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 				rotating = true
 			else:
 				Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 				rotating = false
-		if event.button_index == MOUSE_BUTTON_LEFT:
+		elif event.button_index == MOUSE_BUTTON_MIDDLE:
 			if !panning and event.pressed:
 				Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 				panning = true

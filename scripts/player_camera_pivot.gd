@@ -21,7 +21,7 @@ func _process(delta: float):
 		if current_mouse_relative:
 			rotate(Vector3.DOWN, deg_to_rad(current_mouse_relative.x * rotation_sens))
 			rotate(Vector3.RIGHT, deg_to_rad(current_mouse_relative.y * rotation_sens))
-			rotation_degrees.x = clamp(rotation_degrees.x, -25, +25)
+			rotation_degrees.x = clamp(rotation_degrees.x, -25, +40)
 			rotation_degrees.z = clamp(rotation_degrees.z, -25, +25)
 			current_lock_rotation = global_rotation
 		else:
@@ -32,9 +32,9 @@ func _process(delta: float):
 
 func _input(event: InputEvent):
 	# Enable / disable rotating
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_RIGHT:
 		if !rotating and event.pressed:
-			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+			Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 			rotating = true
 			current_lock_rotation = global_rotation
 			rotation_start.emit()
