@@ -14,6 +14,8 @@ func set_quest(quest: Quest) -> void:
 	if quest.material and quest.material is ShaderMaterial:
 		quest.material.set_shader_parameter("active", true)
 		packageMesh.set_surface_override_material(0, quest.material)
+	else:
+		packageMesh.set_surface_override_material(0, null)
 	
 	for element: Element in quest.elements:
 		var side = Element.PackageSide.keys()[element.side]

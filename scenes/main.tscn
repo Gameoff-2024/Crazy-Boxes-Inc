@@ -19,8 +19,13 @@ sky_material = SubResource("ProceduralSkyMaterial_slcvf")
 [sub_resource type="Environment" id="Environment_eulnq"]
 background_mode = 2
 sky = SubResource("Sky_hcpea")
+glow_enabled = true
 fog_enabled = true
-fog_height = 2.0
+fog_light_color = Color(0.603627, 0.636809, 0.688949, 1)
+fog_sun_scatter = 0.5
+fog_height = 5.0
+fog_depth_curve = 2.0
+fog_depth_end = 200.0
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_1d768"]
 auto_exposure_enabled = true
@@ -68,6 +73,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.036, -0.134303)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.37569, 0, 0.0557663)
 
 [node name="ResetTimer" type="Timer" parent="."]
+unique_name_in_owner = true
 wait_time = 60.0
 
 [node name="Landscape" parent="." instance=ExtResource("8_ssieo")]
