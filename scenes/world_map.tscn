@@ -436,16 +436,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0.001, 27.5)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0.001, 33)
 
 [node name="commercial_tile9" parent="Roads" instance=ExtResource("7_wa21w")]
-transform = Transform3D(0.999992, 0, -0.00399679, 0, 1, 0, 0.00399679, 0, 0.999992, 82.5, 0.001, 5.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 82.4998, 0, 5.50004)
 
 [node name="commercial_tile10" parent="Roads" instance=ExtResource("7_wa21w")]
-transform = Transform3D(0.999992, 0, -0.00399679, 0, 1, 0, 0.00399679, 0, 0.999992, 88.0098, 0.000999998, 5.47803)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 87.9996, 0, 5.50001)
 
 [node name="commercial_tile11" parent="Roads" instance=ExtResource("7_wa21w")]
-transform = Transform3D(0.999992, 0, -0.00399679, 0, 1, 0, 0.00399679, 0, 0.999992, 93.5098, 0.000999998, 5.50002)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.4996, 0.000999998, 5.50002)
 
 [node name="commercial_tile12" parent="Roads" instance=ExtResource("7_wa21w")]
-transform = Transform3D(0.999992, 0, -0.00399679, 0, 1, 0, 0.00399679, 0, 0.999992, 99.0097, 0.000999998, 5.522)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98.9999, 0.000999998, 5.49932)
 
 [node name="commercial_tile13" parent="Roads" instance=ExtResource("7_wa21w")]
 transform = Transform3D(0.999992, 0, -0.00399679, 0, 1, 0, 0.00399679, 0, 0.999992, 104.51, 0.000999998, 5.54398)
@@ -454,7 +454,7 @@ transform = Transform3D(0.999992, 0, -0.00399679, 0, 1, 0, 0.00399679, 0, 0.9999
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.5, 0.000999998, 5.5)
 
 [node name="commercial_tile15" parent="Roads" instance=ExtResource("7_wa21w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 82.5, 0, 11)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 82.4996, 0, 11)
 
 [node name="commercial_tile16" parent="Roads" instance=ExtResource("7_wa21w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 88, 0, 11)
@@ -463,10 +463,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 88, 0, 11)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.5, 0.000999998, 11)
 
 [node name="commercial_tile18" parent="Roads" instance=ExtResource("7_wa21w")]
-transform = Transform3D(0.999992, 0, -0.00399679, 0, 1, 0, 0.00399679, 0, 0.999992, 98.9877, 0.000999998, 11.022)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98.9999, 0.000999998, 10.9999)
 
 [node name="commercial_tile19" parent="Roads" instance=ExtResource("7_wa21w")]
-transform = Transform3D(0.999992, 0, -0.00399679, 0, 1, 0, 0.00399679, 0, 0.999992, 104.488, 0.000999998, 11.0439)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.5, 0.000999998, 11.0005)
 
 [node name="commercial_tile20" parent="Roads" instance=ExtResource("7_wa21w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 82.5, 0, 16.5)
@@ -502,7 +502,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.5, 0.000999998, 22)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.5, 0.000999998, 27.5)
 
 [node name="commercial_tile30" parent="Roads" instance=ExtResource("7_wa21w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 82.5, 0.000999998, 27.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 82.5, 0.001, 27.5)
 
 [node name="commercial_tile31" parent="Roads" instance=ExtResource("7_wa21w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 88, 0.000999998, 27.5)
