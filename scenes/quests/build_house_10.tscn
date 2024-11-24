@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=4 uid="uid://c2dalslc3003k"]
+[gd_scene load_steps=51 format=4 uid="uid://c2dalslc3003k"]
 
 [ext_resource type="Script" path="res://scripts/build_house_10.gd" id="1_31bb4"]
 [ext_resource type="PackedScene" uid="uid://bwu5c10kdbdgn" path="res://assets/models/roads/tile_low.glb" id="1_mluji"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bkeudwqiey5rg" path="res://assets/models/vehicles/box.glb" id="7_tcywk"]
 [ext_resource type="Texture2D" uid="uid://okycugaut5sj" path="res://assets/models/mini-characters/Textures/colormap.png" id="8_83e5h"]
 [ext_resource type="Script" path="res://scripts/construction_character.gd" id="8_qygl2"]
+[ext_resource type="PackedScene" uid="uid://bmi7448uxluac" path="res://assets/models/prototype-kit/target-a-round.glb" id="11_gt1yt"]
 
 [sub_resource type="Curve3D" id="Curve3D_isrxu"]
 _data = {
@@ -2852,5 +2853,8 @@ collision_mask = 4
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("BoxShape3D_r2cjd")
+
+[node name="target-a-round2" parent="." instance=ExtResource("11_gt1yt")]
+transform = Transform3D(-4.37114e-08, 0, 3, 0, 3, 0, -1, 0, -1.31134e-07, 0, 2.708, 1.36856)
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

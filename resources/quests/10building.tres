@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="Quest" load_steps=6 format=3 uid="uid://dp53340nsltfl"]
+[gd_resource type="Resource" script_class="Quest" load_steps=8 format=3 uid="uid://dp53340nsltfl"]
 
 [ext_resource type="Script" path="res://scripts/resources/element.gd" id="1_j8b73"]
 [ext_resource type="Texture2D" uid="uid://dasreihdgbbct" path="res://assets/img/helmet_128x91.png" id="2_fxgfi"]
 [ext_resource type="Script" path="res://scripts/resources/quest.gd" id="3_1dh8t"]
 [ext_resource type="Texture2D" uid="uid://bwvqyypp0vka8" path="res://assets/img/caterpillar_128x115.png" id="3_d7fro"]
+[ext_resource type="Texture2D" uid="uid://cpbqstmpy5ai4" path="res://assets/img/target_128x128.png" id="4_hwnxa"]
 
 [sub_resource type="Resource" id="Resource_ykg3b"]
 script = ExtResource("1_j8b73")
@@ -12,8 +13,14 @@ decal1 = ExtResource("2_fxgfi")
 decal2 = ExtResource("3_d7fro")
 side = 0
 
+[sub_resource type="Resource" id="Resource_uknvq"]
+script = ExtResource("1_j8b73")
+textLabel = ""
+decal1 = ExtResource("4_hwnxa")
+side = 2
+
 [resource]
 script = ExtResource("3_1dh8t")
 id = 10
 color = Color(0.247059, 0.529412, 1, 0)
-elements = Array[ExtResource("1_j8b73")]([SubResource("Resource_ykg3b")])
+elements = Array[ExtResource("1_j8b73")]([SubResource("Resource_ykg3b"), SubResource("Resource_uknvq")])
