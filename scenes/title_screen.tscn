@@ -1,13 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://gryucx2n8goa"]
+[gd_scene load_steps=8 format=3 uid="uid://gryucx2n8goa"]
 
 [ext_resource type="Script" path="res://scripts/title_screen.gd" id="1_85mrq"]
+[ext_resource type="Theme" uid="uid://d3nb4rtlepufm" path="res://resources/main_theme.tres" id="1_tbv8l"]
 [ext_resource type="Texture2D" uid="uid://378mpxai134q" path="res://assets/img/title_screen_1920x1080.png" id="2_o2dux"]
-[ext_resource type="FontFile" uid="uid://cm77ftmps3og0" path="res://resources/fonts/Bettermilk.otf" id="3_qw5ub"]
+[ext_resource type="Texture2D" uid="uid://bnawlb4yv27a0" path="res://assets/img/box_image_570x457.png" id="4_ic8mn"]
+[ext_resource type="Shader" path="res://resources/shaders/transparency.gdshader" id="4_w63lj"]
+[ext_resource type="AudioStream" uid="uid://bo7p8ykdrneea" path="res://assets/sounds/Density & Time - MAZE.mp3" id="6_dpta0"]
 
-[sub_resource type="Theme" id="Theme_48e57"]
-default_font = ExtResource("3_qw5ub")
-default_font_size = 56
-Label/colors/font_color = Color(0.27451, 0.654902, 1, 1)
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gfcu5"]
+shader = ExtResource("4_w63lj")
+shader_parameter/alpha = 0.9
+shader_parameter/texture = ExtResource("4_ic8mn")
 
 [node name="TitleScreen" type="Control"]
 layout_mode = 3
@@ -17,7 +20,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
-theme = SubResource("Theme_48e57")
+theme = ExtResource("1_tbv8l")
 script = ExtResource("1_85mrq")
 
 [node name="BackgroundContainer" type="MarginContainer" parent="."]
@@ -33,6 +36,20 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 texture = ExtResource("2_o2dux")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_gfcu5")
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -514.0
+offset_top = 176.0
+offset_right = 56.0001
+offset_bottom = 633.0
+grow_horizontal = 0
+scale = Vector2(0.730137, 0.761764)
+texture = ExtResource("4_ic8mn")
 
 [node name="MenuContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -73,6 +90,12 @@ text = ">"
 [node name="SelectorColdown" type="Timer" parent="."]
 wait_time = 0.1
 one_shot = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_dpta0")
+volume_db = -8.0
+autoplay = true
+bus = &"Background Music"
 
 [connection signal="mouse_entered" from="MenuContainer/play_label" to="." method="_on_play_label_mouse_entered"]
 [connection signal="mouse_exited" from="MenuContainer/play_label" to="." method="_on_play_label_mouse_exited"]

@@ -1,11 +1,13 @@
-[gd_scene load_steps=13 format=3 uid="uid://b22yg8qvukk2b"]
+[gd_scene load_steps=15 format=3 uid="uid://b22yg8qvukk2b"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_rlfhc"]
 [ext_resource type="PackedScene" uid="uid://bppvsr4na3ydl" path="res://scenes/quest_manager.tscn" id="2_rsn4w"]
+[ext_resource type="Theme" uid="uid://d3nb4rtlepufm" path="res://resources/main_theme.tres" id="3_wjled"]
 [ext_resource type="PackedScene" uid="uid://dy6gruj4b2t1q" path="res://scenes/player.tscn" id="4_mkejn"]
 [ext_resource type="PackedScene" uid="uid://c4acnkarrlclk" path="res://scenes/world_map.tscn" id="6_vts3g"]
 [ext_resource type="PackedScene" uid="uid://bf4mujj3qlo4c" path="res://scenes/quest_indicator.tscn" id="7_d4bhd"]
 [ext_resource type="PackedScene" uid="uid://b47hnywb58h1h" path="res://landscape.tscn" id="8_ssieo"]
+[ext_resource type="AudioStream" uid="uid://c6fgf3qyjal4d" path="res://assets/sounds/Vibe Mountain - Operatic 3.mp3" id="9_uteh8"]
 [ext_resource type="Script" path="res://scripts/autoload/camera_manager.gd" id="35_cwjvg"]
 [ext_resource type="PackedScene" uid="uid://ctdxyrsdbpayx" path="res://scenes/ui/ui.tscn" id="47_fpkxg"]
 
@@ -34,6 +36,7 @@ auto_exposure_enabled = true
 script = ExtResource("1_rlfhc")
 
 [node name="UI" parent="." instance=ExtResource("47_fpkxg")]
+theme = ExtResource("3_wjled")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_eulnq")
@@ -78,6 +81,12 @@ wait_time = 60.0
 
 [node name="Landscape" parent="." instance=ExtResource("8_ssieo")]
 transform = Transform3D(20.8439, -2.48622, 13.5776, 2.48412, 24.8653, 0.739601, -13.578, 0.732489, 20.9786, 56.3729, -15.9276, 49.9065)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_uteh8")
+volume_db = -8.0
+autoplay = true
+bus = &"Background Music"
 
 [connection signal="new_quest" from="." to="QuestManager" method="_on_main_new_quest"]
 [connection signal="disable_box_shooting" from="QuestManager" to="Player" method="_on_quest_manager_disable_box_shooting"]
