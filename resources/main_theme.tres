@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://d3nb4rtlepufm"]
+
+[ext_resource type="FontFile" uid="uid://cm77ftmps3og0" path="res://resources/fonts/Bettermilk.otf" id="1_4kxqd"]
+
+[resource]
+default_font = ExtResource("1_4kxqd")
+default_font_size = 56
+Label/colors/font_color = Color(0.27451, 0.654902, 1, 1)
