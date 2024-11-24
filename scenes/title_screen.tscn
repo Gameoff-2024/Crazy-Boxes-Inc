@@ -16,17 +16,17 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 theme = SubResource("Theme_48e57")
 script = ExtResource("1_85mrq")
 
-[node name="BackgroundContainer" type="BoxContainer" parent="."]
+[node name="BackgroundContainer" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="BackgroundContainer"]
 layout_mode = 2
@@ -39,29 +39,42 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -456.0
-offset_top = 293.0
-offset_right = -321.0
-offset_bottom = 443.0
+offset_left = -446.0
+offset_top = 240.0
+offset_right = -273.0
+offset_bottom = 502.0
 grow_horizontal = 0
 
 [node name="play_label" type="Label" parent="MenuContainer"]
 layout_mode = 2
+mouse_filter = 0
+theme_override_font_sizes/font_size = 100
 text = "Play"
 metadata/action = 0
 
 [node name="exit_label" type="Label" parent="MenuContainer"]
 layout_mode = 2
+mouse_filter = 0
+theme_override_font_sizes/font_size = 100
 text = "Exit"
 metadata/action = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuContainer"]
+layout_mode = 2
 
 [node name="Selector" type="Label" parent="."]
 visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 73.0
+theme_override_font_sizes/font_size = 100
 text = ">"
 
 [node name="SelectorColdown" type="Timer" parent="."]
 wait_time = 0.1
 one_shot = true
+
+[connection signal="mouse_entered" from="MenuContainer/play_label" to="." method="_on_play_label_mouse_entered"]
+[connection signal="mouse_exited" from="MenuContainer/play_label" to="." method="_on_play_label_mouse_exited"]
+[connection signal="mouse_entered" from="MenuContainer/exit_label" to="." method="_on_exit_label_mouse_entered"]
+[connection signal="mouse_exited" from="MenuContainer/exit_label" to="." method="_on_exit_label_mouse_exited"]

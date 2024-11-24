@@ -12,6 +12,9 @@ const MAIN = preload("res://scenes/main.tscn")
 var selected_menu_item = 0
 var menu_items : Array[Node]
 
+var play_hovered = false
+var exit_hovered = false
+
 func _ready() -> void:
 	menu_items = menu_container.get_children()
 	
@@ -22,6 +25,18 @@ func _ready() -> void:
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
 		get_tree().quit()
+		
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		if play_hovered:
+			play()
+		elif exit_hovered:
+			exit()
+			
+	if event is InputEventMouseMotion:
+		if play_hovered:
+			set_selected_item(0)
+		elif exit_hovered:
+			set_selected_item(1)
 		
 	if selector_coldown.is_stopped():
 		if event is InputEventKey:
@@ -38,11 +53,36 @@ func _input(event: InputEvent) -> void:
 			elif event.keycode == KEY_ENTER:
 				var action = menu_items[selected_menu_item].get_meta("action", -1)
 				if action == PLAY:
-					get_tree().change_scene_to_packed(MAIN)
+					play()
 				if action == EXIT:
-					get_tree().quit()
+					exit()
+
 
 func set_selected_item(item_index: int) -> void:
 	selector_coldown.start()
 	selected_menu_item = item_index
 	selector.global_position = menu_items[item_index].global_position - Vector2(40, 0)
+
+
+func play():
+	get_tree().change_scene_to_packed(MAIN)
+	
+	
+func exit():
+	get_tree().quit()
+
+
+func _on_play_label_mouse_entered() -> void:
+	play_hovered = true
+
+
+func _on_play_label_mouse_exited() -> void:
+	play_hovered = false
+
+
+func _on_exit_label_mouse_entered() -> void:
+	exit_hovered = true
+
+
+func _on_exit_label_mouse_exited() -> void:
+	exit_hovered = false
