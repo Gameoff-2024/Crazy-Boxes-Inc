@@ -1,0 +1,67 @@
+[gd_scene load_steps=5 format=3 uid="uid://gryucx2n8goa"]
+
+[ext_resource type="Script" path="res://scripts/title_screen.gd" id="1_85mrq"]
+[ext_resource type="Texture2D" uid="uid://378mpxai134q" path="res://assets/img/title_screen_1920x1080.png" id="2_o2dux"]
+[ext_resource type="FontFile" uid="uid://cm77ftmps3og0" path="res://resources/fonts/Bettermilk.otf" id="3_qw5ub"]
+
+[sub_resource type="Theme" id="Theme_48e57"]
+default_font = ExtResource("3_qw5ub")
+default_font_size = 56
+Label/colors/font_color = Color(0.27451, 0.654902, 1, 1)
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_48e57")
+script = ExtResource("1_85mrq")
+
+[node name="BackgroundContainer" type="BoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="BackgroundContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("2_o2dux")
+
+[node name="MenuContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -456.0
+offset_top = 293.0
+offset_right = -321.0
+offset_bottom = 443.0
+grow_horizontal = 0
+
+[node name="play_label" type="Label" parent="MenuContainer"]
+layout_mode = 2
+text = "Play"
+metadata/action = 0
+
+[node name="exit_label" type="Label" parent="MenuContainer"]
+layout_mode = 2
+text = "Exit"
+metadata/action = 1
+
+[node name="Selector" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 73.0
+text = ">"
+
+[node name="SelectorColdown" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
