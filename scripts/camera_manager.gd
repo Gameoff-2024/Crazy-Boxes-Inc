@@ -5,6 +5,11 @@ var quest_camera: Camera3D
 
 var mouse_cursor = load("res://assets/ui/crosshair002.png")
 
+signal ui_enabled
+signal ui_disabled
+signal ui_quest_enabled
+signal ui_quest_disabled
+
 func _ready() -> void:
 	var cameras = get_tree().get_nodes_in_group("camera")
 	for camera in cameras:
@@ -30,10 +35,13 @@ func quest_camera_make_active():
 	quest_camera.make_current()
 	player_camera.get_parent().active = false
 	Input.set_custom_mouse_cursor(null)
-	
+	emit_signal("ui_disabled")
+	emit_signal("ui_quest_enabled")
 	
 func player_camera_make_active():
 	player_camera.make_current()
 	player_camera.get_parent().active = true
 	%QuestManager.inactive()
 	Input.set_custom_mouse_cursor(mouse_cursor, 0, Vector2(32, 32))
+	emit_signal("ui_enabled")
+	emit_signal("ui_quest_disabled")

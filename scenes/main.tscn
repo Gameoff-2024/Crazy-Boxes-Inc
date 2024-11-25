@@ -1,10 +1,12 @@
-[gd_scene load_steps=15 format=3 uid="uid://b22yg8qvukk2b"]
+[gd_scene load_steps=17 format=3 uid="uid://b22yg8qvukk2b"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_rlfhc"]
 [ext_resource type="PackedScene" uid="uid://bppvsr4na3ydl" path="res://scenes/quest_manager.tscn" id="2_rsn4w"]
 [ext_resource type="Theme" uid="uid://d3nb4rtlepufm" path="res://resources/main_theme.tres" id="3_wjled"]
+[ext_resource type="PackedScene" uid="uid://d1l8sjlt2is6w" path="res://scenes/ui/ui_quest.tscn" id="4_eyoum"]
 [ext_resource type="PackedScene" uid="uid://dy6gruj4b2t1q" path="res://scenes/player.tscn" id="4_mkejn"]
 [ext_resource type="Script" path="res://scripts/camera_manager.gd" id="4_q7u5j"]
+[ext_resource type="Script" path="res://scripts/ui_quest.gd" id="5_kxquq"]
 [ext_resource type="PackedScene" uid="uid://c4acnkarrlclk" path="res://scenes/world_map.tscn" id="6_vts3g"]
 [ext_resource type="PackedScene" uid="uid://bf4mujj3qlo4c" path="res://scenes/quest_indicator.tscn" id="7_d4bhd"]
 [ext_resource type="PackedScene" uid="uid://b47hnywb58h1h" path="res://landscape.tscn" id="8_ssieo"]
@@ -36,7 +38,13 @@ auto_exposure_enabled = true
 script = ExtResource("1_rlfhc")
 
 [node name="UI" parent="." instance=ExtResource("47_fpkxg")]
+unique_name_in_owner = true
 theme = ExtResource("3_wjled")
+
+[node name="UIQuest" parent="." instance=ExtResource("4_eyoum")]
+unique_name_in_owner = true
+visible = false
+script = ExtResource("5_kxquq")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_eulnq")
@@ -89,6 +97,10 @@ autoplay = true
 bus = &"Background Music"
 
 [connection signal="new_quest" from="." to="QuestManager" method="_on_main_new_quest"]
+[connection signal="ui_disabled" from="CameraManager" to="UI" method="_on_camera_manager_ui_disabled"]
+[connection signal="ui_enabled" from="CameraManager" to="UI" method="_on_camera_manager_ui_enabled"]
+[connection signal="ui_quest_disabled" from="CameraManager" to="UIQuest" method="_on_camera_manager_ui_quest_disabled"]
+[connection signal="ui_quest_enabled" from="CameraManager" to="UIQuest" method="_on_camera_manager_ui_quest_enabled"]
 [connection signal="disable_box_shooting" from="QuestManager" to="Player" method="_on_quest_manager_disable_box_shooting"]
 [connection signal="enable_box_shooting" from="QuestManager" to="Player" method="_on_quest_manager_enable_box_shooting"]
 [connection signal="show_quest_indicator" from="QuestManager" to="QuestIndicator" method="_on_quest_manager_show_quest_indicator"]

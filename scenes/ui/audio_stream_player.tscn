@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctni8d1ubk24w"]
+
+[ext_resource type="AudioStream" uid="uid://bo7p8ykdrneea" path="res://assets/sounds/Density & Time - MAZE.mp3" id="1_xj4b7"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_xj4b7")
+volume_db = -8.0
+autoplay = true
+bus = &"Background Music"

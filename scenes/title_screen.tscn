@@ -5,9 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://378mpxai134q" path="res://assets/img/title_screen_1920x1080.png" id="2_o2dux"]
 [ext_resource type="Texture2D" uid="uid://bnawlb4yv27a0" path="res://assets/img/box_image_570x457.png" id="4_ic8mn"]
 [ext_resource type="Shader" path="res://resources/shaders/transparency.gdshader" id="4_w63lj"]
-[ext_resource type="AudioStream" uid="uid://bo7p8ykdrneea" path="res://assets/sounds/Density & Time - MAZE.mp3" id="6_dpta0"]
 [ext_resource type="PackedScene" uid="uid://c571sdbs13vtl" path="res://scenes/ui/selector.tscn" id="6_gepcd"]
 [ext_resource type="LabelSettings" uid="uid://cl4dne3ovval0" path="res://resources/ui/labelsetting.tres" id="6_jxqyo"]
+[ext_resource type="PackedScene" uid="uid://ctni8d1ubk24w" path="res://scenes/ui/audio_stream_player.tscn" id="8_ulwd5"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_gfcu5"]
 shader = ExtResource("4_w63lj")
@@ -102,11 +102,7 @@ metadata/action = 1
 wait_time = 0.1
 one_shot = true
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_dpta0")
-volume_db = -8.0
-autoplay = true
-bus = &"Background Music"
+[node name="AudioStreamPlayer" parent="." instance=ExtResource("8_ulwd5")]
 
 [connection signal="mouse_entered" from="MenuContainer/PlayContainer/play_label" to="." method="_on_play_label_mouse_entered"]
 [connection signal="mouse_exited" from="MenuContainer/PlayContainer/play_label" to="." method="_on_play_label_mouse_exited"]

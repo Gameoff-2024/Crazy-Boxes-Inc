@@ -24,3 +24,11 @@ func _process(delta: float) -> void:
 	var time_string = "%02d:%02d:%03d" % [minutes, seconds, milliseconds]
 	%TimeLabel.text = time_string
 	GameState.time = time_string
+
+
+func _on_camera_manager_ui_disabled() -> void:
+	hide()
+
+
+func _on_camera_manager_ui_enabled() -> void:
+	show()
