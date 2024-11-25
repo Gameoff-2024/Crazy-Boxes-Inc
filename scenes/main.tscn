@@ -85,7 +85,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.3756
 
 [node name="ResetTimer" type="Timer" parent="."]
 unique_name_in_owner = true
-wait_time = 60.0
+wait_time = 120.0
 
 [node name="Landscape" parent="." instance=ExtResource("8_ssieo")]
 transform = Transform3D(20.8439, -2.48622, 13.5776, 2.48412, 24.8653, 0.739601, -13.578, 0.732489, 20.9786, 56.3729, -15.9276, 49.9065)

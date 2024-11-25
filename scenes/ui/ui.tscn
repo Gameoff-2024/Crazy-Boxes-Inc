@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ctdxyrsdbpayx"]
+[gd_scene load_steps=13 format=3 uid="uid://ctdxyrsdbpayx"]
 
 [ext_resource type="Script" path="res://scripts/ui.gd" id="1_e6a0a"]
 [ext_resource type="PackedScene" uid="uid://bml4xghk1tgxm" path="res://scenes/ui/ui_box.tscn" id="2_5mbv4"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cmv7ier20sust" path="res://assets/ui/keyboard_q.png" id="4_j0ns3"]
 [ext_resource type="Texture2D" uid="uid://dvdy65lpkfx3o" path="res://assets/ui/keyboard_w.png" id="5_20xki"]
 [ext_resource type="Texture2D" uid="uid://cu7vvx8a3acgy" path="res://assets/ui/keyboard_space_icon.png" id="5_dh3sf"]
+[ext_resource type="Texture2D" uid="uid://5eaf6a0hmet0" path="res://assets/ui/keyboard_r.png" id="5_x7v8l"]
 [ext_resource type="Texture2D" uid="uid://byu04jbc8rwp" path="res://assets/ui/keyboard_a.png" id="6_6ultt"]
 [ext_resource type="Texture2D" uid="uid://spmuwivdxgtr" path="res://assets/ui/keyboard_s.png" id="7_dobov"]
 [ext_resource type="Texture2D" uid="uid://ccvhkcode7nln" path="res://assets/ui/mouse_right.png" id="7_p15ua"]
@@ -36,41 +37,57 @@ theme_override_constants/margin_bottom = 20
 [node name="Top" type="HSplitContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/Top"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Top"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/Top/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_constants/separation = 2
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/Top/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Top/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 texture = ExtResource("4_j0ns3")
 expand_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/Top/HBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer/Top/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 text = ":"
 label_settings = ExtResource("3_75yoe")
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="MarginContainer/Top/HBoxContainer"]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="MarginContainer/Top/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
-[node name="SubViewport" type="SubViewport" parent="MarginContainer/Top/HBoxContainer/SubViewportContainer"]
+[node name="SubViewport" type="SubViewport" parent="MarginContainer/Top/VBoxContainer/HBoxContainer/SubViewportContainer"]
 transparent_bg = true
 handle_input_locally = false
 size = Vector2i(64, 64)
 render_target_update_mode = 4
 
-[node name="UIBox" parent="MarginContainer/Top/HBoxContainer/SubViewportContainer/SubViewport" instance=ExtResource("2_5mbv4")]
+[node name="UIBox" parent="MarginContainer/Top/VBoxContainer/HBoxContainer/SubViewportContainer/SubViewport" instance=ExtResource("2_5mbv4")]
 
-[node name="BoxContainer" type="BoxContainer" parent="MarginContainer/Top/HBoxContainer"]
+[node name="BoxContainer" type="BoxContainer" parent="MarginContainer/Top/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="ScoreLabel" type="Label" parent="MarginContainer/Top/HBoxContainer/BoxContainer"]
+[node name="ScoreLabel" type="Label" parent="MarginContainer/Top/VBoxContainer/HBoxContainer/BoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "0"
+label_settings = ExtResource("3_75yoe")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/Top/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Top/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("5_x7v8l")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Top/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = ": reset"
 label_settings = ExtResource("3_75yoe")
 
 [node name="TimeLabel" type="Label" parent="MarginContainer/Top"]

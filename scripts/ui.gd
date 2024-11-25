@@ -20,8 +20,7 @@ func _process(delta: float) -> void:
 	var time_elapsed = time_now - time_start
 	var minutes = time_elapsed / 60
 	var seconds = fmod(time_elapsed, 60)
-	var milliseconds = fmod(time_elapsed, 1) * 100
-	var time_string = "%02d:%02d:%03d" % [minutes, seconds, milliseconds]
+	var time_string = "%02d:%02d" % [minutes, seconds]
 	%TimeLabel.text = time_string
 	GameState.time = time_string
 
