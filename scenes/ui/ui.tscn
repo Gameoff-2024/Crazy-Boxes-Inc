@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bml4xghk1tgxm" path="res://scenes/ui/ui_box.tscn" id="2_5mbv4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_gddrv"]
-font_size = 32
+font_size = 40
 outline_size = 4
 
 [node name="UI" type="Control"]
@@ -28,27 +28,39 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+[node name="HSplitContainer" type="HSplitContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HSplitContainer"]
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="MarginContainer/HBoxContainer"]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="MarginContainer/HSplitContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
-[node name="SubViewport" type="SubViewport" parent="MarginContainer/HBoxContainer/SubViewportContainer"]
+[node name="SubViewport" type="SubViewport" parent="MarginContainer/HSplitContainer/HBoxContainer/SubViewportContainer"]
 transparent_bg = true
 handle_input_locally = false
 size = Vector2i(64, 64)
 render_target_update_mode = 4
 
-[node name="UIBox" parent="MarginContainer/HBoxContainer/SubViewportContainer/SubViewport" instance=ExtResource("2_5mbv4")]
+[node name="UIBox" parent="MarginContainer/HSplitContainer/HBoxContainer/SubViewportContainer/SubViewport" instance=ExtResource("2_5mbv4")]
 
-[node name="BoxContainer" type="BoxContainer" parent="MarginContainer/HBoxContainer"]
+[node name="BoxContainer" type="BoxContainer" parent="MarginContainer/HSplitContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="ScoreLabel" type="Label" parent="MarginContainer/HBoxContainer/BoxContainer"]
+[node name="ScoreLabel" type="Label" parent="MarginContainer/HSplitContainer/HBoxContainer/BoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 text = "0"
+label_settings = SubResource("LabelSettings_gddrv")
+
+[node name="TimeLabel" type="Label" parent="MarginContainer/HSplitContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "TIME: "
 label_settings = SubResource("LabelSettings_gddrv")

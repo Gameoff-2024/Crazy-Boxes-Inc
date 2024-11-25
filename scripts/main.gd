@@ -15,9 +15,6 @@ func _process(delta: float) -> void:
 		can_reset = false
 		%ResetTimer.start()
 
-func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_cancel"):
-		get_tree().quit()
 
 func _on_reset_timer_timeout() -> void:
 	can_reset = true

@@ -3,6 +3,7 @@ class_name QuestLoader
 @export var quest_path = "res://resources/quests/"
 
 var quests_list: Array
+var shuffled = false
 
 func _init():
 	quests_list = Array(DirAccess.get_files_at(quest_path))
@@ -11,7 +12,6 @@ func _init():
 
 func choose_random_quest() -> Quest:
 	if quests_list.is_empty():
-		print("WIN")
 		return null
 		
 	return load(quest_path + quests_list.pop_back())
