@@ -17,7 +17,7 @@ func _on_quest_manager_show_quest_indicator() -> void:
 
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
-	if body.name == "Player":
+	if body.name == "Player" and active:
 		hide()
 		active = false
 		%Area3D.monitoring = active
