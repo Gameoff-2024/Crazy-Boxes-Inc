@@ -11,7 +11,7 @@ func _ready() -> void:
 		
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("reset") and can_reset:
-		$Player.global_position = $PlayerPosition.global_position
+		$Player.global_transform = $PlayerPosition.global_transform
 		can_reset = false
 		%ResetTimer.start()
 

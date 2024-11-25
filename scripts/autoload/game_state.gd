@@ -4,7 +4,7 @@ signal score_updated(old_score: int, new_score: int)
 
 var score := 0
 
-var time = 0
+var time = ""
 
 
 func score_add_one():

@@ -2,10 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/ui.gd" id="1_e6a0a"]
 [ext_resource type="PackedScene" uid="uid://bml4xghk1tgxm" path="res://scenes/ui/ui_box.tscn" id="2_5mbv4"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_gddrv"]
-font_size = 40
-outline_size = 4
+[ext_resource type="LabelSettings" uid="uid://cl4dne3ovval0" path="res://resources/ui/labelsetting.tres" id="3_75yoe"]
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -55,7 +52,7 @@ layout_mode = 2
 unique_name_in_owner = true
 layout_mode = 2
 text = "0"
-label_settings = SubResource("LabelSettings_gddrv")
+label_settings = ExtResource("3_75yoe")
 
 [node name="TimeLabel" type="Label" parent="MarginContainer/HSplitContainer"]
 unique_name_in_owner = true
@@ -63,4 +60,4 @@ layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
 text = "TIME: "
-label_settings = SubResource("LabelSettings_gddrv")
+label_settings = ExtResource("3_75yoe")

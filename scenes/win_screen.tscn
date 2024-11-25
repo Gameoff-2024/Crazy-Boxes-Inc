@@ -1,4 +1,23 @@
-[gd_scene format=3 uid="uid://3iq8cbfbj14u"]
+[gd_scene load_steps=9 format=3 uid="uid://3iq8cbfbj14u"]
+
+[ext_resource type="Script" path="res://scripts/win_screen.gd" id="1_7xm6j"]
+[ext_resource type="Texture2D" uid="uid://378mpxai134q" path="res://assets/img/title_screen_1920x1080.png" id="1_bcqwl"]
+[ext_resource type="Shader" path="res://resources/shaders/blur.gdshader" id="1_goa8a"]
+[ext_resource type="Shader" path="res://resources/shaders/transparency.gdshader" id="2_a26ek"]
+[ext_resource type="Texture2D" uid="uid://bnawlb4yv27a0" path="res://assets/img/box_image_570x457.png" id="3_jw0di"]
+[ext_resource type="LabelSettings" uid="uid://cl4dne3ovval0" path="res://resources/ui/labelsetting.tres" id="5_be7w8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tbxa2"]
+shader = ExtResource("1_goa8a")
+shader_parameter/blur_radius = 0.0
+shader_parameter/blur_amount = 1.745
+shader_parameter/blur_inner = 0.0
+shader_parameter/blur_outer = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b50uc"]
+shader = ExtResource("2_a26ek")
+shader_parameter/alpha = 0.9
+shader_parameter/texture = ExtResource("3_jw0di")
 
 [node name="WinScreen" type="Control"]
 layout_mode = 3
@@ -7,16 +26,59 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_7xm6j")
+
+[node name="BackgroundContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="BackgroundContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("1_bcqwl")
+
+[node name="ColorRect" type="ColorRect" parent="BackgroundContainer"]
+material = SubResource("ShaderMaterial_tbxa2")
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_b50uc")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -231.0
+offset_top = -256.0
+offset_right = 565.0
+offset_bottom = 382.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.730137, 0.761764)
+texture = ExtResource("3_jw0di")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = 14
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_top = -11.5
-offset_bottom = 11.5
+anchors_preset = -1
+anchor_left = 0.391
+anchor_top = 0.339
+anchor_right = 0.545
+anchor_bottom = 0.663
+offset_left = -20.7201
+offset_top = 4.87997
+offset_right = 75.6
+offset_bottom = 28.96
 grow_horizontal = 2
 grow_vertical = 2
-text = "You WIN"
+text = "You WIN
+
+TIME: "
+label_settings = ExtResource("5_be7w8")
 horizontal_alignment = 1
+vertical_alignment = 1
