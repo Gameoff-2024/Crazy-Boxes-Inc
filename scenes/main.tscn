@@ -4,11 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://bppvsr4na3ydl" path="res://scenes/quest_manager.tscn" id="2_rsn4w"]
 [ext_resource type="Theme" uid="uid://d3nb4rtlepufm" path="res://resources/main_theme.tres" id="3_wjled"]
 [ext_resource type="PackedScene" uid="uid://dy6gruj4b2t1q" path="res://scenes/player.tscn" id="4_mkejn"]
+[ext_resource type="Script" path="res://scripts/camera_manager.gd" id="4_q7u5j"]
 [ext_resource type="PackedScene" uid="uid://c4acnkarrlclk" path="res://scenes/world_map.tscn" id="6_vts3g"]
 [ext_resource type="PackedScene" uid="uid://bf4mujj3qlo4c" path="res://scenes/quest_indicator.tscn" id="7_d4bhd"]
 [ext_resource type="PackedScene" uid="uid://b47hnywb58h1h" path="res://landscape.tscn" id="8_ssieo"]
 [ext_resource type="AudioStream" uid="uid://c6fgf3qyjal4d" path="res://assets/sounds/Vibe Mountain - Operatic 3.mp3" id="9_uteh8"]
-[ext_resource type="Script" path="res://scripts/autoload/camera_manager.gd" id="35_cwjvg"]
 [ext_resource type="PackedScene" uid="uid://ctdxyrsdbpayx" path="res://scenes/ui/ui.tscn" id="47_fpkxg"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_slcvf"]
@@ -53,7 +53,7 @@ shadow_blur = 2.5
 sky_mode = 1
 
 [node name="CameraManager" type="Node3D" parent="."]
-script = ExtResource("35_cwjvg")
+script = ExtResource("4_q7u5j")
 
 [node name="QuestManager" parent="." node_paths=PackedStringArray("quest_indicator") groups=["quest_manager"] instance=ExtResource("2_rsn4w")]
 unique_name_in_owner = true

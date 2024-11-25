@@ -1,5 +1,9 @@
-[gd_resource type="LabelSettings" format=3 uid="uid://cl4dne3ovval0"]
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://cl4dne3ovval0"]
+
+[ext_resource type="FontFile" uid="uid://bi3u0negxprb5" path="res://resources/fonts/LEMONMILK-Medium.otf" id="1_uex8p"]
 
 [resource]
-font_size = 40
-outline_size = 4
+font = ExtResource("1_uex8p")
+font_size = 50
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)

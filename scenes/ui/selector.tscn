@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://c571sdbs13vtl"]
+
+[ext_resource type="Texture2D" uid="uid://dmc3es8kkd53n" path="res://resources/ui/navigation_e.png" id="1_t4una"]
+[ext_resource type="Script" path="res://scenes/ui/selector.gd" id="2_mydpf"]
+
+[node name="Selector" type="TextureRect"]
+self_modulate = Color(1, 1, 1, 0)
+size_flags_horizontal = 4
+texture = ExtResource("1_t4una")
+expand_mode = 3
+stretch_mode = 3
+script = ExtResource("2_mydpf")

@@ -6,21 +6,23 @@ const EXIT := 1
 const MAIN = preload("res://scenes/main.tscn")
 
 @onready var menu_container: VBoxContainer = $MenuContainer
-@onready var selector: Label = $Selector
 @onready var selector_coldown: Timer = $SelectorColdown
 
 var selected_menu_item = 0
 var menu_items : Array[Node]
+var selectors : Array
 
 var play_hovered = false
 var exit_hovered = false
 
 func _ready() -> void:
+	selectors = get_tree().get_nodes_in_group("selector")
+	
 	menu_items = menu_container.get_children()
 	
 	if menu_items.size() > 0:
 		set_selected_item(0)
-		selector.show()
+		selectors[0].show()
 		
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
@@ -61,7 +63,9 @@ func _input(event: InputEvent) -> void:
 func set_selected_item(item_index: int) -> void:
 	selector_coldown.start()
 	selected_menu_item = item_index
-	selector.global_position = menu_items[item_index].global_position - Vector2(40, 0)
+	var label = menu_items[item_index] as Label
+	get_tree().call_group("selector", "inactive")
+	selectors[item_index].active()
 
 
 func play():

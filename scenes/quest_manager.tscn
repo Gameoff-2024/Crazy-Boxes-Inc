@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://scripts/quest_manager.gd" id="1_rwak3"]
 [ext_resource type="Script" path="res://scripts/quest_displayer.gd" id="2_6fpso"]
 [ext_resource type="Texture2D" uid="uid://bbpi23bgbmxav" path="res://assets/models/boxes/Textures/colormap.png" id="3_ia8dh"]
-[ext_resource type="FontFile" uid="uid://cm77ftmps3og0" path="res://resources/fonts/Bettermilk.otf" id="4_806bw"]
 [ext_resource type="PackedScene" uid="uid://xgm0jawlubr4" path="res://assets/models/props/clipboard.glb" id="5_arc75"]
+[ext_resource type="FontFile" uid="uid://bpbpodta7tpgx" path="res://resources/fonts/Cream Cake.otf" id="6_sgd2u"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ck4su"]
 resource_name = "colormap"
@@ -90,7 +90,7 @@ double_sided = false
 text = "Lorem ipsum
 sdasda
 dasd sssssssss"
-font = ExtResource("4_806bw")
+font = ExtResource("6_sgd2u")
 font_size = 300
 outline_size = 100
 line_spacing = -100.0
@@ -126,7 +126,7 @@ double_sided = false
 text = "Lorem ipsum
 sdasda
 dasd sssssssss"
-font = ExtResource("4_806bw")
+font = ExtResource("6_sgd2u")
 font_size = 300
 outline_size = 100
 line_spacing = -100.0
@@ -162,7 +162,7 @@ double_sided = false
 text = "Lorem ipsum
 sdasda
 dasd sssssssss"
-font = ExtResource("4_806bw")
+font = ExtResource("6_sgd2u")
 font_size = 300
 outline_size = 100
 line_spacing = -100.0
@@ -196,7 +196,7 @@ double_sided = false
 text = "Lorem ipsum
 sdasda
 dasd sssssssss"
-font = ExtResource("4_806bw")
+font = ExtResource("6_sgd2u")
 font_size = 300
 outline_size = 100
 line_spacing = -100.0
@@ -237,5 +237,5 @@ outline_modulate = Color(0.864675, 0.864675, 0.864675, 1)
 text = "Go get
  a new 
 package!"
-font = ExtResource("4_806bw")
+font = ExtResource("6_sgd2u")
 font_size = 48

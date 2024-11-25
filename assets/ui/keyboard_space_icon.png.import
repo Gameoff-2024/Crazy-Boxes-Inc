@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0ogt68v7hiqi"
-path="res://.godot/imported/crosshair002.png-a84692c96109ddd38d81a75bc246165a.ctex"
+uid="uid://cu7vvx8a3acgy"
+path="res://.godot/imported/keyboard_space_icon.png-d120c17daf10b54085be3b212654511e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/crosshair002.png"
-dest_files=["res://.godot/imported/crosshair002.png-a84692c96109ddd38d81a75bc246165a.ctex"]
+source_file="res://assets/ui/keyboard_space_icon.png"
+dest_files=["res://.godot/imported/keyboard_space_icon.png-d120c17daf10b54085be3b212654511e.ctex"]
 
 [params]
 
