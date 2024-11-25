@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=4 uid="uid://bppvsr4na3ydl"]
+[gd_scene load_steps=13 format=4 uid="uid://bppvsr4na3ydl"]
 
 [ext_resource type="Script" path="res://scripts/quest_manager.gd" id="1_rwak3"]
 [ext_resource type="Script" path="res://scripts/quest_displayer.gd" id="2_6fpso"]
 [ext_resource type="Texture2D" uid="uid://bbpi23bgbmxav" path="res://assets/models/boxes/Textures/colormap.png" id="3_ia8dh"]
 [ext_resource type="PackedScene" uid="uid://xgm0jawlubr4" path="res://assets/models/props/clipboard.glb" id="5_arc75"]
+[ext_resource type="FontFile" uid="uid://bi3u0negxprb5" path="res://resources/fonts/LEMONMILK-Medium.otf" id="6_2wm0i"]
 [ext_resource type="FontFile" uid="uid://bpbpodta7tpgx" path="res://resources/fonts/Cream Cake.otf" id="6_sgd2u"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ck4su"]
@@ -225,17 +226,16 @@ skeleton = NodePath("../..")
 
 [node name="NoQuestDisplayer" type="Node3D" parent="."]
 unique_name_in_owner = true
-visible = false
 
 [node name="clipboard" parent="NoQuestDisplayer" instance=ExtResource("5_arc75")]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -0.0905559, 0.500855, 0)
 
 [node name="Label3D" type="Label3D" parent="NoQuestDisplayer"]
-transform = Transform3D(-1.75593e-08, -0.401709, 0, -1.75593e-08, 7.6754e-16, 0.428124, -0.401709, 1.75593e-08, -1.87139e-08, 0.0241432, 0.505088, -0.00194473)
+transform = Transform3D(-1.76059e-09, -0.0402774, 0, -1.76059e-09, 7.69575e-17, 0.0429259, -0.0402774, 1.76059e-09, -1.87635e-09, 0.0170434, 0.511179, -0.00363906)
 modulate = Color(0, 0, 0, 1)
 outline_modulate = Color(0.864675, 0.864675, 0.864675, 1)
 text = "Go get
- a new 
+a new 
 package!"
-font = ExtResource("6_sgd2u")
-font_size = 48
+font = ExtResource("6_2wm0i")
+font_size = 300

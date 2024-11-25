@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://dy6gruj4b2t1q"]
+[gd_scene load_steps=20 format=4 uid="uid://dy6gruj4b2t1q"]
 
 [ext_resource type="Script" path="res://scripts/player_camera_pivot.gd" id="2_fvrfc"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="2_np1tf"]
@@ -8,6 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://dtyy6mamekyag" path="res://assets/models/container/Textures/colormap.png" id="7_cx80p"]
 [ext_resource type="Script" path="res://scripts/player-skip.gd" id="7_ryb5v"]
 [ext_resource type="PackedScene" uid="uid://cks8v06vh0bfn" path="res://scenes/BoxLong.tscn" id="8_1daob"]
+[ext_resource type="PackedScene" uid="uid://ce3g52f511x3o" path="res://scenes/particles.tscn" id="9_4dws8"]
+[ext_resource type="AudioStream" uid="uid://diortcnx7v1rl" path="res://assets/sounds/win.wav" id="10_cv3n0"]
+[ext_resource type="AudioStream" uid="uid://cwbihu7vqvop7" path="res://assets/sounds/shot.wav" id="11_03sjk"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kjse8"]
 friction = 0.5
@@ -179,6 +182,9 @@ script = ExtResource("5_dbhll")
 [node name="Shooter" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.981174, -0.0659413)
 
+[node name="Particles" parent="." instance=ExtResource("9_4dws8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.894564, 0)
+
 [node name="Skip" type="Node3D" parent="."]
 unique_name_in_owner = true
 transform = Transform3D(0.375855, 0, 0, 0, 0.375855, 0, 0, 0, 0.375855, 0, 0.88727, -0.0639817)
@@ -216,6 +222,16 @@ spot_angle_attenuation = 1.93187
 [node name="ShootTimer" type="Timer" parent="."]
 unique_name_in_owner = true
 wait_time = 0.5
+
+[node name="WinSound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("10_cv3n0")
+
+[node name="ShotSound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("11_03sjk")
+volume_db = -5.0
+pitch_scale = 1.2
 
 [connection signal="rotation_start" from="CameraPivot" to="." method="_on_camera_pivot_rotation_start"]
 [connection signal="rotation_stop" from="CameraPivot" to="." method="_on_camera_pivot_rotation_stop"]

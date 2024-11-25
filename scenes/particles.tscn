@@ -1,0 +1,90 @@
+[gd_scene load_steps=6 format=3 uid="uid://ce3g52f511x3o"]
+
+[ext_resource type="Script" path="res://scenes/particles.gd" id="1_ghvd2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2djm0"]
+disable_fog = true
+vertex_color_use_as_albedo = true
+albedo_color = Color(0, 1, 0.498039, 1)
+emission = Color(1, 1, 1, 1)
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_v6qyf"]
+size = Vector2(0.05, 0.05)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m3aow"]
+disable_fog = true
+albedo_color = Color(0.0901961, 0, 1, 1)
+emission = Color(1, 1, 1, 1)
+billboard_mode = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_smlk4"]
+disable_fog = true
+albedo_color = Color(0.848443, 0, 0.272242, 1)
+emission = Color(1, 1, 1, 1)
+billboard_mode = 1
+
+[node name="Particles" type="Node3D"]
+script = ExtResource("1_ghvd2")
+
+[node name="GreenParticles" type="CPUParticles3D" parent="."]
+material_override = SubResource("StandardMaterial3D_2djm0")
+emitting = false
+amount = 32
+one_shot = true
+explosiveness = 0.6
+randomness = 0.2
+lifetime_randomness = 0.3
+visibility_aabb = AABB(-4, -4, -4, 8, 8, 8)
+mesh = SubResource("QuadMesh_v6qyf")
+direction = Vector3(0, 1, 0)
+spread = 30.0
+initial_velocity_min = 20.0
+initial_velocity_max = 50.0
+linear_accel_max = 10.0
+damping_min = 49.919
+damping_max = 61.129
+angle_max = 45.0
+scale_amount_min = 0.8
+scale_amount_max = 1.2
+
+[node name="BlueParticles" type="CPUParticles3D" parent="."]
+material_override = SubResource("StandardMaterial3D_m3aow")
+emitting = false
+amount = 32
+one_shot = true
+explosiveness = 0.6
+randomness = 0.2
+lifetime_randomness = 0.3
+visibility_aabb = AABB(-4, -4, -4, 8, 8, 8)
+mesh = SubResource("QuadMesh_v6qyf")
+direction = Vector3(0, 1, 0)
+spread = 30.0
+initial_velocity_min = 20.0
+initial_velocity_max = 50.0
+damping_min = 49.919
+damping_max = 61.129
+angle_max = 45.0
+scale_amount_min = 0.8
+scale_amount_max = 1.2
+
+[node name="RedParticles" type="CPUParticles3D" parent="."]
+material_override = SubResource("StandardMaterial3D_smlk4")
+emitting = false
+amount = 32
+lifetime = 0.5
+one_shot = true
+explosiveness = 0.6
+randomness = 0.2
+lifetime_randomness = 0.3
+visibility_aabb = AABB(-4, -4, -4, 8, 8, 8)
+mesh = SubResource("QuadMesh_v6qyf")
+direction = Vector3(0, 1, 0)
+spread = 30.0
+initial_velocity_min = 20.0
+initial_velocity_max = 50.0
+damping_min = 49.919
+damping_max = 61.129
+angle_max = 45.0
+scale_amount_min = 0.8
+scale_amount_max = 1.2

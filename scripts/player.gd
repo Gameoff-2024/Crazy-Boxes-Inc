@@ -32,6 +32,7 @@ func _process(delta: float):
 	if Input.is_action_just_pressed("shot") and _can_shoot:
 		shoot_box()
 		%ShootTimer.start()
+		%ShotSound.play()
 		_can_shoot = false
 		
 		
@@ -137,6 +138,9 @@ func _on_camera_pivot_rotation_stop() -> void:
 func _on_quest_manager_disable_box_shooting() -> void:
 	_can_shoot = false
 	%Skip.hide_boxes()
+	$Particles.show()
+	$Particles.emit()
+	%WinSound.play()
 
 
 func _on_quest_manager_enable_box_shooting() -> void:
