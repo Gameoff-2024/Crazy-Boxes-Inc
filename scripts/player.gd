@@ -27,6 +27,7 @@ var _can_shoot := true
 func _ready():
 	_quest_manager = get_tree().get_first_node_in_group("quest_manager")
 
+
 func _process(delta: float):
 	if Input.is_action_just_pressed("shot") and _can_shoot:
 		shoot_box()
@@ -49,14 +50,14 @@ func _physics_process(delta: float):
 		# Sudden velocity change, likely due to a collision. Play an impact sound to give audible feedback,
 		# and vibrate for haptic feedback.
 		#$ImpactSound.play()
-		Input.vibrate_handheld(100)
-		for joypad in Input.get_connected_joypads():
-			Input.start_joy_vibration(joypad, 0.0, 0.5, 0.1)
+		pass
 
 	# Automatically accelerate when using touch controls (reversing overrides acceleration).
-	if DisplayServer.is_touchscreen_available() or Input.is_action_pressed(&"up"):
+	if Input.is_action_pressed(&"up"):
 		# Increase engine force at low speeds to make the initial acceleration faster.
 		var speed := linear_velocity.length()
+		
+		lerp_camera_to_original_position(delta * speed)
 		if speed < 5.0 and not is_zero_approx(speed):
 			engine_force = clampf(engine_force_value * 5.0 / speed, 0.0, 100.0)
 		else:
@@ -145,3 +146,7 @@ func _on_quest_manager_enable_box_shooting() -> void:
 
 func _on_shoot_timer_timeout() -> void:
 	_can_shoot = true
+
+
+func lerp_camera_to_original_position(delta) -> void:
+	$CameraPivot.transform = $CameraPivot.transform.interpolate_with($CameraPivotStart.transform, delta)

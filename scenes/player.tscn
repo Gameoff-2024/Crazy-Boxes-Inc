@@ -164,12 +164,15 @@ damping_compression = 0.88
 [node name="wheel-default2" parent="wheel-back-right" instance=ExtResource("3_fj3q0")]
 transform = Transform3D(-0.5, 0, -7.54979e-08, 0, 0.5, 0, 7.54979e-08, 0, -0.5, 0, 0, 0)
 
+[node name="CameraPivotStart" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+
 [node name="CameraPivot" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.583746, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
 script = ExtResource("2_fvrfc")
 
 [node name="Camera3D" type="Camera3D" parent="CameraPivot" groups=["camera"]]
-transform = Transform3D(-2, 0, -1.74846e-07, -3.53579e-08, 1.95868, 0.404447, 1.71234e-07, 0.404447, -1.95868, 0, 1.24562, -3.03982)
+transform = Transform3D(-1, -2.26267e-08, 8.44439e-08, 0, 0.965926, 0.258819, -8.74228e-08, 0.258819, -0.965926, 0, 1.2, -3)
 cull_mask = 1047553
 script = ExtResource("5_dbhll")
 
