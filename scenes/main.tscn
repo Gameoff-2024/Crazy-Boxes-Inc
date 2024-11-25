@@ -58,7 +58,7 @@ script = ExtResource("35_cwjvg")
 [node name="QuestManager" parent="." node_paths=PackedStringArray("quest_indicator") groups=["quest_manager"] instance=ExtResource("2_rsn4w")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.5, 16.5, 0)
-active_quest_id = 0
+active_quest_id = -1
 quest_indicator = NodePath("../QuestIndicator")
 
 [node name="QuestIndicator" parent="." instance=ExtResource("7_d4bhd")]

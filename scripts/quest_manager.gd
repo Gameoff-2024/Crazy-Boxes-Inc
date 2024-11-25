@@ -44,6 +44,9 @@ func _ready() -> void:
 		active_quest = quest_loader.choose_quest(active_quest_id)
 		set_quest(active_quest)
 		active()
+	else:
+		_on_main_new_quest()
+		
 		
 
 func _process(delta: float):
@@ -107,12 +110,14 @@ func active():
 	$QuestDisplayer.show()
 	starting_rotation = package_pivot.rotation
 	starting_position = package_pivot.position
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	
 	
 func inactive():
 	$QuestDisplayer.hide()
-	package_pivot.rotation = starting_rotation
-	package_pivot.position = starting_position
+	if package_pivot:
+		package_pivot.rotation = starting_rotation
+		package_pivot.position = starting_position
 	
 
 func set_quest(quest: Quest):

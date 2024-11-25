@@ -63,22 +63,26 @@ grow_vertical = 2
 scale = Vector2(0.730137, 0.761764)
 texture = ExtResource("3_jw0di")
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.391
-anchor_top = 0.339
-anchor_right = 0.545
-anchor_bottom = 0.663
-offset_left = -20.7201
-offset_top = 4.87997
-offset_right = 75.6
-offset_bottom = 28.96
-grow_horizontal = 2
-grow_vertical = 2
-text = "You WIN
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 734.0
+offset_top = 366.0
+offset_right = 1126.0
+offset_bottom = 758.0
+theme_override_constants/separation = 5
 
-TIME: "
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "You WIN!"
+label_settings = ExtResource("5_be7w8")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TimeLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "TIME:"
 label_settings = ExtResource("5_be7w8")
 horizontal_alignment = 1
 vertical_alignment = 1
