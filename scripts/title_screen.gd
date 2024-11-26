@@ -54,6 +54,7 @@ func _input(event: InputEvent) -> void:
 					set_selected_item(selected_menu_item - 1)
 			elif event.keycode == KEY_ENTER:
 				var action = menu_items[selected_menu_item].get_meta("action", -1)
+				print(menu_items[selected_menu_item])
 				if action == PLAY:
 					play()
 				if action == EXIT:

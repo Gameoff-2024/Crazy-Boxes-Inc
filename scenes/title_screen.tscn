@@ -68,6 +68,7 @@ grow_horizontal = 0
 [node name="PlayContainer" type="HBoxContainer" parent="MenuContainer"]
 layout_mode = 2
 size_flags_vertical = 6
+metadata/action = 0
 
 [node name="Selector" parent="MenuContainer/PlayContainer" groups=["selector"] instance=ExtResource("6_gepcd")]
 layout_mode = 2
@@ -85,6 +86,7 @@ metadata/action = 0
 [node name="ExitContainer" type="HBoxContainer" parent="MenuContainer"]
 layout_mode = 2
 size_flags_vertical = 6
+metadata/action = 1
 
 [node name="Selector" parent="MenuContainer/ExitContainer" groups=["selector"] instance=ExtResource("6_gepcd")]
 layout_mode = 2
