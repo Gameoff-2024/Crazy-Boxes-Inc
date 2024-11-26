@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://dy6gruj4b2t1q"]
+[gd_scene load_steps=28 format=4 uid="uid://dy6gruj4b2t1q"]
 
 [ext_resource type="Script" path="res://scripts/player_camera_pivot.gd" id="2_fvrfc"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="2_np1tf"]
@@ -128,6 +128,14 @@ point_count = 2
 
 [sub_resource type="Gradient" id="Gradient_3xd4g"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="Animation" id="Animation_lxkvu"]
+resource_name = "move"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mkmd8"]
+_data = {
+"move": SubResource("Animation_lxkvu")
+}
 
 [node name="PlayerBody3D" type="VehicleBody3D" groups=["player"]]
 collision_layer = 2
@@ -285,6 +293,11 @@ damping_max = 0.05
 angle_max = 360.0
 scale_amount_curve = SubResource("Curve_gd7mq")
 color_ramp = SubResource("Gradient_3xd4g")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_mkmd8")
+}
 
 [connection signal="rotation_start" from="CameraPivot" to="." method="_on_camera_pivot_rotation_start"]
 [connection signal="rotation_stop" from="CameraPivot" to="." method="_on_camera_pivot_rotation_stop"]

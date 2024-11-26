@@ -5,8 +5,8 @@
 [ext_resource type="Theme" uid="uid://d3nb4rtlepufm" path="res://resources/main_theme.tres" id="3_wjled"]
 [ext_resource type="PackedScene" uid="uid://d1l8sjlt2is6w" path="res://scenes/ui/ui_quest.tscn" id="4_eyoum"]
 [ext_resource type="PackedScene" uid="uid://dy6gruj4b2t1q" path="res://scenes/player.tscn" id="4_mkejn"]
-[ext_resource type="Script" path="res://scripts/camera_manager.gd" id="4_q7u5j"]
 [ext_resource type="Script" path="res://scripts/ui_quest.gd" id="5_kxquq"]
+[ext_resource type="PackedScene" uid="uid://cpplsdw4y4v4y" path="res://scenes/camera_manager.tscn" id="6_lmsye"]
 [ext_resource type="PackedScene" uid="uid://c4acnkarrlclk" path="res://scenes/world_map.tscn" id="6_vts3g"]
 [ext_resource type="PackedScene" uid="uid://bf4mujj3qlo4c" path="res://scenes/quest_indicator.tscn" id="7_d4bhd"]
 [ext_resource type="PackedScene" uid="uid://b47hnywb58h1h" path="res://landscape.tscn" id="8_ssieo"]
@@ -60,8 +60,7 @@ shadow_opacity = 0.5
 shadow_blur = 2.5
 sky_mode = 1
 
-[node name="CameraManager" type="Node3D" parent="."]
-script = ExtResource("4_q7u5j")
+[node name="CameraManager" parent="." instance=ExtResource("6_lmsye")]
 
 [node name="QuestManager" parent="." node_paths=PackedStringArray("quest_indicator") groups=["quest_manager"] instance=ExtResource("2_rsn4w")]
 unique_name_in_owner = true
@@ -90,7 +89,7 @@ wait_time = 120.0
 [node name="Landscape" parent="." instance=ExtResource("8_ssieo")]
 transform = Transform3D(20.8439, -2.48622, 13.5776, 2.48412, 24.8653, 0.739601, -13.578, 0.732489, 20.9786, 56.3729, -15.9276, 49.9065)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="GameMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_uteh8")
 volume_db = -8.0
 autoplay = true

@@ -3,25 +3,27 @@
 [ext_resource type="Script" path="res://scenes/particles.gd" id="1_ghvd2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2djm0"]
+shading_mode = 0
 disable_fog = true
 vertex_color_use_as_albedo = true
 albedo_color = Color(0, 1, 0.498039, 1)
-emission = Color(1, 1, 1, 1)
 billboard_mode = 1
 
 [sub_resource type="QuadMesh" id="QuadMesh_v6qyf"]
 size = Vector2(0.05, 0.05)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m3aow"]
+shading_mode = 0
 disable_fog = true
+vertex_color_use_as_albedo = true
 albedo_color = Color(0.0901961, 0, 1, 1)
-emission = Color(1, 1, 1, 1)
 billboard_mode = 1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_smlk4"]
+shading_mode = 0
 disable_fog = true
+vertex_color_use_as_albedo = true
 albedo_color = Color(0.848443, 0, 0.272242, 1)
-emission = Color(1, 1, 1, 1)
 billboard_mode = 1
 
 [node name="Particles" type="Node3D"]

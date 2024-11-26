@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpplsdw4y4v4y"]
+
+[ext_resource type="Script" path="res://scripts/camera_manager.gd" id="1_vqlge"]
+
+[node name="CameraManager" type="Node3D"]
+script = ExtResource("1_vqlge")
+
+[node name="SoundPlayer" type="AudioStreamPlayer" parent="."]

@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjxb45q7x87il"]
+
+[ext_resource type="Script" path="res://scripts/music_icon.gd" id="1_6fs6x"]
+[ext_resource type="Texture2D" uid="uid://b6jyx8yfb3v1i" path="res://assets/ui/musicOn.png" id="1_ixe40"]
+[ext_resource type="Texture2D" uid="uid://ngfk8bakq3km" path="res://assets/ui/musicOff.png" id="2_k7ayd"]
+
+[node name="MusicIcon" type="BoxContainer"]
+offset_right = 50.0
+offset_bottom = 50.0
+script = ExtResource("1_6fs6x")
+
+[node name="MusicOn" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+texture = ExtResource("1_ixe40")
+stretch_mode = 2
+
+[node name="MusicOff" type="TextureRect" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 8
+texture = ExtResource("2_k7ayd")
+stretch_mode = 2

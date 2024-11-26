@@ -25,6 +25,7 @@ func _process(delta: float) -> void:
 			quest_camera_make_active()
 		else:
 			player_camera_make_active()
+		$SoundPlayer.play()
 			
 	if Input.is_action_just_pressed("ui_cancel") and quest_camera.current:
 		player_camera_make_active()
