@@ -23,6 +23,8 @@ func _process(delta: float) -> void:
 	var time_string = "%02d:%02d" % [minutes, seconds]
 	%TimeLabel.text = time_string
 	GameState.time = time_string
+	
+	manage_music_icons()
 
 
 func _on_camera_manager_ui_disabled() -> void:
@@ -31,3 +33,12 @@ func _on_camera_manager_ui_disabled() -> void:
 
 func _on_camera_manager_ui_enabled() -> void:
 	show()
+	
+
+func manage_music_icons() -> void:
+	if AudioServer.is_bus_mute(0):
+		%MusicOff.show()
+		%MusicOn.hide()
+	else:
+		%MusicOff.hide()
+		%MusicOn.show()

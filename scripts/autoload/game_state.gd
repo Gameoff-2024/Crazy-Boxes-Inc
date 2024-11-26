@@ -12,3 +12,7 @@ func score_add_one():
 	score_updated.emit(score, new_score)
 	score = new_score
 	
+	
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("mute"):
+		AudioServer.set_bus_mute(0, not AudioServer.is_bus_mute(0))

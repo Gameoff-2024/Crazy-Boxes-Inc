@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://ctdxyrsdbpayx"]
+[gd_scene load_steps=15 format=3 uid="uid://ctdxyrsdbpayx"]
 
 [ext_resource type="Script" path="res://scripts/ui.gd" id="1_e6a0a"]
 [ext_resource type="PackedScene" uid="uid://bml4xghk1tgxm" path="res://scenes/ui/ui_box.tscn" id="2_5mbv4"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://cu7vvx8a3acgy" path="res://assets/ui/keyboard_space_icon.png" id="5_dh3sf"]
 [ext_resource type="Texture2D" uid="uid://5eaf6a0hmet0" path="res://assets/ui/keyboard_r.png" id="5_x7v8l"]
 [ext_resource type="Texture2D" uid="uid://byu04jbc8rwp" path="res://assets/ui/keyboard_a.png" id="6_6ultt"]
+[ext_resource type="Texture2D" uid="uid://b6jyx8yfb3v1i" path="res://assets/ui/musicOn.png" id="6_iqg32"]
+[ext_resource type="Texture2D" uid="uid://ngfk8bakq3km" path="res://assets/ui/musicOff.png" id="6_seosm"]
 [ext_resource type="Texture2D" uid="uid://spmuwivdxgtr" path="res://assets/ui/keyboard_s.png" id="7_dobov"]
 [ext_resource type="Texture2D" uid="uid://ccvhkcode7nln" path="res://assets/ui/mouse_right.png" id="7_p15ua"]
 [ext_resource type="Texture2D" uid="uid://br5jgwkqyo4d8" path="res://assets/ui/keyboard_d.png" id="8_yahft"]
@@ -90,13 +92,32 @@ layout_mode = 2
 text = ": unstuck"
 label_settings = ExtResource("3_75yoe")
 
-[node name="TimeLabel" type="Label" parent="MarginContainer/Top"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/Top"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="TimeLabel" type="Label" parent="MarginContainer/Top/VBoxContainer2"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
 text = "TIME: "
 label_settings = ExtResource("3_75yoe")
+
+[node name="MusicOn" type="TextureRect" parent="MarginContainer/Top/VBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+texture = ExtResource("6_iqg32")
+stretch_mode = 2
+
+[node name="MusicOff" type="TextureRect" parent="MarginContainer/Top/VBoxContainer2"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 8
+texture = ExtResource("6_seosm")
+stretch_mode = 2
 
 [node name="Bottom" type="HSplitContainer" parent="MarginContainer"]
 layout_mode = 2

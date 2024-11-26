@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://gryucx2n8goa"]
+[gd_scene load_steps=11 format=3 uid="uid://gryucx2n8goa"]
 
 [ext_resource type="Script" path="res://scripts/title_screen.gd" id="1_85mrq"]
 [ext_resource type="Theme" uid="uid://d3nb4rtlepufm" path="res://resources/main_theme.tres" id="1_tbv8l"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c571sdbs13vtl" path="res://scenes/ui/selector.tscn" id="6_gepcd"]
 [ext_resource type="LabelSettings" uid="uid://cl4dne3ovval0" path="res://resources/ui/labelsetting.tres" id="6_jxqyo"]
 [ext_resource type="PackedScene" uid="uid://ctni8d1ubk24w" path="res://scenes/ui/audio_stream_player.tscn" id="8_ulwd5"]
+[ext_resource type="Texture2D" uid="uid://c7hoq877dbjfi" path="res://assets/ui/keyboard_m.png" id="9_jdigr"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_gfcu5"]
 shader = ExtResource("4_w63lj")
@@ -103,6 +104,38 @@ wait_time = 0.1
 one_shot = true
 
 [node name="AudioStreamPlayer" parent="." instance=ExtResource("8_ulwd5")]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "PRESS"
+label_settings = ExtResource("6_jxqyo")
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("9_jdigr")
+expand_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "TO MUTE"
+label_settings = ExtResource("6_jxqyo")
 
 [connection signal="mouse_entered" from="MenuContainer/PlayContainer/play_label" to="." method="_on_play_label_mouse_entered"]
 [connection signal="mouse_exited" from="MenuContainer/PlayContainer/play_label" to="." method="_on_play_label_mouse_exited"]

@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://cj0rqm5rwxrv8"]
+
+[ext_resource type="Script" path="res://scripts/music_v_box_container.gd" id="1_7f4f6"]
+[ext_resource type="Texture2D" uid="uid://b6jyx8yfb3v1i" path="res://assets/ui/musicOn.png" id="1_7l4xe"]
+[ext_resource type="Texture2D" uid="uid://ngfk8bakq3km" path="res://assets/ui/musicOff.png" id="2_52og8"]
+
+[node name="MusicVBoxContainer" type="MarginContainer"]
+offset_right = 32.0
+offset_bottom = 32.0
+size_flags_horizontal = 0
+size_flags_vertical = 4
+script = ExtResource("1_7f4f6")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MusicOn" type="TextureRect" parent="HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("1_7l4xe")
+expand_mode = 2
+
+[node name="MusicOff" type="TextureRect" parent="HBoxContainer"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("2_52og8")
+expand_mode = 2
