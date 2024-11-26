@@ -68,6 +68,9 @@ func _physics_process(delta: float):
 		# Apply analog brake factor for more subtle braking if not fully holding down the trigger.
 		engine_force *= Input.get_action_strength(&"down")
 
+	if engine_force != 0:
+		$AnimationPlayer.play("move")
+
 	steering = move_toward(steering, _steer_target, STEER_SPEED * delta)
 
 	previous_speed = linear_velocity.length()
