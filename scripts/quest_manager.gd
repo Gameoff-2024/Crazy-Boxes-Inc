@@ -48,7 +48,6 @@ func _ready() -> void:
 		_on_main_new_quest()
 		
 		
-
 func _process(delta: float):
 	if !quest_displayer.visible:
 		return
@@ -57,7 +56,6 @@ func _process(delta: float):
 		if current_mouse_relative:
 			package_pivot.rotate(Vector3.FORWARD, deg_to_rad(current_mouse_relative.normalized().x * rotation_sensibility))
 			package_pivot.rotate(Vector3.RIGHT, deg_to_rad(current_mouse_relative.normalized().y * rotation_sensibility))
-
 	elif zooming:
 		if current_mouse_relative:
 			package_pivot.position.z = clamp(package_pivot.position.z + current_mouse_zoom_relative.y, min_zoom, max_zoom)
@@ -114,6 +112,7 @@ func active():
 	
 	
 func inactive():
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	$QuestDisplayer.hide()
 	if package_pivot:
 		package_pivot.rotation = starting_rotation
