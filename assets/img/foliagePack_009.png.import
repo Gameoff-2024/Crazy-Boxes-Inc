@@ -2,18 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://docka2nff23sj"
-path.s3tc="res://.godot/imported/colormap.png-a31ab4e16f68cf6c792fe099abd926b7.s3tc.ctex"
-path.etc2="res://.godot/imported/colormap.png-a31ab4e16f68cf6c792fe099abd926b7.etc2.ctex"
+uid="uid://ca100gkdv0o8o"
+path.s3tc="res://.godot/imported/foliagePack_009.png-caf4fc4160e1c1ddb3fd16c3aba540c7.s3tc.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
-source_file="res://assets/models/skate/Textures/colormap.png"
-dest_files=["res://.godot/imported/colormap.png-a31ab4e16f68cf6c792fe099abd926b7.s3tc.ctex", "res://.godot/imported/colormap.png-a31ab4e16f68cf6c792fe099abd926b7.etc2.ctex"]
+source_file="res://assets/img/foliagePack_009.png"
+dest_files=["res://.godot/imported/foliagePack_009.png-caf4fc4160e1c1ddb3fd16c3aba540c7.s3tc.ctex"]
 
 [params]
 

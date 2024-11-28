@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://c4acnkarrlclk"]
+[gd_scene load_steps=48 format=3 uid="uid://c4acnkarrlclk"]
 
 [ext_resource type="PackedScene" uid="uid://bksnos26h6fga" path="res://scenes/floor.tscn" id="1_qlq8n"]
 [ext_resource type="PackedScene" uid="uid://npy26s8n58ex" path="res://assets/models/roads/road_crossroad.glb" id="2_wb3ai"]
@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://cgmaeqe6jqycr" path="res://assets/models/houses/tree_large.glb" id="17_0sdic"]
 [ext_resource type="PackedScene" uid="uid://b3623jufft4yg" path="res://assets/models/houses/fence_large.glb" id="18_qf07b"]
 [ext_resource type="PackedScene" uid="uid://c2dalslc3003k" path="res://scenes/quests/build_house_10.tscn" id="18_v7eqq"]
+[ext_resource type="PackedScene" uid="uid://ckmd02veb7lqv" path="res://scenes/houses/forest_house_id_9.tscn" id="19_jm0qm"]
 [ext_resource type="PackedScene" uid="uid://bfe00hq24bmyt" path="res://assets/models/houses/HouseTall2Stories.glb" id="19_rp4j8"]
 [ext_resource type="PackedScene" uid="uid://cgo5xxpck0qm5" path="res://assets/models/houses/driveway_long.glb" id="20_qqbbe"]
 [ext_resource type="PackedScene" uid="uid://cg1mvm0jt44au" path="res://assets/models/houses/house_type03.glb" id="21_ge8tv"]
@@ -45,6 +46,7 @@
 [ext_resource type="PackedScene" uid="uid://dj4q00iannf87" path="res://assets/models/boxes/box-long.glb" id="42_qwu7v"]
 [ext_resource type="PackedScene" uid="uid://kdqc76lxud3g" path="res://assets/models/boxes/box-small.glb" id="43_1ydwr"]
 [ext_resource type="PackedScene" uid="uid://8h8fiibks635" path="res://assets/models/boxes/box-wide.glb" id="44_wfnav"]
+[ext_resource type="PackedScene" uid="uid://cq67kc3cn6kab" path="res://scenes/light_curved.tscn" id="47_38l4i"]
 
 [node name="WorldMap" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.036, 0)
@@ -436,79 +438,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0, 27.5)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0, 33)
 
 [node name="commercial_tile9" parent="Roads" instance=ExtResource("7_wa21w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 82.4998, 0, 5.50004)
-
-[node name="commercial_tile10" parent="Roads" instance=ExtResource("7_wa21w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 87.9996, 0, 5.50001)
-
-[node name="commercial_tile11" parent="Roads" instance=ExtResource("7_wa21w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.5, 0, 5.5)
-
-[node name="commercial_tile12" parent="Roads" instance=ExtResource("7_wa21w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99, 0, 5.5)
-
-[node name="tile_low14" parent="Roads" instance=ExtResource("7_wa21w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.5, 0, 5.5)
-
-[node name="commercial_tile15" parent="Roads" instance=ExtResource("7_wa21w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 82.4996, 0, 11)
-
-[node name="commercial_tile16" parent="Roads" instance=ExtResource("7_wa21w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 88, 0, 11)
-
-[node name="commercial_tile17" parent="Roads" instance=ExtResource("7_wa21w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.5, 0, 11)
-
-[node name="commercial_tile18" parent="Roads" instance=ExtResource("7_wa21w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99, 0, 11)
-
-[node name="commercial_tile19" parent="Roads" instance=ExtResource("7_wa21w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.5, 0, 11)
-
-[node name="commercial_tile20" parent="Roads" instance=ExtResource("7_wa21w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 82.5, 0, 16.5)
-
-[node name="commercial_tile21" parent="Roads" instance=ExtResource("7_wa21w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 88, 0, 16.5)
-
-[node name="commercial_tile22" parent="Roads" instance=ExtResource("7_wa21w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.5, 0.000999998, 16.5)
-
-[node name="commercial_tile23" parent="Roads" instance=ExtResource("7_wa21w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99, 0, 16.5)
-
-[node name="commercial_tile24" parent="Roads" instance=ExtResource("7_wa21w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.5, 0, 16.5)
-
-[node name="commercial_tile25" parent="Roads" instance=ExtResource("7_wa21w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 82.5, 0, 22)
-
-[node name="commercial_tile26" parent="Roads" instance=ExtResource("7_wa21w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 88, 0, 22)
-
-[node name="commercial_tile27" parent="Roads" instance=ExtResource("7_wa21w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.5, 0, 22)
-
-[node name="commercial_tile28" parent="Roads" instance=ExtResource("7_wa21w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99, 0, 22)
-
-[node name="commercial_tile29" parent="Roads" instance=ExtResource("7_wa21w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.5, 0, 22)
-
-[node name="commercial_tile34" parent="Roads" instance=ExtResource("7_wa21w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.5, 0, 27.5)
-
-[node name="commercial_tile30" parent="Roads" instance=ExtResource("7_wa21w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 82.5, 0, 27.5)
-
-[node name="commercial_tile31" parent="Roads" instance=ExtResource("7_wa21w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 88, 0, 27.5)
-
-[node name="commercial_tile32" parent="Roads" instance=ExtResource("7_wa21w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.5, 0, 27.5)
-
-[node name="commercial_tile33" parent="Roads" instance=ExtResource("7_wa21w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99, 0, 27.5)
+transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 93.5, 0, 16.5)
 
 [node name="tile_low8" parent="Roads" instance=ExtResource("7_wa21w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0, 33)
@@ -557,6 +487,7 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 51, 15
 
 [node name="GlitchHouseId8" parent="Houses" instance=ExtResource("16_jb157")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 18, 0, 29.5)
+trigger_distance = 20.0
 
 [node name="HideAndSeekHouseId7" parent="Houses" instance=ExtResource("15_swcgx")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 104.57, -9.53674e-07, -5.44043)
@@ -564,24 +495,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 104.57
 [node name="BuildHouse10" parent="Houses" instance=ExtResource("18_v7eqq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.5, 0, -16.5)
 
-[node name="House1" type="Node3D" parent="Houses"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
-
-[node name="house_type012" parent="Houses/House1" instance=ExtResource("15_xju2p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5, 0, -4.4)
-metadata/quest_id = 0
-
-[node name="path_long2" parent="Houses/House1" instance=ExtResource("16_xi21n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.0811, 0, -3.85)
-
-[node name="tree_large2" parent="Houses/House1" instance=ExtResource("17_0sdic")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.2385, 0, -3.56659)
-
-[node name="tree_large3" parent="Houses/House1" instance=ExtResource("17_0sdic")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.6083, 0, -3.42259)
-
-[node name="fence_large2" parent="Houses/House1" instance=ExtResource("18_qf07b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.0762, -0.0495357, -12.2971)
+[node name="ForestHouseId9" parent="Houses" instance=ExtResource("19_jm0qm")]
 
 [node name="House2" type="Node3D" parent="Houses"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, 0)
@@ -594,7 +508,7 @@ metadata/quest_id = 0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.0811, 0, -3.85)
 
 [node name="tree_large2" parent="Houses/House2" instance=ExtResource("17_0sdic")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.2385, 0, -3.56659)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0984, 0, -3.56659)
 
 [node name="tree_large3" parent="Houses/House2" instance=ExtResource("17_0sdic")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.6083, 0, -3.42259)
@@ -801,6 +715,30 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.286857, 0, 4)
 [node name="HedgeStraightLong8" parent="Decorations" instance=ExtResource("34_v173r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.286857, 0, -4)
 
+[node name="HedgeStraightLong9" parent="Decorations" instance=ExtResource("34_v173r")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 15, 0, -8.5)
+
+[node name="HedgeStraightLong12" parent="Decorations" instance=ExtResource("34_v173r")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 28.5, 0, -10.5)
+
+[node name="HedgeStraightLong10" parent="Decorations" instance=ExtResource("34_v173r")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 15, 0, -13)
+
+[node name="HedgeStraightLong11" parent="Decorations" instance=ExtResource("34_v173r")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 15, 0, -17.5)
+
+[node name="HedgeStraightLong15" parent="Decorations" instance=ExtResource("34_v173r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -17.5)
+
+[node name="HedgeStraightLong16" parent="Decorations" instance=ExtResource("34_v173r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.2772, 0, -17.5)
+
+[node name="HedgeStraightLong13" parent="Decorations" instance=ExtResource("34_v173r")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 19.5, 0, -29)
+
+[node name="HedgeStraightLong14" parent="Decorations" instance=ExtResource("34_v173r")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 24, 0, -29)
+
 [node name="HedgeCorner" parent="Decorations" instance=ExtResource("35_ht2gr")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.99911, 0.0355873, 3.96407)
 
@@ -811,13 +749,49 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.0008
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.99911, 0.0355873, -4.03593)
 
 [node name="HedgeCorner4" parent="Decorations" instance=ExtResource("35_ht2gr")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7.00089, 0.0355873, -4.03593)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 6.965, 0, -4.036)
+
+[node name="HedgeCorner5" parent="Decorations" instance=ExtResource("35_ht2gr")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 15, 0.036, -4)
+
+[node name="HedgeCorner8" parent="Decorations" instance=ExtResource("35_ht2gr")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 28.5, 0.036, -4)
+
+[node name="HedgeCorner6" parent="Decorations" instance=ExtResource("35_ht2gr")]
+transform = Transform3D(1, 0, 2.13163e-14, 0, 1, 0, -2.13163e-14, 0, 1, 15, 0.036, -29)
+
+[node name="HedgeCorner7" parent="Decorations" instance=ExtResource("35_ht2gr")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 28.5, 0.036, -29)
 
 [node name="HedgeStraight" parent="Decorations" instance=ExtResource("36_sdpit")]
 transform = Transform3D(0.999985, 0, -0.00556757, 0, 1, 0, 0.00556757, 0, 0.999985, 3.64232, 0.0355873, 3.96407)
 
 [node name="HedgeStraight2" parent="Decorations" instance=ExtResource("36_sdpit")]
-transform = Transform3D(0.999985, 0, -0.00556757, 0, 1, 0, 0.00556757, 0, 0.999985, 3.64232, 0.0355873, -4.03593)
+transform = Transform3D(0.999945, -0.00891851, -0.00556735, 0.00891838, 0.99996, -4.96545e-05, 0.00556757, 0, 0.999985, 3.64232, 0.0355873, -4.03593)
+
+[node name="HedgeStraight9" parent="Decorations" instance=ExtResource("36_sdpit")]
+transform = Transform3D(-4.37097e-08, 3.81449e-10, 1, 0.00872654, 0.999962, 0, -0.999962, 0.00872653, -4.37114e-08, 28.5, 0.036, -7.33)
+
+[node name="HedgeStraight10" parent="Decorations" instance=ExtResource("36_sdpit")]
+transform = Transform3D(0.999962, -0.00872653, 0, 0.00872654, 0.999962, 0, 0, 0, 1, 21.808, 0.036, -17.5)
+
+[node name="HedgeStraight3" parent="Decorations" instance=ExtResource("36_sdpit")]
+transform = Transform3D(-6.55671e-08, 0, -1, 0, 1, 0, 1.5, 0, -4.37114e-08, 15, 0, -25)
+
+[node name="HedgeStraight4" parent="Decorations" instance=ExtResource("36_sdpit")]
+transform = Transform3D(-6.55671e-08, 0, -1, 0, 1, 0, 1.5, 0, -4.37114e-08, 28.5, 0, -25)
+
+[node name="HedgeStraight5" parent="Decorations" instance=ExtResource("36_sdpit")]
+transform = Transform3D(-6.55671e-08, 0, -1, 0, 1, 0, 1.5, 0, -4.37114e-08, 28.5, 0, -21.5)
+
+[node name="HedgeStraight6" parent="Decorations" instance=ExtResource("36_sdpit")]
+transform = Transform3D(-6.55671e-08, 0, -1, 0, 1, 0, 1.5, 0, -4.37114e-08, 28.5, 0, -18)
+
+[node name="HedgeStraight7" parent="Decorations" instance=ExtResource("36_sdpit")]
+transform = Transform3D(-6.55671e-08, 0, -1, 0, 1, 0, 1.5, 0, -4.37114e-08, 28.5, 0, -14.5)
+
+[node name="HedgeStraight8" parent="Decorations" instance=ExtResource("36_sdpit")]
+transform = Transform3D(-6.55671e-08, 0, -1, 0, 1, 0, 1.5, 0, -4.37114e-08, 28.5, 0, -14.5)
 
 [node name="PedestrianCrossings" parent="Decorations" instance=ExtResource("37_23qqp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8452, 0.0555873, -8.0875)
@@ -872,8 +846,17 @@ transform = Transform3D(-4.37114e-08, 1.29179e-15, -1, -0.482503, 0.875894, 2.10
 [node name="box-small2" parent="Decorations/Boxes" instance=ExtResource("43_1ydwr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.68563, 0.562219, -1.38603)
 
+[node name="box-small5" parent="Decorations/Boxes" instance=ExtResource("43_1ydwr")]
+transform = Transform3D(0.992467, 0, -0.12251, 0, 1, 0, 0.12251, 0, 0.992467, -0.851416, 0, -1.0711)
+
 [node name="box-long3" parent="Decorations/Boxes" instance=ExtResource("42_qwu7v")]
 transform = Transform3D(0.816027, 0, -0.578014, 0, 1, 0, 0.578014, 0, 0.816027, -1.65133, 0.0554126, 1.60157)
+
+[node name="box-long5" parent="Decorations/Boxes" instance=ExtResource("42_qwu7v")]
+transform = Transform3D(0.946908, 0, 0.321506, 0, 1, 0, -0.321506, 0, 0.946908, -0.495498, 0.0554126, 1.60157)
+
+[node name="box-long6" parent="Decorations/Boxes" instance=ExtResource("42_qwu7v")]
+transform = Transform3D(-4.13794e-08, -0.946649, 0.322266, 1, -4.37114e-08, 0, 1.40867e-08, 0.322266, 0.946649, -0.596007, 0.555413, -0.340002)
 
 [node name="box-wide2" parent="Decorations/Boxes" instance=ExtResource("44_wfnav")]
 transform = Transform3D(0.957062, 0, 0.289884, 0, 1, 0, -0.289884, 0, 0.957062, -1.3144, 0.0554124, 0.743734)
@@ -886,3 +869,341 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.769359, 0.0554126, -1.8300
 
 [node name="box-small4" parent="Decorations/Boxes" instance=ExtResource("43_1ydwr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.05675, 0.555315, -1.67572)
+
+[node name="box-small6" parent="Decorations/Boxes" instance=ExtResource("43_1ydwr")]
+transform = Transform3D(0.90686, 0, 0.421432, 0, 1, 0, -0.421432, 0, 0.90686, -1.25215, 1.08432, -1.41744)
+
+[node name="Lights" type="Node3D" parent="Decorations"]
+
+[node name="light_curved" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.71131, 0.11, -2.43937)
+
+[node name="light_curved2" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.71131, 0.11, 2.48061)
+
+[node name="light_curved3" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.20338, 0.11, -2.43937)
+
+[node name="light_curved4" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 8.20338, 0.11, 2.48061)
+
+[node name="light_curved9" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.60425, 0.11, 8.26013)
+
+[node name="light_curved10" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 13.4704, 0.11, 8.26013)
+
+[node name="light_curved33" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.60425, 0.11, 21.527)
+
+[node name="light_curved34" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 13.4704, 0.11, 21.527)
+
+[node name="light_curved47" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.60425, 0.11, -30.6848)
+
+[node name="light_curved48" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 13.4704, 0.11, -30.6848)
+
+[node name="light_curved49" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.60425, 0.11, -17.4179)
+
+[node name="light_curved50" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 13.4704, 0.11, -17.4179)
+
+[node name="light_curved37" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.0227, 0.11, 18.988)
+
+[node name="light_curved38" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 29.8888, 0.11, 18.988)
+
+[node name="light_curved39" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.0227, 0.11, 36.125)
+
+[node name="light_curved40" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 29.8888, 0.11, 36.125)
+
+[node name="light_curved43" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 41.5199, 0.11, 19.0463)
+
+[node name="light_curved44" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 46.3861, 0.11, 19.0463)
+
+[node name="light_curved45" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 41.5199, 0.11, 35.4722)
+
+[node name="light_curved46" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 46.3861, 0.11, 35.4722)
+
+[node name="light_curved98" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 58.0618, 0.11, 14.0979)
+
+[node name="light_curved99" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 62.928, 0.11, 14.0979)
+
+[node name="light_curved100" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 58.0618, 0.11, 30.5238)
+
+[node name="light_curved101" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 62.928, 0.11, 30.5238)
+
+[node name="light_curved104" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 107.549, 0.11, 8.3274)
+
+[node name="light_curved105" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 112.415, 0.11, 8.3274)
+
+[node name="light_curved106" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 107.549, 0.11, 24.7533)
+
+[node name="light_curved107" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 112.415, 0.11, 24.7533)
+
+[node name="light_curved108" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 107.549, 0.11, -17.5111)
+
+[node name="light_curved109" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 112.415, 0.11, -17.5111)
+
+[node name="light_curved110" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 107.549, 0.11, -1.08517)
+
+[node name="light_curved111" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 112.415, 0.11, -1.08517)
+
+[node name="light_curved102" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 74.6556, 0.11, 14.0979)
+
+[node name="light_curved103" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 79.5218, 0.11, 14.0979)
+
+[node name="light_curved41" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.0227, 0.11, 36.125)
+
+[node name="light_curved94" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 46.3861, 0.11, 19.0463)
+
+[node name="light_curved95" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 41.5199, 0.11, 35.4722)
+
+[node name="light_curved96" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 46.3861, 0.11, 35.4722)
+
+[node name="light_curved97" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.0227, 0.11, 36.125)
+
+[node name="light_curved42" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 29.8888, 0.11, 36.125)
+
+[node name="light_curved35" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.60425, 0.11, 35.0123)
+
+[node name="light_curved36" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 13.4704, 0.11, 35.0123)
+
+[node name="light_curved5" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.7054, 0.11, -2.43937)
+
+[node name="light_curved6" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 13.7054, 0.11, 2.48061)
+
+[node name="light_curved7" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.7054, 0.11, -2.43937)
+
+[node name="light_curved8" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 13.7054, 0.11, 2.48061)
+
+[node name="light_curved11" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1, 0, 0, 0, 0.99996, -0.00891851, 0, 0.00891851, 0.99996, 28.1694, 0.11, -2.43937)
+
+[node name="light_curved12" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 28.1694, 0.11, 2.48061)
+
+[node name="light_curved69" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1, 0, 0, 0, 0.99996, -0.00891851, 0, 0.00891851, 0.99996, 36.6078, 0.11, 14.1271)
+
+[node name="light_curved70" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 36.6078, 0.11, 19.0471)
+
+[node name="light_curved13" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.2755, 0.11, -2.43937)
+
+[node name="light_curved14" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 41.2755, 0.11, 2.48061)
+
+[node name="light_curved51" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.2231, 0.11, -35.4419)
+
+[node name="light_curved52" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-1, 0, -8.74228e-08, -7.79681e-10, 0.99996, 0.00891851, 8.74193e-08, 0.00891851, -0.99996, 19.2231, 0.11, -30.5219)
+
+[node name="light_curved55" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.7338, 0.11, -35.4419)
+
+[node name="light_curved56" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-1, 0, -8.74228e-08, -7.79681e-10, 0.99996, 0.00891851, 8.74193e-08, 0.00891851, -0.99996, 30.7338, 0.11, -30.5219)
+
+[node name="light_curved57" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.4924, 0.11, -35.4419)
+
+[node name="light_curved58" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-1, 0, -8.74228e-08, -7.79681e-10, 0.99996, 0.00891851, 8.74193e-08, 0.00891851, -0.99996, 46.4924, 0.11, -30.5219)
+
+[node name="light_curved59" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.623, 0.11, -35.4419)
+
+[node name="light_curved60" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-1, 0, -8.74228e-08, -7.79681e-10, 0.99996, 0.00891851, 8.74193e-08, 0.00891851, -0.99996, 68.623, 0.11, -30.5219)
+
+[node name="light_curved61" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.4484, 0.11, -35.4419)
+
+[node name="light_curved62" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-1, 0, -8.74228e-08, -7.79681e-10, 0.99996, 0.00891851, 8.74193e-08, 0.00891851, -0.99996, 58.4484, 0.11, -30.5219)
+
+[node name="light_curved63" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.4484, 0.11, -19.0323)
+
+[node name="light_curved71" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 69.1729, 0.11, -27.4896)
+
+[node name="light_curved64" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-1, 0, -8.74228e-08, -7.79681e-10, 0.99996, 0.00891851, 8.74193e-08, 0.00891851, -0.99996, 58.4484, 0.11, -14.1124)
+
+[node name="light_curved65" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.4582, 0.11, -19.0323)
+
+[node name="light_curved66" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-1, 0, -8.74228e-08, -7.79681e-10, 0.99996, 0.00891851, 8.74193e-08, 0.00891851, -0.99996, 46.4582, 0.11, -14.1124)
+
+[node name="light_curved67" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74.4811, 0.11, -19.0323)
+
+[node name="light_curved68" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-1, 0, -8.74228e-08, -7.79681e-10, 0.99996, 0.00891851, 8.74193e-08, 0.00891851, -0.99996, 74.4811, 0.11, -14.1124)
+
+[node name="light_curved53" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5531, 0.11, -35.4419)
+
+[node name="light_curved54" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 41.5531, 0.11, -30.5219)
+
+[node name="light_curved15" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.8452, 0.11, -2.43937)
+
+[node name="light_curved16" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 46.8452, 0.11, 2.48061)
+
+[node name="light_curved17" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.0178, 0.11, -2.43937)
+
+[node name="light_curved18" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 58.0178, 0.11, 2.48061)
+
+[node name="light_curved19" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.9576, 0.11, -2.43937)
+
+[node name="light_curved20" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 62.9576, 0.11, 2.48061)
+
+[node name="light_curved21" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74.6606, 0.11, -2.43937)
+
+[node name="light_curved22" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 74.6606, 0.11, 2.48061)
+
+[node name="light_curved23" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74.6606, 0.11, -2.43937)
+
+[node name="light_curved24" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 74.6606, 0.11, 2.48061)
+
+[node name="light_curved25" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 79.5664, 0.11, -2.43937)
+
+[node name="light_curved26" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 79.5664, 0.11, 2.48061)
+
+[node name="light_curved27" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 92.4442, 0.11, -2.43937)
+
+[node name="light_curved28" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 92.4442, 0.11, 2.48061)
+
+[node name="light_curved72" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 79.4879, 0.11, -24.4324)
+
+[node name="light_curved73" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 79.4879, 0.11, -19.5124)
+
+[node name="light_curved74" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 92.3657, 0.11, -24.4324)
+
+[node name="light_curved75" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 92.3657, 0.11, -19.5124)
+
+[node name="light_curved76" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 107.639, 0.11, -24.4324)
+
+[node name="light_curved77" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 107.639, 0.11, -19.5124)
+
+[node name="light_curved78" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 79.4879, 0.11, -13.3525)
+
+[node name="light_curved79" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 79.4879, 0.11, -8.43253)
+
+[node name="light_curved80" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 92.3657, 0.11, -13.3525)
+
+[node name="light_curved81" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 92.3657, 0.11, -8.43253)
+
+[node name="light_curved82" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 107.639, 0.11, -13.3525)
+
+[node name="light_curved83" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 107.639, 0.11, -8.43253)
+
+[node name="light_curved84" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 79.4879, 0.11, 30.4818)
+
+[node name="light_curved85" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 79.4879, 0.11, 35.4018)
+
+[node name="light_curved90" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.9016, 0.11, 30.4818)
+
+[node name="light_curved91" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 68.9016, 0.11, 35.4018)
+
+[node name="light_curved92" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.4649, 0.11, 30.4818)
+
+[node name="light_curved93" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 52.4649, 0.11, 35.4018)
+
+[node name="light_curved86" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 92.3657, 0.11, 30.4818)
+
+[node name="light_curved87" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 92.3657, 0.11, 35.4018)
+
+[node name="light_curved88" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 107.639, 0.11, 30.4818)
+
+[node name="light_curved89" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 107.639, 0.11, 35.4018)
+
+[node name="light_curved29" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 107.284, 0.11, -2.43937)
+
+[node name="light_curved30" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 107.284, 0.11, 2.48061)
+
+[node name="light_curved31" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 107.284, 0.11, -2.43937)
+
+[node name="light_curved32" parent="Decorations/Lights" instance=ExtResource("47_38l4i")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 107.284, 0.11, 2.48061)
