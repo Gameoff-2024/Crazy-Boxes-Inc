@@ -5,6 +5,8 @@ var total = 1
 var time_start = 0
 var time_now = 0
 
+var reset_time = 0
+
 func _ready():
 	GameState.score_updated.connect(_on_score_updated)
 	total = QuestLoader.get_total_quests()
@@ -24,6 +26,7 @@ func _process(delta: float) -> void:
 	var time_string = "%02d:%02d" % [minutes, seconds]
 	%TimeLabel.text = time_string
 	GameState.time = time_string
+	%ResetProgressBar.value = 100 - (reset_time * 100)
 
 
 func _on_camera_manager_ui_disabled() -> void:

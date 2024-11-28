@@ -4,16 +4,15 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dhf5xkg40r2vs"
 path.s3tc="res://.godot/imported/skate2.png-5d81afda2fda4f5e8897e70194b971c1.s3tc.ctex"
-path.etc2="res://.godot/imported/skate2.png-5d81afda2fda4f5e8897e70194b971c1.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/img/skate2.png"
-dest_files=["res://.godot/imported/skate2.png-5d81afda2fda4f5e8897e70194b971c1.s3tc.ctex", "res://.godot/imported/skate2.png-5d81afda2fda4f5e8897e70194b971c1.etc2.ctex"]
+dest_files=["res://.godot/imported/skate2.png-5d81afda2fda4f5e8897e70194b971c1.s3tc.ctex"]
 
 [params]
 

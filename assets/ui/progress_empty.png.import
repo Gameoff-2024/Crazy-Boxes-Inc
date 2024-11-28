@@ -2,27 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dafc1b7w708wy"
-path.s3tc="res://.godot/imported/snowman_128x128.png-c8680c906007801259943afaea8521a6.s3tc.ctex"
+uid="uid://b1mstx7qc8cpj"
+path="res://.godot/imported/progress_empty.png-d88cd3f72b9edb0e8a3ce9c0e6052160.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/img/snowman_128x128.png"
-dest_files=["res://.godot/imported/snowman_128x128.png-c8680c906007801259943afaea8521a6.s3tc.ctex"]
+source_file="res://assets/ui/progress_empty.png"
+dest_files=["res://.godot/imported/progress_empty.png-d88cd3f72b9edb0e8a3ce9c0e6052160.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -32,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

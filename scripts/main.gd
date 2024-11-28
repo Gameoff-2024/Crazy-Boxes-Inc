@@ -10,7 +10,8 @@ func _process(delta: float) -> void:
 		$Player.global_transform = $PlayerPosition.global_transform
 		can_reset = false
 		%ResetTimer.start()
-
+	else:
+		$UI.reset_time = %ResetTimer.time_left / %ResetTimer.wait_time
 
 func _on_reset_timer_timeout() -> void:
 	can_reset = true

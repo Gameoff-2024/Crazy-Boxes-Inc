@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://ctdxyrsdbpayx"]
+[gd_scene load_steps=16 format=3 uid="uid://ctdxyrsdbpayx"]
 
 [ext_resource type="Script" path="res://scripts/ui.gd" id="1_e6a0a"]
 [ext_resource type="PackedScene" uid="uid://bml4xghk1tgxm" path="res://scenes/ui/ui_box.tscn" id="2_5mbv4"]
@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://5eaf6a0hmet0" path="res://assets/ui/keyboard_r.png" id="5_x7v8l"]
 [ext_resource type="Texture2D" uid="uid://byu04jbc8rwp" path="res://assets/ui/keyboard_a.png" id="6_6ultt"]
 [ext_resource type="PackedScene" uid="uid://cjxb45q7x87il" path="res://scenes/ui/music_icon.tscn" id="6_mt5mn"]
+[ext_resource type="Texture2D" uid="uid://b1mstx7qc8cpj" path="res://assets/ui/progress_empty.png" id="6_ndvhi"]
+[ext_resource type="Texture2D" uid="uid://d3nup0rut5dj" path="res://assets/ui/progress_full.png" id="7_5d6e2"]
 [ext_resource type="Texture2D" uid="uid://spmuwivdxgtr" path="res://assets/ui/keyboard_s.png" id="7_dobov"]
 [ext_resource type="Texture2D" uid="uid://ccvhkcode7nln" path="res://assets/ui/mouse_right.png" id="7_p15ua"]
 [ext_resource type="Texture2D" uid="uid://br5jgwkqyo4d8" path="res://assets/ui/keyboard_d.png" id="8_yahft"]
@@ -90,6 +92,16 @@ expand_mode = 2
 layout_mode = 2
 text = ": unstuck"
 label_settings = ExtResource("3_75yoe")
+
+[node name="ResetProgressBar" type="TextureProgressBar" parent="MarginContainer/Top/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+rounded = true
+fill_mode = 4
+texture_under = ExtResource("6_ndvhi")
+texture_progress = ExtResource("7_5d6e2")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/Top"]
 layout_mode = 2
