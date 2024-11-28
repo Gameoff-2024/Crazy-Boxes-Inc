@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=4 uid="uid://c4acnkarrlclk"]
+[gd_scene load_steps=72 format=4 uid="uid://c4acnkarrlclk"]
 
 [ext_resource type="PackedScene" uid="uid://bksnos26h6fga" path="res://scenes/floor.tscn" id="1_qlq8n"]
 [ext_resource type="PackedScene" uid="uid://npy26s8n58ex" path="res://assets/models/roads/road_crossroad.glb" id="2_wb3ai"]
@@ -16,16 +16,14 @@
 [ext_resource type="PackedScene" uid="uid://1r3iot4c0wx1" path="res://scenes/quests/basket_house_id_4.tscn" id="13_i2xag"]
 [ext_resource type="PackedScene" uid="uid://bu3ysabbk6buc" path="res://scenes/quests/skate_house_id_5.tscn" id="14_qyndc"]
 [ext_resource type="PackedScene" uid="uid://cl12jqxd8m2f" path="res://scenes/HideAndSeekHouseId7.tscn" id="15_swcgx"]
-[ext_resource type="PackedScene" uid="uid://cs57fiofj1q4g" path="res://assets/models/houses/HouseWideWithSolarPanels.glb" id="15_xju2p"]
 [ext_resource type="PackedScene" uid="uid://xjknberblov6" path="res://scenes/quests/up_house_id_6.tscn" id="15_y7rns"]
 [ext_resource type="PackedScene" uid="uid://cwi3d5r2pmh7g" path="res://scenes/quests/glitch_house_id_8.tscn" id="16_jb157"]
 [ext_resource type="PackedScene" uid="uid://cp1euoxaxrdpj" path="res://assets/models/houses/path_long.glb" id="16_xi21n"]
-[ext_resource type="PackedScene" uid="uid://cgmaeqe6jqycr" path="res://assets/models/houses/tree_large.glb" id="17_0sdic"]
-[ext_resource type="PackedScene" uid="uid://b3623jufft4yg" path="res://assets/models/houses/fence_large.glb" id="18_qf07b"]
 [ext_resource type="PackedScene" uid="uid://c2dalslc3003k" path="res://scenes/quests/build_house_10.tscn" id="18_v7eqq"]
 [ext_resource type="PackedScene" uid="uid://ckmd02veb7lqv" path="res://scenes/houses/forest_house_id_9.tscn" id="19_jm0qm"]
 [ext_resource type="PackedScene" uid="uid://bfe00hq24bmyt" path="res://assets/models/houses/HouseTall2Stories.glb" id="19_rp4j8"]
 [ext_resource type="PackedScene" uid="uid://cgo5xxpck0qm5" path="res://assets/models/houses/driveway_long.glb" id="20_qqbbe"]
+[ext_resource type="PackedScene" uid="uid://lmdj6t1y0uvv" path="res://scenes/houses/bison_house_11.tscn" id="20_y0udl"]
 [ext_resource type="PackedScene" uid="uid://cg1mvm0jt44au" path="res://assets/models/houses/house_type03.glb" id="21_ge8tv"]
 [ext_resource type="PackedScene" uid="uid://dkmv1bsbm5ppl" path="res://assets/models/houses/SquareHouse.glb" id="22_hcsdk"]
 [ext_resource type="PackedScene" uid="uid://b0b38udnk2k42" path="res://assets/models/houses/path_tilesLong.glb" id="23_2oe38"]
@@ -60,6 +58,9 @@
 [ext_resource type="PackedScene" uid="uid://bi0bdxmv3w8cl" path="res://assets/models/vehicles/debris-bolt.glb" id="58_hqp2x"]
 [ext_resource type="PackedScene" uid="uid://djfc3yrm4gkhq" path="res://assets/models/vehicles/ambulance.glb" id="59_o2tis"]
 [ext_resource type="Texture2D" uid="uid://gw2uho0rmih" path="res://assets/models/prototype-kit/Textures/colormap.png" id="60_w5tcm"]
+[ext_resource type="PackedScene" uid="uid://bio6f4bj1qj36" path="res://assets/models/vehicles/sedan.glb" id="61_ig6px"]
+[ext_resource type="PackedScene" uid="uid://b31qfncg4fkse" path="res://assets/models/vehicles/suv-luxury.glb" id="62_hgpe2"]
+[ext_resource type="PackedScene" uid="uid://bd0g4jrc4xjmy" path="res://assets/models/vehicles/hatchback-sports.glb" id="63_ti338"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oyrvf"]
 resource_name = "colormap"
@@ -656,24 +657,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -0.00695765)
 [node name="BuildHouse10" parent="Houses" instance=ExtResource("18_v7eqq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.5, 0, -16.5)
 
-[node name="House2" type="Node3D" parent="Houses"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, 0)
-
-[node name="house_type012" parent="Houses/House2" instance=ExtResource("15_xju2p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5, 0, -4.4)
-metadata/quest_id = 0
-
-[node name="path_long2" parent="Houses/House2" instance=ExtResource("16_xi21n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.0811, 0, -3.85)
-
-[node name="tree_large2" parent="Houses/House2" instance=ExtResource("17_0sdic")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0984, 0, -3.56659)
-
-[node name="tree_large3" parent="Houses/House2" instance=ExtResource("17_0sdic")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.6083, 0, -3.42259)
-
-[node name="fence_large2" parent="Houses/House2" instance=ExtResource("18_qf07b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.0794, 0, -12.2694)
+[node name="BisonHouse11" parent="Houses" instance=ExtResource("20_y0udl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.0875, 1.90735e-06, -6.9771)
 
 [node name="HouseTall2Stories2" parent="Houses" instance=ExtResource("19_rp4j8")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 20.5, 0, -22.7)
@@ -1487,3 +1472,12 @@ skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Decorations/vehicle/body/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_aa6qf")
+
+[node name="sedan" parent="Decorations" instance=ExtResource("61_ig6px")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.9598, 0.0499998, -5.84594)
+
+[node name="suv-luxury" parent="Decorations" instance=ExtResource("62_hgpe2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.9646, 0.05, -5.98056)
+
+[node name="hatchback-sports" parent="Decorations" instance=ExtResource("63_ti338")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 69.9838, 0.0554129, -5.96209)

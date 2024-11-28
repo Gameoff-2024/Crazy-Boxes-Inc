@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=3 uid="uid://lmdj6t1y0uvv"]
+
+[ext_resource type="PackedScene" uid="uid://cs57fiofj1q4g" path="res://assets/models/houses/HouseWideWithSolarPanels.glb" id="1_8eaq4"]
+[ext_resource type="PackedScene" uid="uid://cp1euoxaxrdpj" path="res://assets/models/houses/path_long.glb" id="2_258bo"]
+[ext_resource type="PackedScene" uid="uid://cgmaeqe6jqycr" path="res://assets/models/houses/tree_large.glb" id="3_gf0sr"]
+[ext_resource type="PackedScene" uid="uid://b3623jufft4yg" path="res://assets/models/houses/fence_large.glb" id="4_ml1tn"]
+[ext_resource type="PackedScene" uid="uid://ceyrs0an8056k" path="res://scenes/animal_bison.tscn" id="5_lq35p"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_nunns"]
+vertices = PackedVector3Array(17.5736, 0.5, -14.8513, 17.5736, 0.5, -9.85135, 22.5736, 0.5, -9.85135, 22.5736, 0.5, -14.8513)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+agent_max_climb = 0.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_w3ckk"]
+size = Vector2(5, 5)
+
+[node name="BisonHouse11" type="Node3D"]
+
+[node name="house_type012" parent="." instance=ExtResource("1_8eaq4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.46792, 0, 2.59017)
+metadata/quest_id = 0
+
+[node name="path_long2" parent="." instance=ExtResource("2_258bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.11318, 0, 3.14017)
+
+[node name="tree_large2" parent="." instance=ExtResource("3_gf0sr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.869516, 0, 3.42358)
+
+[node name="tree_large3" parent="." instance=ExtResource("3_gf0sr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.64038, 0, 3.56758)
+
+[node name="fence_large2" parent="." instance=ExtResource("4_ml1tn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.11148, -0.521776, -5.27923)
+
+[node name="animal-bison2" parent="." node_paths=PackedStringArray("navigation_region") instance=ExtResource("5_lq35p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.154, 0, -3.751)
+navigation_region = NodePath("../NavigationRegion3D")
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.9849, 0, 6.99017)
+navigation_mesh = SubResource("NavigationMesh_nunns")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D"]
+transform = Transform3D(1.22481, 0, 0, 0, 0.99871, 0, 0, 0, 1.19169, 20.1356, 0, -12.3721)
+mesh = SubResource("PlaneMesh_w3ckk")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.960866, 0.277013, 0, -0.277013, 0.960866, 1.71435, 1.6108, -1.92686)

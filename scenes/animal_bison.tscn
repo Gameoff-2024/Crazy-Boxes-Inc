@@ -1,0 +1,423 @@
+[gd_scene load_steps=22 format=4 uid="uid://ceyrs0an8056k"]
+
+[ext_resource type="Script" path="res://scenes/animal_bison.gd" id="1_2ajlh"]
+[ext_resource type="Texture2D" uid="uid://gw2uho0rmih" path="res://assets/models/prototype-kit/Textures/colormap.png" id="1_rcl6h"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_edidh"]
+resource_name = "colormap"
+cull_mode = 2
+albedo_texture = ExtResource("1_rcl6h")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_nnwg4"]
+_surfaces = [{
+"aabb": AABB(-0.35, -4.95297e-11, -0.23125, 0.6, 0.4625, 0.4625),
+"format": 34896613377,
+"index_count": 348,
+"index_data": PackedByteArray("AgAAAAEAAQADAAIAAwAEAAIAAwAFAAQAAgAEAAYABgAHAAIACgAIAAkACQALAAoADgAMAA0ADQAPAA4ADwAQAA4ADwAKABAADwARAAoAEQAIAAoAEgARAA8ADwATABIAEQAUAAgAFAAVAAgAAQAAABYAFgAXAAEAEwAXABYAFgASABMAFwAYAAEAGAAZAAEAGAAXABoAAgAbABYAFgAAAAIAHQAcAA4ADgAQAB0AGQAeAAMAAwABABkAHwAaABcAFwAgAB8ABQALAAkACQAEAAUAIAAPAA0ADQAhACAAIQAfACAAEQASABYAFgAbABEAIwAiABwAHAAdACMACQAIABUAFQAGAAkABgAEAAkAIQAkACIAIgAfACEAHwAiACUAIgAjACUAGgAfACUAJQAYABoADAAkACEAIQANAAwAFQAUAAcABwAGABUAJAAMAA4ADgAcACQAHAAiACQABwAUABEAEQAbAAcAGwACAAcAHQAQAAoACgALAB0ACwAjAB0ACwAFACMABQAlACMABQADACUAAwAeACUAFwATAA8ADwAgABcAGAAlAB4AHgAZABgAKAAmACcAJwApACgAKQAqACgAKQArACoAKwAsACoAKwAtACwALQAuAC8ALwAsAC0AKAAqADAAMAAxACgAMgAmACgAKAAxADIAMgAzACcAJwAmADIAMwA0ACkAKQAnADMAKwA1AC4ALgAtACsAKgAsAC8ALwAwACoANQArACkAKQA0ADUAOAA2ADcANwA5ADgAOQA6ADgAOQA7ADoAOwA8ADoAOwA9ADwALgA1ADoAOgA8AC4ALwAuADwAPAA9AC8AOgA1ADQANAA4ADoANgAzADIAMgA3ADYAMQAwADsAOwA5ADEAOAA0ADMAMwA2ADgAOQA3ADIAMgAxADkALwA9ADsAOwAwAC8A"),
+"lods": [0.321101, PackedByteArray("AgAAAAEAAQADAAIAAwAEAAIAAwAFAAQAAgAEABUAFQAHAAIACgAIAAkACQALAAoADgAMAA0ADQAMACIADQAPAA4AIgAfAA0ADwAQAA4AHwAiACUAIgAjACUAGgAfACUAJQAYABoADwAKABAADwARAAoAEQAIAAoAEgARAA8ADwATABIAEQAHAAgABwAVAAgAAQAAABYAFgAXAAEAFwAYAAEAGAAXABoAEwAXABYAFgASABMAAgAbABYAFgAAAAIAHQAcAA4ADgAQAB0AGAAlAAMAAwABABgAHwAaABcAFwAgAB8ABQALAAkACQAEAAUAIAAPAA0ADQAfACAAEQASABYAFgAbABEAIwAiABwAHAAdACMACQAIABUAFQAEAAkADgAcAAwAHAAiAAwAEQAbAAcAGwACAAcAHQAQAAoACgALAB0ACwAjAB0ACwAFACMABQAlACMABQADACUAFwATAA8ADwAgABcA")],
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 62,
+"vertex_data": PackedByteArray("qiowRawbAACqKlLkrBsAAKoqMEWzbgAAqipS5FLkAACqKjBFS5EAAKoqMEVS5AAAqiqYIkuRAACqKpgis24AAP9fAABLkQAA/18wRUuRAAD/XwAAUuQAAP9fMEVS5AAAVOUAAEuRAABU5QAAs24AAKnKAABLkQAAqcoAALNuAACpygAAUuQAAP9fAACzbgAA/18AAKwbAACpygAArBsAAFVFAACzbgAAVUUAAEuRAAD/XzBFrBsAAKnKMEWsGwAA//+6wawbAABU5VLkrBsAAP//MEWsGwAA/18wRbNuAACpyjBFS5EAAKnKMEVS5AAAVOVS5FLkAAD//zBFs24AAKnKMEWzbgAA//+YIrNuAAD//zBFS5EAAP//MEVS5AAA//+YIkuRAAD//7rBUuQAAKmqC9oUDgAAqarJMxQOAACpqq3ytSYAAKmqKBu1JgAAqaqt8knZAACpqigbSdkAAKmqC9rq8QAAqarJM+rxAACqKoMp//8AAKoqUuT//wAAqir//1LkAACqKv//rBsAAKoqUuQAAAAAqiqDKQAAAACqKtYNrBsAAKoq1g1S5AAAAACnNaMQAAAAAC3YoxAAAAAAkx23KAAAAABB8LcoAAAAAJMdR9cAAAAAQfBH1wAAAACnNVvvAAAAAC3YW+8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_lad77"]
+resource_name = "animal-bison_torso"
+_surfaces = [{
+"aabb": AABB(-0.35, -4.95297e-11, -0.23125, 0.6, 0.4625, 0.4625),
+"attribute_data": PackedByteArray("/7cJ5f+3MtP/twnl/7cy0/+3CeX/twnl/7fq6P+36uj/t8vs/7cJ5f+3y+z/twnl/7fL7P+3y+z/t8vs/7fL7P+3y+z/t8vs/7fL7P+3y+z/t8vs/7fL7P+3y+z/t8vs/7cJ5f+3CeX/tzLT/7cJ5f+3y+z/t8vs/7cT1/+3MtP/twnl/7cJ5f+3CeX/twnl/7cJ5f+3CeX/t8vs/7cJ5f+3y+z/tzLT/7cy0/+3MtP/tzLT/7cJ5f+3CeX/twnl/7cJ5f+3CeX/twnl/7cJ5f+3CeX/t8vs/7fL7P+3CeX/t+ro/7cJ5f+3y+z/twnl/7fL7P+3CeX/twnl/7cJ5f+3CeX/twnl/7fL7P+3y+z/twnl/7fq6P+3CeX/t+ro/7cJ5f+36uj/twnl/7cT1/+3CeX/twnl/7cT1/+36uj/t+ro/7fL7P+3y+z/t8vs/7fq6P+3y+z/t+ro/7fL7P+3y+z/t+ro/7cJ5f+3CeX/t8vs/7fL7P+36uj/twnl/7cJ5f+3y+z/t8vs/7cJ5f+3CeX/twnl/7cJ5f+3E9f/tzLT/7cy0/+3y+z/t8vs/7cJ5f+3CeX/txPX/7cy0/+3E9f/tzLT/7cC5P+3lfX/t2fh/7cw+P+3Z+H/tzD4/7cC5P+3lfX/t6v2/7fs4v+3lfX/twLk/7dn4f+3/9//t2fh/7f/3/+3AuT/t2fh/7fs4v+3/9//t6v2/7eV9f+37OL/twLk/7eY+f+3MPj/t6v2/7eV9f+3mPn/t6v2/7cw+P+3lfX/twLk/7fs4v+3Z+H/t//f/7cw+P+3MPj/t5j5/7eY+f+3Y/X/tzTk/7fu9/+3qeH/t+73/7ep4f+3Y/X/tzTk/7eY+f+37vf/t6v2/7dj9f+3q/b/t2P1/7fs4v+3NOT/t5j5/7eY+f+37vf/t+73/7er9v+37OL/t2P1/7c05P+3/9//t6nh/7f/3/+3qeH/t5j5/7er9v+37vf/t2P1/7c05P+37OL/t6nh/7f/3/+3NOT/t6nh/7fs4v+3/9//t+ro/7fL7P+3y+z/t8vs/7cT1/+3E9c="),
+"format": 34896613399,
+"index_count": 348,
+"index_data": PackedByteArray("AgAAAAEAAQADAAIAAwAEAAIAAwAFAAQAAgAEAAYABgAHAAIACgAIAAkACQALAAoADgAMAA0ADQAPAA4ADwAQAA4ADwARABAADwASABEAEgATABEAFAASAA8ADwAVABQAEgAWABMAFgAXABMAGgAYABkAGQAbABoAHAAbABkAGQAdABwAGwAeABoAHgAfABoAHgAbACAAIwAhACIAIgAkACMAJwAlACYAJgAoACcAKwApACoAKgAsACsALwAtAC4ALgAwAC8AMwAxADIAMgA0ADMANwA1ADYANgA4ADcAOAA5ADcAPAA6ADsAOwA9ADwAQAA+AD8APwBBAEAARABCAEMAQwBFAEQARQBGAEQASQBHAEgASABKAEkASgBIAEsASABMAEsATQBKAEsASwBOAE0AUQBPAFAAUABSAFEAVQBTAFQAVABWAFUAWQBXAFgAWABaAFkAWgBbAFkAXgBcAF0AXQBfAF4AXwBgAF4AYwBhAGIAYgBkAGMAZABlAGMAZABmAGUAZgBnAGUAZgBoAGcAaABpAGcAbABqAGsAawBtAGwAcABuAG8AbwBxAHAAdAByAHMAcwB1AHQAdQB2AHQAdQB3AHYAdwB4AHYAdwB5AHgAfAB6AHsAewB9AHwAgAB+AH8AfwCBAIAAhACCAIMAgwCFAIQAiACGAIcAhwCJAIgAjACKAIsAiwCNAIwAkACOAI8AjwCRAJAAlACSAJMAkwCVAJQAmACWAJcAlwCZAJgAnACaAJsAmwCdAJwAnQCeAJwAnQCfAJ4AnwCgAJ4AnwChAKAApACiAKMAowClAKQAqACmAKcApwCpAKgArACqAKsAqwCtAKwAsACuAK8ArwCxALAAtACyALMAswC1ALQAuAC2ALcAtwC5ALgAvAC6ALsAuwC9ALwAwAC+AL8AvwDBAMAA"),
+"lods": [0.321101, PackedByteArray("AgAAAAEAAQADAAIAAwAEAAIAAwAFAAQAAgAEAMQAxAAHAAIACgAIAAkACQALAAoADgAMAMMAwwAMAEgAwwAPAA4ASABKAMMADwAQAA4ASgBIAEsASABMAEsATQBKAEsASwBOAE0ADwARABAADwASABEAEgATABEAFAASAA8ADwAVABQAEgDCABMAwgDFABMAGgAYABkAGQAbABoAGwAeABoAHgAbACAAHAAbABkAGQAdABwAIwAhACIAIgAkACMAJwAlACYAJgAoACcAxwDGACoAKgAsAMcALwAtAC4ALgAwAC8AMwAxADIAMgA0ADMANwA1ADYANgA5ADcAPAA6ADsAOwA9ADwAQAA+AD8APwBBAEAARABCAEMAQwBGAEQAWABaAFcAWgBbAFcAXQBfAF4AXwBgAF4AYwBhAGIAYgBkAGMAZABlAGMAZABmAGUAZgBnAGUAZgBoAGcAbABqAGsAawBtAGwA")],
+"material": SubResource("StandardMaterial3D_edidh"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 200,
+"vertex_data": PackedByteArray("qiowRawb/7+qKlLkrBv/v6oqMEWzbv+/qipS5FLk/7+qKjBFS5H/v6oqMEVS5P+/qiqYIkuRjMGqKpgis26Mwf9fAABLkf+//18wRUuR/7//XwAAUuT/v/9fMEVS5P+/VOUAAEuRjMFU5QAAs26MwanKAABLkf+/qcoAALNu/7+pygAAUuT/v/9fAABS5P+//18AALNu/7//XwAAS5H/v/9fAACsG/+/qcoAAKwb/79VRQAAs26MwVVFAABLkYzBqiowRawb////XzBFrBv//6oqUuSsG///qcowRawb//+pygAArBv///9fAACsG/////+6wawb//9U5VLkrBv/////MEWsG////18wRbNu/7//XzBFrBv/v6oqMEWzbv+/qiowRawb/7+pyjBFS5H/v6nKAABLkf+/qcowRVLk/7+pygAAUuT/v1TlUuRS5Lj0qipS5FLk//9U5VLkrBu49KoqUuSsG/////8wRawb/7+pyjBFrBv/v///MEWzbv+/qcowRbNu/7//XzBFUuT/v/9fMEVLkf+/qiowRVLk/7+qKjBFS5H/v6nKAACzbv//VOUAALNu//+pyjBFs27/////mCKzbv////8wRbNu////XwAArBv/v/9fMEWsG/+//18AALNu/7//XzBFs27/v///MEVLkf+/qcowRUuR/7///zBFUuT/v6nKMEVS5P+//18AAEuRAIBVRQAAS5EAgP9fMEVLkQCAqiqYIkuRAICqKjBFS5EAgP//mCJLkYzB//8wRUuR/7///5gis26Mwf//MEWzbv+///+6wVLkjMH//zBFUuT/v///MEWsG/+///+6wawbjMH//5giS5GMwf//mCKzbozBVOUAAEuRyMxU5QAAs27IzFVFAACzbsjMqiqYIrNujMFVRQAAS5HIzKoqmCJLkYzBVOUAAEuRAICpygAAS5EAgP//mCJLkQCAqcowRUuRAID//zBFS5EAgFVFAACzbv///18AALNu//+qKpgis27///9fMEWzbv//qiowRbNu//+pygAAUuQAgP9fAABS5ACAqcowRVLkAID/XzBFUuQAgP//MEVS5ACAqiowRVLkAID//7rBUuQAgKoqUuRS5ACAVOVS5FLkAICpygAArBv/v6nKAACzbv+/qcowRawb/7+pyjBFs27/v///usFS5IzBVOVS5FLkyMz//7rBrBuMwVTlUuSsG8jMqaoL2hQO/7+pqskzFA7/v6mqrfK1Jv+/qaooG7Um/7+pqq3ySdn/v6mqKBtJ2f+/qaoL2urx/7+pqskz6vH/v6oqgyn//7yQqipS5P//vJCpqskz6vFCkKmqC9rq8UKQqaqt8knZ3smqKv//UuSFyamqrfK1JgPdqir//6wbZ92pqgvaFA6C+6mqrfK1Jpb5qipS5AAAevuqKv//rBub+aoqgykAAKr7qarJMxQOsPuqKlLkAACq+6mqC9oUDrD7qirWDawbm/mpqigbtSaW+aoqgykAAHr7qarJMxQOgvuqKtYNUuTcr6oqgyn//8qQqaooG0nZdrCpqskz6vFQkKmqC9rq8VCQqipS5P//ypCpqq3ySdl2sKoq//9S5NyvqaooG0nZ3smpqigbtSYD3aoq1g1S5IXJqirWDawbZ90AAKc1oxD/vwAALdijEP+/AACTHbco/78AAEHwtyj/vwAAkx1H1/+/AABB8EfX/78AAKc1W+//vwAALdhb7/+/qirWDVLk0bAAAJMdR9eysqoqgyn//ySWAACnNVvvz5SqKoMp//+9lQAApzVb73OUqipS5P//vZUAAC3YW+9zlKoq1g1S5HXCqirWDawbGNkAAJMdR9f6wwAAkx23KNHXqiqDKQAAKvGqKlLkAAAq8QAApzWjEGjxAAAt2KMQaPGqKv//UuR1wgAAQfBH1/rDqir//6wbGNkAAEHwtyjR16oq1g2sG+PqqiqDKQAAnvAAAJMdtyig6gAApzWjEPbwAAAt2KMQ9vCqKlLkAACe8AAAQfC3KKDqqir//6wb4+oAAC3YW+/PlAAAQfBH17KyqipS5P//JJaqKv//UuTRsKoqmCKzbpXSVOUAALNujMFVRQAAS5GMwVVFAABLkcm+//+6wVLkcMz//7rBrBtFzv9/////f////3////9/////f////3///5FbyO2RW8jt/3////9/////f////3///zYSkVs2EpFbAAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/39tJDaSbSQ2kv9/////f////3////9/////f////3////9/////f////3///wAA/38AAP9/AAD/fwAA/3//fwAA/38AAP9/AAD/fwAANTqUC/9//781OpQL/3//vwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9//3////9/////f////3////9/////f////3////9/////f///AAD/fwAA/38AAP9/AAD/f/9/////f////3////9/////f///yG1tJP9/AADIbW0k/38AAG2kNhL/fwAA/38AAG2kNhLIbW0kyG1tJGRbNklkWzZJyTZj25FbyO3JNmPbkVvI7f9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////fwAA/38AAP9/AAD/fwAAbaQ2EjXJmyRtpDYSNcmbJP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAAjh1vZW/lcWIYHulk6OTmYVzYnSOX2F4j58zoLazMEC5bltcB1rSRAu+W4QFctJQCWX/3FVx/aBX2laUAZ5WjAGp9XTRufdc0Hn7vFid+XBbeFK5wsSKjZbMUx3AqIyplKuXUXKLlTl3H8ExrrvAga2FcXFgWUuhMoVyXWO5RrEz/f////3////9/////f////3////9/////f////3///wknprR6JqSzWTivyLw6v8oYO8DBuj1UxD6+F7upu7q9Ti+c37c7HtfNL9jeqDpR1wVpxv03ggXp52rk/RmC5uphoE6vJaHMr+Cot7usqKe6/Uri95hmNPp5Sfr3nGiW+meFm+jKhZfmBIh4yRyI/co+tby6Wsx6pk+3WbhYywmnqy5V11cY5lW4NSSkoBfifZ7ITySpy9Ul")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_nnwg4")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_konwd"]
+_surfaces = [{
+"aabb": AABB(-0.0625, -0.3125, -0.0625, 0.125, 0.375, 0.125),
+"format": 34896613377,
+"index_count": 72,
+"index_data": PackedByteArray("AgAAAAEAAQADAAIABgAEAAUABQAHAAYACQAIAAUABQAEAAkABgAKAAEAAQAAAAYAAAAEAAYAAAALAAQACwAJAAQADAAKAAYABgAHAAwADQALAAAAAAACAA0ACwANAAgACAAJAAsAAgADAAwADAAHAAIABwANAAIABwAFAA0ABQAIAA0ADAADAAEAAQAKAAwA"),
+"lods": [0.0637161, PackedByteArray("AgAAAAEAAQADAAIAAAACAA0AAAANAAUABQAEAAAABgAEAAUABgAFAAwADAAKAAYABgAKAAEAAQAAAAYAAAAEAAYAAgADAAwADAAFAAIABQANAAIADAADAAEAAQAKAAwA"), 0.0854234, PackedByteArray("BQAGAAEAAQADAAUABgAFAAwADAAKAAYABgAKAAEABQADAAwADAADAAEAAQAKAAwA")],
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 14,
+"vertex_data": PackedByteArray("//9U1QAAAAD/3wAAAAAAAP//VNX//wAA/98AAP//AAB9JX/zAAAAAH0lf/P//wAAAABU1QAAAAAAAFTV//8AAP9//////wAA/3///wAAAAD/HwAAAAAAAIHaf/MAAAAA/x8AAP//AACB2n/z//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_7fpha"]
+resource_name = "animal-bison_leg-back-left"
+_surfaces = [{
+"aabb": AABB(-0.0625, -0.3125, -0.0625, 0.125, 0.375, 0.125),
+"attribute_data": PackedByteArray("/7fL7P+3y+z/t8vs/7fL7P+3sdr/t7Ha/7fL7P+3y+z/tzLT/7ex2v+3MtP/t7Ha/7fL7P+3y+z/t8vs/7fL7P+3sdr/t7Ha/7cy0/+3y+z/t8vs/7fL7P+3y+z/t7Ha/7fL7P+3sdr/t8vs/7ex2v+3MtP/t7Ha/7cy0/+3y+z/t8vs/7fL7P+3y+z/t7Ha/7ex2v+3MtP/t8vs/7fL7P+3y+z/t8vs/7ex2v+3sdr/t8vs/7ex2v+3sdr/t7Ha/7ex2g=="),
+"format": 34896613399,
+"index_count": 72,
+"index_data": PackedByteArray("AgAAAAEAAQADAAIABgAEAAUABQAHAAYACgAIAAkACQALAAoADgAMAA0ADQAPAA4ADwAQAA4ADwARABAAEQASABAAFQATABQAFAAWABUAGQAXABgAGAAaABkAHQAbABwAHAAeAB0AIQAfACAAIAAiACEAIgAjACEAIgAkACMAJAAlACMAKAAmACcAJwApACgA"),
+"lods": [0.0637161, PackedByteArray("AgAAAAEAAQADAAIAAAACADAALAAwAC8ALwAtACwABgAEAC4ABgAuABUAFQATAAYADgAMAA0ADQAPAA4ADwAQAA4AIQAfACAAIAAkACEAJAAjACEAKAAmACcAJwApACgA"), 0.0854234, PackedByteArray("BQAGAAEAAQADACoABgArABUAFQATAAYADgAMAA0AJAAfACAAKAAmACcAJwApACgA")],
+"material": SubResource("StandardMaterial3D_edidh"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 49,
+"vertex_data": PackedByteArray("//9U1QAAS8D/3wAAAAAFwP//VNX//0vA/98AAP//BcB9JX/zAAD8xX0lf/P///zFAABU1QAAS8AAAFTV//9LwP9//////1TVfSV/8////MX/f///AABU1X0lf/MAAPzF/x8AAAAA////3wAAAAD//wAAVNUAAP////9U1QAA//99JX/zAAD//4Haf/MAAP///3///wAA////HwAAAAAFwAAAVNUAAEvA/x8AAP//BcAAAFTV//9LwIHaf/MAAPzF//9U1QAAS8CB2n/z///8xf//VNX//0vAgdp/8////MX/f/////9U1YHaf/MAAPzF/3///wAAVNX/3wAA//8AgP8fAAD//wCA//9U1f//AIAAAFTV//8AgIHaf/P//wCAfSV/8///AID/f/////8AgP/fAAD///+//98AAAAA/7//HwAA////v/8fAAAAAP+/fSV/8///zv59JX/z//9IwP//VNUAAEDLfSV/8wAAmdJ9JX/z//+SwX0lf/P//3/bgdp/8///J8XDkmEJ83wXBsOSYQnzfBcG/pwAxv6cAMZhiTvtYYk77aqqqqr+nADGqqqqqv6cAMb/f////3////9/////f////3////9/////f///6Hnz/GGJO+3oefP8YYk77f25/xzDkmEJ/bn/HMOSYQn9uf8cVNWqKv25/xxU1aoq/3////9/////f////3////9/////f////3///wAA/38AAP9/AAD/fwAA/39Xv06BMImd7XbGOyPxqBuuT5Jf2yCuvaNHt6Qb")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_konwd")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_g8jyi"]
+_surfaces = [{
+"aabb": AABB(-0.0625, -0.3125, -0.0625, 0.125, 0.375, 0.125),
+"format": 34896613377,
+"index_count": 72,
+"index_data": PackedByteArray("AgAAAAEAAQADAAIABQAEAAIAAgADAAUABwAGAAUABQADAAcAAwAIAAcAAwABAAgAAQAJAAgABQAGAAoACgAEAAUABwALAAoACgAGAAcADAAJAAEAAQAAAAwAAgAEAAoACgALAAIACwAAAAIACwANAAAADQAMAAAACAANAAsACwAHAAgADQAIAAkACQAMAA0A"),
+"lods": [0.0874229, PackedByteArray("BQAEAAIAAgAHAAUABwAGAAUABQAGAAoACgAEAAUABwALAAoACgAGAAcABwACAAsAAgAEAAoACgALAAIA")],
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 14,
+"vertex_data": PackedByteArray("fSV/8wAAAAB9JX/z//8AAAAAVNUAAAAAAABU1f//AAD/HwAAAAAAAP8fAAD//wAA/98AAP//AAD//1TV//8AAIHaf/P//wAA/3//////AAD/3wAAAAAAAP//VNUAAAAA/3///wAAAACB2n/zAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_yj8n1"]
+resource_name = "animal-bison_leg-back-right"
+_surfaces = [{
+"aabb": AABB(-0.0625, -0.3125, -0.0625, 0.125, 0.375, 0.125),
+"attribute_data": PackedByteArray("/7ex2v+3sdr/t8vs/7fL7P+3y+z/t8vs/7fL7P+3y+z/t8vs/7fL7P+3y+z/t8vs/7ex2v+3sdr/tzLT/7fL7P+3y+z/t8vs/7fL7P+3y+z/t8vs/7fL7P+3y+z/tzLT/7ex2v+3MtP/t7Ha/7fL7P+3y+z/t8vs/7fL7P+3sdr/t7Ha/7cy0/+3sdr/t8vs/7ex2v+3y+z/t7Ha/7cy0/+3sdr/tzLT/7fL7P+3y+z/t8vs/7fL7P+3y+z/t8vs"),
+"format": 34896613399,
+"index_count": 72,
+"index_data": PackedByteArray("AgAAAAEAAQADAAIABgAEAAUABQAHAAYACgAIAAkACQALAAoACwAMAAoACwANAAwADQAOAAwAEQAPABAAEAASABEAFQATABQAFAAWABUAGQAXABgAGAAaABkAHQAbABwAHAAeAB0AHgAfAB0AHgAgAB8AIAAhAB8AJAAiACMAIwAlACQAKAAmACcAJwApACgA"),
+"lods": [0.0874229, PackedByteArray("BgAEAAIAKgAuACwACgAIAAkAEQAPABAAEAASABEAFQATABQAFAAWABUALwArAC0AHQAbABwAHAAeAB0A")],
+"material": SubResource("StandardMaterial3D_edidh"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 48,
+"vertex_data": PackedByteArray("fSV/8wAA/MV9JX/z///8xQAAVNUAAEvAAABU1f//S8D/HwAAAAAFwAAAVNUAAEvA/x8AAP//BcAAAFTV//9LwP/fAAD//wCA/x8AAP//AID//1TV//8AgAAAVNX//wCAgdp/8///AIB9JX/z//8AgP9//////wCA/98AAP///7//3wAAAAD/v/8fAAD///+//x8AAAAA/7///1TVAABLwP/fAAAAAAXA//9U1f//S8D/3wAA//8FwP9//////1TVfSV/8////MX/f///AABU1X0lf/MAAPzF/x8AAAAA////3wAAAAD//wAAVNUAAP////9U1QAA//99JX/zAAD//4Haf/MAAP///3///wAA//+B2n/zAAD8xf//VNUAAEvAgdp/8////MX//1TV//9LwIHaf/P///zF/3//////VNWB2n/zAAD8xf9///8AAFTVAABU1QAA7bUAAFTVAACU3P8fAAD//w6v//9U1QAAlsn//1TV//8L1///VNX//wfJ/pwAxv6cAMZhiTvtYYk77eh58/xhiTvt6Hnz/GGJO+3/f////3////9/////f////3////9/////f///AAD/fwAA/38AAP9/AAD/f8OSYQnzfBcGw5JhCfN8Fwaqqqqq/pwAxqqqqqr+nADG/3////9/////f////3////9/////f////3////25/xzDkmEJ/bn/HMOSYQn9uf8cVNWqKv25/xxU1aoqCIfY8LCunKLmgiT4IcOQIc6cHQjqwfUg")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_g8jyi")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qjjd4"]
+_surfaces = [{
+"aabb": AABB(-0.0625, -0.3125, -0.0625, 0.125, 0.375, 0.125),
+"format": 34896613377,
+"index_count": 72,
+"index_data": PackedByteArray("AgAAAAEAAQADAAIAAwAEAAIAAwAFAAQABQAGAAQAAgAEAAcABwAIAAIABQAJAAoACgAGAAUACQAFAAMAAwALAAkADAAAAAIAAgAIAAwACwANAAwADAAIAAsACAAJAAsACAAHAAkABwAKAAkACwADAAEAAQANAAsADAANAAEAAQAAAAwABgAKAAcABwAEAAYA"),
+"lods": [0.0874229, PackedByteArray("AgAAAAEAAQADAAIADAAAAAIAAgALAAwACwANAAwACwADAAEACwACAAMAAQANAAsADAANAAEAAQAAAAwA")],
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 14,
+"vertex_data": PackedByteArray("/x8AAAAAAAD/3wAAAAAAAAAAVNUAAAAA//9U1QAAAAB9JX/zAAAAAIHaf/MAAAAA/3///wAAAAB9JX/z//8AAAAAVNX//wAAgdp/8///AAD/f/////8AAP//VNX//wAA/x8AAP//AAD/3wAA//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_lbvkn"]
+resource_name = "animal-bison_leg-front-left"
+_surfaces = [{
+"aabb": AABB(-0.0625, -0.3125, -0.0625, 0.125, 0.375, 0.125),
+"attribute_data": PackedByteArray("/7fL7P+3y+z/t8vs/7fL7P+3sdr/t7Ha/7cy0/+3sdr/t7Ha/7fL7P+3y+z/t7Ha/7cy0/+3sdr/tzLT/7ex2v+3y+z/t7Ha/7fL7P+3y+z/t8vs/7fL7P+3y+z/t8vs/7fL7P+3y+z/t8vs/7ex2v+3sdr/tzLT/7fL7P+3y+z/t8vs/7fL7P+3y+z/t8vs/7fL7P+3y+z/tzLT/7ex2v+3MtP/t7Ha/7fL7P+3y+z/t8vs/7fL7A=="),
+"format": 34896613399,
+"index_count": 72,
+"index_data": PackedByteArray("AgAAAAEAAQADAAIAAwAEAAIAAwAFAAQABQAGAAQACQAHAAgACAAKAAkADQALAAwADAAOAA0AEQAPABAAEAASABEAFQATABQAFAAWABUAGQAXABgAGAAaABkAGgAbABkAGgAcABsAHAAdABsAIAAeAB8AHwAhACAAJAAiACMAIwAlACQAKAAmACcAJwApACgA"),
+"lods": [0.0874229, PackedByteArray("AgAAAAEAAQADAAIAFQATAAkACQAsAC0AGQAXABgAEgArAB8AEgAqACsAHwAhABIAJAAiACMAIwAlACQA")],
+"material": SubResource("StandardMaterial3D_edidh"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 46,
+"vertex_data": PackedByteArray("/x8AAAAA////3wAAAAD//wAAVNUAAP////9U1QAA//99JX/zAAD//4Haf/MAAP///3///wAA//99JX/zAAD8xX0lf/P///zFAABU1QAAS8AAAFTV//9LwIHaf/P///zF/3//////VNWB2n/zAAD8xf9///8AAFTVgdp/8wAA/MX//1TVAABLwIHaf/P///zF//9U1f//S8D/HwAAAAAFwAAAVNUAAEvA/x8AAP//BcAAAFTV//9LwP/fAAD//wCA/x8AAP//AID//1TV//8AgAAAVNX//wCAgdp/8///AIB9JX/z//8AgP9//////wCA//9U1QAAS8D/3wAAAAAFwP//VNX//0vA/98AAP//BcD/3wAA////v//fAAAAAP+//x8AAP///7//HwAAAAD/v/9//////1TVfSV/8////MX/f///AABU1X0lf/MAAPzFAABU1QAA1tb//1TVAABBwf//VNX//2vg/x8AAP//0K3/f////3////9/////f////3////9/////f////pwAxv6cAMZhiTvtYYk77f25/xxU1aoq/bn/HFTVqir9uf8cw5JhCf25/xzDkmEJ6Hnz/GGJO+3oefP8YYk77f9/////f////3////9/////f////3////9////DkmEJ83wXBsOSYQnzfBcGAAD/fwAA/38AAP9/AAD/f6qqqqr+nADGqqqqqv6cAMaOq+CoqKHUEI3MriI/hCTz")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_qjjd4")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_wp71m"]
+_surfaces = [{
+"aabb": AABB(-0.0625, -0.3125, -0.0625, 0.125, 0.375, 0.125),
+"format": 34896613377,
+"index_count": 72,
+"index_data": PackedByteArray("AgAAAAEAAQADAAIAAwAEAAIAAwAFAAQABQAGAAQABwAFAAMAAwAIAAcACAAJAAoACgALAAgACwAHAAgACwAMAAcADAANAAcACgAAAAIAAgALAAoACAADAAEAAQAJAAgAAgAEAAwADAALAAIABQAHAA0ADQAGAAUABgANAAwADAAEAAYACgAJAAEAAQAAAAoA"),
+"lods": [0.0449892, PackedByteArray("AgAAAAEAAQADAAIACAAJAAoACgALAAgACgAAAAIAAgALAAoACwACAAMACAADAAEAAQAJAAgAAwAIAAsACgAJAAEAAQAAAAoA")],
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 14,
+"vertex_data": PackedByteArray("/x8AAAAAAAD/3wAAAAAAAAAAVNUAAAAA//9U1QAAAAB9JX/zAAAAAIHaf/MAAAAA/3///wAAAACB2n/z//8AAP//VNX//wAA/98AAP//AAD/HwAA//8AAAAAVNX//wAAfSV/8///AAD/f/////8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_q3icw"]
+resource_name = "animal-bison_leg-front-right"
+_surfaces = [{
+"aabb": AABB(-0.0625, -0.3125, -0.0625, 0.125, 0.375, 0.125),
+"attribute_data": PackedByteArray("/7fL7P+3y+z/t8vs/7fL7P+3sdr/t7Ha/7cy0/+3sdr/t8vs/7ex2v+3y+z/t8vs/7fL7P+3y+z/t8vs/7ex2v+3sdr/tzLT/7fL7P+3y+z/t8vs/7fL7P+3y+z/t8vs/7fL7P+3y+z/t7Ha/7ex2v+3y+z/t8vs/7ex2v+3MtP/t7Ha/7cy0/+3MtP/t7Ha/7cy0/+3sdr/t8vs/7fL7P+3y+z/t8vs/7fL7P+3y+z/t8vs/7fL7P+3y+w="),
+"format": 34896613399,
+"index_count": 72,
+"index_data": PackedByteArray("AgAAAAEAAQADAAIAAwAEAAIAAwAFAAQABQAGAAQACQAHAAgACAAKAAkADQALAAwADAAOAA0ADgAPAA0ADgAQAA8AEAARAA8AFAASABMAEwAVABQAGAAWABcAFwAZABgAHAAaABsAGwAdABwAIAAeAB8AHwAhACAAJAAiACMAIwAlACQAKAAmACcAJwApACgA"),
+"lods": [0.0449892, PackedByteArray("AgAAAAEAAQADAAIADQALAAwADAAOAA0AFAASABMAEwAVABQALgATACsACgAIABcAFwAZAAoAKgAsAC0AKAAmACcAJwApACgA")],
+"material": SubResource("StandardMaterial3D_edidh"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 47,
+"vertex_data": PackedByteArray("/x8AAAAA////3wAAAAD//wAAVNUAAP////9U1QAA//99JX/zAAD//4Haf/MAAP///3///wAA//+B2n/zAAD8xf//VNUAAEvAgdp/8////MX//1TV//9LwP/fAAD//wCA/x8AAP//AID//1TV//8AgAAAVNX//wCAgdp/8///AIB9JX/z//8AgP9//////wCA/x8AAAAABcAAAFTVAABLwP8fAAD//wXAAABU1f//S8D//1TVAABLwP/fAAAAAAXA//9U1f//S8D/3wAA//8FwH0lf/MAAPzFfSV/8////MUAAFTVAABLwAAAVNX//0vAgdp/8////MX/f/////9U1YHaf/MAAPzF/3///wAAVNX/f/////9U1X0lf/P///zF/3///wAAVNV9JX/zAAD8xf/fAAD///+//98AAAAA/7//HwAA////v/8fAAAAAP+///9U1QAA3sj//1TVAACG1v//VNX//6PKAABU1f//NtkAAFTV//84x/9/////f////3////9/////f////3////9////9uf8cw5JhCf25/xzDkmEJ/3////9/////f////3////9/////f////3///+h58/xhiTvt6Hnz/GGJO+3DkmEJ83wXBsOSYQnzfBcG/pwAxv6cAMZhiTvtYYk77f25/xxU1aoq/bn/HFTVqiqqqqqq/pwAxqqqqqr+nADGAAD/fwAA/38AAP9/AAD/f47BxyDA1mArSMWkIuWsMqbCnnnC")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_wp71m")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_rjp00"]
+_surfaces = [{
+"aabb": AABB(-0.289832, -0.13125, -0.18395, 0.289832, 0.363994, 0.3679),
+"format": 34896613377,
+"index_count": 156,
+"index_data": PackedByteArray("AgAAAAEAAQADAAIAAQAEAAUABQADAAEABAAGAAcABwAFAAQAAgAHAAYABgAAAAIAAQAAAAYABgAEAAEABQAHAAIAAgADAAUACgAIAAkACQALAAoACQAMAA0ADQALAAkADQAMAA4ADgAPAA0ADQAPAAoACgALAA0ADwAOAAgACAAKAA8AEgAQABEAEQATABIAEAASABQAFAAVABAAEwAWABQAFAASABMAFwAVABQAFAAWABcAFwAWABMAEwARABcAGgAYABkAGQAbABoAGQAcAB0AHQAbABkAGgAeAB8AHwAYABoAHQAeABoAGgAbAB0AGQAYAB8AHwAcABkAIgAgACEAIQAjACIAIQAkACUAJQAjACEAIQAgACYAJgAkACEAJQAnACIAIgAjACUAIgAnACYAJgAgACIA"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 40,
+"vertex_data": PackedByteArray("//9OXDvBAAA0NwAAO8EAADCtgs47wQAAAAAiTDvBAAA0NwAAwz4AAAAAIkzDPgAA//9OXMM+AAAwrYLOwz4AAGeLi187wQAAZ4s3mTvBAAB1lMBm//8AAHWUAZL//wAA1dM3mTvBAADHygGS//8AANXTi187wQAAx8rAZv//AADV0zeZwz4AAGeLN5nDPgAAx8oBkgAAAAB1lAGSAAAAAMfKwGYAAAAA1dOLX8M+AAB1lMBmAAAAAGeLi1/DPgAATon//7hFAABOif//NnEAAGdxAfW4RQAAZ3EB9TZxAAC1suXGNnEAAOeC6rA2cQAA54LqsLhFAAC1suXGuEUAAE6J///IjgAATon//0a6AABncQH1yI4AAGdxAfVGugAAtbLlxka6AADnguqwRroAALWy5cbIjgAA54LqsMiOAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ug1ls"]
+resource_name = "animal-bison_head"
+_surfaces = [{
+"aabb": AABB(-0.289832, -0.13125, -0.18395, 0.289832, 0.363994, 0.3679),
+"attribute_data": PackedByteArray("/7fL7P+3y+z/tzLT/7e62/+3y+z/t7rb/7fL7P+3utv/t8vs/7cy0/+3y+z/t7rb/7cy0/+3y+z/tzLT/7fL7P+3y+z/t8vs/7fL7P+3y+z/tzLT/7cy0/+3utv/t7rb/7dD6v+3MtP/t2Hn/7cU1v+3MtP/txTW/7cy0/+3FNb/tzLT/7dD6v+3FNb/t2Hn/7dh5/+3Yef/txTW/7cU1v+3Q+r/t0Pq/7dh5/+3Yef/tzLT/7cy0/+3FNb/txTW/7cU1v+3Yef/tzLT/7dD6v+3Yef/t2Hn/7cU1v+3FNb/t0Pq/7dh5/+3Q+r/t2Hn/7dh5/+3FNb/t0Pq/7cy0//3MtP/9zLT//cy0//3MtP/98vs//fL7P/3MtP/9zLT//fL7P/3y+z/9zLT//cy0//3y+z/9zLT//fL7P/3MtP/9zLT//fL7P/3MtP/98vs//cy0//3MtP/9zLT//cy0//3y+z/98vs//cy0//3MtP/9zLT//fL7P/3MtP/98vs//fL7P/3MtP/98vs//cy0//3y+z/98vs//cy0//3MtM="),
+"format": 34896613399,
+"index_count": 156,
+"index_data": PackedByteArray("AgAAAAEAAQADAAIABgAEAAUABQAHAAYACgAIAAkACQALAAoADgAMAA0ADQAPAA4AEgAQABEAEQATABIAFgAUABUAFQAXABYAGgAYABkAGQAbABoAHgAcAB0AHQAfAB4AIgAgACEAIQAjACIAJgAkACUAJQAnACYAKgAoACkAKQArACoALgAsAC0ALQAvAC4AMgAwADEAMQAzADIANgA0ADUANQA3ADYAOgA4ADkAOQA7ADoAPgA8AD0APQA/AD4AQgBAAEEAQQBDAEIARgBEAEUARQBHAEYASgBIAEkASQBLAEoATgBMAE0ATQBPAE4AUgBQAFEAUQBTAFIAVgBUAFUAVQBXAFYAWgBYAFkAWQBbAFoAXgBcAF0AXQBfAF4AYgBgAGEAYQBjAGIAZgBkAGUAZQBnAGYA"),
+"material": SubResource("StandardMaterial3D_edidh"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 104,
+"vertex_data": PackedByteArray("//9OXDvBVJU0NwAAO8FUlTCtgs47wVSVAAAiTDvBVJU0NwAAwz66wgAAIkzDPjXANDcAADvBusIAACJMO8E1wP//TlzDPv//MK2CzsM+//80NwAAwz7//wAAIkzDPv//MK2CzsM+usL//05cwz66wjCtgs47wbrC//9OXDvBusL//05cO8G6wv//TlzDPrrCNDcAADvBusI0NwAAwz66wjCtgs7DPmbGMK2CzjvBZsYAACJMwz41wAAAIkw7wTXAZ4uLXzvBY7tnizeZO8Fju3WUwGb//2O7dZQBkv//Y7vV0zeZO8Fju8fKAZL//2O7Z4s3mTvBY7t1lAGS//9ju9XTN5k7wWO71dOLXzvBY7vHygGS//9ju8fKwGb//2O7x8rAZv//AIB1lMBm//8AgMfKAZL//wCAdZQBkv//AIDV04tfO8Fju2eLi187wWO7x8rAZv//Y7t1lMBm//9ju9XTN5nDPv//Z4s3mcM+///HygGSAAD//3WUAZIAAP//x8oBkgAAm8THysBmAACbxNXTN5nDPpvE1dOLX8M+m8R1lMBmAAD//8fKwGYAAP//dZQBkgAA///HygGSAAD//9XTi1/DPv//x8rAZgAA//9ni4tfwz7//3WUwGYAAP//dZTAZgAAm8R1lAGSAACbxGeLi1/DPpvEZ4s3mcM+m8ROif//uEX/8E6J//82cf/wZ3EB9bhF4NpncQH1NnHg2rWy5cY2cVSV54LqsDZxVJVOif//NnFUlWdxAfU2cVSV54LqsLhF//+1suXGuEX//2dxAfW4Rf//Ton//7hF///nguqwuEVpwGdxAfW4RYbA54LqsDZxacBncQH1NnGGwE6J//+4RbrCtbLlxrhFusJOif//NnG6wrWy5cY2cbrCTon//8iO//BOif//Rrr/8GdxAfXIjuDaZ3EB9Ua64Nq1suXGRrpUleeC6rBGulSVTon//0a6VJVncQH1RrpUlU6J///IjrrCtbLlxsiOusJOif//Rrq6wrWy5cZGurrC54LqsMiOacBncQH1yI6GwOeC6rBGumnAZ3EB9Ua6hsDnguqwyI7//7Wy5cbIjv//Z3EB9ciO//9Oif//yI7///////////////////////9WU6rpHIjE71ZTqukciMTv8mTy5PJk8uTyZPLk8mTy5KisVBaorFQWqKxUFqisVBZUFlZTVBZWU1QWVlNUFlZTnZ3CxJ2dwsQciMTvHIjE7/9/////f////3////9///////9/////f////3////9//38AAP9/AAD/fwAA/38AAP9/////f////3////9///8AAP9/AAD/fwAA/38AAP9//3+fw/9/n8P/f5/D/3+fw/9/AAD/fwAA/38AAP9/AAD/f////3////9/////f///X7z//1+8//9fvP//X7z///9/////f////3////9////gcG+44HBvuJlbzK2ZW8yt//////////////////////Jk8uTyZPLk8mTy5PJk8uRwajf16osp6HBqN/XqiynoqKxUFqisVBaorFQWqKxUFuBwb7jgcG+4mVvMrZlbzK3/////////////////////qKxUFqisVBaorFQWqKxUFnBqN/XqiynocGo39eqLKejyZPLk8mTy5PJk8uTyZPLk")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_rjp00")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ir0fc"]
+size = Vector3(0.847595, 0.720703, 0.484802)
+
+[sub_resource type="Animation" id="Animation_wflhl"]
+resource_name = "walk"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("animal-bison/root/torso/leg-front-left")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, -0.258819, -0.965926, 0.133333, 1, 0, 0, -0.234162, -0.972198, 0.266667, 1, 0, 0, -0.169139, -0.985592, 0.4, 1, 0, 0, -0.0774151, -0.996999, 0.533333, 1, 0, 0, 0.0261382, -0.999658, 0.666667, 1, 0, 0, 0.125718, -0.992066, 0.8, 1, 0, 0, 0.205863, -0.978581, 0.933333, 1, 0, 0, 0.25237, -0.967631, 1.06667, 1, 0, 0, 0.25237, -0.967631, 1.2, 1, 0, 0, 0.205863, -0.978581, 1.33333, 1, 0, 0, 0.125718, -0.992066, 1.46667, 1, 0, 0, 0.0261381, -0.999658, 1.6, 1, 0, 0, -0.0774151, -0.996999, 1.73333, 1, 0, 0, -0.169139, -0.985592, 2, 1, 0, 0, -0.258819, -0.965926)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("animal-bison/root/torso/leg-front-right")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0.258819, -0.965926, 0.133333, 1, 0, 0, 0.234162, -0.972198, 0.266667, 1, 0, 0, 0.169139, -0.985592, 0.4, 1, 0, 0, 0.0774151, -0.996999, 0.533333, 1, 0, 0, -0.0261382, -0.999658, 0.666667, 1, 0, 0, -0.125718, -0.992066, 0.8, 1, 0, 0, -0.205863, -0.978581, 0.933333, 1, 0, 0, -0.25237, -0.967631, 1.06667, 1, 0, 0, -0.25237, -0.967631, 1.2, 1, 0, 0, -0.205863, -0.978581, 1.33333, 1, 0, 0, -0.125718, -0.992066, 1.46667, 1, 0, 0, -0.0261381, -0.999658, 1.6, 1, 0, 0, 0.0774151, -0.996999, 1.73333, 1, 0, 0, 0.169139, -0.985592, 2, 1, 0, 0, 0.258819, -0.965926)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("animal-bison/root/torso/leg-back-left")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0.258819, -0.965926, 0.133333, 1, 0, 0, 0.234162, -0.972198, 0.266667, 1, 0, 0, 0.169139, -0.985592, 0.4, 1, 0, 0, 0.0774151, -0.996999, 0.533333, 1, 0, 0, -0.0261382, -0.999658, 0.666667, 1, 0, 0, -0.125718, -0.992066, 0.8, 1, 0, 0, -0.205863, -0.978581, 0.933333, 1, 0, 0, -0.25237, -0.967631, 1.06667, 1, 0, 0, -0.25237, -0.967631, 1.2, 1, 0, 0, -0.205863, -0.978581, 1.33333, 1, 0, 0, -0.125718, -0.992066, 1.46667, 1, 0, 0, -0.0261381, -0.999658, 1.6, 1, 0, 0, 0.0774151, -0.996999, 1.73333, 1, 0, 0, 0.169139, -0.985592, 2, 1, 0, 0, 0.258819, -0.965926)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("animal-bison/root/torso/leg-back-right")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, -0.258819, -0.965926, 0.133333, 1, 0, 0, -0.234162, -0.972198, 0.266667, 1, 0, 0, -0.169139, -0.985592, 0.4, 1, 0, 0, -0.0774151, -0.996999, 0.533333, 1, 0, 0, 0.0261382, -0.999658, 0.666667, 1, 0, 0, 0.125718, -0.992066, 0.8, 1, 0, 0, 0.205863, -0.978581, 0.933333, 1, 0, 0, 0.25237, -0.967631, 1.06667, 1, 0, 0, 0.25237, -0.967631, 1.2, 1, 0, 0, 0.205863, -0.978581, 1.33333, 1, 0, 0, 0.125718, -0.992066, 1.46667, 1, 0, 0, 0.0261381, -0.999658, 1.6, 1, 0, 0, -0.0774151, -0.996999, 1.73333, 1, 0, 0, -0.169139, -0.985592, 2, 1, 0, 0, -0.258819, -0.965926)
+
+[sub_resource type="Animation" id="Animation_1kvi5"]
+resource_name = "run"
+length = 0.25
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("animal-bison/root/torso/leg-front-left")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0.422618, -0.906308, 0.0333333, 1, 0, 0, 0.276336, -0.961061, 0.0666667, 1, 0, 0, -0.0399865, -0.9992, 0.1, 1, 0, 0, -0.321439, -0.94693, 0.133333, 1, 0, 0, -0.389392, -0.921072, 0.166667, 1, 0, 0, -0.198655, -0.98007, 0.2, 1, 0, 0, 0.0871558, -0.996195, 0.25, 1, 0, 0, 0.422618, -0.906308)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("animal-bison/root/torso/leg-front-right")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0.422618, -0.906308, 0.0333333, 1, 0, 0, 0.276336, -0.961061, 0.0666667, 1, 0, 0, -0.0399865, -0.9992, 0.1, 1, 0, 0, -0.321439, -0.94693, 0.133333, 1, 0, 0, -0.389392, -0.921072, 0.166667, 1, 0, 0, -0.198655, -0.98007, 0.2, 1, 0, 0, 0.0871558, -0.996195, 0.25, 1, 0, 0, 0.422618, -0.906308)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("animal-bison/root/torso/leg-back-left")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, -0.422618, -0.906308, 0.0333333, 1, 0, 0, -0.276336, -0.961061, 0.0666667, 1, 0, 0, 0.0399865, -0.9992, 0.1, 1, 0, 0, 0.321439, -0.94693, 0.133333, 1, 0, 0, 0.389392, -0.921072, 0.166667, 1, 0, 0, 0.198655, -0.98007, 0.2, 1, 0, 0, -0.0871558, -0.996195, 0.25, 1, 0, 0, -0.422618, -0.906308)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("animal-bison/root/torso/leg-back-right")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, -0.422618, -0.906308, 0.0333333, 1, 0, 0, -0.276336, -0.961061, 0.0666667, 1, 0, 0, 0.0399865, -0.9992, 0.1, 1, 0, 0, 0.321439, -0.94693, 0.133333, 1, 0, 0, 0.389392, -0.921072, 0.166667, 1, 0, 0, 0.198655, -0.98007, 0.2, 1, 0, 0, -0.0871558, -0.996195, 0.25, 1, 0, 0, -0.422618, -0.906308)
+tracks/4/type = "position_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("animal-bison/root/torso")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0.25, 0, 0.0333333, 1, 0, 0.303333, 0, 0.0666667, 1, 0, 0.344167, 0, 0.1, 1, 0, 0.295, 0, 0.133333, 1, 0, 0.248333, 0, 0.166667, 1, 0, 0.245833, 0, 0.2, 1, 0, 0.25, 0, 0.25, 1, 0, 0.25, 0)
+
+[sub_resource type="Animation" id="Animation_vgfud"]
+resource_name = "down"
+length = 0.5
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("animal-bison/root/torso/leg-front-left")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.0333333, 1, 0, 0, 0.000124112, -1, 0.0666667, 1, 0, 0, 0.0019858, -0.999998, 0.1, 1, 0, 0, 0.0100529, -0.999949, 0.133333, 1, 0, 0, 0.0317674, -0.999495, 0.166667, 1, 0, 0, 0.0774924, -0.996993, 0.2, 1, 0, 0, 0.160157, -0.987092, 0.233333, 1, 0, 0, 0.293603, -0.955928, 0.266667, 1, 0, 0, 0.468334, -0.883551, 0.3, 1, 0, 0, 0.584731, -0.811227, 0.333333, 1, 0, 0, 0.650185, -0.759776, 0.366667, 1, 0, 0, 0.684287, -0.729213, 0.4, 1, 0, 0, 0.699963, -0.71418, 0.433333, 1, 0, 0, 0.705701, -0.70851, 0.5, 1, 0, 0, 0.707107, -0.707107)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("animal-bison/root/torso/leg-front-right")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.0333333, 1, 0, 0, 0.000124112, -1, 0.0666667, 1, 0, 0, 0.0019858, -0.999998, 0.1, 1, 0, 0, 0.0100529, -0.999949, 0.133333, 1, 0, 0, 0.0317674, -0.999495, 0.166667, 1, 0, 0, 0.0774924, -0.996993, 0.2, 1, 0, 0, 0.160157, -0.987092, 0.233333, 1, 0, 0, 0.293603, -0.955928, 0.266667, 1, 0, 0, 0.468334, -0.883551, 0.3, 1, 0, 0, 0.584731, -0.811227, 0.333333, 1, 0, 0, 0.650185, -0.759776, 0.366667, 1, 0, 0, 0.684287, -0.729213, 0.4, 1, 0, 0, 0.699963, -0.71418, 0.433333, 1, 0, 0, 0.705701, -0.70851, 0.5, 1, 0, 0, 0.707107, -0.707107)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("animal-bison/root/torso/leg-back-left")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.0333333, 1, 0, 0, -0.000124112, -1, 0.0666667, 1, 0, 0, -0.0019858, -0.999998, 0.1, 1, 0, 0, -0.0100529, -0.999949, 0.133333, 1, 0, 0, -0.0317674, -0.999495, 0.166667, 1, 0, 0, -0.0774924, -0.996993, 0.2, 1, 0, 0, -0.160157, -0.987092, 0.233333, 1, 0, 0, -0.293603, -0.955928, 0.266667, 1, 0, 0, -0.468334, -0.883551, 0.3, 1, 0, 0, -0.584731, -0.811227, 0.333333, 1, 0, 0, -0.650185, -0.759776, 0.366667, 1, 0, 0, -0.684287, -0.729213, 0.4, 1, 0, 0, -0.699963, -0.71418, 0.433333, 1, 0, 0, -0.705701, -0.70851, 0.5, 1, 0, 0, -0.707107, -0.707107)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("animal-bison/root/torso/leg-back-right")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.0333333, 1, 0, 0, -0.000124112, -1, 0.0666667, 1, 0, 0, -0.0019858, -0.999998, 0.1, 1, 0, 0, -0.0100529, -0.999949, 0.133333, 1, 0, 0, -0.0317674, -0.999495, 0.166667, 1, 0, 0, -0.0774924, -0.996993, 0.2, 1, 0, 0, -0.160157, -0.987092, 0.233333, 1, 0, 0, -0.293603, -0.955928, 0.266667, 1, 0, 0, -0.468334, -0.883551, 0.3, 1, 0, 0, -0.584731, -0.811227, 0.333333, 1, 0, 0, -0.650185, -0.759776, 0.366667, 1, 0, 0, -0.684287, -0.729213, 0.4, 1, 0, 0, -0.699963, -0.71418, 0.433333, 1, 0, 0, -0.705701, -0.70851, 0.5, 1, 0, 0, -0.707107, -0.707107)
+tracks/4/type = "position_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("animal-bison/root/torso")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0.25, 0, 0.0666667, 1, 0, 0.249368, 0, 0.1, 1, 0, 0.2468, 0, 0.133333, 1, 0, 0.239886, 0, 0.166667, 1, 0, 0.225309, 0, 0.2, 1, 0, 0.1988, 0, 0.233333, 1, 0, 0.155146, 0, 0.266667, 1, 0, 0.0948543, 0, 0.3, 1, 0, 0.0512, 0, 0.333333, 1, 0, 0.0246914, 0, 0.366667, 1, 0, 0.0101136, 0, 0.4, 1, 0, 0.0032, 0, 0.433333, 1, 0, 0.000632093, 0, 0.5, 1, 0, 0, 0)
+
+[sub_resource type="Animation" id="Animation_4ka6f"]
+resource_name = "up"
+length = 0.5
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("animal-bison/root/torso/leg-front-left")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0.707107, -0.707107, 0.0333333, 1, 0, 0, 0.707019, -0.707195, 0.0666667, 1, 0, 0, 0.705701, -0.70851, 0.1, 1, 0, 0, 0.699963, -0.71418, 0.133333, 1, 0, 0, 0.684287, -0.729213, 0.166667, 1, 0, 0, 0.650185, -0.759776, 0.2, 1, 0, 0, 0.584731, -0.811227, 0.233333, 1, 0, 0, 0.468334, -0.883551, 0.266667, 1, 0, 0, 0.293603, -0.955928, 0.3, 1, 0, 0, 0.160157, -0.987092, 0.333333, 1, 0, 0, 0.0774924, -0.996993, 0.366667, 1, 0, 0, 0.0317674, -0.999495, 0.4, 1, 0, 0, 0.0100529, -0.99995, 0.433333, 1, 0, 0, 0.00198578, -0.999998, 0.5, 1, 0, 0, 0, -1)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("animal-bison/root/torso/leg-front-right")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0.707107, -0.707107, 0.0333333, 1, 0, 0, 0.707019, -0.707195, 0.0666667, 1, 0, 0, 0.705701, -0.70851, 0.1, 1, 0, 0, 0.699963, -0.71418, 0.133333, 1, 0, 0, 0.684287, -0.729213, 0.166667, 1, 0, 0, 0.650185, -0.759776, 0.2, 1, 0, 0, 0.584731, -0.811227, 0.233333, 1, 0, 0, 0.468334, -0.883551, 0.266667, 1, 0, 0, 0.293603, -0.955928, 0.3, 1, 0, 0, 0.160157, -0.987092, 0.333333, 1, 0, 0, 0.0774924, -0.996993, 0.366667, 1, 0, 0, 0.0317674, -0.999495, 0.4, 1, 0, 0, 0.0100529, -0.99995, 0.433333, 1, 0, 0, 0.00198578, -0.999998, 0.5, 1, 0, 0, 0, -1)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("animal-bison/root/torso/leg-back-left")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, -0.707107, -0.707107, 0.0333333, 1, 0, 0, -0.707019, -0.707195, 0.0666667, 1, 0, 0, -0.705701, -0.70851, 0.1, 1, 0, 0, -0.699963, -0.71418, 0.133333, 1, 0, 0, -0.684287, -0.729213, 0.166667, 1, 0, 0, -0.650185, -0.759776, 0.2, 1, 0, 0, -0.584731, -0.811227, 0.233333, 1, 0, 0, -0.468334, -0.883551, 0.266667, 1, 0, 0, -0.293603, -0.955928, 0.3, 1, 0, 0, -0.160157, -0.987092, 0.333333, 1, 0, 0, -0.0774924, -0.996993, 0.366667, 1, 0, 0, -0.0317674, -0.999495, 0.4, 1, 0, 0, -0.0100529, -0.99995, 0.433333, 1, 0, 0, -0.00198578, -0.999998, 0.5, 1, 0, 0, 0, -1)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("animal-bison/root/torso/leg-back-right")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, -0.707107, -0.707107, 0.0333333, 1, 0, 0, -0.707019, -0.707195, 0.0666667, 1, 0, 0, -0.705701, -0.70851, 0.1, 1, 0, 0, -0.699963, -0.71418, 0.133333, 1, 0, 0, -0.684287, -0.729213, 0.166667, 1, 0, 0, -0.650185, -0.759776, 0.2, 1, 0, 0, -0.584731, -0.811227, 0.233333, 1, 0, 0, -0.468334, -0.883551, 0.266667, 1, 0, 0, -0.293603, -0.955928, 0.3, 1, 0, 0, -0.160157, -0.987092, 0.333333, 1, 0, 0, -0.0774924, -0.996993, 0.366667, 1, 0, 0, -0.0317674, -0.999495, 0.4, 1, 0, 0, -0.0100529, -0.99995, 0.433333, 1, 0, 0, -0.00198578, -0.999998, 0.5, 1, 0, 0, 0, -1)
+tracks/4/type = "position_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("animal-bison/root/torso")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, 0, 0.0666667, 1, 0, 0.000632099, 0, 0.1, 1, 0, 0.0032, 0, 0.133333, 1, 0, 0.0101136, 0, 0.166667, 1, 0, 0.0246914, 0, 0.2, 1, 0, 0.0512, 0, 0.233333, 1, 0, 0.0948543, 0, 0.266667, 1, 0, 0.155146, 0, 0.3, 1, 0, 0.1988, 0, 0.333333, 1, 0, 0.225309, 0, 0.366667, 1, 0, 0.239886, 0, 0.4, 1, 0, 0.2468, 0, 0.433333, 1, 0, 0.249368, 0, 0.5, 1, 0, 0.25, 0)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mcofw"]
+_data = {
+"down": SubResource("Animation_vgfud"),
+"run": SubResource("Animation_1kvi5"),
+"up": SubResource("Animation_4ka6f"),
+"walk": SubResource("Animation_wflhl")
+}
+
+[node name="animal-bison2" type="CharacterBody3D"]
+script = ExtResource("1_2ajlh")
+
+[node name="animal-bison" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="root" type="Node3D" parent="animal-bison"]
+
+[node name="torso" type="MeshInstance3D" parent="animal-bison/root"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.314788, 0)
+mesh = SubResource("ArrayMesh_lad77")
+skeleton = NodePath("")
+
+[node name="leg-back-left" type="MeshInstance3D" parent="animal-bison/root/torso"]
+transform = Transform3D(0.909308, -0.416124, 0, 0.416124, 0.909308, 0, 0, 0, 1, 0.1875, 0.0625, 0.09375)
+mesh = SubResource("ArrayMesh_7fpha")
+skeleton = NodePath("")
+
+[node name="leg-back-right" type="MeshInstance3D" parent="animal-bison/root/torso"]
+transform = Transform3D(0.909308, 0.416124, 0, -0.416124, 0.909308, 0, 0, 0, 1, 0.1875, 0.0625, -0.09375)
+mesh = SubResource("ArrayMesh_yj8n1")
+skeleton = NodePath("")
+
+[node name="leg-front-left" type="MeshInstance3D" parent="animal-bison/root/torso"]
+transform = Transform3D(0.909308, 0.416124, 0, -0.416124, 0.909308, 0, 0, 0, 1, -0.1875, 0.0625, 0.09375)
+mesh = SubResource("ArrayMesh_lbvkn")
+skeleton = NodePath("")
+
+[node name="leg-front-right" type="MeshInstance3D" parent="animal-bison/root/torso"]
+transform = Transform3D(0.909308, -0.416124, 0, 0.416124, 0.909308, 0, 0, 0, 1, -0.1875, 0.0625, -0.09375)
+mesh = SubResource("ArrayMesh_q3icw")
+skeleton = NodePath("")
+
+[node name="head" type="MeshInstance3D" parent="animal-bison/root/torso"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.1625, 0)
+mesh = SubResource("ArrayMesh_ug1ls")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-0.0492682, 0, 0.998785, 0, 1, 0, -0.998785, 0, -0.0492682, -0.0729474, 0.364465, 0.0826313)
+shape = SubResource("BoxShape3D_ir0fc")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_mcofw")
+}
+autoplay = "walk"
