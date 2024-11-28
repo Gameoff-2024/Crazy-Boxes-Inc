@@ -383,6 +383,9 @@ transform = Transform3D(2.53598, 0, -2.21962, 0, 3.37015, 0, 2.21962, 0, 2.53598
 [node name="lightpost2" parent="Decorations" instance=ExtResource("11_m3b2r")]
 transform = Transform3D(1.81818, 0, 0, 0, 1.81818, 0, 0, 0, 1.81818, 3.96371, 0.0541249, -5.05992)
 
+[node name="lightpost3" parent="Decorations" instance=ExtResource("11_m3b2r")]
+transform = Transform3D(1.81818, 0, 0, 0, 1.81818, 0, 0, 0, 1.81818, -9.07758, 0.0541249, 1.49214)
+
 [node name="lightpost5" parent="Decorations" instance=ExtResource("11_m3b2r")]
 transform = Transform3D(1.81818, 0, 0, 0, 1.81818, 0, 0, 0, 1.81818, -3.7524, 0.0541249, -5.05992)
 

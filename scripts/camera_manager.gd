@@ -3,7 +3,7 @@ extends Node3D
 var player_camera: Camera3D
 var quest_camera: Camera3D
 
-var mouse_cursor = load("res://assets/ui/crosshair002.png")
+@export var mouse_cursor : Resource
 
 signal ui_enabled
 signal ui_disabled
@@ -43,6 +43,6 @@ func player_camera_make_active():
 	player_camera.make_current()
 	player_camera.get_parent().active = true
 	%QuestManager.inactive()
-	Input.set_custom_mouse_cursor(mouse_cursor, 0, Vector2(32, 32))
+	Input.set_custom_mouse_cursor(mouse_cursor, Input.CURSOR_ARROW, Vector2(32, 32))
 	emit_signal("ui_enabled")
 	emit_signal("ui_quest_disabled")

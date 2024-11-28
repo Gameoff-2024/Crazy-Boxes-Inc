@@ -37,8 +37,6 @@ func _process(delta: float):
 		
 		
 func _physics_process(delta: float):
-	var fwd_mps := (linear_velocity * transform.basis).x
-
 	_steer_target = Input.get_axis(&"right", &"left")
 	_steer_target *= STEER_LIMIT
 

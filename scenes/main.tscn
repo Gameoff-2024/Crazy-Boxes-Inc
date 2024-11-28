@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://b22yg8qvukk2b"]
+[gd_scene load_steps=18 format=3 uid="uid://b22yg8qvukk2b"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_rlfhc"]
 [ext_resource type="PackedScene" uid="uid://bppvsr4na3ydl" path="res://scenes/quest_manager.tscn" id="2_rsn4w"]
@@ -9,7 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://cpplsdw4y4v4y" path="res://scenes/camera_manager.tscn" id="6_lmsye"]
 [ext_resource type="PackedScene" uid="uid://c4acnkarrlclk" path="res://scenes/world_map.tscn" id="6_vts3g"]
 [ext_resource type="PackedScene" uid="uid://bf4mujj3qlo4c" path="res://scenes/quest_indicator.tscn" id="7_d4bhd"]
-[ext_resource type="PackedScene" uid="uid://b47hnywb58h1h" path="res://landscape.tscn" id="8_ssieo"]
+[ext_resource type="Texture2D" uid="uid://b0ogt68v7hiqi" path="res://assets/ui/crosshair_small.png" id="7_g0dn1"]
+[ext_resource type="PackedScene" uid="uid://b47hnywb58h1h" path="res://scenes/landscape.tscn" id="8_ssieo"]
 [ext_resource type="AudioStream" uid="uid://c6fgf3qyjal4d" path="res://assets/sounds/Vibe Mountain - Operatic 3.mp3" id="9_uteh8"]
 [ext_resource type="PackedScene" uid="uid://ctdxyrsdbpayx" path="res://scenes/ui/ui.tscn" id="47_fpkxg"]
 
@@ -58,6 +59,7 @@ shadow_blur = 2.5
 directional_shadow_mode = 0
 
 [node name="CameraManager" parent="." instance=ExtResource("6_lmsye")]
+mouse_cursor = ExtResource("7_g0dn1")
 
 [node name="QuestManager" parent="." node_paths=PackedStringArray("quest_indicator") groups=["quest_manager"] instance=ExtResource("2_rsn4w")]
 unique_name_in_owner = true
@@ -92,7 +94,6 @@ volume_db = -8.0
 autoplay = true
 bus = &"Background Music"
 
-[connection signal="new_quest" from="." to="QuestManager" method="_on_main_new_quest"]
 [connection signal="ui_disabled" from="CameraManager" to="UI" method="_on_camera_manager_ui_disabled"]
 [connection signal="ui_enabled" from="CameraManager" to="UI" method="_on_camera_manager_ui_enabled"]
 [connection signal="ui_quest_disabled" from="CameraManager" to="UIQuest" method="_on_camera_manager_ui_quest_disabled"]
