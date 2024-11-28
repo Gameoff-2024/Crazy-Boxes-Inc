@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bjhdp3hjnqihq"
 path.s3tc="res://.godot/imported/hide-&-seek.png-22553dece0d60665322c8880203c20fa.s3tc.ctex"
+path.etc2="res://.godot/imported/hide-&-seek.png-22553dece0d60665322c8880203c20fa.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/img/hide-&-seek.png"
-dest_files=["res://.godot/imported/hide-&-seek.png-22553dece0d60665322c8880203c20fa.s3tc.ctex"]
+dest_files=["res://.godot/imported/hide-&-seek.png-22553dece0d60665322c8880203c20fa.s3tc.ctex", "res://.godot/imported/hide-&-seek.png-22553dece0d60665322c8880203c20fa.etc2.ctex"]
 
 [params]
 

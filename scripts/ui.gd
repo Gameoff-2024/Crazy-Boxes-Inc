@@ -1,12 +1,13 @@
 extends Control
 
-var total = 9
+var total = 1
 
 var time_start = 0
 var time_now = 0
 
 func _ready():
 	GameState.score_updated.connect(_on_score_updated)
+	total = QuestLoader.get_total_quests()
 	%ScoreLabel.text = "0" + '/' + str(total)
 	time_start = Time.get_unix_time_from_system()
 	

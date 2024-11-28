@@ -11,7 +11,7 @@ const STEER_SPEED = 1.5
 const STEER_LIMIT = 0.4
 const BRAKE_STRENGTH = 2.0
 
-@export var engine_force_value := 40.0
+@export var engine_force_value := 80.0
 
 @onready var shooter: Node3D = $Shooter
 @onready var camera: Camera3D = $CameraPivot/Camera3D
