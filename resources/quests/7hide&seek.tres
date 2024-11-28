@@ -1,18 +1,21 @@
-[gd_resource type="Resource" script_class="Quest" load_steps=6 format=3 uid="uid://cinsbmddy4oqx"]
+[gd_resource type="Resource" script_class="Quest" load_steps=7 format=3 uid="uid://cinsbmddy4oqx"]
 
 [ext_resource type="Script" path="res://scripts/resources/element.gd" id="1_4u80v"]
+[ext_resource type="Texture2D" uid="uid://whtxfyyfo555" path="res://assets/img/question_mark.png" id="2_4o1sm"]
 [ext_resource type="Texture2D" uid="uid://bjhdp3hjnqihq" path="res://assets/img/hide-&-seek.png" id="2_rbaf8"]
 [ext_resource type="Script" path="res://scripts/resources/quest.gd" id="4_pg4l7"]
 
 [sub_resource type="Resource" id="Resource_7pyo8"]
 script = ExtResource("1_4u80v")
-textLabel = "Hide & Seek"
+textLabel = "Hide and Seek"
 side = 1
 
 [sub_resource type="Resource" id="Resource_kpiou"]
 script = ExtResource("1_4u80v")
 textLabel = ""
 picture = ExtResource("2_rbaf8")
+decal1 = ExtResource("2_4o1sm")
+decal2 = ExtResource("2_4o1sm")
 side = 0
 
 [resource]

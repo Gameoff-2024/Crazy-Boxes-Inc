@@ -44,6 +44,7 @@ func _ready() -> void:
 		active_quest = quest_loader.choose_quest(active_quest_id)
 		set_quest(active_quest)
 		active()
+		no_quest_displayer.hide()
 	else:
 		_on_main_new_quest()
 		
