@@ -23,12 +23,15 @@ func actor_setup():
 	destination = NavigationServer3D.map_get_random_point(navigation_region.get_navigation_map(), 1, false)
 	# Now that the navigation map is no longer empty, set the movement target.
 	set_movement_target(destination)
+	print(destination)
+	
 
 func set_movement_target(movement_target: Vector3):
 	navigation_agent.set_target_position(movement_target)
-	look_at(movement_target)
+	look_at(to_global(movement_target))
 
 func _physics_process(delta):
+	await get_tree().physics_frame
 	if navigation_agent.is_navigation_finished():
 		print("Done")
 		destination = NavigationServer3D.map_get_random_point(navigation_region.get_navigation_map(), 1, false)

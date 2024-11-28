@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://lmdj6t1y0uvv"]
+[gd_scene load_steps=7 format=3 uid="uid://lmdj6t1y0uvv"]
 
 [ext_resource type="PackedScene" uid="uid://cs57fiofj1q4g" path="res://assets/models/houses/HouseWideWithSolarPanels.glb" id="1_8eaq4"]
 [ext_resource type="PackedScene" uid="uid://cp1euoxaxrdpj" path="res://assets/models/houses/path_long.glb" id="2_258bo"]
 [ext_resource type="PackedScene" uid="uid://cgmaeqe6jqycr" path="res://assets/models/houses/tree_large.glb" id="3_gf0sr"]
 [ext_resource type="PackedScene" uid="uid://b3623jufft4yg" path="res://assets/models/houses/fence_large.glb" id="4_ml1tn"]
-[ext_resource type="PackedScene" uid="uid://ceyrs0an8056k" path="res://scenes/animal_bison.tscn" id="5_lq35p"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_nunns"]
 vertices = PackedVector3Array(17.5736, 0.5, -14.8513, 17.5736, 0.5, -9.85135, 22.5736, 0.5, -9.85135, 22.5736, 0.5, -14.8513)
@@ -31,10 +30,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.64038, 0, 3.56758)
 
 [node name="fence_large2" parent="." instance=ExtResource("4_ml1tn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.11148, -0.521776, -5.27923)
-
-[node name="animal-bison2" parent="." node_paths=PackedStringArray("navigation_region") instance=ExtResource("5_lq35p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.154, 0, -3.751)
-navigation_region = NodePath("../NavigationRegion3D")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.9849, 0, 6.99017)
