@@ -875,7 +875,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.769359, 0.0554126, -1.8300
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.05675, 0.555315, -1.67572)
 
 [node name="box-small6" parent="Decorations/Boxes" instance=ExtResource("43_1ydwr")]
-transform = Transform3D(0.90686, 0, 0.421432, 0, 1, 0, -0.421432, 0, 0.90686, -1.25215, 1.08432, -1.41744)
+transform = Transform3D(0.90686, 0, 0.421432, 0, 1, 0, -0.421432, 0, 0.90686, -1.2702, 1.12122, -1.47876)
 
 [node name="Lights" type="Node3D" parent="Decorations"]
 
