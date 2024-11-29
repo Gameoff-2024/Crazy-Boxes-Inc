@@ -64,7 +64,7 @@ mouse_cursor = ExtResource("7_g0dn1")
 [node name="QuestManager" parent="." node_paths=PackedStringArray("quest_indicator") groups=["quest_manager"] instance=ExtResource("2_rsn4w")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -176.576, 16.5, -129.047)
-active_quest_id = 9
+active_quest_id = 11
 quest_indicator = NodePath("../QuestIndicator")
 
 [node name="QuestIndicator" parent="." instance=ExtResource("7_d4bhd")]

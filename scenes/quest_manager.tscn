@@ -99,16 +99,16 @@ outline_size = 100
 line_spacing = -100.0
 
 [node name="Decal1" type="Decal" parent="QuestDisplayer/PackagePivot/Package/Top"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.113084, 0.037678, 0.388241)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.143665, 0.037678, 0.413786)
 visible = false
-size = Vector3(0.25, 0.1, 0.25)
+size = Vector3(0.2, 0.1, 0.2)
 upper_fade = 0.0
 lower_fade = 0.0
 
 [node name="Decal2" type="Decal" parent="QuestDisplayer/PackagePivot/Package/Top"]
-transform = Transform3D(-0.0293871, 0, 0.999568, 0, 1, 0, -0.999568, 0, -0.0293871, -0.087889, 0.037678, -0.317492)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.137, 0.038, -0.362)
 visible = false
-size = Vector3(0.25, 0.1, 0.25)
+size = Vector3(0.2, 0.1, 0.2)
 upper_fade = 0.0
 lower_fade = 0.0
 
@@ -189,6 +189,7 @@ transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 0.0
 
 [node name="Picture" type="MeshInstance3D" parent="QuestDisplayer/PackagePivot/Package/Bottom"]
 transform = Transform3D(-0.18962, -0.134389, 1.53426e-07, 6.38159e-08, -1.05534e-08, 1, -0.168482, 0.15125, 2.0606e-07, -0.178267, 0.00916934, 0.398099)
+visible = false
 mesh = SubResource("QuadMesh_ylp1p")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_28oew")
@@ -205,15 +206,13 @@ outline_size = 100
 line_spacing = -100.0
 
 [node name="Decal1" type="Decal" parent="QuestDisplayer/PackagePivot/Package/Bottom"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.129398, 0.0281981, 0.380383)
-visible = false
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.119853, 0.0281981, 0.372747)
 size = Vector3(0.25, 0.1, 0.25)
 upper_fade = 0.0
 lower_fade = 0.0
 
 [node name="Decal2" type="Decal" parent="QuestDisplayer/PackagePivot/Package/Bottom"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.119132, 0.028198, -0.372079)
-visible = false
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.121041, 0.028198, -0.366352)
 size = Vector3(0.25, 0.1, 0.25)
 upper_fade = 0.0
 lower_fade = 0.0

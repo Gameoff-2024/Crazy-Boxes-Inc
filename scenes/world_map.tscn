@@ -54,9 +54,9 @@
 [ext_resource type="PackedScene" uid="uid://dugi3b0laqlrq" path="res://assets/models/vehicles/debris-door.glb" id="54_36rtc"]
 [ext_resource type="PackedScene" uid="uid://bbt0oqeombmob" path="res://assets/models/vehicles/debris-drivetrain-axle.glb" id="55_qewn5"]
 [ext_resource type="PackedScene" uid="uid://bchgjvqhviuof" path="res://assets/models/vehicles/debris-tire.glb" id="56_kt1cs"]
+[ext_resource type="PackedScene" uid="uid://poe1n0ar51vm" path="res://scenes/ambulance.tscn" id="57_0pwc4"]
 [ext_resource type="PackedScene" uid="uid://bxb7bf5t22gfx" path="res://assets/models/vehicles/debris-bumper.glb" id="57_lxkox"]
 [ext_resource type="PackedScene" uid="uid://bi0bdxmv3w8cl" path="res://assets/models/vehicles/debris-bolt.glb" id="58_hqp2x"]
-[ext_resource type="PackedScene" uid="uid://djfc3yrm4gkhq" path="res://assets/models/vehicles/ambulance.glb" id="59_o2tis"]
 [ext_resource type="Texture2D" uid="uid://gw2uho0rmih" path="res://assets/models/prototype-kit/Textures/colormap.png" id="60_w5tcm"]
 [ext_resource type="PackedScene" uid="uid://bio6f4bj1qj36" path="res://assets/models/vehicles/sedan.glb" id="61_ig6px"]
 [ext_resource type="PackedScene" uid="uid://b31qfncg4fkse" path="res://assets/models/vehicles/suv-luxury.glb" id="62_hgpe2"]
@@ -1442,8 +1442,7 @@ transform = Transform3D(-0.198706, -0.773293, -0.602108, 0.968535, -0.248876, 0,
 [node name="debris-bolt3" parent="Decorations" instance=ExtResource("58_hqp2x")]
 transform = Transform3D(0.0940957, 0.366187, 0.925772, 0.968536, -0.248876, 8.9721e-09, 0.230402, 0.896643, -0.378083, 34.284, 0.152701, 37.5563)
 
-[node name="ambulance" parent="Decorations" instance=ExtResource("59_o2tis")]
-transform = Transform3D(0.0882337, 0, -0.9961, 0, 1, 0, 0.9961, 0, 0.0882337, 37.3124, 0.110413, 36.2281)
+[node name="ambulance" parent="Decorations" instance=ExtResource("57_0pwc4")]
 
 [node name="vehicle" type="Node3D" parent="Decorations"]
 transform = Transform3D(0.979233, -0.202498, 0.00981526, -0.0515485, -0.201869, 0.978055, -0.196073, -0.95825, -0.208116, 34.6089, 0.544784, 39.9962)

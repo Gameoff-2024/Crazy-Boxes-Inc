@@ -5,11 +5,12 @@ extends Node3D
 @onready var basePath: String = "PackagePivot/Package"
 
 func set_quest(quest: Quest) -> void:
-	print(quest.id)
 	reset_quest()
-	var package_material = packageMesh.mesh.surface_get_material(0)
-	if package_material is StandardMaterial3D:
-		package_material.albedo_color = quest.color
+	
+	if quest.color.a != 0:
+		var package_material = packageMesh.mesh.surface_get_material(0)
+		if package_material is StandardMaterial3D:
+			package_material.albedo_color = quest.color
 		
 	if quest.material and quest.material is ShaderMaterial:
 		quest.material.set_shader_parameter("active", true)
