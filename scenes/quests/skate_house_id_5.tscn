@@ -2616,7 +2616,7 @@ _data = {
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3hukv"]
-size = Vector3(6, 1.5, 4)
+size = Vector3(6, 0.898865, 4)
 
 [node name="SkateHouseId5" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.5, 0, -22.5)
@@ -2832,10 +2832,6 @@ libraries = {
 }
 autoplay = "idle"
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Skate"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0.75, -8)
-shape = SubResource("BoxShape3D_3hukv")
-
 [node name="obstacle-box3" parent="Skate" instance=ExtResource("9_5cndh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.05267, -0.0644127, -9.46293)
 
@@ -2865,3 +2861,10 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 8.0026
 
 [node name="half-pipe11" parent="Skate" instance=ExtResource("7_6dd41")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 8.00267, -0.0144127, -9.51293)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Skate"]
+metadata/quest_id = 5
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Skate/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, -0.000383972, 0, 0.000383972, 1, 7.5, 0.449432, -8.00012)
+shape = SubResource("BoxShape3D_3hukv")

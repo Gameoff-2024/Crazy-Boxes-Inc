@@ -7,10 +7,12 @@ extends Node3D
 func set_quest(quest: Quest) -> void:
 	reset_quest()
 	
+	var package_material = packageMesh.mesh.surface_get_material(0)
 	if quest.color.a != 0:
-		var package_material = packageMesh.mesh.surface_get_material(0)
 		if package_material is StandardMaterial3D:
 			package_material.albedo_color = quest.color
+	else:
+		package_material.albedo_color = Color.TRANSPARENT
 		
 	if quest.material and quest.material is ShaderMaterial:
 		quest.material.set_shader_parameter("active", true)
