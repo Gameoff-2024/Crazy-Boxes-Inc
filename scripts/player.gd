@@ -125,6 +125,7 @@ func _on_camera_pivot_rotation_stop() -> void:
 
 func _on_quest_manager_disable_box_shooting() -> void:
 	_can_shoot = false
+	%ShootTimer.stop()
 	%Skip.hide_boxes()
 	$Particles.show()
 	$Particles.emit()
