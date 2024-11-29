@@ -55,7 +55,7 @@ func _process(delta: float):
 		
 	if rotating:
 		if current_mouse_relative:
-			package_pivot.rotate(Vector3.FORWARD, deg_to_rad(current_mouse_relative.normalized().x * rotation_sensibility))
+			package_pivot.rotate(Vector3.UP, deg_to_rad(current_mouse_relative.normalized().x * rotation_sensibility))
 			package_pivot.rotate(Vector3.RIGHT, deg_to_rad(current_mouse_relative.normalized().y * rotation_sensibility))
 	elif zooming:
 		if current_mouse_relative:
