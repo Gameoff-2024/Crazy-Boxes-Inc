@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://d1l8sjlt2is6w"]
+[gd_scene load_steps=7 format=3 uid="uid://d1l8sjlt2is6w"]
 
 [ext_resource type="Theme" uid="uid://d3nb4rtlepufm" path="res://resources/main_theme.tres" id="1_l4uqi"]
+[ext_resource type="Texture2D" uid="uid://qipglkaqy6xg" path="res://assets/ui/keyboard_escape.png" id="3_hmf1j"]
 [ext_resource type="Texture2D" uid="uid://cmv7ier20sust" path="res://assets/ui/keyboard_q.png" id="3_slkao"]
 [ext_resource type="Texture2D" uid="uid://jk2gynq0onoy" path="res://assets/ui/mouse_left.png" id="4_s3hpf"]
 [ext_resource type="LabelSettings" uid="uid://cl4dne3ovval0" path="res://resources/ui/labelsetting.tres" id="5_6g1k1"]
@@ -38,6 +39,16 @@ theme_override_constants/separation = 2
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/Top/HBoxContainer"]
 layout_mode = 2
 texture = ExtResource("3_slkao")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Top/HBoxContainer"]
+layout_mode = 2
+text = "/"
+label_settings = ExtResource("5_6g1k1")
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/Top/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_hmf1j")
 expand_mode = 2
 
 [node name="ScoreLabel" type="Label" parent="MarginContainer/Top/HBoxContainer"]
