@@ -12,6 +12,7 @@ const STEER_LIMIT = 0.4
 const BRAKE_STRENGTH = 2.0
 
 @export var engine_force_value := 80.0
+@export var engine_max_velocity := 80.0
 
 @onready var shooter: Node3D = $Shooter
 @onready var camera: Camera3D = $CameraPivot/Camera3D
@@ -49,7 +50,7 @@ func _physics_process(delta: float):
 		
 		lerp_camera_to_original_position(delta * speed)
 		if speed < 5.0 and not is_zero_approx(speed):
-			engine_force = clampf(engine_force_value * 5.0 / speed, 0.0, 100.0)
+			engine_force = clampf(engine_force_value * 5.0 / speed, 0.0, engine_max_velocity)
 		else:
 			engine_force = engine_force_value
 	else:
@@ -59,12 +60,17 @@ func _physics_process(delta: float):
 		# Increase engine force at low speeds to make the initial reversing faster.
 		var speed := linear_velocity.length()
 		if speed < 5.0 and not is_zero_approx(speed):
-			engine_force = -clampf(engine_force_value * BRAKE_STRENGTH * 5.0 / speed, 0.0, 100.0)
+			engine_force = -clampf(engine_force_value * BRAKE_STRENGTH * 50.0 / speed, 0.0, engine_max_velocity)
 		else:
 			engine_force = -engine_force_value * BRAKE_STRENGTH
 
 		# Apply analog brake factor for more subtle braking if not fully holding down the trigger.
 		engine_force *= Input.get_action_strength(&"down")
+		
+	if engine_force > engine_max_velocity:
+		engine_force = engine_max_velocity
+	elif engine_force < -engine_max_velocity:
+		engine_force = -engine_max_velocity
 
 	if engine_force != 0:
 		$AnimationPlayer.play("move")
