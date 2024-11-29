@@ -1,15 +1,27 @@
-[gd_resource type="Resource" script_class="Quest" load_steps=4 format=3 uid="uid://ct3nokxjmy1i2"]
+[gd_resource type="Resource" script_class="Quest" load_steps=7 format=3 uid="uid://ct3nokxjmy1i2"]
 
 [ext_resource type="Script" path="res://scripts/resources/element.gd" id="1_0ve1h"]
+[ext_resource type="Texture2D" uid="uid://ckhuvapabd6nk" path="res://assets/img/tree1.png" id="2_7o2q1"]
 [ext_resource type="Script" path="res://scripts/resources/quest.gd" id="2_wi2s3"]
+[ext_resource type="Texture2D" uid="uid://b35kdvmdv1jre" path="res://assets/img/tree2.png" id="3_1okl7"]
 
-[sub_resource type="Resource" id="Resource_x8ifo"]
+[sub_resource type="Resource" id="Resource_yfct0"]
+script = ExtResource("1_0ve1h")
+textLabel = "Life in the woods
+is fantastic!"
+decal1 = ExtResource("3_1okl7")
+decal2 = ExtResource("2_7o2q1")
+side = 1
+
+[sub_resource type="Resource" id="Resource_mtkow"]
 script = ExtResource("1_0ve1h")
 textLabel = ""
+decal1 = ExtResource("3_1okl7")
+decal2 = ExtResource("2_7o2q1")
 side = 0
 
 [resource]
 script = ExtResource("2_wi2s3")
 id = 9
 color = Color(1.44392e-07, 0.433599, 5.77569e-07, 1)
-elements = Array[ExtResource("1_0ve1h")]([SubResource("Resource_x8ifo")])
+elements = Array[ExtResource("1_0ve1h")]([SubResource("Resource_yfct0"), SubResource("Resource_mtkow")])

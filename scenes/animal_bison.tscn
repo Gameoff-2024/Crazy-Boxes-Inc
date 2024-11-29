@@ -386,22 +386,22 @@ mesh = SubResource("ArrayMesh_lad77")
 skeleton = NodePath("")
 
 [node name="leg-back-left" type="MeshInstance3D" parent="animal-bison/root/torso"]
-transform = Transform3D(0.909308, -0.416124, 0, 0.416124, 0.909308, 0, 0, 0, 1, 0.1875, 0.0625, 0.09375)
+transform = Transform3D(0.921342, -0.388752, 0, 0.388752, 0.921342, 0, 0, 0, 1, 0.1875, 0.0625, 0.09375)
 mesh = SubResource("ArrayMesh_7fpha")
 skeleton = NodePath("")
 
 [node name="leg-back-right" type="MeshInstance3D" parent="animal-bison/root/torso"]
-transform = Transform3D(0.909308, 0.416124, 0, -0.416124, 0.909308, 0, 0, 0, 1, 0.1875, 0.0625, -0.09375)
+transform = Transform3D(0.921342, 0.388752, 0, -0.388752, 0.921342, 0, 0, 0, 1, 0.1875, 0.0625, -0.09375)
 mesh = SubResource("ArrayMesh_yj8n1")
 skeleton = NodePath("")
 
 [node name="leg-front-left" type="MeshInstance3D" parent="animal-bison/root/torso"]
-transform = Transform3D(0.909308, 0.416124, 0, -0.416124, 0.909308, 0, 0, 0, 1, -0.1875, 0.0625, 0.09375)
+transform = Transform3D(0.921342, 0.388752, 0, -0.388752, 0.921342, 0, 0, 0, 1, -0.1875, 0.0625, 0.09375)
 mesh = SubResource("ArrayMesh_lbvkn")
 skeleton = NodePath("")
 
 [node name="leg-front-right" type="MeshInstance3D" parent="animal-bison/root/torso"]
-transform = Transform3D(0.909308, -0.416124, 0, 0.416124, 0.909308, 0, 0, 0, 1, -0.1875, 0.0625, -0.09375)
+transform = Transform3D(0.921342, -0.388752, 0, 0.388752, 0.921342, 0, 0, 0, 1, -0.1875, 0.0625, -0.09375)
 mesh = SubResource("ArrayMesh_q3icw")
 skeleton = NodePath("")
 
