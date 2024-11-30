@@ -1,7 +1,7 @@
 [gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://cqmvt84td32uk"]
 
 [ext_resource type="Shader" path="res://resources/shaders/glitch.gdshader" id="1_nwec7"]
-[ext_resource type="Texture2D" uid="uid://dgl0m5m367bj4" path="res://assets/img/texture_house.png" id="2_4345k"]
+[ext_resource type="Texture2D" uid="uid://cmfrmqww2w01v" path="res://assets/img/texture_house.png" id="2_4345k"]
 
 [resource]
 render_priority = 0
