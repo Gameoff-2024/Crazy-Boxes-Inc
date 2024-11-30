@@ -2,6 +2,7 @@ extends RigidBody3D
 
 @onready var rocket_particles: CPUParticles3D = $RocketParticles
 @onready var launch_timer: Timer = $LaunchTimer
+@onready var wait_particles: Node3D = $WaitParticles
 
 @export var close_to_land_height := 50
 @export var max_velocity := Vector3(0, 20, 0)
@@ -16,9 +17,10 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if _ready_to_launch():
-		rocket_particles.emitting = true
 		flying = true
-		
+		rocket_particles.emitting = true
+		_tooggle_wait_particles()
+			
 	if _top_limit_reached():
 		rocket_particles.emitting = false
 		flying = false
@@ -33,6 +35,7 @@ func _process(delta: float) -> void:
 		close_to_land = false
 		
 	if _landed():
+		_tooggle_wait_particles()
 		_reset_rocket()
 		
 	rocket_particles.lifetime = clamp(lerp(0.015, 0.3, position.y / close_to_land_height), 0.015, 0.3)
@@ -69,6 +72,10 @@ func _physics_process(delta: float) -> void:
 	
 func _reset_start_launch_timer():
 	launch_timer.start()
+	
+func _tooggle_wait_particles():
+	for child in wait_particles.get_children():
+		child.emitting = !child.emitting
 	
 func _reset_rocket():
 	falling = false

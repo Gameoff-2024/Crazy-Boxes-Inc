@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://bcy4qs4pyilk4"]
+[gd_scene load_steps=17 format=4 uid="uid://bcy4qs4pyilk4"]
 
 [ext_resource type="PackedScene" uid="uid://dbnorm5ctg8uv" path="res://scenes/rocket.tscn" id="1_eu2fg"]
 [ext_resource type="Script" path="res://scripts/rocket.gd" id="2_ipdov"]
@@ -131,10 +131,27 @@ billboard_mode = 1
 [sub_resource type="QuadMesh" id="QuadMesh_b6g4j"]
 lightmap_size_hint = Vector2i(7, 7)
 material = SubResource("StandardMaterial3D_03rae")
-size = Vector2(0.5, 0.5)
+size = Vector2(0.1, 0.1)
+
+[sub_resource type="Curve" id="Curve_u3qx3"]
+min_value = -360.0
+max_value = 360.0
+_data = [Vector2(0, -360), 0.0, 0.000252657, 0, 0, Vector2(1, 360), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [sub_resource type="Gradient" id="Gradient_l161k"]
-colors = PackedColorArray(1, 0.607843, 0, 1, 1, 0, 0, 0)
+colors = PackedColorArray(0.140447, 0.140447, 0.140447, 1, 1, 1, 1, 0)
+metadata/_snap_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sv2bn"]
+vertex_color_use_as_albedo = true
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_0epm6"]
+material = SubResource("StandardMaterial3D_sv2bn")
+
+[sub_resource type="Gradient" id="Gradient_rrstq"]
+colors = PackedColorArray(1, 0, 0, 1, 1, 0.505882, 0, 0)
 
 [node name="LaunchStation" type="Node3D"]
 
@@ -155,12 +172,74 @@ axis_lock_linear_z = true
 script = ExtResource("2_ipdov")
 max_velocity = Vector3(0, 35, 0)
 
+[node name="WaitParticles" type="Node3D" parent="Rocket"]
+
+[node name="RocketWaitParticles" type="CPUParticles3D" parent="Rocket/WaitParticles"]
+transform = Transform3D(1, 0, 0, 0, 0.992757, -0.120137, 0, 0.120137, 0.992757, 0, 14.2093, -2.47406)
+amount = 256
+lifetime = 4.0
+lifetime_randomness = 1.0
+mesh = SubResource("QuadMesh_b6g4j")
+direction = Vector3(0, -1, 0)
+spread = 10.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 3.0
+initial_velocity_max = 3.0
+angle_max = 160.0
+angle_curve = SubResource("Curve_u3qx3")
+color_ramp = SubResource("Gradient_l161k")
+
+[node name="RocketWaitParticles2" type="CPUParticles3D" parent="Rocket/WaitParticles"]
+transform = Transform3D(-4.37114e-08, -0.120137, -0.992757, 0, 0.992757, -0.120137, 1, -5.25135e-09, -4.33948e-08, 2.42519, 14.2093, -0.00800943)
+amount = 256
+lifetime = 4.0
+lifetime_randomness = 1.0
+mesh = SubResource("QuadMesh_b6g4j")
+direction = Vector3(0, -1, 0)
+spread = 10.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 3.0
+initial_velocity_max = 3.0
+angle_max = 160.0
+angle_curve = SubResource("Curve_u3qx3")
+color_ramp = SubResource("Gradient_l161k")
+
+[node name="RocketWaitParticles3" type="CPUParticles3D" parent="Rocket/WaitParticles"]
+transform = Transform3D(-1, 1.81402e-08, 1.49902e-07, -1.40918e-15, 0.992757, -0.120137, -1.50996e-07, -0.120137, -0.992757, -0.00541449, 14.2093, 2.4981)
+amount = 256
+lifetime = 4.0
+lifetime_randomness = 1.0
+mesh = SubResource("QuadMesh_b6g4j")
+direction = Vector3(0, -1, 0)
+spread = 10.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 3.0
+initial_velocity_max = 3.0
+angle_max = 160.0
+angle_curve = SubResource("Curve_u3qx3")
+color_ramp = SubResource("Gradient_l161k")
+
+[node name="RocketWaitParticles4" type="CPUParticles3D" parent="Rocket/WaitParticles"]
+transform = Transform3D(7.44882e-08, 0.120137, 0.992757, -8.34391e-09, 0.992757, -0.120137, -1, 6.65297e-10, 7.49511e-08, -2.48987, 14.2093, -0.00202823)
+amount = 256
+lifetime = 4.0
+lifetime_randomness = 1.0
+mesh = SubResource("QuadMesh_b6g4j")
+direction = Vector3(0, -1, 0)
+spread = 10.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 3.0
+initial_velocity_max = 3.0
+angle_max = 160.0
+angle_curve = SubResource("Curve_u3qx3")
+color_ramp = SubResource("Gradient_l161k")
+
 [node name="RocketParticles" type="CPUParticles3D" parent="Rocket"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
 emitting = false
 amount = 128
 lifetime = 0.3
-mesh = SubResource("QuadMesh_b6g4j")
+mesh = SubResource("QuadMesh_0epm6")
 emission_shape = 6
 emission_ring_axis = Vector3(0, 0, 1)
 emission_ring_height = 1.0
@@ -171,7 +250,7 @@ spread = 40.0
 gravity = Vector3(0, 0, 0)
 initial_velocity_min = 20.0
 initial_velocity_max = 20.0
-color_ramp = SubResource("Gradient_l161k")
+color_ramp = SubResource("Gradient_rrstq")
 
 [node name="LaunchTimer" type="Timer" parent="Rocket"]
 wait_time = 10.0
