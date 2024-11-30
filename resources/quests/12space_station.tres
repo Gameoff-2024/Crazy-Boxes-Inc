@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="Quest" load_steps=8 format=3 uid="uid://q0vc5oiu2yuh"]
+
+[ext_resource type="Script" path="res://scripts/resources/element.gd" id="1_ljxb6"]
+[ext_resource type="Texture2D" uid="uid://dk3igdkblhahj" path="res://assets/img/First_Aid_Green_Cross.png" id="2_eb0qv"]
+[ext_resource type="Script" path="res://scripts/resources/quest.gd" id="3_w8l4s"]
+
+[sub_resource type="Resource" id="Resource_21skt"]
+script = ExtResource("1_ljxb6")
+textLabel = "Supplies 
+needed at
+the crash site.
+STAT!"
+decal1 = ExtResource("2_eb0qv")
+decal2 = ExtResource("2_eb0qv")
+side = 0
+
+[sub_resource type="Resource" id="Resource_e7y22"]
+script = ExtResource("1_ljxb6")
+textLabel = ""
+decal1 = ExtResource("2_eb0qv")
+decal2 = ExtResource("2_eb0qv")
+side = 1
+
+[sub_resource type="Resource" id="Resource_16pwe"]
+script = ExtResource("1_ljxb6")
+textLabel = ""
+decal1 = ExtResource("2_eb0qv")
+decal2 = ExtResource("2_eb0qv")
+side = 2
+
+[sub_resource type="Resource" id="Resource_pe17u"]
+script = ExtResource("1_ljxb6")
+textLabel = ""
+decal1 = ExtResource("2_eb0qv")
+decal2 = ExtResource("2_eb0qv")
+side = 3
+
+[resource]
+script = ExtResource("3_w8l4s")
+id = 12
+color = Color(0.247059, 0.529412, 1, 0)
+elements = Array[ExtResource("1_ljxb6")]([SubResource("Resource_21skt"), SubResource("Resource_e7y22"), SubResource("Resource_16pwe"), SubResource("Resource_pe17u")])

@@ -48,7 +48,7 @@ func _physics_process(delta: float):
 		# Increase engine force at low speeds to make the initial acceleration faster.
 		var speed := linear_velocity.length()
 		
-		lerp_camera_to_original_position(delta * speed)
+		# lerp_camera_to_original_position(delta * speed)
 		if speed < 5.0 and not is_zero_approx(speed):
 			engine_force = clampf(engine_force_value * 5.0 / speed, 0.0, engine_max_velocity)
 		else:
