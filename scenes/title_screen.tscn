@@ -28,12 +28,7 @@ theme = ExtResource("1_tbv8l")
 script = ExtResource("1_85mrq")
 
 [node name="BackgroundContainer" parent="." instance=ExtResource("3_gjovv")]
-layout_mode = 0
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-grow_horizontal = 1
-grow_vertical = 1
+layout_mode = 1
 
 [node name="TextureRect" type="TextureRect" parent="."]
 material = SubResource("ShaderMaterial_gfcu5")
@@ -48,6 +43,24 @@ offset_bottom = 633.0
 grow_horizontal = 0
 scale = Vector2(0.730137, 0.761764)
 texture = ExtResource("4_ic8mn")
+expand_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -849.0
+offset_top = -402.0
+offset_right = 310.0
+offset_bottom = 113.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.0630899
+texture = ExtResource("9_u3c24")
+expand_mode = 2
 
 [node name="MenuContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -96,12 +109,6 @@ text = "Exit"
 label_settings = ExtResource("6_jxqyo")
 metadata/action = 1
 
-[node name="SelectorColdown" type="Timer" parent="."]
-wait_time = 0.1
-one_shot = true
-
-[node name="AudioStreamPlayer" parent="." instance=ExtResource("8_ulwd5")]
-
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -138,11 +145,11 @@ size_flags_vertical = 8
 text = "TO MUTE"
 label_settings = ExtResource("6_jxqyo")
 
-[node name="Gametitle" type="Sprite2D" parent="."]
-position = Vector2(705, 353)
-rotation = -0.10985
-scale = Vector2(0.485118, 0.485118)
-texture = ExtResource("9_u3c24")
+[node name="SelectorColdown" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource("8_ulwd5")]
 
 [connection signal="mouse_entered" from="MenuContainer/PlayContainer/play_label" to="." method="_on_play_label_mouse_entered"]
 [connection signal="mouse_exited" from="MenuContainer/PlayContainer/play_label" to="." method="_on_play_label_mouse_exited"]
