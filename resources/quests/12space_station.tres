@@ -1,39 +1,26 @@
-[gd_resource type="Resource" script_class="Quest" load_steps=9 format=3 uid="uid://q0vc5oiu2yuh"]
+[gd_resource type="Resource" script_class="Quest" load_steps=7 format=3 uid="uid://q0vc5oiu2yuh"]
 
 [ext_resource type="Script" path="res://scripts/resources/element.gd" id="1_ljxb6"]
+[ext_resource type="Texture2D" uid="uid://bhm0ebg0hord2" path="res://assets/img/quest_12.png" id="2_gk6sj"]
 [ext_resource type="Texture2D" uid="uid://ctgkqmhbq3s1a" path="res://assets/img/rocket_124x124.png" id="2_s6y04"]
-[ext_resource type="Texture2D" uid="uid://dasreihdgbbct" path="res://assets/img/helmet_128x91.png" id="3_34tnt"]
 [ext_resource type="Script" path="res://scripts/resources/quest.gd" id="3_w8l4s"]
 
 [sub_resource type="Resource" id="Resource_5pw4b"]
 script = ExtResource("1_ljxb6")
-textLabel = "10, 9, 8..."
-picture = ExtResource("3_34tnt")
+textLabel = "Bring me
+the helmet"
+picture = ExtResource("2_gk6sj")
 side = 0
 
-[sub_resource type="Resource" id="Resource_qvopr"]
+[sub_resource type="Resource" id="Resource_akujf"]
 script = ExtResource("1_ljxb6")
 textLabel = ""
-decal1 = ExtResource("2_s6y04")
-decal2 = ExtResource("2_s6y04")
-side = 1
-
-[sub_resource type="Resource" id="Resource_hj1w2"]
-script = ExtResource("1_ljxb6")
-textLabel = "Wait for him!"
 decal1 = ExtResource("2_s6y04")
 decal2 = ExtResource("2_s6y04")
 side = 2
-
-[sub_resource type="Resource" id="Resource_r3o23"]
-script = ExtResource("1_ljxb6")
-textLabel = ""
-decal1 = ExtResource("2_s6y04")
-decal2 = ExtResource("2_s6y04")
-side = 3
 
 [resource]
 script = ExtResource("3_w8l4s")
 id = 12
 color = Color(0, 0, 0, 0)
-elements = Array[ExtResource("1_ljxb6")]([SubResource("Resource_5pw4b"), SubResource("Resource_qvopr"), SubResource("Resource_hj1w2"), SubResource("Resource_r3o23")])
+elements = Array[ExtResource("1_ljxb6")]([SubResource("Resource_5pw4b"), SubResource("Resource_akujf")])

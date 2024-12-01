@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://bppvsr4na3ydl"]
+[gd_scene load_steps=17 format=4 uid="uid://bppvsr4na3ydl"]
 
 [ext_resource type="Script" path="res://scripts/quest_manager.gd" id="1_rwak3"]
 [ext_resource type="Script" path="res://scripts/quest_displayer.gd" id="2_6fpso"]
@@ -47,7 +47,13 @@ shadow_mesh = SubResource("ArrayMesh_20asl")
 
 [sub_resource type="QuadMesh" id="QuadMesh_ylp1p"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_28oew"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_usi52"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1f8di"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ry7vv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_83fk3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fenj4"]
 albedo_color = Color(0, 0, 0, 1)
@@ -85,7 +91,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.0208272)
 transform = Transform3D(-0.158052, -0.158252, -3.19788e-08, 8.5797e-10, -8.81755e-09, 1, -0.198398, 0.126068, 2.98e-08, -0.214206, 0.00564522, 0.486042)
 mesh = SubResource("QuadMesh_ylp1p")
 skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_28oew")
+surface_material_override/0 = SubResource("StandardMaterial3D_usi52")
 
 [node name="TextLabel" type="Label3D" parent="QuestDisplayer/PackagePivot/Package/Top"]
 transform = Transform3D(0.00777704, -0.0934463, 2.54641e-06, -2.14051e-05, 7.73593e-07, 0.0937694, -0.0934463, -0.00777704, -2.12672e-05, 0.0133832, 0.0022338, 0.00987531)
@@ -120,7 +126,7 @@ transform = Transform3D(-0.17674, -0.14513, -3.13541e-08, 0, -8.84407e-09, 1, -0
 visible = false
 mesh = SubResource("QuadMesh_ylp1p")
 skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_28oew")
+surface_material_override/0 = SubResource("StandardMaterial3D_1f8di")
 
 [node name="TextLabel" type="Label3D" parent="QuestDisplayer/PackagePivot/Package/Front"]
 transform = Transform3D(0.00777704, -0.0934463, 2.54641e-06, -2.14051e-05, 7.73593e-07, 0.0937694, -0.0934463, -0.00777704, -2.12672e-05, 0.0238961, 0.000705957, -0.0369803)
@@ -156,7 +162,7 @@ transform = Transform3D(-0.195622, -0.1288, 1.33886e-07, 2.20467e-09, 4.0423e-08
 visible = false
 mesh = SubResource("QuadMesh_ylp1p")
 skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_28oew")
+surface_material_override/0 = SubResource("StandardMaterial3D_ry7vv")
 
 [node name="TextLabel" type="Label3D" parent="QuestDisplayer/PackagePivot/Package/Back"]
 transform = Transform3D(0.00777704, -0.0934463, 2.54641e-06, -2.14051e-05, 7.73593e-07, 0.0937694, -0.0934463, -0.00777704, -2.12672e-05, 0.0171101, 0.000705957, -0.0236213)
@@ -192,7 +198,7 @@ transform = Transform3D(-0.18962, -0.134389, 1.53426e-07, 6.38159e-08, -1.05534e
 visible = false
 mesh = SubResource("QuadMesh_ylp1p")
 skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_28oew")
+surface_material_override/0 = SubResource("StandardMaterial3D_83fk3")
 
 [node name="TextLabel" type="Label3D" parent="QuestDisplayer/PackagePivot/Package/Bottom"]
 transform = Transform3D(0.00777704, -0.0934463, 2.54641e-06, -2.14051e-05, 7.73593e-07, 0.0937694, -0.0934463, -0.00777704, -2.12672e-05, 0.0108736, 0.00592664, -0.0468947)
