@@ -3,6 +3,8 @@ extends RigidBody3D
 @onready var rocket_particles: CPUParticles3D = $RocketParticles
 @onready var launch_timer: Timer = $LaunchTimer
 @onready var wait_particles: Node3D = $WaitParticles
+@onready var rocket_engine_audio_3d: AudioStreamPlayer3D = $RocketEngineAudio3D
+@onready var rocket_take_off_audio_3d: AudioStreamPlayer3D = $RocketTakeOffAudio3D
 
 @export var close_to_land_height := 50
 @export var max_velocity := Vector3(0, 20, 0)
@@ -13,10 +15,13 @@ var falling := false
 var close_to_land := false
 
 func _ready() -> void:
+	rocket_engine_audio_3d.play()
 	_reset_start_launch_timer()
 
 func _process(delta: float) -> void:
 	if _ready_to_launch():
+		rocket_engine_audio_3d.stop()
+		rocket_take_off_audio_3d.play()
 		flying = true
 		rocket_particles.emitting = true
 		_tooggle_wait_particles()
@@ -81,4 +86,6 @@ func _reset_rocket():
 	falling = false
 	flying = false
 	rocket_particles.emitting = false
+	rocket_take_off_audio_3d.stop()
+	rocket_engine_audio_3d.play()
 	_reset_start_launch_timer()

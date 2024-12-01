@@ -1,7 +1,9 @@
-[gd_scene load_steps=17 format=4 uid="uid://bcy4qs4pyilk4"]
+[gd_scene load_steps=19 format=4 uid="uid://bcy4qs4pyilk4"]
 
 [ext_resource type="PackedScene" uid="uid://dbnorm5ctg8uv" path="res://scenes/rocket.tscn" id="1_eu2fg"]
 [ext_resource type="Script" path="res://scripts/rocket.gd" id="2_ipdov"]
+[ext_resource type="AudioStream" uid="uid://d3f8s7avi2kwd" path="res://assets/sounds/rocket-take-off-sound-90267.mp3" id="3_jwth6"]
+[ext_resource type="AudioStream" uid="uid://dhhsu5plsces2" path="res://assets/sounds/rocket-engine-90835.mp3" id="3_xuxv2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wantq"]
 resource_name = "metalRed"
@@ -20,7 +22,6 @@ metallic = 1.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2tbhv"]
 resource_name = "_defaultMat"
-albedo_color = Color(1, 1, 1, 1)
 metallic = 1.0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_cjlsr"]
@@ -258,3 +259,14 @@ one_shot = true
 
 [node name="DebugCamera" type="Camera3D" parent="Rocket"]
 transform = Transform3D(-4.05874e-08, 0.371254, -0.928531, 1.6228e-08, 0.928531, 0.371254, 1, 0, -4.37114e-08, -94.3645, 91.0533, -0.418019)
+
+[node name="RocketEngineAudio3D" type="AudioStreamPlayer3D" parent="Rocket"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0.865978, 0)
+stream = ExtResource("3_xuxv2")
+bus = &"SX"
+
+[node name="RocketTakeOffAudio3D" type="AudioStreamPlayer3D" parent="Rocket"]
+stream = ExtResource("3_jwth6")
+volume_db = -4.0
+max_distance = 40.0
+bus = &"SX"
